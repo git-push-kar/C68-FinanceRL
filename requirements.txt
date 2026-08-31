@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.2
+gymnasium>=0.29
+torch>=2.4
+transformers>=4.45
+peft>=0.13
+yfinance>=0.2.54

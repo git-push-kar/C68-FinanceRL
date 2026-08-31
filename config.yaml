@@ -1,0 +1,11 @@
+model:
+  backbone_id: internlm/internlm2_5-1_8b-chat
+  adapter_name: finance
+  target_modules: [q_proj, v_proj]
+  lora_r: 16
+reward:
+  transaction_cost_bps: 10.0
+  max_weight: 0.30
+  turnover_penalty: 0.001
+  volatility_penalty: 0.10
+  drawdown_penalty: 0.20
