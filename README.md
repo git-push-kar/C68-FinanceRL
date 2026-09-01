@@ -27,8 +27,14 @@ py -3.11 -m venv .venv
 pip install -r requirements.txt
 ```
 
-Use a local historical daily-data CSV with `Date,Ticker,Close`; `Volume` is
-optional. One row is one asset on one trading day.
+Dataset is **bundled** in `data/nifty50_prices.csv` (14MB cleaned panel: 287k rows, 49 Nifty tickers, 1999-2026, effective 2017-11-17..2026-01-30 after `ffill` : `env.py:45`) so `git clone` works offline. Verify:
+
+```powershell
+dir data                          # -> nifty50_prices.csv + nifty50_summary_statistics.csv
+python evaluate_baselines.py --data data\nifty50_prices.csv --start 2023-01-01 --end 2024-12-31
+```
+
+To rebuild data from scratch or use `Date,Ticker,Close` + optional `Volume` (one row per asset per day):
 
 ```csv
 Date,Ticker,Close,Volume
@@ -38,25 +44,24 @@ Date,Ticker,Close,Volume
 
 ## Chronological workflow
 
-Do not tune settings on the held-out period. Train through a fixed date:
+Do not tune settings on the held-out period. Train through a fixed date.
 
-For the Nifty 50, first download and normalize the daily market panel. The
-script reads the current official constituent list from NSE, appends Yahoo
-Finance's `.NS` symbol suffix, and produces the format expected by training:
+A5000 (Ampere, 24GB) – BF16/TF32 optimized (`train.py:34`, `model.py:21`):
 
 ```powershell
+# CUDA torch first: pip install torch --index-url https://download.pytorch.org/whl/cu121
+python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 25000 --output artifacts\finance_v1 --device cuda --dtype bf16 --minibatch-size 128 --rollout-steps 512
+# smoke
+python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 256 --output artifacts\smoke --device cuda --dtype bf16
+```
+
+CPU or rebuild-data fallback:
+
+```powershell
+# Re-download Nifty 50 panel (current NSE list + yfinance .NS) if you delete bundled data
 python prepare_nifty50_data.py --start 2020-01-01 --end 2025-01-01 --output data\nifty50_prices.csv
-```
 
-Then reserve later dates as an untouched test period:
-
-```powershell
 python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 25000 --output artifacts\finance_v1
-```
-
-Evaluate the untouched period against an equal-weight baseline:
-
-```powershell
 python evaluate_baselines.py --data data\nifty50_prices.csv --start 2023-01-01 --end 2024-12-31
 ```
 

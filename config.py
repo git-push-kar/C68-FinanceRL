@@ -12,6 +12,8 @@ class ModelConfig:
     lora_dropout: float = 0.05
     target_modules: List[str] = field(default_factory=lambda: ["q_proj", "v_proj"])
     adapter_name: str = "finance"
+    # A5000 (Ampere) prefers bf16; options: bf16, fp16, fp32
+    dtype: str = "bf16"
 
 
 @dataclass
@@ -25,7 +27,8 @@ class PPOConfig:
     max_grad_norm: float = 0.5
     rollout_steps: int = 256
     update_epochs: int = 4
-    minibatch_size: int = 64
+    minibatch_size: int = 64  # A5000 24GB can use 128-256; override via --minibatch-size
+    # A5000 tuning: allow TF32 + larger batches without OOM (1.8B frozen ~5GB in bf16)
 
 
 def serializable(config):

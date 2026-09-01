@@ -1,2 +1,51 @@
-venv/
+# Python bytecode/cache
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.conda/
+
+# Training outputs - keep dir structure, ignore large binaries
+artifacts/*
+!artifacts/.gitkeep
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+
+# Dataset is intentionally TRACKED so `git clone` works offline
+# Do NOT ignore data/*.csv - 14MB cleaned panel is bundled
+# If you add raw 87MB dump, use Git LFS: git lfs track "data/*.csv"
+# Large raw dumps outside data/ stay ignored:
+*.csv.gz
+*.parquet
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.jupyter/
+.ipynb_checkpoints/
+
+# Logs & experiment tracking
+*.log
+logs/
+wandb/
+lightning_logs/
+runs/
