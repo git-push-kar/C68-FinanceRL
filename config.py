@@ -10,7 +10,8 @@ class ModelConfig:
     lora_r: int = 16
     lora_alpha: int = 32
     lora_dropout: float = 0.05
-    target_modules: List[str] = field(default_factory=lambda: ["q_proj", "v_proj"])
+    # InternLM2 uses fused wqkv + wo (not q_proj/v_proj like Llama); w1/w2/w3 are FFN
+    target_modules: List[str] = field(default_factory=lambda: ["wqkv", "wo"])
     adapter_name: str = "finance"
     # A5000 (Ampere) prefers bf16; options: bf16, fp16, fp32
     dtype: str = "bf16"

@@ -1,8 +1,9 @@
 numpy>=1.26
 pandas>=2.2
 gymnasium>=0.29
-# For A5000 (Ampere, 24GB, sm_86) install CUDA build — see setup below:
-# pip install torch --index-url https://download.pytorch.org/whl/cu121  # or cu124
+# For A5000 (Ampere, 24GB, sm_86) install CUDA build — driver 595.95 CUDA 13.2 -> cu128 works (backward compat):
+# pip install torch --index-url https://download.pytorch.org/whl/cu128
+# Verified: torch 2.11.0+cu128 on RTX A5000 sm_86 25.8GB, bf16 (~3.9GB VRAM for 49 assets)
 torch>=2.4
 transformers>=4.45
 peft>=0.13

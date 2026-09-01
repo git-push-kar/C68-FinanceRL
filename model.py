@@ -33,9 +33,36 @@ class InternLMFinancePolicy(nn.Module):
             if load_dtype != torch.float32:
                 base = base.to(dtype=load_dtype)
         for parameter in base.parameters(): parameter.requires_grad = False
+        # Auto-correct target_modules for InternLM2 (uses fused wqkv/wo, not q_proj/v_proj)
+        # If cfg still has Llama-style names, remap to avoid ValueError: Target modules {'q_proj','v_proj'} not found
+        target = list(cfg.target_modules)
+        if any(t in ("q_proj", "k_proj", "v_proj", "o_proj") for t in target):
+            # detect actual leaf names in base model
+            leaf_names = {n.split(".")[-1] for n, m in base.named_modules() if hasattr(m, "weight") and m.weight.ndim == 2}
+            if "wqkv" in leaf_names:
+                # fused QKV model: map q/k/v -> wqkv, o -> wo
+                remapped = []
+                for t in target:
+                    if t in ("q_proj", "k_proj", "v_proj", "qkv_proj"):
+                        if "wqkv" not in remapped: remapped.append("wqkv")
+                    elif t in ("o_proj",):
+                        remapped.append("wo")
+                    else:
+                        remapped.append(t)
+                target = remapped
+                print(f"[InternLMFinancePolicy] Remapped LoRA target_modules {cfg.target_modules} -> {target} (detected wqkv/wo in backbone)")
+            elif leaf_names.intersection({"q_proj", "v_proj"}):
+                pass  # already compatible
         lora = LoraConfig(r=cfg.lora_r, lora_alpha=cfg.lora_alpha, lora_dropout=cfg.lora_dropout,
-                          target_modules=cfg.target_modules, bias="none", task_type="FEATURE_EXTRACTION")
-        self.backbone = get_peft_model(base, lora, adapter_name=cfg.adapter_name)
+                          target_modules=target, bias="none", task_type="FEATURE_EXTRACTION")
+        try:
+            self.backbone = get_peft_model(base, lora, adapter_name=cfg.adapter_name)
+        except ValueError as e:
+            if "Target modules" in str(e):
+                # last-resort fallback: use whatever Linear leaves exist
+                leaf_names = sorted({n.split(".")[-1] for n, m in base.named_modules() if "Linear" in type(m).__name__})
+                raise ValueError(f"{e}. Detected Linear leaves in backbone: {leaf_names}. Set ModelConfig.target_modules to one of them, e.g. ['wqkv','wo'] for InternLM2.") from e
+            raise
         hidden = getattr(base.config, "hidden_size", cfg.hidden_size); self.encoders = FinanceEncoders(hidden, n_assets)
         # Keep encoders/heads in same dtype as backbone on CUDA for autocast efficiency
         if torch.cuda.is_available() and load_dtype != torch.float32:
@@ -47,8 +74,26 @@ class InternLMFinancePolicy(nn.Module):
             self.critic = self.critic.to(dtype=load_dtype)
         self.log_std = nn.Parameter(torch.full((n_assets,), -0.5))
     def forward(self, obs):
-        output = self.backbone(inputs_embeds=self.encoders(obs["market"], obs["portfolio"], obs["risk"]), return_dict=True)
-        state = output.last_hidden_state[:, -1]; return self.actor(state), self.critic(state).squeeze(-1)
+        # A5000 bf16: encoders/heads are in load_dtype (bf16) but obs from env/tensor_obs is fp32.
+        # Cast inputs to encoder dtype for matmul consistency (with or without autocast).
+        enc_dtype = next(self.encoders.parameters()).dtype
+        market = obs["market"].to(dtype=enc_dtype) if obs["market"].dtype != enc_dtype else obs["market"]
+        portfolio = obs["portfolio"].to(dtype=enc_dtype) if obs["portfolio"].dtype != enc_dtype else obs["portfolio"]
+        risk = obs["risk"].to(dtype=enc_dtype) if obs["risk"].dtype != enc_dtype else obs["risk"]
+        # InternLM2ForCausalLM + transformers 5.x: must disable cache (DynamicCache.from_legacy_cache removed)
+        # and request hidden_states; output is CausalLMOutputWithPast (logits + hidden_states), not last_hidden_state
+        output = self.backbone(
+            inputs_embeds=self.encoders(market, portfolio, risk),
+            return_dict=True, use_cache=False, output_hidden_states=True,
+        )
+        if hasattr(output, "hidden_states") and output.hidden_states is not None:
+            state = output.hidden_states[-1][:, -1]
+        elif hasattr(output, "last_hidden_state"):
+            state = output.last_hidden_state[:, -1]
+        else:
+            # fallback: last hidden is logits proj input, use logits last dim? should not happen
+            raise AttributeError(f"Backbone output has no hidden_states/last_hidden_state: {type(output)} {dir(output)}")
+        return self.actor(state), self.critic(state).squeeze(-1)
     def _dist(self, mean): return torch.distributions.Normal(mean, self.log_std.exp().expand_as(mean))
     def act(self, obs):
         mean, value = self(obs); dist = self._dist(mean); action = dist.sample()

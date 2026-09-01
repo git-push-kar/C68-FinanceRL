@@ -55,11 +55,14 @@ if __name__ == "__main__":
     scaler = torch.amp.GradScaler("cuda") if (use_amp and args.dtype == "fp16") else None
 
     policy = InternLMFinancePolicy(cfg, env.n_assets).to(device)
+    # A5000 note: torch.compile needs Triton (Linux/WSL). On Windows it raises TritonMissing at first call.
+    compile_enabled = False
     if args.compile and hasattr(torch, "compile"):
         # compile only trainable heads+encoders path; backbone is frozen - compile helps PPO loop
         try:
             policy = torch.compile(policy)
-            print("torch.compile enabled")
+            compile_enabled = True
+            print("torch.compile enabled (requires Triton; on Windows use WSL/Linux or omit --compile)")
         except Exception as e:
             print(f"torch.compile failed: {e}")
 
@@ -74,14 +77,30 @@ if __name__ == "__main__":
         for _ in range(ppo_cfg.rollout_steps):
             with torch.no_grad():
                 # autocast for inference too on A5000
-                if use_amp:
-                    with torch.autocast(device_type="cuda", dtype=amp_dtype):
+                try:
+                    if use_amp:
+                        with torch.autocast(device_type="cuda", dtype=amp_dtype):
+                            action, logp, value = policy.act(tensor_obs(obs, device))
+                    else:
                         action, logp, value = policy.act(tensor_obs(obs, device))
-                else:
-                    action, logp, value = policy.act(tensor_obs(obs, device))
-            next_obs, reward, terminated, truncated, _ = env.step(action.squeeze(0).cpu().numpy())
+                except Exception as e:
+                    if compile_enabled and "Triton" in str(e):
+                        print(f"torch.compile Triton missing -> falling back to eager (omit --compile on Windows): {e}")
+                        policy = policy._orig_mod if hasattr(policy, "_orig_mod") else policy  # unwrap
+                        compile_enabled = False
+                        # retry eager
+                        if use_amp:
+                            with torch.autocast(device_type="cuda", dtype=amp_dtype):
+                                action, logp, value = policy.act(tensor_obs(obs, device))
+                        else:
+                            action, logp, value = policy.act(tensor_obs(obs, device))
+                    else:
+                        raise
+            # A5000 bf16: action is bf16 -> numpy doesn't support bf16, cast to fp32
+            next_obs, reward, terminated, truncated, _ = env.step(action.squeeze(0).float().cpu().numpy())
             for k, v in obs.items(): batch["obs"][k].append(v)
-            batch["actions"].append(action.squeeze(0)); batch["log_probs"].append(logp.squeeze(0)); batch["rewards"].append(torch.tensor(reward, device=device)); batch["dones"].append(torch.tensor(float(terminated or truncated), device=device)); batch["values"].append(value.squeeze(0)); rewards.append(reward); obs = next_obs; steps += 1
+            # keep PPO tensors in fp32 for stable GAE/loss (bf16 -> fp32)
+            batch["actions"].append(action.squeeze(0).float()); batch["log_probs"].append(logp.squeeze(0).float()); batch["rewards"].append(torch.tensor(reward, device=device)); batch["dones"].append(torch.tensor(float(terminated or truncated), device=device)); batch["values"].append(value.squeeze(0).float()); rewards.append(reward); obs = next_obs; steps += 1
             if terminated or truncated: obs, _ = env.reset()
             if steps >= args.timesteps: break
         with torch.no_grad():
@@ -90,7 +109,7 @@ if __name__ == "__main__":
                     _, bootstrap = policy(tensor_obs(obs, device))
             else:
                 _, bootstrap = policy(tensor_obs(obs, device))
-        values = torch.stack(batch["values"] + [bootstrap.squeeze(0)]); advantages, returns = compute_gae(torch.stack(batch["rewards"]), values, torch.stack(batch["dones"]), ppo_cfg.gamma, ppo_cfg.gae_lambda)
+        values = torch.stack(batch["values"] + [bootstrap.squeeze(0).float()]); advantages, returns = compute_gae(torch.stack(batch["rewards"]), values, torch.stack(batch["dones"]), ppo_cfg.gamma, ppo_cfg.gae_lambda)
         batch["obs"] = {k:torch.as_tensor(np.stack(v), device=device) for k,v in batch["obs"].items()}; batch.update(actions=torch.stack(batch["actions"]), log_probs=torch.stack(batch["log_probs"]), advantages=advantages, returns=returns)
         ppo_update(policy, optimizer, batch, ppo_cfg, scaler=scaler, use_amp=use_amp)
         print(f"steps={steps} mean_reward={np.mean(rewards[-len(batch['rewards']):]):.6f} peak_equity={env.peak_equity:.2f}")
