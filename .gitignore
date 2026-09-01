@@ -17,7 +17,6 @@ ENV/
 .conda/
 
 # Training outputs - keep dir structure, ignore large binaries
-artifacts/*
 !artifacts/.gitkeep
 *.pt
 *.pth
