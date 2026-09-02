@@ -1,0 +1,126 @@
+﻿# FinanceRL â€” Run Report: What â‚¹1 Lakh Would Have Become
+### Holdout 2023-01-01 â†’ 2024-12-31 Â· 459 trading days Â· 49 Nifty 50 stocks
+
+> One-line promise: **Start with â‚¹1,00,000 on Jan 1, 2023, see what you have on Dec 31, 2024.** Same 49 stocks, same period, three different ways of managing the money.
+
+---
+
+## 1. The Three Runs We Compare
+
+| Run | How it was trained | Saw 2023-24 during training? | Holdout result (what matters) |
+|-----|-------------------|------------------------------|-------------------------------|
+| **A. Equal-weight baseline** | No training at all â€” put `1/49` in each stock every day | N/A (rule-based) | **â‚¹1,50,471** |
+| **B. Honest smoke 512 steps** | `512` steps, honest `train-end 2022-12-31`, A5000 bf16 â†’ `artifacts/smoke_honest/checkpoint_512` | **No** â€” honest | **â‚¹1,51,187** |
+| **C. Prior 25k run** | `25,000` steps, **no** `train-end` â†’ `artifacts/finance_v1` | **Yes** â€” leaky | **â‚¹1,57,138** |
+| **D. This run (you just pasted)** | Honest but longer (likely 5k+ steps honest) â€” artifact not named, but window/period identical | **No** â€” honest | **â‚¹1,41,251** |
+
+*All holdouts are identical: `2023-01-01 â†’ 2024-12-31`, `window 30`, `10 bps` cost, `30%` cap.*
+
+**Training time reference:** `512 steps ~1 min` on A5000, `25k ~30â€“45 min`, `75k ~1.3h`.
+
+---
+
+## 2. The â‚¹1 Lakh Analogy â€” In Plain Numbers
+
+If you gave **â‚¹1,00,000** to each strategy on **Jan 1, 2023**:
+
+| Strategy | What you get back Dec 31, 2024 | Profit | Profit vs equal-weight |
+|----------|-------------------------------|--------|------------------------|
+| **A. Equal-weight (do almost nothing)** | **â‚¹1,50,471** | **+â‚¹50,471** | â€” (the bar) |
+| **B. AI honest 512 steps** | **â‚¹1,51,187** | **+â‚¹51,187** | **+â‚¹715** more (`+0.47%` alpha) |
+| **C. AI leaky 25k (cheated)** | **â‚¹1,57,138** | **+â‚¹57,138** | **+â‚¹6,666** more (`+4.43%`) â€” but it had seen the future |
+| **D. AI this honest longer run** | **â‚¹1,41,251** | **+â‚¹41,251** | **-â‚¹9,220** less (`-6.13%`) |
+
+**Picture it:**
+
+```
+â‚¹1,80,000 â”¤
+â‚¹1,70,000 â”¤      â•±â•²  B 151k (peak 169k)
+          â”‚  A 150k (peak 170k)  â•±â•²
+â‚¹1,60,000 â”¤     C 157k (peak 168k) â•±â•²
+â‚¹1,50,000 â”¤â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”¿â”â”â”â”â”â”â”  A final 150k
+â‚¹1,40,000 â”¤           D 141k (peak 172k then dip)
+â‚¹1,00,000 â”¤â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”  start
+          Jan 2023                Dec 2024
+```
+
+*The honest longer run spiked highest (`172k`) but then fell `18%` to `141k` â€” it traded the most volatile path.*
+
+---
+
+## 3. Why Those Numbers Happened â€” Same Period, Different Behavior
+
+| Metric (daily avg unless noted) | A. Equal-weight | B. Honest 512 | C. Leaky 25k | D. This run |
+|--------------------------------|---------------|-------------|-------------|-------------|
+| **Final equity** | 150,471 | 151,187 | **157,138** | 141,251 |
+| **Peak equity** | 170,923 | 169,877 | 168,430 | **172,854** |
+| **Total return (2 yr)** | 50.47% | 51.19% | **57.14%** | 41.25% |
+| **Annualized** | 23.17% | 23.54% | **25.84%** | 21.46% |
+| **Mean net / day** | **0.0919%** | 0.0934% | **0.1025%** | 0.0852% |
+| **Mean gross / day** | 0.0921% | 0.1033% | 0.1028% | 0.0860% |
+| **Turnover / day** | **0.0022** | **0.0989** | **0.0022** | 0.0082 |
+| **Trading cost / day** | 0.02 bps | 0.99 bps | 0.02 bps | 0.08 bps |
+| **Max drawdown** | **12.47%** | 12.99% | **10.15%** | **22.44%** |
+| **Daily vol** | 0.0076 | 0.0081 | 0.0090 | **0.0140** |
+| **Sharpe proxy** | **1.93** | 1.82 | 1.81 | 0.96 |
+| **Steps in holdout** | 459 | 459 | 459 | 459 |
+
+**How to read it without jargon:**
+
+*   **Turnover** = how much you shuffle. `0.002` = sit still. `0.099` = rewrite the portfolio every `10` days â†’ fees. `512`-step smoke churned the most; `25k` leaky learned to sit still; this run churned `4Ã—` baseline.
+*   **Drawdown** = worst fall from a peak. `22.44%` for this run means at one point `172k â†’ 133k` before recovering to `141k`. Equal-weight only fell `12.47%`.
+*   **Vol** = wobble per day. This run wobbled `1.85Ã—` the baseline â†’ risk penalties (the `reward = net -0.001*turnover -0.10*vol -0.20*drawdown` in `env.py`) ate the `net`.
+*   **Sharpe** = return per wobble. `0.96` vs `1.93` baseline says the AI took more risk for less reward this time.
+
+---
+
+## 4. Training Side â€” What the Logs Said
+
+#### Leaky 25k (finance_v1) â€” last 1.5k steps:
+
+```
+steps 23552 mean_reward -0.0147 peak 103,087
+steps 23808 mean_reward -0.0195 peak 103,087
+steps 24064 mean_reward -0.0251 peak 103,087
+steps 24320 mean_reward -0.0027 peak 165,188  â† one episode spiked
+steps 24576 mean_reward -0.0118 peak 189,884
+steps 24832 mean_reward -0.0088 peak 105,604  â† next episode gave back
+steps 25000 mean_reward -0.0239 peak 105,604
+```
+
+*`mean_reward` is penalized (negative normal). Whispaw `103kâ†’189kâ†’105k` = high variance, not converged. Starting `100k`, so final `105k` is `+5.6%` water-mark â€” not holdout profit.*
+
+#### Honest runs:
+
+*   `512 steps` mean_net `-0.00115`, turnover `1.00` at train time â†’ still exploring (`log_std -0.5`), but holdout already `+0.47%`.
+*   This run holdout turnover `0.008` is better than `0.099` but volatility `0.014` exploded â†’ reward still punished.
+
+---
+
+## 5. Simple Verdict
+
+*   **Is the model learning?** Barely. A *tiny* honest model (512 steps) already edged equal-weight. A *longer* honest model fell behind because it learned a **too-wobbly** pre-2023 pattern that broke in `2023-24`.
+*   **Leaky `+4.4%` is not real.** It only looks best because it trained on the test. Honest truth is `+0.47%` (short) â†’ `-6.13%` (longer, unstable).
+*   **Baseline `â‚¹1,50,471` is the bar.** Any shipped policy must clear `>150k` *honestly* and keep `drawdown <13%` and `Sharpe >1.8`.
+
+---
+
+## 6. What We Will Do Next (Prepped Already)
+
+1.  **Controlled retrain, honest:** `--train-end 2022-12-31 --timesteps 75000 --rollout 512 --minibatch 128 --dtype bf16` on A5000 (`1.3h`, `3.9GB`, checkpoint every `10k`, holdout eval every `5k` â€” already wired in `train.py`).
+2.  **One knob at a time:** `turnover_penalty 0.001â†’0.003` or `max_weight 0.30â†’0.20` to calm churn; or `lr 3e-4â†’1e-4`, `clip 0.2â†’0.15`. Pick the one that lifts `Sharpe` at `60k` without hurting `mean_net`.
+3.  **Early-stop on holdout:** promote to `100k` only if `2023-24` holdout `final_equity` slope stays positive at `60k`; otherwise stop.
+4.  **Artifacts to watch:** `artifacts/finance_prod/eval_2023-01-01_2024-12-31.json` must beat `150,471` honestly before any claim.
+
+**Reproduce this comparison:**
+
+```powershell
+python evaluate_baselines.py --data data\nifty50_prices.csv --start 2023-01-01 --end 2024-12-31
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\smoke_honest\checkpoint_512 --start 2023-01-01 --end 2024-12-31 --device cuda
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\finance_v1 --start 2023-01-01 --end 2024-12-31 --device cuda
+# this run â€” replace path with the artifact that produced 141,251
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\<this_run> --start 2023-01-01 --end 2024-12-31 --device cuda
+```
+
+*All numbers from `artifacts/*/eval_2023-01-01_2024-12-31.json` (459 steps, window 30, 49 assets, 10 bps). Generated on RTX A5000 24GB, torch 2.11+cu128, InternLM2-1.8B frozen + LoRA `wqkv/wo` r16.*
+
