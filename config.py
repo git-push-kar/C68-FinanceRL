@@ -26,10 +26,10 @@ class PPOConfig:
     value_coef: float = 0.5
     entropy_coef: float = 0.01
     max_grad_norm: float = 0.5
-    rollout_steps: int = 256
+    rollout_steps: int = 256  # prod on A5000: 512 (CLI --rollout-steps 512)
     update_epochs: int = 4
-    minibatch_size: int = 64  # A5000 24GB can use 128-256; override via --minibatch-size
-    # A5000 tuning: allow TF32 + larger batches without OOM (1.8B frozen ~5GB in bf16)
+    minibatch_size: int = 64  # prod on A5000: 128 (CLI --minibatch-size 128); 24GB can use 256
+    # A5000 (sm_86 24GB) prod recipe: 75k-100k timesteps (≈70-94 train-split episodes) + rollout 512/minibatch 128/bf16
 
 
 def serializable(config):

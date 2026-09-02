@@ -1,0 +1,31 @@
+{
+  "holdout": "2023-01-01\u21922024-12-31",
+  "learned_policy": {
+    "final_equity": 157137.63052006692,
+    "peak_equity": 168430.26309920076,
+    "return_total": 0.5713763052006691,
+    "return_annualized": 0.2583980978516505,
+    "mean_net_return": 0.0010253892771890894,
+    "mean_gross_return": 0.0010275727226677243,
+    "mean_turnover": 0.0021834454786348184,
+    "mean_trading_cost": 2.183445478634818e-06,
+    "max_drawdown": 0.10153120390808801,
+    "volatility_daily": 0.008981220196032924,
+    "sharpe_proxy": 1.8123964970898476,
+    "steps": 459
+  },
+  "baseline_equal_weight": {
+    "final_equity": 150471.28097133167,
+    "peak_equity": 170922.71609128974,
+    "return_total": 0.5047128097133167,
+    "return_annualized": 0.2316596007085943,
+    "mean_net_return": 0.000919284129796009,
+    "mean_gross_return": 0.0009214627789036242,
+    "mean_turnover": 0.002178649107615153,
+    "mean_trading_cost": 2.178649107615153e-06,
+    "max_drawdown": 0.12468970073788166,
+    "volatility_daily": 0.007565428842057903,
+    "sharpe_proxy": 1.928927515581162,
+    "steps": 459
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "backbone_id": "internlm/internlm2_5-1_8b-chat",
+  "trust_remote_code": true,
+  "hidden_size": 2048,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "wqkv",
+    "wo"
+  ],
+  "adapter_name": "finance",
+  "dtype": "bf16"
+}

@@ -46,13 +46,25 @@ Date,Ticker,Close,Volume
 
 Do not tune settings on the held-out period. Train through a fixed date.
 
-A5000 (Ampere, 24GB) – BF16/TF32 optimized (`train.py:34`, `model.py:21`):
+A5000 (Ampere, 24GB, sm_86) – BF16/TF32 optimized (`train.py:45`, `model.py:22`):
 
 ```powershell
-# CUDA torch first: pip install torch --index-url https://download.pytorch.org/whl/cu121
-python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 25000 --output artifacts\finance_v1 --device cuda --dtype bf16 --minibatch-size 128 --rollout-steps 512
-# smoke
-python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 256 --output artifacts\smoke --device cuda --dtype bf16
+# CUDA torch first (driver 595.95 CUDA 13.2 tested: cu128): pip install torch --index-url https://download.pytorch.org/whl/cu128
+# Verified: torch 2.11+cu128, 3.9GB VRAM (49 assets, bf16), InternLM2 1.8B frozen
+# Quick smoke (honest split, ~30s, verifies pipeline + holdout eval):
+python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 512 --output artifacts\smoke_a5000 --device cuda --dtype bf16 --eval-interval 256
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\smoke_a5000 --start 2023-01-01 --end 2024-12-31 --device cuda
+python evaluate_baselines.py --data data\nifty50_prices.csv --start 2023-01-01 --end 2024-12-31
+
+# Production (honest split, 75k steps ≈70 episodes, ~1.3h A5000; 100k ≈94 episodes ~1.8h):
+python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 75000 --output artifacts\finance_prod --device cuda --dtype bf16 --rollout-steps 512 --minibatch-size 128 --eval-interval 5000 --checkpoint-interval 10000
+# or 100k full:
+python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timesteps 100000 --output artifacts\finance_prod_100k --device cuda --dtype bf16 --rollout-steps 512 --minibatch-size 128 --eval-interval 5000
+
+# Holdout eval of any artifact (learned vs equal_weight):
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\finance_prod --start 2023-01-01 --end 2024-12-31
+# your prior leaky run (no train-end) — re-evaluate for comparison (leaked 2023-24):
+python evaluate_policy.py --data data\nifty50_prices.csv --artifacts artifacts\finance_v1 --start 2023-01-01 --end 2024-12-31
 ```
 
 CPU or rebuild-data fallback:
@@ -65,9 +77,11 @@ python train.py --data data\nifty50_prices.csv --train-end 2022-12-31 --timestep
 python evaluate_baselines.py --data data\nifty50_prices.csv --start 2023-01-01 --end 2024-12-31
 ```
 
+Training now logs `mean_reward / mean_net / max_dd / mean_turnover / peak_equity` per rollout and periodic `[Holdout ...]` learned vs equal_weight when `--train-end` is set (see `train.py --eval-interval`). Checkpoints land in `artifacts/.../checkpoint_<steps>/`.
+
 Artifacts are saved as `finance_lora/`, `ppo_heads.pt`, and JSON configs. Keep
 the LoRA unmerged; it can later be loaded as the named `finance` adapter on the
-same shared InternLM backbone as other adapters.
+same shared InternLM backbone as other adapters. Evaluate any saved adapter with `evaluate_policy.py` (loads `finance_lora` + `ppo_heads.pt`).
 
 The environment is long-only and fully invested. Its reward is net portfolio
 return minus transaction cost, turnover, volatility, and drawdown penalties.
