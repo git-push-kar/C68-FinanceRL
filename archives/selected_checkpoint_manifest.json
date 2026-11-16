@@ -1,0 +1,2846 @@
+{
+  "demo/adapters/finance_explanation/adapter_config.json": {
+    "sha256": "cbee380705149c1fe634a38b8293cf4c585677e16078f94a17cbf5e6d64be71d",
+    "bytes": 1073
+  },
+  "demo/adapters/finance_explanation/adapter_model.safetensors": {
+    "sha256": "6c7ea899cc004a0abf2da0f14d60535ad9fc9a11446d61a9f7992b250bfd9d2d",
+    "bytes": 73916992
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "2fd0da02402056eedbb1c10009fac6b0ee49a27c3b1d84d151ffce3bdb1bb4db",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "a8aa196dcb09765b736455ab4c19e32d15189b7f341829918556a5df6f59c7cb",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "bf586543f27a24f388dfad9398a666496485c62035f717582d0b8bdcacf2e4f9",
+    "bytes": 9240
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "cd83f2b781288d1c761cb964ae134278562e45724e27b30ec877beab7851b737",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "233070f5f0eb3bf5f3ac79e78c89528930f28510cf4b44d52d93af93e2fee3ef",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "513248fa0f54ffce7e3cf8ce27aa46eea1dd12184c04e914bd186c7bb6bd8be2",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "51cf86d2873164d6aa627d878837b3768ec4493060ec72c613b5518796b1928b",
+    "bytes": 9238
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "85ff5dea3ed3968626e063f63ffa1d2434cb720bd5314b0107c3def2e1fc8348",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "161b8f86ef6c6eb27110748ced5cb3080e4cde5d8b576a8184d1478b6f8a6d2d",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "657ebd785fe6f0b1a860b7ee8315474633e56656479aced4af42e9576c373d6a",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "9f3747c325f1a48c7bc2941da846e68938b0df6a34dce58f214f93bfcea39d0f",
+    "bytes": 9240
+  },
+  "research/campaign_runs/asset_allocation_dynamic_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "50b06bbda69ceca064dd419941b8b91c0c8622616af61ec73c8431ffc1fd1b8b",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_allocation_static_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "9e4dd7b65f6021124e251aed33d219a414b1a365fae1e840b3dbb5258a960c49",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_static_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "ad85c72cae3a74405c411247f32ad5155eac82f78f03a30b9f6d1d67745f7e48",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_static_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "f5cb12e1c3dba9ef0a63464a387903bc1bd6c862b37f2f7fa11c1af240470cbe",
+    "bytes": 9239
+  },
+  "research/campaign_runs/asset_allocation_static_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "caf05e899e6ab28477e9ce90e1db7ab19ee6446364c70c584ae0968426a353a1",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_allocation_static_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "95a6ac7a680ddfe11cdcf721444a74f693766d9df444ed50ee8ed1ad65157f73",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_static_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "6d87eaa71ba20f37ceed4e44fc142b7df286245e9e868174a3531f47f0d6c71f",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_static_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "3ec35074e55c33d606f8ce8f632a6db4340a73a424cbff173c0633371bbba69f",
+    "bytes": 9237
+  },
+  "research/campaign_runs/asset_allocation_static_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "5bc329faebdc65218d2337e76ee47e5b19a9718a4a8c13c931a8b5bad908f1be",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_allocation_static_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "d4310821e36f187eda9cd399372c5f35bf306b28883c1b2b31ec4b9958b03271",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_allocation_static_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "7b150ba8b1b4f85221a5e77d4a99d932c820bd03f16d8755788f5b1e723fef54",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_allocation_static_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "abf8eb3f08a7f9df66985851803f4bd0b45c660faf6b0457e3cd012881d26014",
+    "bytes": 9239
+  },
+  "research/campaign_runs/asset_allocation_static_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "64310eb9c3e5e1900b274a2e976927eb711397f42c4042f87e0a7590536cd648",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed123_64/checkpoint_32/manifest.json": {
+    "sha256": "64ef272d9f746cd9c2ce1f9b6e255e87c8be8d28a937420a761189359f335ea7",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed123_64/checkpoint_32/numeric.pt": {
+    "sha256": "4f9651448d122248066d1cbddfd316615d2e267ded6847c8240264846b70a15a",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed123_64/checkpoint_32/policy.json": {
+    "sha256": "ce78008a6b2c22ad832653cc45535007b1e06b89d07666724934599ba7045405",
+    "bytes": 9274
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed123_64/checkpoint_32/training_state.pt": {
+    "sha256": "6c0a0d6329271be9bf5c8244c1bde54c1237e37080271a4d0912f60d5124ecb1",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed42_64/checkpoint_36/manifest.json": {
+    "sha256": "523116026204dd91157f29f0cdc0d3aee43b8078f2f11ef204256e1c5011e2f2",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed42_64/checkpoint_36/numeric.pt": {
+    "sha256": "5844596b5c6eabe5c28b95e23d9dcceff7c15d75f90691e3453ff07e27881c7d",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed42_64/checkpoint_36/policy.json": {
+    "sha256": "389e1cd926d013f4b2fd56921beae79df83191aa74df048c09f05568a5b4c5d8",
+    "bytes": 9272
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed42_64/checkpoint_36/training_state.pt": {
+    "sha256": "86d001e7fa9cd4f3da41cdda64e4197f6c009adcc0a45b9c979b7a0873c900dc",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed456_64/checkpoint_36/manifest.json": {
+    "sha256": "5bee7bb5be83e72bc555433fc91b7a6e06b6111b6c5cc08c05f3f1edda9bae8c",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed456_64/checkpoint_36/numeric.pt": {
+    "sha256": "fc74118a00b9538db1ed2a3618275133f8258094add50f5b4e658e921ebec199",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed456_64/checkpoint_36/policy.json": {
+    "sha256": "b3215f2eb18a6476d8d4bbe68c336295af16d639564adac22cfc0d456b93afa7",
+    "bytes": 9274
+  },
+  "research/campaign_runs/asset_risk_reward_dynamic_seed456_64/checkpoint_36/training_state.pt": {
+    "sha256": "a2799eaa918bb65ca9d1a4e2de8c663225bcd7ada7b36fa75a71a9465d79e5a6",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed123_64/checkpoint_52/manifest.json": {
+    "sha256": "e7d91f5f35021023d90c64e05c0102de1863627a62a0cf596ed576db41bd77c1",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed123_64/checkpoint_52/numeric.pt": {
+    "sha256": "fc3e24a5108f418246244ff8c1776da428226cc710ce6de375b7c29c749a62ba",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed123_64/checkpoint_52/policy.json": {
+    "sha256": "b7ee7d4cde92bd72b679c2d7c1ec300fec42dd679908a92dda5ab834c87cbe7e",
+    "bytes": 9273
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed123_64/checkpoint_52/training_state.pt": {
+    "sha256": "959e4be8a7e182f5ed234b8b186f09b2da3625703e4ab22b8a869d3e10c2f1f2",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed42_64/checkpoint_52/manifest.json": {
+    "sha256": "151acf0725744a393dc97c399c6ecefb6afa53745fa1de2df09b2f11e10a1b6c",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed42_64/checkpoint_52/numeric.pt": {
+    "sha256": "85d6c98ad474f7387573246f9133d1c2103fe3be5a42213230d0ffce2c0a2794",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed42_64/checkpoint_52/policy.json": {
+    "sha256": "4432c05eceec6f07eaf5c4932b0c71336b01168d12c3ca4bb9081bcb185b03af",
+    "bytes": 9271
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed42_64/checkpoint_52/training_state.pt": {
+    "sha256": "8a5ca45a4b8e15f5b4d5af3f0262b11ed94dab21f46e18ecb8fcc45a6c0cecd0",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed456_64/checkpoint_52/manifest.json": {
+    "sha256": "483346e53dc1a5d31c36d6b7150d6dc58e841ef663aa42c5769a57e97b761abe",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed456_64/checkpoint_52/numeric.pt": {
+    "sha256": "11953527551e592f5e843b989903bdd110ccccbbc4f04e3dc7c0473b2df4be2a",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed456_64/checkpoint_52/policy.json": {
+    "sha256": "e5d9504013d9edb817852c0ab097f6b12852aba6fe4026ed84d97758f061ee66",
+    "bytes": 9273
+  },
+  "research/campaign_runs/asset_risk_reward_static_seed456_64/checkpoint_52/training_state.pt": {
+    "sha256": "474bd3790d88ba72ca1b63dc96eb6d0a76840c380e4df7ed700874b463d8425c",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed123_64/checkpoint_44/manifest.json": {
+    "sha256": "b7a16ee7630d7701523010f18c7114a55a3105633956c4f00c5ddb9ae4016de8",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed123_64/checkpoint_44/numeric.pt": {
+    "sha256": "178d4a5458ed68788c5637dee35271cec6784d81b4adbfe11d56f3d84b092fd2",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed123_64/checkpoint_44/policy.json": {
+    "sha256": "69acdfd7681d8fb682eebaf9227e63e14d6fe7683b790413a928d279b823c30c",
+    "bytes": 9270
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed123_64/checkpoint_44/training_state.pt": {
+    "sha256": "2a458e6a83b7a2f4737d9943b87d897983151e9ef2f659c8c0d0e895d361f7b5",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed42_64/checkpoint_44/manifest.json": {
+    "sha256": "1b6eda5ca7b3e26d210c96fb025a7b0e3b7623cf07b29a4916318753e41f530e",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed42_64/checkpoint_44/numeric.pt": {
+    "sha256": "f2a1392a33e8f7afad486e107338865509cd3622bf2715b7c16cec7b9fdd77d7",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed42_64/checkpoint_44/policy.json": {
+    "sha256": "350300e54015346e1d78886730a441e277cfe7b14670794b4a7dcaacfd5a7205",
+    "bytes": 9268
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed42_64/checkpoint_44/training_state.pt": {
+    "sha256": "9c17a2c1b9d28fec2bb6f94248a76d1cb643f6fcb349dc4f74f373ad7411ad5a",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed456_64/checkpoint_44/manifest.json": {
+    "sha256": "c1a1867d63284677cb6529fc10b85f575d1dbe635014b94ebe794b6c71999310",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed456_64/checkpoint_44/numeric.pt": {
+    "sha256": "5abe8f6cf59ea12c306a96517addbe13f9091d54b4552d43a99e1587cde2193e",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed456_64/checkpoint_44/policy.json": {
+    "sha256": "9aebef5f3da8bfd6004fec82a05c28397e39c29b8790e8336640167a4af30cf7",
+    "bytes": 9270
+  },
+  "research/campaign_runs/asset_robust_dynamic_seed456_64/checkpoint_44/training_state.pt": {
+    "sha256": "db638286cd623cd20a31790f6b5addacea558931bef0fd1f07c2d05cd1f85d11",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_static_seed123_64/checkpoint_60/manifest.json": {
+    "sha256": "dd844fffc58e7db6e21387f286abc55c7637f93fc3124b9310f6d5024cd65022",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_static_seed123_64/checkpoint_60/numeric.pt": {
+    "sha256": "8cf2b3daec263aa98dc3ffb71d0688ff6b818df986e3bbea6cd4b2a605cee107",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_static_seed123_64/checkpoint_60/policy.json": {
+    "sha256": "3cecf40f771c5b3252ba2b2c9810e8bf85614828dee534f1af26215adf2cd9e0",
+    "bytes": 9269
+  },
+  "research/campaign_runs/asset_robust_static_seed123_64/checkpoint_60/training_state.pt": {
+    "sha256": "9cd22fe4920585b20c9e5aca3750fb37833ab62cd5528eaff824bd71e02a022e",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_static_seed42_64/checkpoint_60/manifest.json": {
+    "sha256": "b6c8b83633f0e343156a8126e2375d5f447784aa90ed7883a18cb395c873d618",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_static_seed42_64/checkpoint_60/numeric.pt": {
+    "sha256": "f1cfb6b6a2feabf74206003aa1fb7c43038630bf86ecd20445a8e6f7e08ec73a",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_static_seed42_64/checkpoint_60/policy.json": {
+    "sha256": "b729a43f4361d9b68501240f6cc712d446dea36fc43a045035c52a9f85c36329",
+    "bytes": 9267
+  },
+  "research/campaign_runs/asset_robust_static_seed42_64/checkpoint_60/training_state.pt": {
+    "sha256": "a145b19e598e9173aa2763d2c7fcbc804f15a7be7672ad5ccf4f59ab4da7a80b",
+    "bytes": 69502
+  },
+  "research/campaign_runs/asset_robust_static_seed456_64/checkpoint_60/manifest.json": {
+    "sha256": "c1ad60383cf8e5a42b3445e2547fb10f16eb1f8757fd60460a313f333dfcb555",
+    "bytes": 198
+  },
+  "research/campaign_runs/asset_robust_static_seed456_64/checkpoint_60/numeric.pt": {
+    "sha256": "085b6e8739f72b82ee360ac4c3dfac0bd9354f180b5fbceadd3f6eb0336644b2",
+    "bytes": 31560
+  },
+  "research/campaign_runs/asset_robust_static_seed456_64/checkpoint_60/policy.json": {
+    "sha256": "a122f9d0fe852e16bf557e078e0ca4a6757763de91c1118c9ed72b651d177f84",
+    "bytes": 9269
+  },
+  "research/campaign_runs/asset_robust_static_seed456_64/checkpoint_60/training_state.pt": {
+    "sha256": "97723bd10dcd4b148e7da098d97089d94596eafcfd5cab42a64b846ef370753f",
+    "bytes": 69502
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "048d613325a0c024d4abb0185d551bc8c9b6048e966b9b9bc8f6cdbe9219d872",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "c8b891ebb2cbe35307801e8ad50064b2b3a09e887ac1fb473dacd73593ec0796",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "3a97a79f155f530f955df452d26e7066de976d743688da1c0402b7e08851d6da",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "aac28cd3ec111bf0a630372f65e2fce50859146f5ebd2140fecd339491148cc7",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "a7c9ce8a3d3149ea054908337474d7c74a0e227fd2947abfc6c7f844bb381a47",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "2719a1ef7658fe0fd397acd1e653e034949918feb6e5204d74302953a01aad63",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "4513d3489d2d2b96cb8afef9c1104bd362726008b85d0f95c5795ef9e4ce974a",
+    "bytes": 9623
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "83a3491e415482ac5f69b278b5fd43c0bf8e0bd819c7e43ae2951ed03c209ebc",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "ee7cef4335f575264f6a2af4d76bca40cf87be4f66768cded0be0ba87c763afe",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "712cffb629ca80779c80bb5d82225d2b29d9cdfc91b3c6a5d4c4ecd7ea5afb7b",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "d92ee388059f546e164f93e662ada000e0267af32427e5df889ff8b7def358e2",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2022_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "d43a28da4c367114e6e5401f2be56288b6038da949a5d758741f4de5faa80b7f",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed123_64/checkpoint_0/manifest.json": {
+    "sha256": "4ac5c0fc92aad9d3b79f4997d8d6a21184c222eaf68347713ffeace717909742",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed123_64/checkpoint_0/numeric.pt": {
+    "sha256": "e9793c3a1deaf4e17f8fea359e1a8cf65994b50eec516cddef7ed66ae8870137",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed123_64/checkpoint_0/policy.json": {
+    "sha256": "29883d524e2215ddbc0c5ae3a76893c28d6fb263a05c42849a2ad288ffe34dfc",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed123_64/checkpoint_0/training_state.pt": {
+    "sha256": "f7897b7988c4118b557e5a457d81aa4a9daa2ffee16e250bb122f3d84f06e2ba",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed42_64/checkpoint_0/manifest.json": {
+    "sha256": "9471adee1c8031db68551529d908a8cb36c232659438fb78e9c0046e8d0d616c",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed42_64/checkpoint_0/numeric.pt": {
+    "sha256": "8a9fa0ec124887cc3b6a253cf81a8996e46760fe42ff4a36ae957ccbd6803f77",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed42_64/checkpoint_0/policy.json": {
+    "sha256": "4846847311d797e0dc7b22e106cc577375d220213c8f737098538fda7b207d1d",
+    "bytes": 9623
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed42_64/checkpoint_0/training_state.pt": {
+    "sha256": "a73c8bb8bf3cfb7abc11a1a70182be43e2875507662e2eb017739a0dbb8f1e04",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed456_64/checkpoint_0/manifest.json": {
+    "sha256": "068699ad4ee931c1d02b426702b9c29547a8ab3c179eb34050f12567d3bf65b7",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed456_64/checkpoint_0/numeric.pt": {
+    "sha256": "03ac6f6dd75332826e85c4ccc8fb9eb19947c5d359c8b99c1968734d3c3d3905",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed456_64/checkpoint_0/policy.json": {
+    "sha256": "bcbaf4f2077e087a7e0931420596fdefbcbd15c8102002310973596b67c3987f",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2023_seed456_64/checkpoint_0/training_state.pt": {
+    "sha256": "73a91bac20ea64993e50ca6e5f95a6c9a774566c14046f7f52b315cedc5bc94d",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "ae6f43a8de2213b0219bc9789dae825a3022667c4d80474955f9d5011b053227",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "0b56941a76d3db5ed1e629ae167985e46a95202eeaa4dbcc840fc1ce9ad304ee",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "c54515e9bccfaa473c371cf20f1324de1ddcd2c0ee558e2bdd875a2ad0cd9cc8",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "4167c442d660e761300a4e2032bd3f56e68cb7cdc0f29bfacd61618fe9722fab",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "3f120d13553f79cbcce1d8e9a4e383745252b1e7c1e70ec1880fb4eedc5cf540",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "ce6cd76d985f1b427019382bdf2b35940d81cea209e0e459aa595e156b37e3d1",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "bee8e2a2ef1cc3c5fbfaacdbd57a35d48007c08fefac1706bca77122ecb3a6b5",
+    "bytes": 9623
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "ae400409d115f282d3864a7bcdd30173a3aa89399425e5cdfd529055d876cc3b",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "079193a56b9b72da85f6d4648c0ca15943ef092658f8bbc556f12ae9c2e904b3",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "6c6ca4e390bb264efbf9c2fb759f2c6aebe46852f7a1eb3db64fd2e8bf917026",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "832f43d523c8b52d6d8d724843f52cb24658c9b0071e4cbb143257a24dcf6f62",
+    "bytes": 9625
+  },
+  "research/campaign_runs/multiasset_annual_dynamic_2024_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "ccafa6ee8c7e4bae70e4603648fb8cb72e693586ad0e3a3b3e762196aacd6412",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "a561a4f0bee00fd9e454cd5c75814a9810e125cfca520f2ecc9cac1bc1e5b630",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "5c8d2c49a57a92cb1ce03251a6d28693c68e32f7885079cac2a5413d06548dc0",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "48e6af28a020f8cae6b65b7ee7e6dd85a453d0e7f90ddf6e91ad68276c307e95",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "f82ac8607cc9d7a65b4d37537a5812cfeab69a672482a7fc77961285baebf4b9",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "6bfc8be2db5e74bd1d920fd9e71dcfd12f03650f65b281a3b9bea4530efbad28",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "527e918923d31e484ea3eb7687799fbfb18e1976eb10d41fdf03c37dce892f72",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "ffea092c2403f5564f8b02a2a8f3ea3e9b13dfc37da3cd1d3d62712e8e423c04",
+    "bytes": 9622
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "26ff4a3e134ee60c57b8d29f1a3357363cd25c7960c552470aa1499e0b775cb6",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "777cc30d773e5fdd92a88aed8a9666d0f7aa61a8bca545c3bdcf0f196e1f15e9",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "ce68900f22b36a31c255b645bdd916b1414306fca73df97449071bb1811d758d",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "cba207cdba32f514ca0e0bd0119f77622e0615b74ab676244ec8a4e7f5241f45",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2022_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "baf82907912713127bcc67e83610dd4e2de2c1de3660c76a8f5e8f45f234d0c5",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed123_64/checkpoint_0/manifest.json": {
+    "sha256": "d8ad8a7b50265f959387e75039854a893ced79a950e023f31b2e2e90dbbf0aad",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed123_64/checkpoint_0/numeric.pt": {
+    "sha256": "e9793c3a1deaf4e17f8fea359e1a8cf65994b50eec516cddef7ed66ae8870137",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed123_64/checkpoint_0/policy.json": {
+    "sha256": "c922f01d829b58a5b6ceeb64835b2a51deb036e205ff21b77a2f95c3bd4376b6",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed123_64/checkpoint_0/training_state.pt": {
+    "sha256": "f7897b7988c4118b557e5a457d81aa4a9daa2ffee16e250bb122f3d84f06e2ba",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed42_64/checkpoint_0/manifest.json": {
+    "sha256": "92536b3681d6f97b392580bc73f562aca9fc555b899af15e319bb8f261f0d2e4",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed42_64/checkpoint_0/numeric.pt": {
+    "sha256": "8a9fa0ec124887cc3b6a253cf81a8996e46760fe42ff4a36ae957ccbd6803f77",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed42_64/checkpoint_0/policy.json": {
+    "sha256": "107d75136d617d2f3a6c513e126c8721023973eab266c1ddbdfbdba75cd97729",
+    "bytes": 9622
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed42_64/checkpoint_0/training_state.pt": {
+    "sha256": "a73c8bb8bf3cfb7abc11a1a70182be43e2875507662e2eb017739a0dbb8f1e04",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed456_64/checkpoint_0/manifest.json": {
+    "sha256": "37b98049aec0f189c6e6309d3366dd0f50401c2380763db3efa1c53451f01ba9",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed456_64/checkpoint_0/numeric.pt": {
+    "sha256": "03ac6f6dd75332826e85c4ccc8fb9eb19947c5d359c8b99c1968734d3c3d3905",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed456_64/checkpoint_0/policy.json": {
+    "sha256": "d6eb1cd63853dfa5eb99c1f29986d2a219dca06e7f8ae7b2d68f9addec56a2f5",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2023_seed456_64/checkpoint_0/training_state.pt": {
+    "sha256": "73a91bac20ea64993e50ca6e5f95a6c9a774566c14046f7f52b315cedc5bc94d",
+    "bytes": 6591
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "f9c5c464d487f3409b50d00edbe28ea847938f9502b6584395e20d9896099e2e",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "37a9150bd70044114cf9f9a23d991ca041fec6698ae68ddaf3d8f82c3f831860",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "c3fab4fc6687038ec8ab4343c146b09731fb3b8e73d1849c30d04575cedaca2e",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "8db20601e9512e6a2582d1bec43914f5e41b7cd07f070f38dc2b1ef43138671e",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "e7516a88bbd86c409bdbd622bf426f5fa03ce8427f546ece4320c77d14f87624",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "79199300f7f7264ebccf0c8c7b9d46c6c76a0bc80430dea23dfb2f68ba82a2b1",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "c241f35c90eb8d91c4080bec8a8c84f5490ebf8534e84052ca1805c8e411ceeb",
+    "bytes": 9622
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "3709be4bba7fff6fa45ebe7a023388442074abce26bff5241b27f9fe17856f68",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "2ad775b28fd337834289bf5f953d2637d296df21435d719d603ce31feb1c2279",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "2544ae9b8b0a07f65f367aa7d7c8a03ef907ad477d45616b8b18ca68b238e11c",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "38d6ed3514cb491f0eb0a80eac1848b6e0dbc7f69123ec1ee6f757343a6a629e",
+    "bytes": 9624
+  },
+  "research/campaign_runs/multiasset_annual_static_2024_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "632521aa38486292bc8949cb54063565598dff207804211e31bff5e9ac5c5ffa",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "c739b76d2aff32b1416742a1b08395deb10dc96ea748b9f50d10135ec3c93ace",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/manifest.json": {
+    "sha256": "6a0e478db5a28db6345196ed48ab757b8013051246d60516f3cab001c5a1ce5e",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/policy.json": {
+    "sha256": "fcb8fadbf41e77e1d3cdc412aeb5c554e0f886fc23d87abb25096d7a7e5d3e29",
+    "bytes": 9689
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed123_16/checkpoint_16/training_state.pt": {
+    "sha256": "b57af2780886737899acde560c504938361b82fd1e6ff8a891ebcd62ebe0cb4e",
+    "bytes": 54674449
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "dcd88c2a92c4b77d7c0235678fde2410a361be75352bc06c523989865127a42c",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/manifest.json": {
+    "sha256": "286587197f59b76febabb6777efdcdf60746c57a1397e15be970cbccbdf5aef3",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/policy.json": {
+    "sha256": "f49909990caa7225233a74b5304c17ef6cc68c0b0198d71addd4f1faf432e7a1",
+    "bytes": 9687
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed42_16/checkpoint_16/training_state.pt": {
+    "sha256": "ee7f538146470e69ffc13151990cd7418d4741a4077101d7ec4b35717ed3ab49",
+    "bytes": 54674449
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "a21d040ecd2252721dbd6a0a286d942b56704e75025a794d10d3579130d911ac",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/manifest.json": {
+    "sha256": "0cd527b9533d8be3a2f7dae493c08cd3a2946ecd2a44cadb17ea02c91940f7cb",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/policy.json": {
+    "sha256": "b7d42d8e442a9f83955e73a5343aacb6a165551452639c81efa2163e0e18a017",
+    "bytes": 9689
+  },
+  "research/campaign_runs/multiasset_dynamic_native_seed456_16/checkpoint_16/training_state.pt": {
+    "sha256": "3e4a0e300ae50e9230949b46dfb2a6663b11ee8e832506cc056038d81609b726",
+    "bytes": 54674449
+  },
+  "research/campaign_runs/multiasset_dynamic_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "1a58bb0feb98e14d85bdb78eba4259ee9ae5d6d538c926fc2ffe3139eeae1876",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_dynamic_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "68c86dc2f72c2dc3a1de510e2ad1475647e44fa8ab8618eb30bb986af035a296",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_dynamic_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "1e32279cb34de79540f118a6518a6b7c30c743bbae3768aa9bda5cd8ed51ced5",
+    "bytes": 9222
+  },
+  "research/campaign_runs/multiasset_dynamic_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "b0c9785249c361f45d7c46b7e9785ba87e91bebc6729c57374da0b382fbbdd04",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_dynamic_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "f0aa401676b8c8333897addd9f7de6d0e8ec92161214c2243c895f7d0af02da4",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_dynamic_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "41f6c3a831990625b2789a8ef1410c97aeda4f36db9a279f4c365d8dd826b0d3",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_dynamic_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "37b858bdedaff7953a3ee1327a6255abe435599afc019d17a59a20be664eb281",
+    "bytes": 9220
+  },
+  "research/campaign_runs/multiasset_dynamic_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "a8a35c338e9e21d091c83a42324690516c774d02781883e7d8c8809102058754",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_dynamic_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "d8b0beffa07db493fa16a8dcb9b612e8f9e4531f05eeaa8fbebab4829e18e953",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_dynamic_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "774de793e900868f2987523055d213a8140e470e5568d5f24874676c9fa0e497",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_dynamic_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "dd2e59fdee133225d59d988d6bbb43513228318b4633048c394cf2fbf05ffa58",
+    "bytes": 9222
+  },
+  "research/campaign_runs/multiasset_dynamic_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "7143aba9bf1db0cfe424ebb61e9042e34fd08fe199f4c525f02d53a4b43d7877",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_native_seed123_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_native_seed123_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "b5062f85d2e8044a2b181f4bcae6b4e917bed0ca845d908b287c5ca9b9fc9ea2",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_native_seed123_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_native_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "7bf07d309775075739d6dce50d30ac703f70a826f85fb03a2e360412735c5b1b",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_native_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "b84d89152cd4021961fde1a67c1236e3aa361ad109e31d6219ee76f3037d7011",
+    "bytes": 8930
+  },
+  "research/campaign_runs/multiasset_native_seed42_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_native_seed42_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "4e4e3f6cef991e20fa34308cc3edaa1b8024f1a3d7614d5e779d0bf9ba2342a8",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_native_seed42_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_native_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "5ff3a61f7c68774a273ddeed130f6d38652a20e4ef78865d28a9b570fe53e073",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_native_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "bd7c5a1ced432e36f5c44827d222b2be2aa8708847f3131dd42d9af7473b0020",
+    "bytes": 8928
+  },
+  "research/campaign_runs/multiasset_native_seed456_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_native_seed456_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "d62ce00d13828134da93e6b8a8a4f98c6d50f6730e384e5e37a3dabe03b906aa",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_native_seed456_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_native_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "41ceb9f77b399eca8d0b463fa5c77c5b2b7f743075c3d9b7d377d5ff8f243c66",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_native_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "20c186ee4c858a7e2b7f567f833c2c526720aeb5b52cc17a4097e6bc7dc46643",
+    "bytes": 8930
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "614f46f4f6a8e6c865d6cdc8af903a58e1d26b82473d168028cce85dc0c01d1e",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/manifest.json": {
+    "sha256": "fd68561b5922daa70a4912bc53bf1f8cf7b8f860ce8d378c09850e8508946b0d",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/policy.json": {
+    "sha256": "cb71cb8aa43834e8213120fdcb3270e57ef78265e629cb9796d49f0a90036495",
+    "bytes": 9714
+  },
+  "research/campaign_runs/multiasset_readout_only_seed123_16/checkpoint_16/training_state.pt": {
+    "sha256": "302f5a97a14484bf1b1b358f94d0a35c5a7048f101e12e16ddd84697fb6d2eda",
+    "bytes": 19619153
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "95fce59d9f0e1353c355a32afe2390dc54ecb50f9f4a8bcea623be52aabd9374",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/manifest.json": {
+    "sha256": "36433bb6b6d3d5a7421e2efd2aca3994f7f9a2d406aecdc18b3484ccd420c035",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/policy.json": {
+    "sha256": "42833b8b1fb6a8124e17955c7b9450dbc9f15a1b39e1dc8ae8a69e08836a1714",
+    "bytes": 9712
+  },
+  "research/campaign_runs/multiasset_readout_only_seed42_16/checkpoint_16/training_state.pt": {
+    "sha256": "52e2b6b03e360a54f0e15fded149a2a9c3f140675216c35578a3b54d7eb5998d",
+    "bytes": 19619153
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "e2dbbac9ff054fdd2f7e0e0d00737c823346bafb01c8568f18335d79dd40ac73",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/manifest.json": {
+    "sha256": "4ca193166127c3d106a0b3a7ea3bb2106d3f6a612fe76ddaeba73201c5006e95",
+    "bytes": 450
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/policy.json": {
+    "sha256": "6b058dd49df45d0c1a048b193e20d2b6c57dcccfd42e9ab71ab971c7a26aea75",
+    "bytes": 9714
+  },
+  "research/campaign_runs/multiasset_readout_only_seed456_16/checkpoint_16/training_state.pt": {
+    "sha256": "e4bd3deacf40c35066496a693e7560166a136826d7997ceaeecfd07402a30f1e",
+    "bytes": 19619153
+  },
+  "research/campaign_runs/multiasset_static_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "26739630c7e2a66c85fec8c4e6916251b3088765ca7de8b9f2044635dfdf51ea",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_static_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "7c9b11384a6d62a2f0ec6335987d421d4d3c35700446ed3c77175c0cf59407d0",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_static_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "ed468e1bc1379f41cb7eed2aa548d63b180d09c85fde9e4652864f57bcdab281",
+    "bytes": 9221
+  },
+  "research/campaign_runs/multiasset_static_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "1fbfe1aad3d6b7f783a9b41b322ceffca89a61f743494e711d2b1d19c34a8b57",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_static_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "ae18704a972da4e79de307f11bb87c51c615557531de4797e4f2d727f01fbe30",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_static_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "5422c3402d291e87182b686550540e15ab0fc28dfb8dadb7e93b77dd3d748b86",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_static_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "87b5132d77446d9c663ca289bfdd4d2121935e2a090ee99043d53c3b1c361c92",
+    "bytes": 9219
+  },
+  "research/campaign_runs/multiasset_static_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "2d4d9673e9717c2716248ec1bd65ad03875efa4de903ca34dd83cb0e672db299",
+    "bytes": 60798
+  },
+  "research/campaign_runs/multiasset_static_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "6600df37c4a3ae24a7600f07182eb534492bc3539ae260848d629c5c1e03adc3",
+    "bytes": 198
+  },
+  "research/campaign_runs/multiasset_static_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "2b198e1f48792612ac0488c66d85b00bb9ac4c5efca7bf0db5b822e719bfc67e",
+    "bytes": 27208
+  },
+  "research/campaign_runs/multiasset_static_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "6fffbfbb9059cad7941d1ef74b9486b13949f44afc3d89c9b1621d3d68e2f363",
+    "bytes": 9221
+  },
+  "research/campaign_runs/multiasset_static_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "2cda3531105e940ab5f49c35a7798c9c835fa17f2af230014e43a10947ea5f2e",
+    "bytes": 60798
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed123_64/checkpoint_0/manifest.json": {
+    "sha256": "31c029642fa69c85cee5ac96b29978f694925a8db11193c505591307164a3d4b",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed123_64/checkpoint_0/numeric.pt": {
+    "sha256": "e9793c3a1deaf4e17f8fea359e1a8cf65994b50eec516cddef7ed66ae8870137",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed123_64/checkpoint_0/policy.json": {
+    "sha256": "63e7d0a50b4a8025dc037f1a3176cf168b3d236930cef6a090fcaca0d52ea849",
+    "bytes": 10110
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed123_64/checkpoint_0/training_state.pt": {
+    "sha256": "f7897b7988c4118b557e5a457d81aa4a9daa2ffee16e250bb122f3d84f06e2ba",
+    "bytes": 6591
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed42_64/checkpoint_0/manifest.json": {
+    "sha256": "215b1e4b19e105a5b6ef732124305e09054215d20a4239bf0417e826b3adeb7d",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed42_64/checkpoint_0/numeric.pt": {
+    "sha256": "8a9fa0ec124887cc3b6a253cf81a8996e46760fe42ff4a36ae957ccbd6803f77",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed42_64/checkpoint_0/policy.json": {
+    "sha256": "5a752360ea00f46831201d1fa3042d2cf3c0ec44f5ff30f7486daebb0906150a",
+    "bytes": 10108
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed42_64/checkpoint_0/training_state.pt": {
+    "sha256": "a73c8bb8bf3cfb7abc11a1a70182be43e2875507662e2eb017739a0dbb8f1e04",
+    "bytes": 6591
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed456_64/checkpoint_0/manifest.json": {
+    "sha256": "2b25e1d7ee4ea3f5fd0754f0785d4bd9b97c62fccff7f1fa6c9b068eea7a0850",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed456_64/checkpoint_0/numeric.pt": {
+    "sha256": "03ac6f6dd75332826e85c4ccc8fb9eb19947c5d359c8b99c1968734d3c3d3905",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed456_64/checkpoint_0/policy.json": {
+    "sha256": "5807b3dad755769b8fe6048529456de9f981398660d410c6356328dba5080b86",
+    "bytes": 10110
+  },
+  "research/campaign_runs/nifty_candidate_direct_seed456_64/checkpoint_0/training_state.pt": {
+    "sha256": "73a91bac20ea64993e50ca6e5f95a6c9a774566c14046f7f52b315cedc5bc94d",
+    "bytes": 6591
+  },
+  "research/campaign_runs/nifty_candidate_static_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "c5dd2648d28be31b91dcdcf118d267a5ae5b0e58db2dd8007bf3c51f08afb74c",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_static_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "8d082582b19e1c73b7037294452cb144602fbdf9d6edc8d4e38ee1af511b323d",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_static_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "7e9c88800185bf38c6f879001cefd14bdc821ca5678b536799fa7ff7a02dc7bc",
+    "bytes": 10109
+  },
+  "research/campaign_runs/nifty_candidate_static_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "ee1d48d962b4b499254f83a841746d51b5a0583d788760d0937816079b5af83f",
+    "bytes": 60798
+  },
+  "research/campaign_runs/nifty_candidate_static_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "b2028f99ec45757a063a79fc74008a9b7c3c8ba9edd3aa352440941df4887774",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_static_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "5d885f9843f6c0038dfe9d1dcb0634ef6186b80f15a9560c9e25e6a6b3e34bfd",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_static_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "7119c0875bddf2b159e3a9d5f56af02f336e78f03bac41651d34ce8fcb3ea62b",
+    "bytes": 10107
+  },
+  "research/campaign_runs/nifty_candidate_static_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "fe3c5ed549cabf18e7b9191aa982891ee948c0b9004f0a2ebf9468aae0ca25df",
+    "bytes": 60798
+  },
+  "research/campaign_runs/nifty_candidate_static_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "c88f9740a0a72f169362ba072d1b7b99daee7a855e9ebd07d76755a32951d7eb",
+    "bytes": 198
+  },
+  "research/campaign_runs/nifty_candidate_static_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "a1d00133ce1f93f7284c19c9fb26e8f5225667415791f963e7a04aa11fc06b99",
+    "bytes": 27208
+  },
+  "research/campaign_runs/nifty_candidate_static_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "ae1348ee34b1eeb6d1e438ead6c57ed72c30cd50aff07babf139c64aa784c670",
+    "bytes": 10109
+  },
+  "research/campaign_runs/nifty_candidate_static_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "817cd0a209b3e3690bc54c8bca4d2a64d522130e108f16353859ed1934a18492",
+    "bytes": 60798
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed123_64/checkpoint_44/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed123_64/checkpoint_44/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "e3d94dfbaa6df9af49f8fd08e3535b446000afbe49069e3b68e2584e2d1b6e94",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed123_64/checkpoint_44/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed123_64/checkpoint_44/manifest.json": {
+    "sha256": "a81831c9a8a094bb24eee70fae021e8684cea15630ffe90ec92228b3c561d034",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed123_64/checkpoint_44/policy.json": {
+    "sha256": "51f3abd14fc6de8d9413ae067ddc035e72c234dafd7ad2c29b367e4e9ca51e15",
+    "bytes": 9819
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed42_64/checkpoint_44/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed42_64/checkpoint_44/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "2657a97547a2a7c666cae279b850d62bd945261d4ad74686159895f3f2305609",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed42_64/checkpoint_44/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed42_64/checkpoint_44/manifest.json": {
+    "sha256": "11d2326a47ce4f58e4dcc62e22dc91de8ddbb4e6c2e80dbc8bb66321ea153433",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed42_64/checkpoint_44/policy.json": {
+    "sha256": "618433d6ca9f4eadc36a15835a7678c8bbad349a3305d9b1f9acda9aee0d9e41",
+    "bytes": 9817
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed456_64/checkpoint_44/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed456_64/checkpoint_44/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "c745f950b8105acb091f71f293bab9ffff573c336e85aa4890160fe2b7fd5be2",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed456_64/checkpoint_44/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed456_64/checkpoint_44/manifest.json": {
+    "sha256": "4e87ef88dd47a6e85e676d2e8fa6ad32be4be522cc000de8919f50abad0bac2a",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_reverse_seed456_64/checkpoint_44/policy.json": {
+    "sha256": "3bee70ee13788c4602fe5f745200af8ec9887d85eb4cb5d79cf16fa42cfa250b",
+    "bytes": 9819
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed123_64/checkpoint_48/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed123_64/checkpoint_48/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "3259e6423c09d84426325024b2944c830eff4e49f030ac1de410488071918256",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed123_64/checkpoint_48/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed123_64/checkpoint_48/manifest.json": {
+    "sha256": "c6a21cc5f41a8614cbc6a622623cd20c431147fc2178cd357cc79d0daf936a22",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed123_64/checkpoint_48/policy.json": {
+    "sha256": "3d0d6c7c3f08630c6f52ab846a284abcfabcf330a0c11ebb2e09b67875694633",
+    "bytes": 9817
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed42_64/checkpoint_48/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed42_64/checkpoint_48/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "23574199a0d1a102be88c7fadace3f55db1050fb7fc6ba6665db92d5a5c973bf",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed42_64/checkpoint_48/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed42_64/checkpoint_48/manifest.json": {
+    "sha256": "b98190ca73573c6f37b3ee7493483dcdfef25573fbd81b5df8eaff1f6f576305",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed42_64/checkpoint_48/policy.json": {
+    "sha256": "9a5f663c08997a0d78f73800621a627ef310e4e81bbbb2ceaa05b7040e9252de",
+    "bytes": 9815
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed456_64/checkpoint_48/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed456_64/checkpoint_48/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "d7473890d674dd579691acac7bcb42ca2f5b22db582537d3db366f725e5f0b0d",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed456_64/checkpoint_48/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed456_64/checkpoint_48/manifest.json": {
+    "sha256": "0a3fe2637458da92875f3019d4c4e2396eaec5ffda6e6ae065e20e88fc1c7e2e",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_labels_rotate_seed456_64/checkpoint_48/policy.json": {
+    "sha256": "59263f75fc209ac378d428c35d920967eeccb8582b1f92d01946cc5454b485f1",
+    "bytes": 9817
+  },
+  "research/campaign_runs/nifty_regime_native_seed123_64/checkpoint_24/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_regime_native_seed123_64/checkpoint_24/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "2cc3dde70e56a8f5ecaa31ed14e0364a77cee8d926d632bb7271f003b5fbddc2",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_regime_native_seed123_64/checkpoint_24/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_regime_native_seed123_64/checkpoint_24/manifest.json": {
+    "sha256": "81cbb1eca713f00e4cc4a7f64c8be49f7278c4f458804d95eef9b424510999eb",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_regime_native_seed123_64/checkpoint_24/policy.json": {
+    "sha256": "e9726819d409492137e573a9e8fac939844b789e01641fdc56a9c166c89ef854",
+    "bytes": 10256
+  },
+  "research/campaign_runs/nifty_regime_native_seed42_64/checkpoint_24/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_regime_native_seed42_64/checkpoint_24/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "9dba42554db3ffe41fbb1bce287b9927ea1d303fdaa59e110118ede6784a8938",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_regime_native_seed42_64/checkpoint_24/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_regime_native_seed42_64/checkpoint_24/manifest.json": {
+    "sha256": "4cc6906fa14b8e801dfad076eee72ceb566c766c0b706bc84d3c614588e2ea10",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_regime_native_seed42_64/checkpoint_24/policy.json": {
+    "sha256": "01982693a2be35074dda61b014a4c160d8f041c87154ac3737b8729841cfd138",
+    "bytes": 10251
+  },
+  "research/campaign_runs/nifty_regime_native_seed456_64/checkpoint_24/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_regime_native_seed456_64/checkpoint_24/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "39b8222c3df7b7aa27fd1a421b0519d4559d9b05f2ec2bd72151435a1302db97",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_regime_native_seed456_64/checkpoint_24/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_regime_native_seed456_64/checkpoint_24/manifest.json": {
+    "sha256": "c1c82a9e9984be1dea4f8c7bd496799917fe677e3ab7f6a0c60e4d4ab2b5c81d",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_regime_native_seed456_64/checkpoint_24/policy.json": {
+    "sha256": "2da09a804b2b20c1244c1a3c2cda7161f99082ebcb0cbf439d83ce81deb5bf03",
+    "bytes": 10254
+  },
+  "research/campaign_runs/nifty_static_f1_seed123_64/checkpoint_40/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f1_seed123_64/checkpoint_40/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "a5f565397e043522a825c24d6d21047f573ab6b27fa5bf8a9e0915abf35c4706",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f1_seed123_64/checkpoint_40/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f1_seed123_64/checkpoint_40/manifest.json": {
+    "sha256": "3701f7fe4ab8a0569840247a9b47562a9b8bb76646d82399bd10ac62935e12db",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f1_seed123_64/checkpoint_40/policy.json": {
+    "sha256": "17cc9915429abd3db428b4c69f3b9e2e16e583c65f08920026dfaaef4afae070",
+    "bytes": 10019
+  },
+  "research/campaign_runs/nifty_static_f1_seed42_64/checkpoint_40/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f1_seed42_64/checkpoint_40/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "b5186b0bb7c9bee4027bb9492a814361329e25cce223cf8d2cce3b370a8ffc4c",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f1_seed42_64/checkpoint_40/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f1_seed42_64/checkpoint_40/manifest.json": {
+    "sha256": "d2a37bd59568afa715292c3401a3df8df851554d56d4a4121ed834f0372069cb",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f1_seed42_64/checkpoint_40/policy.json": {
+    "sha256": "d08c5d357412768df5b8d931445fc647eaa30a20f5063b90bd6bd1b5d2e8c564",
+    "bytes": 10017
+  },
+  "research/campaign_runs/nifty_static_f1_seed456_64/checkpoint_40/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f1_seed456_64/checkpoint_40/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "cb59b1abb0aa17b3eed9001d77962ceda024142fe38e5c719b3aeebb96e476ec",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f1_seed456_64/checkpoint_40/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f1_seed456_64/checkpoint_40/manifest.json": {
+    "sha256": "75d407fb3879caee450c653194d4ae9f326483d169bdbd9fec72f89aaee24576",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f1_seed456_64/checkpoint_40/policy.json": {
+    "sha256": "242be26c5a1c4e51ab31c8f5bcc3122dc6c0ffb1294ddd62c8ae214e66eca7cd",
+    "bytes": 10019
+  },
+  "research/campaign_runs/nifty_static_f2_seed123_64/checkpoint_20/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f2_seed123_64/checkpoint_20/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "5dd90658ded91db1127f46fcc70a978bdf522577828137b60f87c1ce234f48fe",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f2_seed123_64/checkpoint_20/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f2_seed123_64/checkpoint_20/manifest.json": {
+    "sha256": "c28f67e4dacf0fd56b5c03130570be9cfe5044e695b5a9705c945a23a96dac9c",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f2_seed123_64/checkpoint_20/policy.json": {
+    "sha256": "b9345cac650ea130b77b1e507e5add401dd7545987c75ab448aeaf4e37159f7a",
+    "bytes": 10019
+  },
+  "research/campaign_runs/nifty_static_f2_seed42_64/checkpoint_20/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f2_seed42_64/checkpoint_20/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "7bb282cb2713c15701d500716aecd9fe3c6ac6f8604ed9ae01f532300a5ef7a9",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f2_seed42_64/checkpoint_20/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f2_seed42_64/checkpoint_20/manifest.json": {
+    "sha256": "83f02ece7e5d786d6706c531d22a8e8a3dd54bb9183b3a922a36d28e26cf08ee",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f2_seed42_64/checkpoint_20/policy.json": {
+    "sha256": "0801c37d7de097f6670a8447882e3b459946bf06815175c3106ac2172e1a961a",
+    "bytes": 10017
+  },
+  "research/campaign_runs/nifty_static_f2_seed456_64/checkpoint_20/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_f2_seed456_64/checkpoint_20/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "572ab1dd706fd2f84057fbf63fa83baedd891b2bcd605f7d4efcc82fe1e2f4e2",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_f2_seed456_64/checkpoint_20/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_f2_seed456_64/checkpoint_20/manifest.json": {
+    "sha256": "f02c6b679d593af1944ad5839b4b2bc098260d9e4f6009a805636c1656428e90",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_f2_seed456_64/checkpoint_20/policy.json": {
+    "sha256": "0239603cf97aaf20baa5ddf525c057b7b97bfc30f4a9d4070d598deaf9805a64",
+    "bytes": 10019
+  },
+  "research/campaign_runs/nifty_static_native_seed123_64/checkpoint_40/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_native_seed123_64/checkpoint_40/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "285e05c18693cfd8a8ad8922566317448fa18046086bf7b6e8113f7f13dd560c",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_native_seed123_64/checkpoint_40/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_native_seed123_64/checkpoint_40/manifest.json": {
+    "sha256": "cd4519b7aa8e9b9a4a38d7a4757318b60c7b6a79a7e45958e3a4e47f2d8c25b9",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_native_seed123_64/checkpoint_40/policy.json": {
+    "sha256": "e4cfc762335f0754b98f788b8d4d2863acf5a67612eedb138f1b2f684cfd6f72",
+    "bytes": 9815
+  },
+  "research/campaign_runs/nifty_static_native_seed42_64/checkpoint_44/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_native_seed42_64/checkpoint_44/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_native_seed42_64/checkpoint_44/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_native_seed42_64/checkpoint_44/manifest.json": {
+    "sha256": "1b0e2f9ea7701956978b717f831997d44796534afa2dc67e5abb8be7960e63d5",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_native_seed42_64/checkpoint_44/policy.json": {
+    "sha256": "00ad39d37a669c15f73a82e364b07e9f0bddbefd9379a62732aca0050806fa88",
+    "bytes": 9813
+  },
+  "research/campaign_runs/nifty_static_native_seed456_64/checkpoint_44/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_static_native_seed456_64/checkpoint_44/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "9e25b04936a092a58b08c904b9a0512eaa747efb7edcf8d1e3df10808ffaf83c",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_static_native_seed456_64/checkpoint_44/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_static_native_seed456_64/checkpoint_44/manifest.json": {
+    "sha256": "b5895e758935d5f54a8619a30f94cd719c0213dabaa5602e21c6dc02e0fda20f",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_static_native_seed456_64/checkpoint_44/policy.json": {
+    "sha256": "90d8aa7db58b1efefdd79b67ce6589f0f2c382c14fcefac548c5803f255db1c8",
+    "bytes": 9815
+  },
+  "research/campaign_runs/nifty_warmup_native_seed123_64/checkpoint_8/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_warmup_native_seed123_64/checkpoint_8/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "5f4103e3b7c5bd6a4fedd97ca207538cb9be5ac9108882819ea2c7941f0e9b73",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_warmup_native_seed123_64/checkpoint_8/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_warmup_native_seed123_64/checkpoint_8/manifest.json": {
+    "sha256": "2a368f03350b4b70fdff7dcd9645640d016d8409cbb0f9add690a1dc40e02e1a",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_warmup_native_seed123_64/checkpoint_8/policy.json": {
+    "sha256": "49b1a4427f5992ae512662ed96b478d370755da6b8ee0279c8fb6317ba8c4f06",
+    "bytes": 9943
+  },
+  "research/campaign_runs/nifty_warmup_native_seed42_64/checkpoint_4/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_warmup_native_seed42_64/checkpoint_4/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "bacb6a2c3eddf3f57e1e0c5fa0fa6970e594fdbe93f14527a9019d71dd7ae6ab",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_warmup_native_seed42_64/checkpoint_4/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_warmup_native_seed42_64/checkpoint_4/manifest.json": {
+    "sha256": "18b7e803ea8ed54cadc605f452dfc542fbb5483ccaa7810203a5d94e6752a2fc",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_warmup_native_seed42_64/checkpoint_4/policy.json": {
+    "sha256": "b358eaafa1c0a0023ef5ef0db448924045c1a2428dfa976b6b872944fa697073",
+    "bytes": 9941
+  },
+  "research/campaign_runs/nifty_warmup_native_seed456_64/checkpoint_4/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/nifty_warmup_native_seed456_64/checkpoint_4/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "3bdc7238cf8daa69b06f7a5a80ee7f3e0974bc63eebff38dddc919c881072ef1",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/nifty_warmup_native_seed456_64/checkpoint_4/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/nifty_warmup_native_seed456_64/checkpoint_4/manifest.json": {
+    "sha256": "43694910f3db4a7ed73e7efb0f4da2f1396fec4baae925d994189bc29c660723",
+    "bytes": 450
+  },
+  "research/campaign_runs/nifty_warmup_native_seed456_64/checkpoint_4/policy.json": {
+    "sha256": "0cb6232bf50695c7340276ba6c58cbdcea3c17a967aafd348607cda21077d190",
+    "bytes": 9943
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "c4e1e6d5908d212e5d9ca4d39518fa4c9464c6b56dbfe66213724de921aa9c3d",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "73c244733d6a26713ed8379ec2e5fd2e1dd973ee4289aef831fa7e8728f5b19a",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "293ac1f29dcd89b4c3e665e7b37a32ec5a5542acec5594508dcb2e7067722d68",
+    "bytes": 9249
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "a8a4a8bf48c81e005b6d3921482db45815555deb2fd8a391f02fbed9ba35b815",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "88191edb6450d3f4512760297ff5706d902dc2d4720fbfd5980cb209002271e0",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "57b45accfc730d3549f320ba52f77025aa5a38fcd04759098de184bc66a8a8e6",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "8b5a83cfb2b7d914ada7c9784179b1acc54bedd1803ec429bfc97b6084472950",
+    "bytes": 9247
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "e3a17286b64bdb7f8c9e2b81812ed3c8d370031ab57f3f550fb7609b189b00c1",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "ce6ac41c58dd001c6674bd1277546e8dc508d69927588f9f250e5f5d02aa0348",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "0a42e641bb13bb96ae242f6dcad5d2b53d98c948f9443a6b4b357bc78baa0219",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "252c8d0c7e944999f038285520b9a6042e7495c6affcb693dd1df5e749303d94",
+    "bytes": 9249
+  },
+  "research/campaign_runs/risk_anchor_dynamic_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "58c6f9c7db4fbd4b8d7acf05f223095dd295682884bcefee199740c2f985097a",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_anchor_static_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "d4460ad0f4645d601c898b6ed888a8289392204c94fb8e112240bf6982d5b81a",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_static_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "128ca119ee3e04157cbb9bf8cd1e179c895b095e1096435a139874d8c7a4df70",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_static_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "e94d1b7826a029bc5245d51c3664ae44a59b372e372c0c4bfc98f1a25209a0be",
+    "bytes": 9248
+  },
+  "research/campaign_runs/risk_anchor_static_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "bfb2aae07fd0d7c56fefd1658976f9295fd14bb2d42fd19ce3d53e7094e1383a",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_anchor_static_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "c05fd0659d3459572fc29e023777df4552096fa3fc191ca7df0fd61d2407e22f",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_static_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "581a8c6e6c0d98a0fd51757e23bcb4bff29d8033ad8774dde7d6f90e39bc7f03",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_static_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "5d0e13974e02d7f5a3186a450b1693cae6f6df03e1b762d743b6d29eade6fc95",
+    "bytes": 9246
+  },
+  "research/campaign_runs/risk_anchor_static_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "de068ef26f0004c7ffb105c915bbe689b3998dfb83f0fabec294ad4fb5b405d2",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_anchor_static_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "be0175f8a68aac234b84b9fe865dec1814f98385c61942985b4e839e141eb2af",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_anchor_static_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "bb0d5beab3fe08a0fc6c921fbd9b61873540f717baba8625d8300146a2e2db73",
+    "bytes": 32840
+  },
+  "research/campaign_runs/risk_anchor_static_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "c9bf3fd541aa014c93674674ad0ccde24c1a81107b062875efa307823ea1a2cd",
+    "bytes": 9248
+  },
+  "research/campaign_runs/risk_anchor_static_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "733e6e456debd18b0663a8e48ca9305356c961d4299ae54a3a1cf295540676e3",
+    "bytes": 72062
+  },
+  "research/campaign_runs/risk_labels_reverse_seed123_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_reverse_seed123_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "7716757d74a92044cb3e7f3bd74edb1337d267afaa092e1afb2fff88e5086120",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_reverse_seed123_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_reverse_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "2b586834b8c8ccadb9ed13cf8affca94fadfa61f3046850abf7c41151b88174e",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_reverse_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "8cd51d22abd16e7479cb23cc9611c0d59bbe152170271ec808c14bbbc627ba91",
+    "bytes": 9044
+  },
+  "research/campaign_runs/risk_labels_reverse_seed42_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_reverse_seed42_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "9a2aad29c57d526165cd370c4edec1af199936841ed36687a043b88a94b49248",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_reverse_seed42_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_reverse_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "d490f637db4132b6feb0d86a36222fbda738268143df631812c3e465983edc63",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_reverse_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "f7d8ce9294ba24cd88fbdc7b0f8eed4a600f65ab82c8448ab968204064488dda",
+    "bytes": 9042
+  },
+  "research/campaign_runs/risk_labels_reverse_seed456_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_reverse_seed456_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "085a64c91d6a70740ab8d19ab5eb621ef313ce665173e85e4de0eb1272bb94fc",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_reverse_seed456_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_reverse_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "734329157cc8bcbe6d9ce052011f92aaa0641911aa4a9cb47f1f056aed659bb0",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_reverse_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "282d870d59825fe52b4c3258028930d98a2cc2251de23ad3e48da00ace34ee80",
+    "bytes": 9044
+  },
+  "research/campaign_runs/risk_labels_rotate_seed123_64/checkpoint_60/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_rotate_seed123_64/checkpoint_60/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "607888c46c2682d57712fae656c09f36b2c75192f78232d2f1ee74d8bc50b89d",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_rotate_seed123_64/checkpoint_60/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_rotate_seed123_64/checkpoint_60/manifest.json": {
+    "sha256": "93e8f80a82a1456d6390857fc4b62a28a8b3b2828a67329a9ba77d1be2e866ca",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_rotate_seed123_64/checkpoint_60/policy.json": {
+    "sha256": "e23c7f009a9af4158e0c555c7afec6a61eb0ee2b77364f17ee264f02e7e66578",
+    "bytes": 9042
+  },
+  "research/campaign_runs/risk_labels_rotate_seed42_64/checkpoint_60/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_rotate_seed42_64/checkpoint_60/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "0690251076c537b1ec8d329201b22999eb269d4d940a27045fd8bd5909e7a98c",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_rotate_seed42_64/checkpoint_60/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_rotate_seed42_64/checkpoint_60/manifest.json": {
+    "sha256": "fb188b9eba107f0a7cc0bb03ad73b4b732153ed90e2864a204b173d64df90f7f",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_rotate_seed42_64/checkpoint_60/policy.json": {
+    "sha256": "fd09b7762508b9e2f5960e17e3f7db6240700b43f8d53f831f3c14aad13d8cfd",
+    "bytes": 9040
+  },
+  "research/campaign_runs/risk_labels_rotate_seed456_64/checkpoint_60/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_labels_rotate_seed456_64/checkpoint_60/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "d1151ae2c4606d395b38a84a81f301cda8b4bddd6a33ef2d84a83ab3f3a3ba1b",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_labels_rotate_seed456_64/checkpoint_60/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_labels_rotate_seed456_64/checkpoint_60/manifest.json": {
+    "sha256": "496aad9526544cb31924b7388ac8850401d08220bbb3b48b60d79a0e5737ebab",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_labels_rotate_seed456_64/checkpoint_60/policy.json": {
+    "sha256": "09fce491cdc2e1fc846a2406f92f7da51045097421c7b97eb1e46859fb5fbca9",
+    "bytes": 9042
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "fb7392167562f66570ba08990eb1479954bce2fa9265da088345d097f368dfb9",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "96e4b06c9cbb3986ad81b01e0ab4a59c649cd274864298441878340ebb01f84d",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "2a52aa86aaeb709f67d950b15e1004b211f1a8c340f56e170fc86e6b23bab627",
+    "bytes": 9254
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "e8499b512041e31d031acc5e22aeeafda9a5ebf91bbea173157b504eaf96c6c8",
+    "bytes": 64382
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "35123f4fbb43229a5c4e57dd3c1a1649ca994ce6fa546243c4339cc11dcb14ad",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "560d3a6c85c90c884854178097ef2a1c278ce1609525083e543e4ed76923fe34",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "6b93f550948218a0eee3917d85bd584a45b0aa110d1438b415e4bd8e3d8a2751",
+    "bytes": 9252
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "4b58d034a3d8d5ebae8326603e329af58f907d7f98430a7c5f69e80708672654",
+    "bytes": 64382
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "bbf2c09053e1512098241968ebe5c5ca3ffa4ca06c8f2191a5d630f596422f13",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "a700bca4afc948fe44019138d6599543d35eaa5aeaffc5ad47f5620935ee28fc",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "4a7bd5a22da34a7882a273154923a0f3c6da36034ed7b88e9cf2a0e480f00200",
+    "bytes": 9254
+  },
+  "research/campaign_runs/risk_selector_dynamic_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "d555015b263dd10fdf244cb253eec8490673d0987148db0d83506205db9b229c",
+    "bytes": 64382
+  },
+  "research/campaign_runs/risk_selector_native_seed123_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_selector_native_seed123_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "bb0ebe0c5447ad2bea33809c12f51e479da3d3a4b5b2303e847e9377f09f2994",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_selector_native_seed123_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_selector_native_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "743cd987564b2eb514452e65b7d9b4277c704284fb0dc5e87c5a8226d6d5d688",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_selector_native_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "523fcc538aac00be795a7129e7df5055ec1ce66b0f36d0b47297d356743a24c1",
+    "bytes": 9042
+  },
+  "research/campaign_runs/risk_selector_native_seed42_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_selector_native_seed42_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "bcc3ed5d4670918a3ddad2d3a21f7343cde15df1d51562a02983029002489bac",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_selector_native_seed42_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_selector_native_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "7b324c465cfa5e257b946e16e97bdcf4d6a0081c44106562e0ef4c268ca22d3e",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_selector_native_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "9b6125379bd44a58ae54ad9dccb429101cc1ecb2c05e5b6b274e87bfb536b1b0",
+    "bytes": 9040
+  },
+  "research/campaign_runs/risk_selector_native_seed456_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/risk_selector_native_seed456_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "e23e54fdb5276398d446edb1c51aefd45c19da66def86218234e35e59404f289",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/risk_selector_native_seed456_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/risk_selector_native_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "77cc160cd91f6c5c2e8b10fbaeb86b81c99009dbad74b4aae7d031b083fdbf57",
+    "bytes": 450
+  },
+  "research/campaign_runs/risk_selector_native_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "e938832f654951660f1cb9e67bbc8add47233f1d314961fad90a8489331a0b4f",
+    "bytes": 9042
+  },
+  "research/campaign_runs/risk_selector_static_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "ef55c3f685cb7d73afb632a2a1dfdd620c4d7dd8be8877fdb2403ef23484893e",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_static_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "6dd110336164789834766c6cb8dfd09a3cc9ca53741f4b4dd6f15a4be50ba546",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_static_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "7008b73d601d4b1d0fa7ba4b9759d34ad74e685b8f39c0c5be055a54b407ce9d",
+    "bytes": 9253
+  },
+  "research/campaign_runs/risk_selector_static_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "1c3f82a69bd318bc183345bfb594ffa58c2ff7a80d85c18db41db2c1a494fe34",
+    "bytes": 64382
+  },
+  "research/campaign_runs/risk_selector_static_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "f3b82e44f93b3d039b5e49a0fe582b42907c6854d2811f2ad8b95cc84760d1b7",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_static_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "0d4fbc0972f37deecf8058b7aeded85f080dbc5d3edbba9a3154da8de767d9cc",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_static_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "4573f5647489552596391d3a6be99bd292868ef068a9bfc01c6d330c8dc108d1",
+    "bytes": 9251
+  },
+  "research/campaign_runs/risk_selector_static_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "4de43949e9c3c3ffbb6157344b9ef8c0c746623aff7fd11ab75c59608be29df1",
+    "bytes": 64382
+  },
+  "research/campaign_runs/risk_selector_static_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "20269614dc8198e4bf1ba56270496c2e4ee69084958ca012230436a725e76a5a",
+    "bytes": 198
+  },
+  "research/campaign_runs/risk_selector_static_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "5346539685ae695d94c361159463b93a41667bc84745e0736ddb8170184f201a",
+    "bytes": 29000
+  },
+  "research/campaign_runs/risk_selector_static_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "372728738d04973d3165112de8e3fef90e2f9ef98d0a3bd361c67c5bb1657196",
+    "bytes": 9253
+  },
+  "research/campaign_runs/risk_selector_static_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "0750b7fe0040b3139932bd1961056496dd083fd66114991d224edc3d0c313a90",
+    "bytes": 64382
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed123_256/checkpoint_0/manifest.json": {
+    "sha256": "4f7cf58467819dcb2acc02019102bc061a626a8ccd5b27a8c122128e97cf019e",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed123_256/checkpoint_0/numeric.pt": {
+    "sha256": "1f91f2e89ce436d9e101e7d7c495f8c970f031bf9598af5c29fdb6d0bd188fd8",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed123_256/checkpoint_0/policy.json": {
+    "sha256": "68736da428e8f759047d2d9386f948a7e0253d54caeece2484d5128d93eaea5e",
+    "bytes": 8875
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed123_256/checkpoint_0/training_state.pt": {
+    "sha256": "7dc809af6b814d21dc62f79eff3df887c2c3485d489c5ce52742dd7d86199509",
+    "bytes": 6719
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed42_256/checkpoint_0/manifest.json": {
+    "sha256": "fd1c311a1f4d74981ffc8a93692e7648831e722f3fcf7c5e214362ef9fa289ab",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed42_256/checkpoint_0/numeric.pt": {
+    "sha256": "c961bb638b3b9e6b40b29a6927bf359fae42ef1c3f5d1dab3e9806590db9a0ec",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed42_256/checkpoint_0/policy.json": {
+    "sha256": "09ae250e7744011964e3bb5f7db2ab285107d32bb2d8d0f9e882e33b5de76653",
+    "bytes": 8873
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed42_256/checkpoint_0/training_state.pt": {
+    "sha256": "5758ffbfa854e5dbdbc7c2e77f29a730f1fbb803a93ec79607308b8cac4acde9",
+    "bytes": 6719
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed456_256/checkpoint_0/manifest.json": {
+    "sha256": "3a2ca5d5a1102fab4c8b18c44275c12cfde5d76354224929be9b1dc46804213b",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed456_256/checkpoint_0/numeric.pt": {
+    "sha256": "facef527d8c222c5b47c011274a84e5cff3bf6d31409cee187ec4714dc101527",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed456_256/checkpoint_0/policy.json": {
+    "sha256": "deaf6d7b511b85d0a5e94d3dbf6d032bb38b31f5daa0fffbb2960873a98d505c",
+    "bytes": 8875
+  },
+  "research/campaign_runs/sector_exposure_direct_numeric_seed456_256/checkpoint_0/training_state.pt": {
+    "sha256": "2d26fd506e668adcbb85a18454f787789f650eef3b3b44e98a2d88ceb54ed4a4",
+    "bytes": 6719
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "620abe001ba6e9a7568ceaa7b151c479501e38ba81508a492649a05106182ce2",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "7b5aa7b786448726ada0033bfeb6da1b243bda4646b8809bfd3d0521a1040941",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "96b7da12ce9619ee0fd604c2270c08a644269a23c79da78d8c1dab87e80872ae",
+    "bytes": 8970
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "37742a3a79cb455a3a8a7e993bac445e718e9afae7ae763508a6533eece60ebc",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "e33a7bc5d18c35f5475d026f9e776520cd5c2579cb7df9e484b1730de6c5d9e7",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "af912ab89ad648a54336769e5a55647f7835e92dc3618895d7751c32233e3fdd",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "359f22b3146813f255d42a241dae92370c934cd2de10de1c6a26ee90bcbf5965",
+    "bytes": 8968
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "6fa5f2601a7ab71fb424575aa2e289abf0b2c5d2deea6e08fc4b5cabfd5a15f6",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed456_64/checkpoint_52/manifest.json": {
+    "sha256": "69c4252878eb48cf90406c03a96d210d7786e087a167766483721f2cab572018",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed456_64/checkpoint_52/numeric.pt": {
+    "sha256": "8e1719396301652247ade98d6ecf4da8175e521809dd6cb7abf46ee1d217f891",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed456_64/checkpoint_52/policy.json": {
+    "sha256": "bcb3b4d6f8b84e735950a7eb18cdc4cc46818e7c5d70fd0c576603a04ee156cc",
+    "bytes": 8970
+  },
+  "research/campaign_runs/sector_exposure_global_numeric_seed456_64/checkpoint_52/training_state.pt": {
+    "sha256": "de178bb1baf4365026e7de97e02cea6063de3f5cc1e09fbe4df07b1d9aff3241",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed123_1024/checkpoint_64/manifest.json": {
+    "sha256": "678119181b9562f0e5646fbeada4b842ca6d53ca6cc1e0f5a124d4fd598c4677",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed123_1024/checkpoint_64/numeric.pt": {
+    "sha256": "a244491f64af0e143d73ce6b11b5623fc8e3c30f4834dacb940e01a502ab05d0",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed123_1024/checkpoint_64/policy.json": {
+    "sha256": "e98070fe900ffc360001f93587b381f6eaefbc4b5617f97e3c91fba45687b687",
+    "bytes": 9423
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed123_1024/checkpoint_64/training_state.pt": {
+    "sha256": "53d97cce2fcef20bc959dcc475056f7cf84e3f72d273eaaa0555259c0704ea5b",
+    "bytes": 55294
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed42_1024/checkpoint_224/manifest.json": {
+    "sha256": "0b4b13f9ddeb06665919a38f637f555630470266d5616d649ca60c83ccf73707",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed42_1024/checkpoint_224/numeric.pt": {
+    "sha256": "65eebb59eddc499999bd0decd6196215b7bcefe7e2da4e30b507e047bc7498c9",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed42_1024/checkpoint_224/policy.json": {
+    "sha256": "7342f29b547dde7a7e4ef662ee7a6dfa3fa9922ca99f4ce8a7b3af0a16f0e3a0",
+    "bytes": 9421
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed42_1024/checkpoint_224/training_state.pt": {
+    "sha256": "c40e340ec9efa4f2dc3db30f33d5d42f854d6078dca83bb6ba26caf16cfb9a32",
+    "bytes": 55294
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed456_1024/checkpoint_192/manifest.json": {
+    "sha256": "58c82d811d5aabb0e53dcc0ef4173ee8aaa3d792a3c9ebbc24d1677033d275fc",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed456_1024/checkpoint_192/numeric.pt": {
+    "sha256": "dad85f305a0d763a47aabef39ae3dfbddcc569140cc2a6f6d753debdc05a4b6d",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed456_1024/checkpoint_192/policy.json": {
+    "sha256": "9e8dc9635629d23c93c90bad22a4f964496cb02f8fed45502c5b216a1bb7c989",
+    "bytes": 9423
+  },
+  "research/campaign_runs/sector_exposure_numeric_seed456_1024/checkpoint_192/training_state.pt": {
+    "sha256": "1dabbc40c8cf603f58da0603e50a79139ae3b3bc39e3bc1093e8a738bb64e2ee",
+    "bytes": 55294
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed123_1024/checkpoint_416/manifest.json": {
+    "sha256": "d40c4e1d180be3e0e266ca6388c117e3aed904aca53597ea253727361a2ed799",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed123_1024/checkpoint_416/numeric.pt": {
+    "sha256": "5f2bb330387ad4b8258a2384a60a00d19e2c24b35c5fc979995092a870ae5bc9",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed123_1024/checkpoint_416/policy.json": {
+    "sha256": "c6c6bb979a7e7219b14a2ea5bf41d7fbbee4d67e4404a77c8819e80e16269e2f",
+    "bytes": 9736
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed123_1024/checkpoint_416/training_state.pt": {
+    "sha256": "dd8f834a489bfaca09c491fcc31449546f5e6c5740874ad7a08c9c388e330dc5",
+    "bytes": 55294
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed42_1024/checkpoint_128/manifest.json": {
+    "sha256": "f5c2665d8fbbfcbbbb87d238f7c937f45d6abf07861c7b42fc949916cb7c96d5",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed42_1024/checkpoint_128/numeric.pt": {
+    "sha256": "14775463c255a600b6f06e557b638983e15976f1d029c279613af8bbddcedd8e",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed42_1024/checkpoint_128/policy.json": {
+    "sha256": "9791a349ce5a50d04cad553fa4c2ffb4539dd1c63c27a9002ab8dbf30db5a18e",
+    "bytes": 9734
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed42_1024/checkpoint_128/training_state.pt": {
+    "sha256": "8182e3f7ed62e46ebd406d110659a7f44aad1d603560509e73f373565a02e224",
+    "bytes": 55358
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed456_1024/checkpoint_448/manifest.json": {
+    "sha256": "42fede4f75537d24cbfc87235b7c264783f0f6580eb9db14fc56c069cefc7bdf",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed456_1024/checkpoint_448/numeric.pt": {
+    "sha256": "b8011ff19ae73a9584fb0bf875e86e883cdd793bdcbbd32326ddd02f5a9cb08d",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed456_1024/checkpoint_448/policy.json": {
+    "sha256": "9c203db705c41545ced627981c8e5284993460f1730e8df91a5dea6aaeef647d",
+    "bytes": 9736
+  },
+  "research/campaign_runs/sector_exposure_soft_numeric_seed456_1024/checkpoint_448/training_state.pt": {
+    "sha256": "85e32fe6f3e5155937feb2e694221fa6debad2a77606adb0fd700d260248d06b",
+    "bytes": 55358
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed123_64/checkpoint_0/manifest.json": {
+    "sha256": "438b2a8f81f320cd6657a25ebd7d86aef9fe34ca8acbea3aea3a14af1dade3bd",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed123_64/checkpoint_0/numeric.pt": {
+    "sha256": "1f91f2e89ce436d9e101e7d7c495f8c970f031bf9598af5c29fdb6d0bd188fd8",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed123_64/checkpoint_0/policy.json": {
+    "sha256": "931ff91d30dca38a12b63daf56c283e8e7af3c12f941aee8401cbc73fd37a20c",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed123_64/checkpoint_0/training_state.pt": {
+    "sha256": "bd56139fbeac96bf64c2dfa5410d7887cc9f85b291f3ce93d48b3834367bd03e",
+    "bytes": 6591
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed42_64/checkpoint_0/manifest.json": {
+    "sha256": "6f33bef8ed71cf97ec4651906fb66a2c6cef803f1ceada7ac6bf1972c197eb0c",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed42_64/checkpoint_0/numeric.pt": {
+    "sha256": "c961bb638b3b9e6b40b29a6927bf359fae42ef1c3f5d1dab3e9806590db9a0ec",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed42_64/checkpoint_0/policy.json": {
+    "sha256": "27b32458b164befca077796ebc40ac296e92c9efa9df00df253fedccc60a3416",
+    "bytes": 9479
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed42_64/checkpoint_0/training_state.pt": {
+    "sha256": "f9cd3f233422c81471afe1bc06b001d18d116351916c0e64e9556d73a9723d77",
+    "bytes": 6591
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed456_64/checkpoint_0/manifest.json": {
+    "sha256": "6519ee58cb46eec39886a2dfb6703d33c80848d7cb1ee28b9f71c22cc65e118a",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed456_64/checkpoint_0/numeric.pt": {
+    "sha256": "facef527d8c222c5b47c011274a84e5cff3bf6d31409cee187ec4714dc101527",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed456_64/checkpoint_0/policy.json": {
+    "sha256": "490b31680be13669bfd75dba7f8c4e85cf9a67c3ea1a6c935f856a08dea906eb",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f1_seed456_64/checkpoint_0/training_state.pt": {
+    "sha256": "9844c3b718525fea318eee531dd4d0123c44504253e4a16c0d8a8b0e96f1cced",
+    "bytes": 6591
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed123_64/checkpoint_8/manifest.json": {
+    "sha256": "5d6ff4656edc3c95690c67b3d77ff1ba62c195b94e44ee7ee9d5abcb61bed671",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed123_64/checkpoint_8/numeric.pt": {
+    "sha256": "8d16cf77dba746fa622e8ea1b0eaa97e0c29d17aa7f7d54b4743110054330cf6",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed123_64/checkpoint_8/policy.json": {
+    "sha256": "1603d46fa3ef63a5c14999b5fa8e76cc1db71cc2a8e6eca39d5d6e6174814e0c",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed123_64/checkpoint_8/training_state.pt": {
+    "sha256": "2486984c78a779235ddc702294c3fee36255dc2d0c32a54ba7f74f5f9f8ebba1",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed42_64/checkpoint_0/manifest.json": {
+    "sha256": "999145c3e249381601fdf995091f57ad88d9e9b872d336569db4ea14eae789a6",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed42_64/checkpoint_0/numeric.pt": {
+    "sha256": "c961bb638b3b9e6b40b29a6927bf359fae42ef1c3f5d1dab3e9806590db9a0ec",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed42_64/checkpoint_0/policy.json": {
+    "sha256": "06cdfc0824cffbea848806464b45bfebf9b5c4e0ed6944d903b677b83f83f5e2",
+    "bytes": 9479
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed42_64/checkpoint_0/training_state.pt": {
+    "sha256": "f9cd3f233422c81471afe1bc06b001d18d116351916c0e64e9556d73a9723d77",
+    "bytes": 6591
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed456_64/checkpoint_0/manifest.json": {
+    "sha256": "13ae006fbd17d4c539970a29965f3609ad0ef72c6f60b8078a996a134c7d0eba",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed456_64/checkpoint_0/numeric.pt": {
+    "sha256": "facef527d8c222c5b47c011274a84e5cff3bf6d31409cee187ec4714dc101527",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed456_64/checkpoint_0/policy.json": {
+    "sha256": "16dca229070aedf83aa93fc725d0022ba8ebdecd4b781300d15c2bbbf131acac",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f2_seed456_64/checkpoint_0/training_state.pt": {
+    "sha256": "9844c3b718525fea318eee531dd4d0123c44504253e4a16c0d8a8b0e96f1cced",
+    "bytes": 6591
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed123_64/checkpoint_64/manifest.json": {
+    "sha256": "4d49ad2bd9c64f3d3b5447f2353d84db6820bf7b2a898fdf539983d049a39ee4",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed123_64/checkpoint_64/numeric.pt": {
+    "sha256": "ed94323d233facd3383f34bdf07640f4e0304e712e0a146c34a24b47b2191af3",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed123_64/checkpoint_64/policy.json": {
+    "sha256": "723972a4101e31f2dffbbd11dc40effb16e3ddf22825d875475ba48672a30b5d",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed123_64/checkpoint_64/training_state.pt": {
+    "sha256": "07664847fe32184dc1a631202ff731f6e8298f35fb3a2d2fc5f6c9cecc7a8892",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "52ceb56803deed2bb475bfd1d28d9a67bc9a708f98fc10bca30ab0dbebd04671",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "6630dcd1d391e6e5db43f7cdcd42b0e022873b8c63f2bc91eb16da974c1a5ffd",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "0ff0dd233b46eb9999fb4bbf11fbcce72391901da628359d07e4acfd0b1e2930",
+    "bytes": 9479
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "beb69b1946463e11e84a57d05de08c6b1b33c493e49c58185a6193feb58387b6",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed456_64/checkpoint_64/manifest.json": {
+    "sha256": "f5a35e2bedf87ab96b09ae0b27ac519c9a29bae63ea0ed51e8461dd1faedb44e",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed456_64/checkpoint_64/numeric.pt": {
+    "sha256": "e10a6e506a33585855edf15b44fb9fb6060a4a465d5258fb6343cc7047c58897",
+    "bytes": 24392
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed456_64/checkpoint_64/policy.json": {
+    "sha256": "b1b132d7a96da0329f205c97f5d10ce5c2d573c8694aadfbdbe98eaaffe184d4",
+    "bytes": 9481
+  },
+  "research/campaign_runs/sector_exposure_walkforward_f3_seed456_64/checkpoint_64/training_state.pt": {
+    "sha256": "b72156a86935a8be678655d348bac0d14022cbe153d5f3e5cefec24d7e26f3bf",
+    "bytes": 55166
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "5163f370845aab5783ee6a4877c61ffa751c890b142f3d3cdc2bf106d750418c",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "25defe7d49352c2863329da7e1223cab77f780219ea0f575f7592e4f2a7c219d",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "19bdfb644e1ee5d4e79137d7cf777da24dbba77f31964703addf556ec45ee5d6",
+    "bytes": 8365
+  },
+  "research/campaign_runs/sector_native_counterfactual_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "d4f43d720014ea45a08193780544c20078aa3f35c8231f50478c5fa1113953d9",
+    "bytes": 35062264
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "d51d5ecb6beb9eaa7a769288bac67b9dcf0948aeca479bb001aa388c7bbaf334",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/manifest.json": {
+    "sha256": "d7eb99d9ece897be904cc27a210ae1ae704091329679e3423ec79c24cbc4fa47",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/policy.json": {
+    "sha256": "f15b3e4a5a920a1a4c58356679a55d9e8b23ca97bda9ee8e4072f35f1091d36f",
+    "bytes": 8766
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed123_256/checkpoint_256/training_state.pt": {
+    "sha256": "46910d016e4be3a141ff64594a33f88f002dfe664df247446c1719a42a8bf6fc",
+    "bytes": 54674966
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "8da98b364fb52ad8bcbe684d3c3de134d614ed57bafd1f16b630c67af7521d09",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/manifest.json": {
+    "sha256": "59a32499a9e021af3823d74f7db68e7e0085bd02aa32d510ffe2f8a6c2c160d7",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/policy.json": {
+    "sha256": "4e3609f163a2d75afdab55c17651001f949c00af93bcc6d97e90bc00f7255981",
+    "bytes": 8764
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_256/checkpoint_96/training_state.pt": {
+    "sha256": "6be9458164c4ed5ceaf267dda4c4329525f13b4c5947b833793755b3c6463cc1",
+    "bytes": 54674966
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "ab8c81d1e2869e801b9df9243f72bc283138b5f02ef972503bf3c63a8c247816",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/manifest.json": {
+    "sha256": "2ac549a3bd666b2fbeb5d8797d5410dcdf565eb20a8fc5b528ea46aefe63e983",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/policy.json": {
+    "sha256": "fb29ebac708468b4c2775b4837f8b9f7357c3f24e7d76f761c69b5d189b96fcd",
+    "bytes": 8762
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "1883227d762a836ed76e62a66e3160ee0490ab997be159e61fb6f20caf10095e",
+    "bytes": 54674966
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/finance_lora/finance/adapter_config.json": {
+    "sha256": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "bytes": 1047
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "85a31a05d0b05bba31a46607632bcd0c6b37161363489104ae6ad70eaab8a7d2",
+    "bytes": 27271760
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/manifest.json": {
+    "sha256": "5435c0b5e434df207be7cccc33dae969f823e50f1dfc0d216b7c41adca6a3eab",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/policy.json": {
+    "sha256": "84d93bb00d0262d4f22d8680258397214c6e3e085b2442906120abe57c3a8da3",
+    "bytes": 8766
+  },
+  "research/campaign_runs/sector_native_readout_counterfactual_seed456_256/checkpoint_256/training_state.pt": {
+    "sha256": "4bbb2c0606dd96d8f25c2113963e1d88ec3ad3802a7e975f926280d5ec7c4b78",
+    "bytes": 54674966
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "6b21f1d05f5b219413424a609a24ba95a8a1b61ebe98ef51cee0b22afeba7896",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/manifest.json": {
+    "sha256": "3d031976df4e7c829852b476516092f952268c3126bc712d5a0e5f29f7a871fe",
+    "bytes": 450
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/policy.json": {
+    "sha256": "e32c6c98d531fd1ac66b3beb81f1843ead7649b09c1fd6548cf2e676e3bb1981",
+    "bytes": 7393
+  },
+  "research/campaign_runs/sector_native_text_grpo_seed42_16/checkpoint_0/training_state.pt": {
+    "sha256": "4a9efadd8d641e4d73bdf283278a460379a85b76bbbeda906f98a6d11a632fb1",
+    "bytes": 7426
+  },
+  "research/campaign_runs/sector_ppo_numeric_seed42_256/checkpoint_224/numeric.pt": {
+    "sha256": "864396f4c48ad820a1988eaea536f143f2b045d759b8bf9e0c71c55a6b18cfe7",
+    "bytes": 769856
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed123_256/checkpoint_256/manifest.json": {
+    "sha256": "da80d6f48e44344ec0adcd5e109a37eb17acb2ea2df27f5e5144d6652c72b657",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed123_256/checkpoint_256/numeric.pt": {
+    "sha256": "8329fe88fb083c4ac3421797f09f45d52c15854b81370c2279df2a7c8ff77f77",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed123_256/checkpoint_256/policy.json": {
+    "sha256": "294032b6c3c796dd9b36ff5dd09a664876fe1bb7be0e42c14b77967cc1c58a1c",
+    "bytes": 9067
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed123_256/checkpoint_256/training_state.pt": {
+    "sha256": "c448edf2ebd5f2f529819033f176ae14b0a26a8aed0170d952bbe9527d218da3",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed42_256/checkpoint_256/manifest.json": {
+    "sha256": "c60a8a9a89ce590e6da0c03cf49fe8507343008f7252306ee8e24c3cfd80767c",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed42_256/checkpoint_256/numeric.pt": {
+    "sha256": "faa955d60ed067710352723ae05dcba7ab86e7e9288a920817cad2bbe9d032eb",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed42_256/checkpoint_256/policy.json": {
+    "sha256": "56061825ed44de848c064bb1a92694b8f0a8440fd71b12e80936ac5fa6acbbc7",
+    "bytes": 9065
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed42_256/checkpoint_256/training_state.pt": {
+    "sha256": "7bda6c2d749511bb11b92cbf22a818f68505b9d7b39bd434d2a6388f15d9c874",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed456_256/checkpoint_256/manifest.json": {
+    "sha256": "3d6837de57d895b7563bc0189454e7f1e3388bb8df6e55703dee44462ffbdfd6",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed456_256/checkpoint_256/numeric.pt": {
+    "sha256": "494ab3da34a49012820987ae0f8a9c4655f8dc8d67049c0ccf73de11f880dd78",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed456_256/checkpoint_256/policy.json": {
+    "sha256": "3327b4de643bd0f317812c27fc71dcf8743b0b458085c9b2e90c43f15ad2e596",
+    "bytes": 9067
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0001_seed456_256/checkpoint_256/training_state.pt": {
+    "sha256": "d68fa0e177356c316d30ebf29110377b009307906e44d27b9291194e18a00cc4",
+    "bytes": 78398
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed123_256/checkpoint_256/manifest.json": {
+    "sha256": "f04da9c3ab607b6a3c331b7c68d2dd15b93bf3f56dbb427520430434e208110f",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed123_256/checkpoint_256/numeric.pt": {
+    "sha256": "f749640a458f2fe377f976baa3d5b6b8749f91fe827f8e386e003aa0116b9e4e",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed123_256/checkpoint_256/policy.json": {
+    "sha256": "885bb427532103d427888e72519366638eefd5ed0d5c69a61b96b3c01218ffd1",
+    "bytes": 9067
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed123_256/checkpoint_256/training_state.pt": {
+    "sha256": "5531591bf0693672b9e6df3267cbe752bbf399ef40ca60816fc20fa2e220c684",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed42_256/checkpoint_256/manifest.json": {
+    "sha256": "d8387320784faa39a95e4b205e7268011e233985bd064b6a6a9198adcd39bb0e",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed42_256/checkpoint_256/numeric.pt": {
+    "sha256": "01e876a34aa11308e982f63bc6c387b406e9ca724de0c61b208ece5144dbf06f",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed42_256/checkpoint_256/policy.json": {
+    "sha256": "18572a5a371eecfd206c68cea722d498a27bb677ee16d95f8db7a6c0598f0d87",
+    "bytes": 9065
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed42_256/checkpoint_256/training_state.pt": {
+    "sha256": "166a0a0174ec9910169220f3e40101cf5a6ab0fad1a31a64276c6828738ce2d9",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed456_256/checkpoint_256/manifest.json": {
+    "sha256": "c7df3fb928f5efd57d7cad1bf76712e57600a80509553b875f22abb7f8a3a909",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed456_256/checkpoint_256/numeric.pt": {
+    "sha256": "52ec9391dc8176a9a5752718e3ca9f2876a8e11406f4dbe442b5b6088c735809",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed456_256/checkpoint_256/policy.json": {
+    "sha256": "440d7012c61f444db0789d269696dbf044260cf07c71c8df98e2e4e4f2c519e7",
+    "bytes": 9067
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p0003_seed456_256/checkpoint_256/training_state.pt": {
+    "sha256": "123a0a93332a3fac89c54f8c80a10756c304fea1bb04a3d68004eaef64aebda8",
+    "bytes": 78398
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_1024/checkpoint_1024/manifest.json": {
+    "sha256": "44344af60ddcf7f58c50f911fc83bf13bbefaa97cf5f97fea072c4e880685b52",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_1024/checkpoint_1024/numeric.pt": {
+    "sha256": "0c83885f2fa3e1a23e47a25b43047dee980e81974d2a7b119bd0d06b1830c2fc",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_1024/checkpoint_1024/policy.json": {
+    "sha256": "0f75198726f1e3e2de3a85ed6d16a18c259850581321569a1105323fa93a5da8",
+    "bytes": 9066
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_1024/checkpoint_1024/training_state.pt": {
+    "sha256": "ea21a1e488e249c754c1ca4f866fb1a035a889f04fa0db97f68b2c20894bb7d5",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_256/checkpoint_256/manifest.json": {
+    "sha256": "315054eb6ec24474b87ffafcceb7ecdb59253925c7b5ce05a6ee0a8aa1633865",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_256/checkpoint_256/numeric.pt": {
+    "sha256": "dd50c7b72a77612b3e6615f8421b51501a106225c836afc5f43f4ed9521f8803",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_256/checkpoint_256/policy.json": {
+    "sha256": "17d5aa6d02cf81aab7d55b1b090a5fdbf2adda5c6cc06b4124b7f67a1e4ab617",
+    "bytes": 9064
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed123_256/checkpoint_256/training_state.pt": {
+    "sha256": "a4c818ecdaa5ab7221e5fea683284b5546690dcd993a422fc983203d9ea083bf",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_1024/checkpoint_704/manifest.json": {
+    "sha256": "72bdd2a5b35b8151599692b9835ea5ae3126288b5064e39bc65234649ccf7c6b",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_1024/checkpoint_704/numeric.pt": {
+    "sha256": "e5502cad1507eb49ad15ef8b60abde90172572e3be712111671666196f01f2df",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_1024/checkpoint_704/policy.json": {
+    "sha256": "481f9e3dda508cc68387663c811ea1b2f0f71e36ce7ca3787fddba8f2068fd54",
+    "bytes": 9064
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_1024/checkpoint_704/training_state.pt": {
+    "sha256": "4c54e2c5cdb51ab8dfe8ca1733952edd0f41c05ef0052d371cb3cc2858b5aa50",
+    "bytes": 78398
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_256/checkpoint_256/manifest.json": {
+    "sha256": "fee81344ca55765bc697888f8d9a2d4bbf2fc32925a21863ae6aaad6b7d79cf6",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_256/checkpoint_256/numeric.pt": {
+    "sha256": "23557463efb9c8c702eb8875428264e19c4898adf81ef665ecb490df4b18427b",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_256/checkpoint_256/policy.json": {
+    "sha256": "8819e7e0e29a384fbf1341bbb7d584bc5679c8bb39976bb2f83fd9f307897fff",
+    "bytes": 9062
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed42_256/checkpoint_256/training_state.pt": {
+    "sha256": "4ef4e38bab3cc51dcbce380086e815205d9224e9b4d4e7bd15db6ccff1e68e5c",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_1024/checkpoint_320/manifest.json": {
+    "sha256": "a5eda82767498ba3898a53a788850a2e8925bee823b00aebccfa2ce268e57b63",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_1024/checkpoint_320/numeric.pt": {
+    "sha256": "ff300cd59ec34d5a3edff0fa8c4d7e00d32833cee27f7ee4106b2251b2576e20",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_1024/checkpoint_320/policy.json": {
+    "sha256": "2ec19359f0304cf93614fe2d156ad5603235f3334229cf89694c6572f1f01dde",
+    "bytes": 9066
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_1024/checkpoint_320/training_state.pt": {
+    "sha256": "43b286d1af96e97e8346532a209bb7c701e03faca0c9c8beaaa38a3f1f10736d",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_256/checkpoint_144/manifest.json": {
+    "sha256": "0bbbb8d5bf8ca1c92f9d52081a167561c790d18e7fef6bd5bbf3399aecf7c836",
+    "bytes": 198
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_256/checkpoint_144/numeric.pt": {
+    "sha256": "af95ea198b479f800424426c6817aeb59dcc30cf90a4e740f110cbdaae2fb4a4",
+    "bytes": 35912
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_256/checkpoint_144/policy.json": {
+    "sha256": "197658d0300584265546ae85ebebc02533d5d83524666f5ac11a01a5b992b363",
+    "bytes": 9064
+  },
+  "research/campaign_runs/sector_summary_numeric_lr0p001_seed456_256/checkpoint_144/training_state.pt": {
+    "sha256": "34ba46e01ba0dd9905f5ee6414aeb1359f895ce1b1857f29f6bf756a6e9f951a",
+    "bytes": 78334
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/environment_config.json": {
+    "sha256": "4ad9cff1c5fe3707e58fd6a5a6ddd5017ec7162a4d618bc2dab6fed16b9eeed0",
+    "bytes": 220
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/finance_heads.pt": {
+    "sha256": "c7267f966ef629a91e8b07e40f1cb7095539a061a49fecc3f13c3bde545c9660",
+    "bytes": 1369139
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "b3bb5f69e05170dcdec8f35f05c51800990da33a8f833bea0f1f30918953583d",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/manifest.json": {
+    "sha256": "b44fecd2fe4c94124b8f505a57246b54851e38e601a32ca5219509501c5b9786",
+    "bytes": 8192
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/strategy_heads.pt": {
+    "sha256": "8744187d82877414529d1ab2b557eb3fa3b4d7a705d168ab981e910ac3553823",
+    "bytes": 32840
+  },
+  "research/campaign_runs/sector_trajectory_grpo_internvl_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "4216d811e44b8fd5b053b22eedbc77e8f5296e39eaecbb31e455696c433fef8d",
+    "bytes": 37716802
+  },
+  "research/campaign_runs/sector_trajectory_grpo_numeric_seed42_64/checkpoint_64/numeric.pt": {
+    "sha256": "59d489fb3b0b942ddbde2cf20f008dba92cedffddccd9bdd317073ba1d2db2ed",
+    "bytes": 769856
+  },
+  "research/campaign_runs/sector_trajectory_grpo_numeric_seed42_64/checkpoint_64/training_state.pt": {
+    "sha256": "cc66e2cb23e39f2302c3e1605acf906395e28623edac80a7720dde015add9782",
+    "bytes": 1544254
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/finance_heads.pt": {
+    "sha256": "b337ebfa1b10e01f7635c7c0693208f06f5ce9449977054757947d162ede283a",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "ba79f3316a760d06123acf0281beb218ff7b5465a6f412911c18f5b30d9b4d3b",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/manifest.json": {
+    "sha256": "26c81f0ef8b119f6811f41ce9baddbc87908a19a7ab2883ab47f757733b11dd8",
+    "bytes": 8592
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/strategy_heads.pt": {
+    "sha256": "9a813c1048db3cd9f2800d8892018b0d8692822cee425b2b1eccde5a3e375882",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed123_128/checkpoint_128/training_state.pt": {
+    "sha256": "6d2254667222063bfd40b19544082a1a6101ac01a221242384110e5d002cbfc5",
+    "bytes": 37751392
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/finance_heads.pt": {
+    "sha256": "d1b7b90797243797f43503a6ee00631a7a732192593881966681af78743249f6",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "dd0b9e7de690f9eb73ca25f3f211c3bc38c7a0466f2a072dcc303adcd219a7ca",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/manifest.json": {
+    "sha256": "afb4966cc4bca7ae3771158b88977ac5353dd14992e4fb5553a0ea50c87ef799",
+    "bytes": 8498
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/strategy_heads.pt": {
+    "sha256": "1f35c48cc722047a3de1dae28cf2b06b5eae9c89c560398ab76c8fadd668638e",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_256_persistent/checkpoint_224/training_state.pt": {
+    "sha256": "bc83553011e4787b180a67c27c2c7ce11555abf4357bea86cbe82cb4757b2e7c",
+    "bytes": 37751392
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/finance_heads.pt": {
+    "sha256": "8d5bf439f87e7199100911b44d94c8e281b2e27e1b635e4b7e674e63b2f8d5d7",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "293c18dd30bdb51caf59def2166db690eb457f3d37c265c3b7d4dfb8f6410895",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/manifest.json": {
+    "sha256": "77ca2e641011afd0fcbe9a4f0372ff04bb43f0993324d98c62e41ee99b8ec77b",
+    "bytes": 8021
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed42_pilot/checkpoint_8/strategy_heads.pt": {
+    "sha256": "a37169aa36303fb7f37eec7bdd41ec974581a5141a07f8c70c6cb22738e872ae",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/finance_heads.pt": {
+    "sha256": "6a8ccd4764bb1d506655aa5c97eb169d5f07b8151b336a097bf28702d08f1d4c",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "8bfadde30564d9f0ef9a5ab1b3c6530d1237d7dbf61e012cf1a241acb29aa6ba",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/manifest.json": {
+    "sha256": "667c5f5774c7a8f66e1e086e1b9faa43d333084149048ea471062314bc1701e1",
+    "bytes": 8592
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/strategy_heads.pt": {
+    "sha256": "4604ea1749532ce25af209b381a7b63aa812c2656f5732e40a0bc8828b658b13",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_internvl_seed456_128/checkpoint_32/training_state.pt": {
+    "sha256": "0dfdfcfdbc8fa3b9a07cff2c9357d9c39e51a2dd71d7da64e8915aa408e07a72",
+    "bytes": 37751392
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/finance_heads.pt": {
+    "sha256": "d054dc608915e3afed7c41bd8ee4e93e884095f7d3f7a3d03031b855acec8ee9",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "d0dbd0913bfb669247bd0cc50b6847be91f0cb27e4e3a41d2b3fbca896ad729b",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/manifest.json": {
+    "sha256": "5d039dcf88209b41947afae249b202c94c1f3459b0df12cc644648bfa0e1755b",
+    "bytes": 8590
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/strategy_heads.pt": {
+    "sha256": "eee9100f725208e7a7fd37fc8f567f131e65c8b9cc8fd8911f3ebfc3f9980bd0",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed123_128/checkpoint_96/training_state.pt": {
+    "sha256": "41aa562aaf36197f64535cdfc9ae778ae5c6d74b9e75c43925cd40e0f7e28ef2",
+    "bytes": 2695450
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/finance_heads.pt": {
+    "sha256": "dedb65c7eeaea09af2767557f663dcfda3f185bb3d50e9beb87f26013d4b427f",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "6b21f1d05f5b219413424a609a24ba95a8a1b61ebe98ef51cee0b22afeba7896",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/manifest.json": {
+    "sha256": "8b86afef9d8d1ca0362c97b004520f0d0ac8ca3073eac349ae4a9a588e37872c",
+    "bytes": 8587
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/strategy_heads.pt": {
+    "sha256": "f57eaccc51e5c69e9de4c8cf9e1e3123c827035399f39c2a084de8dbbc90a205",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed42_128/checkpoint_64/training_state.pt": {
+    "sha256": "f61b81175ff234a7180aed69cddce0854f26136961d57cbcc9d37faa29500c7f",
+    "bytes": 2695450
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/environment_config.json": {
+    "sha256": "cedaa3b48746f6199eef4c83734aaa0dcaa476e1fe07fd2accbbdc1d18a002ce",
+    "bytes": 1061
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/finance_heads.pt": {
+    "sha256": "0d4c1cadd7c8f7c299011cb2aa06a875ee394079dbdbb008c02f97c57651ad6d",
+    "bytes": 1625331
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/finance_lora/finance/adapter_config.json": {
+    "sha256": "9febb5f7d973cfbcefad37599f5ffe501484da6c30898ba45f7cfc7b4957bb70",
+    "bytes": 1020
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/finance_lora/finance/adapter_model.safetensors": {
+    "sha256": "fd3193e9564bb4b1467746f7732afdabc729cefa804b893b443743b7f46bf24a",
+    "bytes": 17465792
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/finance_lora/README.md": {
+    "sha256": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "bytes": 5142
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/manifest.json": {
+    "sha256": "322edcd0081f5fbe517188241ecbf1b31b314341735c52acd8b743267743149a",
+    "bytes": 8590
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/model_config.json": {
+    "sha256": "c6f6ca494e30affcbc5c9698642502a5c2e3f3380f3dfd05c77e8595f6346fc6",
+    "bytes": 512
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/base_modules/ppo_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/strategy_heads.pt": {
+    "sha256": "29f505991c126857c106206b19746d982b1143d6df24713cc8c6dd810a9be0dd",
+    "bytes": 32840
+  },
+  "research/campaign_runs/strategy_ppo_no_lora_seed456_128/checkpoint_64/training_state.pt": {
+    "sha256": "3041518c13a6a54fc531916b089cb6541cd70263d3d67bac9bc256899cf20175",
+    "bytes": 2695450
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed123_128/checkpoint_0/numeric.pt": {
+    "sha256": "b0acd00eb46ee66f342d9ca0282eeb390295536844723889d42121c958414438",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed123_128/checkpoint_0/training_state.pt": {
+    "sha256": "9de1082c5c84a0d0f6bbde9198b87e79a707c7598873dd4cd3394c14ccceea5a",
+    "bytes": 6975
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed42_128/checkpoint_128/numeric.pt": {
+    "sha256": "bca12482139c3e87f64b5568a5ce896b317886ec119b428f62f1d646e9d89ff8",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed42_128/checkpoint_128/training_state.pt": {
+    "sha256": "7de518a8979ff3dca1d67ec4efee460159ec42070b8c2b72936428bfaecb0602",
+    "bytes": 7731926
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed456_128/checkpoint_0/numeric.pt": {
+    "sha256": "192c812af784ac112dcd62e2f432108dc93c6fd30e43132bf3e15d58b6ef9b98",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p0003_seed456_128/checkpoint_0/training_state.pt": {
+    "sha256": "2b6ffc38a3471dcf214ff3b4468e89dc52d093750933d0a54728124cfd9ad0e3",
+    "bytes": 6975
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed123_128/checkpoint_0/numeric.pt": {
+    "sha256": "b0acd00eb46ee66f342d9ca0282eeb390295536844723889d42121c958414438",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed123_128/checkpoint_0/training_state.pt": {
+    "sha256": "461b4a46fecfecf4d1ded14de1aa3265e17ad8fafc232cd1d6114bfe0b478682",
+    "bytes": 6975
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed42_128/checkpoint_0/numeric.pt": {
+    "sha256": "d02178d4853860bddbbd7fd82adbf7ec9bf26aee8661d11e6808c0679626d6a3",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed42_128/checkpoint_0/training_state.pt": {
+    "sha256": "23a2240833adf7242ac3a2c0218950aa8c0f90c236554e5b1edb58cb5fd4514f",
+    "bytes": 6975
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed456_128/checkpoint_0/numeric.pt": {
+    "sha256": "192c812af784ac112dcd62e2f432108dc93c6fd30e43132bf3e15d58b6ef9b98",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_lr0p001_seed456_128/checkpoint_0/training_state.pt": {
+    "sha256": "177dfd4a6795597f967e45ce5f4fa7dd3c3d0741e949034a97bde8e68a82f8a6",
+    "bytes": 6975
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed123_256/checkpoint_32/numeric.pt": {
+    "sha256": "05141f7d7286218e8ae259c2801ab34e482d8799c6b5c6a9ed9085ea45b8cbe9",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed123_256/checkpoint_32/training_state.pt": {
+    "sha256": "584f62ce1602fd2f26cc223b6e9eaac3b28eec09ce46688250a75291301ebe63",
+    "bytes": 7731926
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed42_256/checkpoint_0/numeric.pt": {
+    "sha256": "d02178d4853860bddbbd7fd82adbf7ec9bf26aee8661d11e6808c0679626d6a3",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed42_pilot/checkpoint_16/numeric.pt": {
+    "sha256": "27a3370810ec817450ec19fa44b4865c6cc1dcde53208d971c5ce5f4e8b66349",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed456_256/checkpoint_0/numeric.pt": {
+    "sha256": "192c812af784ac112dcd62e2f432108dc93c6fd30e43132bf3e15d58b6ef9b98",
+    "bytes": 3862336
+  },
+  "research/campaign_runs/strategy_ppo_numeric_seed456_256/checkpoint_0/training_state.pt": {
+    "sha256": "f8b0cc388885274f75b3700b073a25d92dad43dab8df423cd5978fb083e9024c",
+    "bytes": 6975
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "metrics": {
+    "final_equity": 98331.0955038748,
+    "peak_equity": 101272.25547376048,
+    "return_total": -0.016689044961251898,
+    "return_annualized": -0.1828711733189914,
+    "annualization_basis": "geometric, 252 trading days per year",
+    "mean_net_return": -0.0007764218306614847,
+    "mean_gross_return": -0.0006811898034396693,
+    "mean_turnover": 0.04752399961980801,
+    "mean_trading_cost": 9.5047999239616e-05,
+    "max_drawdown": 0.04209315267981317,
+    "volatility_daily": 0.007007662302810746,
+    "sharpe_proxy": -1.7588339628647804,
+    "steps": 21,
+    "first_decision_date": "2025-12-31",
+    "first_return_date": "2026-01-01",
+    "last_return_date": "2026-01-30"
+  },
+  "daily": [
+    {
+      "net_return": -6.837977800411288e-05,
+      "gross_return": 0.0019314927936540105,
+      "trading_cost": 0.001996007984031936,
+      "turnover": 0.9980039920159681,
+      "equity": 99993.16202219958,
+      "drawdown": 6.837977800411288e-05,
+      "decision_date": "2025-12-31",
+      "return_date": "2026-01-01"
+    },
+    {
+      "net_return": 0.0071701130660435375,
+      "gross_return": 0.0071701130660435375,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 100710.12429972996,
+      "drawdown": 0.0,
+      "decision_date": "2026-01-01",
+      "return_date": "2026-01-02"
+    },
+    {
+      "net_return": 0.0009902559991492588,
+      "gross_return": 0.0009902559991492588,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 100809.85310449284,
+      "drawdown": 0.0,
+      "decision_date": "2026-01-02",
+      "return_date": "2026-01-05"
+    },
+    {
+      "net_return": 0.004586876729086642,
+      "gross_return": 0.004586876729086642,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 101272.25547376048,
+      "drawdown": 0.0,
+      "decision_date": "2026-01-05",
+      "return_date": "2026-01-06"
+    },
+    {
+      "net_return": -0.0011993074416514204,
+      "gross_return": -0.0011993074416514204,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 101150.79890413798,
+      "drawdown": 0.0011993074416514204,
+      "decision_date": "2026-01-06",
+      "return_date": "2026-01-07"
+    },
+    {
+      "net_return": -0.013676812837829067,
+      "gross_return": -0.013676812837829067,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99767.3783591292,
+      "drawdown": 0.014859717576065967,
+      "decision_date": "2026-01-07",
+      "return_date": "2026-01-08"
+    },
+    {
+      "net_return": -0.00664367321839876,
+      "gross_return": -0.00664367321839876,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99104.5564994548,
+      "drawdown": 0.021404667686771628,
+      "decision_date": "2026-01-08",
+      "return_date": "2026-01-09"
+    },
+    {
+      "net_return": 0.0060834363597144225,
+      "gross_return": 0.0060834363597144225,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99707.45276187696,
+      "drawdown": 0.01545144526073039,
+      "decision_date": "2026-01-09",
+      "return_date": "2026-01-12"
+    },
+    {
+      "net_return": -0.00134526116153455,
+      "gross_return": -0.00134526116153455,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99573.32019816087,
+      "drawdown": 0.016775920193066063,
+      "decision_date": "2026-01-12",
+      "return_date": "2026-01-13"
+    },
+    {
+      "net_return": -0.0009700722309835541,
+      "gross_return": -0.0009700722309835541,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99476.7268852898,
+      "drawdown": 0.017729718569721276,
+      "decision_date": "2026-01-13",
+      "return_date": "2026-01-14"
+    },
+    {
+      "net_return": 0.0,
+      "gross_return": 0.0,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99476.7268852898,
+      "drawdown": 0.017729718569721276,
+      "decision_date": "2026-01-14",
+      "return_date": "2026-01-15"
+    },
+    {
+      "net_return": 0.0019412801189624407,
+      "gross_return": 0.0019412801189624407,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99669.83907749166,
+      "drawdown": 0.015822856800932983,
+      "decision_date": "2026-01-15",
+      "return_date": "2026-01-16"
+    },
+    {
+      "net_return": -0.002429052986822944,
+      "gross_return": -0.002429052986822944,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 99427.73575718432,
+      "drawdown": 0.018213475230183573,
+      "decision_date": "2026-01-16",
+      "return_date": "2026-01-19"
+    },
+    {
+      "net_return": -0.01901142975950265,
+      "gross_return": -0.01901142975950265,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 97537.47234269022,
+      "drawdown": 0.03687864078467118,
+      "decision_date": "2026-01-19",
+      "return_date": "2026-01-20"
+    },
+    {
+      "net_return": -0.002428163747931089,
+      "gross_return": -0.002428163747931089,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 97300.63538828287,
+      "drawdown": 0.03921725715397595,
+      "decision_date": "2026-01-20",
+      "return_date": "2026-01-21"
+    },
+    {
+      "net_return": 0.008321804190227322,
+      "gross_return": 0.008321804190227322,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 98110.35222356886,
+      "drawdown": 0.03122181129866186,
+      "decision_date": "2026-01-21",
+      "return_date": "2026-01-22"
+    },
+    {
+      "net_return": -0.011221703283518902,
+      "gross_return": -0.011221703283518902,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 97009.38696187444,
+      "drawdown": 0.04209315267981317,
+      "decision_date": "2026-01-22",
+      "return_date": "2026-01-23"
+    },
+    {
+      "net_return": 0.008531725076815322,
+      "gross_return": 0.008531725076815322,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 97837.04438130354,
+      "drawdown": 0.03392055480927847,
+      "decision_date": "2026-01-23",
+      "return_date": "2026-01-27"
+    },
+    {
+      "net_return": 0.0064269919221324745,
+      "gross_return": 0.0064269919221324745,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 98465.8422752275,
+      "drawdown": 0.027711570018899456,
+      "decision_date": "2026-01-27",
+      "return_date": "2026-01-28"
+    },
+    {
+      "net_return": 0.0016509367477939296,
+      "gross_return": 0.0016509367477939296,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 98628.40315264215,
+      "drawdown": 0.026106383320388837,
+      "decision_date": "2026-01-28",
+      "return_date": "2026-01-29"
+    },
+    {
+      "net_return": -0.0030144222076394778,
+      "gross_return": -0.0030144222076394778,
+      "trading_cost": 0.0,
+      "turnover": 0.0,
+      "equity": 98331.0955038748,
+      "drawdown": 0.029042109866386112,
+      "decision_date": "2026-01-29",
+      "return_date": "2026-01-30"
+    }
+  ]
+}

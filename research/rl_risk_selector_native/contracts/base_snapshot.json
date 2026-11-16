@@ -1,0 +1,58 @@
+{
+  "model_id": "OpenGVLab/InternVL3-2B",
+  "revision": "899155015275a9b7338c7f4677e19c784e0e5a21",
+  "files": {
+    "added_tokens.json": {
+      "size": 790,
+      "git_blob_sha1": "dd972e4080e791eab591742c1168ee7fd6279146"
+    },
+    "config.json": {
+      "size": 6328,
+      "git_blob_sha1": "91b5777a06c1fb806d054ff69152177444256fbf"
+    },
+    "configuration_intern_vit.py": {
+      "size": 5548,
+      "git_blob_sha1": "7e630c456eb9cf350e55bf850c3ff72f445a7e17"
+    },
+    "configuration_internvl_chat.py": {
+      "size": 4036,
+      "git_blob_sha1": "502772cc6e24e6d1fbc5bf91ce76c9b234101eaf"
+    },
+    "conversation.py": {
+      "size": 15309,
+      "git_blob_sha1": "5a771766f21ce3aeeb99b286fb8d188b0038a547"
+    },
+    "generation_config.json": {
+      "size": 69,
+      "git_blob_sha1": "467e2ba8edc477ad1fb650f892ab5be9210522ab"
+    },
+    "model.safetensors": {
+      "size": 4177999192,
+      "sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7"
+    },
+    "modeling_intern_vit.py": {
+      "size": 18099,
+      "git_blob_sha1": "eb4aef44ddace5782035f0316de3834563b1c8dd"
+    },
+    "modeling_internvl_chat.py": {
+      "size": 15971,
+      "git_blob_sha1": "ccf2ab9cc83283f41aafb611d379c4cc50614132"
+    },
+    "preprocessor_config.json": {
+      "size": 287,
+      "git_blob_sha1": "dfd7e50d9d4e67cd679b16b337b419a0c6cfa849"
+    },
+    "special_tokens_map.json": {
+      "size": 613,
+      "git_blob_sha1": "ac23c0aaa2434523c494330aeb79c58395378103"
+    },
+    "tokenizer.json": {
+      "size": 7033297,
+      "git_blob_sha1": "1b4f039248a420730cd195d6d6a1a9cc713a7f14"
+    },
+    "tokenizer_config.json": {
+      "size": 7330,
+      "git_blob_sha1": "f18c701c825405350d5f0ae158749015b3239e6e"
+    }
+  }
+}

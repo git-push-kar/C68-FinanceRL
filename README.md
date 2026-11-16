@@ -1,3 +1,11 @@
+# Finance RL research and paper-trading demo
+
+Branch `main` contains the current finance research transfer. Start with [docs/START_HERE.md](docs/START_HERE.md), [the full handover](docs/CONTEXT_TRANSFER_FULL.md), and [recovery archives](archives/README.md).
+
+The historical implementation below is retained for provenance; its model and status descriptions do not describe the selected native InternVL3-2B Nifty result. Paper-trading integration is currently in progress.
+
+---
+
 # FinanceRL — AI Paper-Trading on Nifty 50 (InternLM + PPO)
 
 > **Teach a frozen 1.8B language model to manage 49 stocks — no live market, no broker, purely simulated history.**
