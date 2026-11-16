@@ -4,6 +4,8 @@ A native RL adapter learns a mixture of causal stock-allocation strategies, with
 
 **Start:** [current context and results](docs/START_HERE.md) · [detailed research report](docs/JOURNAL_RESEARCH_REPORT.md) · [demo setup](demo/PAPER_TRADING.md) · [full context transfer](docs/CONTEXT_TRANSFER_FULL.md) · [recovery archives](archives/README.md).
 
+**Backup complete:** [published checkpoint release](https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116), [verification receipt](archives/CHECKPOINT_RELEASE_STATUS.md), and [original SSD context bombs](docs/ssd_historical_context/README.md). Install Git LFS when cloning `main`.
+
 ## Selected result
 
 Training2019–2021, validation2022, retrospective continuous test1January2025–30January2026. Same49stocks, costs and dates:

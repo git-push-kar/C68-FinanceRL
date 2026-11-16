@@ -1,0 +1,151 @@
+{
+  "release_url": "https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116",
+  "tag": "finance-checkpoint-archive-20261116",
+  "draft": false,
+  "assets": [
+    {
+      "name": "asset-manifest.json",
+      "bytes": 2653,
+      "sha256": "sha256:e15314f81d1cf66030f23baa97877b6a31b289f2940ada0432b0cc2559ade31b",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/asset-manifest.json"
+    },
+    {
+      "name": "checkpoint-objects-01.zip",
+      "bytes": 984363233,
+      "sha256": "sha256:388616bd06d923dec1bd15b1a0a6a7fa2ed2780f762e052bb8c3ad9a9460cef2",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-01.zip"
+    },
+    {
+      "name": "checkpoint-objects-02.zip",
+      "bytes": 1048430733,
+      "sha256": "sha256:1f31cf7f358195836983cccc7cd34afb58364a4c7033508de228cb58a4fa0a88",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-02.zip"
+    },
+    {
+      "name": "checkpoint-objects-03.zip",
+      "bytes": 1052020780,
+      "sha256": "sha256:f900c6693c10ff9f16e34aec08d316b8a6849a0a53c720068bdf20bcde5131ef",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-03.zip"
+    },
+    {
+      "name": "checkpoint-objects-04.zip",
+      "bytes": 1004557184,
+      "sha256": "sha256:6cf94c91c0aa45aeb30284ee8a83eda56a13575b22b0df4692c760d842943fbf",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-04.zip"
+    },
+    {
+      "name": "checkpoint-objects-05.zip",
+      "bytes": 1096516988,
+      "sha256": "sha256:ffd3ad35311c7ac3a302d219096875f61ce3803572d97b6db3356f836d2847ba",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-05.zip"
+    },
+    {
+      "name": "checkpoint-objects-06.zip",
+      "bytes": 1060049650,
+      "sha256": "sha256:002f0cdcf81dbee17608ba5b929ab2ffce325a1c5f05b221f79ad62e0a75418b",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-06.zip"
+    },
+    {
+      "name": "checkpoint-objects-07.zip",
+      "bytes": 1005571908,
+      "sha256": "sha256:2389792a6945a5ecd797a46d0ec58793250b9483e584ba2e8c51940f19d36b98",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-07.zip"
+    },
+    {
+      "name": "checkpoint-objects-08.zip",
+      "bytes": 1031894228,
+      "sha256": "sha256:0d9cb5f420c4b16e914a4149ac48b4b7c071a302e9f36ddc8f74ca6aa6c69115",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-08.zip"
+    },
+    {
+      "name": "checkpoint-objects-09.zip",
+      "bytes": 1052810487,
+      "sha256": "sha256:66e172b2b9540f103791d3aae9ce58f8e0a57b7312bde702bf638d822aed5cee",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-09.zip"
+    },
+    {
+      "name": "checkpoint-objects-10.zip",
+      "bytes": 1035553294,
+      "sha256": "sha256:e5940c07414306e660208a33caaa5b46f24952083d28e7b1ddd93606d4a83f0d",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-10.zip"
+    },
+    {
+      "name": "checkpoint-objects-11.zip",
+      "bytes": 1001695808,
+      "sha256": "sha256:3cd61f78c2e75761edb62925a00c1eb2a30796b6ae29064d3dc871c74e6ed960",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-11.zip"
+    },
+    {
+      "name": "checkpoint-objects-12.zip",
+      "bytes": 1062895768,
+      "sha256": "sha256:daa66819d62d1514653a98e5890acc42b459ea172a1a3fea563ec9b861935cd8",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-12.zip"
+    },
+    {
+      "name": "checkpoint-objects-13.zip",
+      "bytes": 1027565976,
+      "sha256": "sha256:e723904cba98f1c7601f28c3d8d47be5d72df148a9c837d29d1d1fa4d56899d6",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-13.zip"
+    },
+    {
+      "name": "checkpoint-objects-14.zip",
+      "bytes": 999513873,
+      "sha256": "sha256:e9407b9819e16cbfbed9c0250ec4bd38819c1a0ccb6512f1c0c63dd68156ddb3",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-14.zip"
+    },
+    {
+      "name": "checkpoint-objects-15.zip",
+      "bytes": 959274159,
+      "sha256": "sha256:1341e212afa9f309da45d45d23a8b49130b96364019b19c0e7966bcf76b83e91",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-15.zip"
+    },
+    {
+      "name": "checkpoint-objects-16.zip",
+      "bytes": 1081227793,
+      "sha256": "sha256:211c92179ee4e0947b87bbee21a56e8b41596e196cc323a50baa3b6d1fbbb430",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-16.zip"
+    },
+    {
+      "name": "checkpoint-objects-17.zip",
+      "bytes": 721736746,
+      "sha256": "sha256:b35bb927b68ff4c974488c49373adf1ff043a0be255ba42d96a08b5b87335549",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/checkpoint-objects-17.zip"
+    },
+    {
+      "name": "CHECKPOINT_RECOVERY.md",
+      "bytes": 2371,
+      "sha256": "sha256:db8a87870c3ed773c2eaf49f043cbb2defa840041f44ea3ea96ecb67079eaae5",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/CHECKPOINT_RECOVERY.md"
+    },
+    {
+      "name": "object_verification.json",
+      "bytes": 202,
+      "sha256": "sha256:c057784e11810c4478fe36b72ba2f6fff28415587a2509407f4f19d709f96362",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/object_verification.json"
+    },
+    {
+      "name": "restore_checkpoint_weights.py",
+      "bytes": 4235,
+      "sha256": "sha256:1c2151a623d6ee8120a6a9c7b86e5a0bc3a716eb45e051818e1b5437aea0800f",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/restore_checkpoint_weights.py"
+    },
+    {
+      "name": "weights-index.json",
+      "bytes": 1461840,
+      "sha256": "sha256:b2b59f3d3f4e1e3027a8d2251e144caaf8de8d348001d30007ed2e776de856e3",
+      "url": "https://github.com/git-push-kar/C68-FinanceRL/releases/download/finance-checkpoint-archive-20261116/weights-index.json"
+    }
+  ],
+  "unique_objects_verified": 4663,
+  "original_paths": 5224,
+  "original_bytes": 30279357187,
+  "scope": "All unique checkpoint ZIP members streamed and SHA256/size verified before publication",
+  "public_api_verified": true,
+  "public_downloads_verified": [
+    "asset-manifest.json",
+    "weights-index.json",
+    "restore_checkpoint_weights.py"
+  ],
+  "asset_count": 22,
+  "compressed_asset_bytes": 17227149909
+}

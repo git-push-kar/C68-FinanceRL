@@ -10,6 +10,7 @@
 6. [Recovery archives and checkpoint backup status](../archives/README.md).
 7. [Original SSD context bombs and college handover](ssd_historical_context/README.md).
 8. [Fresh GitHub clone verification](RECOVERY_VERIFICATION.md).
+9. [Completed checkpoint release and public-download verification](../archives/CHECKPOINT_RELEASE_STATUS.md).
 
 The Finance menu now runs the selected Nifty adapter through actual model inference at every scheduled rebalance. It advances a historical market with simulated funds, not a broker/live feed. The whole 270-day path reproduces original research exactly. Finance conversation was removed after 60 actual responses from two model configurations failed the factual gate; the decision inspector is an explicit ledger, not model-generated reasoning. See explanation_assessment/.
 
