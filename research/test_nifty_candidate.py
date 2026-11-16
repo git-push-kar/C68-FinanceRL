@@ -35,6 +35,7 @@ for interval,(start,end) in protocol['test_intervals'].items():
   print(interval,cost,[(r['policy'],round(r['return_total']*100,3)) for r in rows if r['interval']==interval and r['fee_bps']==cost],flush=True)
 (O/'metrics.json').write_text(json.dumps(rows,indent=2));bootstrap=[];rng=np.random.default_rng(20261116)
 for interval in protocol['test_intervals']:
+ if interval=='test_jan2026':continue  #21sessions: no standalone bootstrap claims
  train=np.array([[d['net_return'] for d in stored[(interval,10,name)]['daily']] for name in policies if name!='untrained']);n=train.shape[1]
  for baseline in ['untrained','buy_hold_equal','buy_hold_trained_initial','inverse_vol_rebalanced']:
   base=np.array([d['net_return'] for d in stored[(interval,10,baseline)]['daily']]);assert len(base)==n

@@ -1,6 +1,6 @@
 {
   "mode": "Actual production UI and real API; no network mocks, preset decisions or browser-evaluated fake state",
-  "elapsed_seconds": 55.014389991760254,
+  "elapsed_seconds": 42.933594942092896,
   "sessions": 270,
   "expected_end_equity": 113282.88926029207,
   "checks": [

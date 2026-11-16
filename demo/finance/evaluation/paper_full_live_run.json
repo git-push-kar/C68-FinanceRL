@@ -1,5 +1,5 @@
 {
-  "session_id": "4b517978b72849ddad7778cbcabfc481",
+  "session_id": "ef9858b5d68647279cf9cb2f67ab39b4",
   "date": "2026-01-30",
   "initial_date": "2024-12-31",
   "capital": 100000.0,
@@ -2534,9 +2534,13 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.368,
-        "loaded": []
+        "elapsed_seconds": 11.135,
+        "loaded": [
+          "base",
+          "finance_policy"
+        ]
       },
       "trades": [
         {
@@ -3167,8 +3171,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.177,
         "loaded": []
       },
       "trades": [
@@ -3800,8 +3805,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.18,
+        "elapsed_seconds": 0.185,
         "loaded": []
       },
       "trades": [
@@ -4433,8 +4439,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.18,
+        "elapsed_seconds": 0.179,
         "loaded": []
       },
       "trades": [
@@ -5066,8 +5073,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.185,
+        "elapsed_seconds": 0.186,
         "loaded": []
       },
       "trades": [
@@ -5699,8 +5707,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.182,
         "loaded": []
       },
       "trades": [
@@ -6332,8 +6341,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.172,
         "loaded": []
       },
       "trades": [
@@ -6965,8 +6975,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -7598,8 +7609,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.172,
         "loaded": []
       },
       "trades": [
@@ -8231,8 +8243,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.177,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -8864,8 +8877,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.18,
+        "elapsed_seconds": 0.169,
         "loaded": []
       },
       "trades": [
@@ -9497,6 +9511,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.179,
         "loaded": []
@@ -10130,8 +10145,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.178,
         "loaded": []
       },
       "trades": [
@@ -10763,6 +10779,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.175,
         "loaded": []
@@ -11396,8 +11413,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.181,
+        "elapsed_seconds": 0.18,
         "loaded": []
       },
       "trades": [
@@ -12029,8 +12047,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.187,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -12662,8 +12681,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.181,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -13295,8 +13315,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.171,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -13928,8 +13949,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.177,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -14561,8 +14583,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.181,
+        "elapsed_seconds": 0.17,
         "loaded": []
       },
       "trades": [
@@ -15194,8 +15217,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.182,
+        "elapsed_seconds": 0.174,
         "loaded": []
       },
       "trades": [
@@ -15827,8 +15851,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.181,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -16460,8 +16485,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.181,
+        "elapsed_seconds": 0.182,
         "loaded": []
       },
       "trades": [
@@ -17093,8 +17119,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.182,
+        "elapsed_seconds": 0.18,
         "loaded": []
       },
       "trades": [
@@ -17726,8 +17753,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.182,
+        "elapsed_seconds": 0.186,
         "loaded": []
       },
       "trades": [
@@ -18359,8 +18387,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.18,
+        "elapsed_seconds": 0.183,
         "loaded": []
       },
       "trades": [
@@ -18992,8 +19021,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -19625,8 +19655,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.18,
         "loaded": []
       },
       "trades": [
@@ -20258,8 +20289,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.177,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -20891,8 +20923,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.177,
+        "elapsed_seconds": 0.174,
         "loaded": []
       },
       "trades": [
@@ -21524,8 +21557,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.171,
+        "elapsed_seconds": 0.174,
         "loaded": []
       },
       "trades": [
@@ -22157,8 +22191,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.177,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -22790,8 +22825,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.175,
+        "elapsed_seconds": 0.172,
         "loaded": []
       },
       "trades": [
@@ -23423,8 +23459,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.175,
+        "elapsed_seconds": 0.171,
         "loaded": []
       },
       "trades": [
@@ -24056,6 +24093,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.176,
         "loaded": []
@@ -24689,6 +24727,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.179,
         "loaded": []
@@ -25322,8 +25361,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.186,
+        "elapsed_seconds": 0.183,
         "loaded": []
       },
       "trades": [
@@ -25955,8 +25995,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.179,
+        "elapsed_seconds": 0.176,
         "loaded": []
       },
       "trades": [
@@ -26588,8 +26629,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.187,
+        "elapsed_seconds": 0.177,
         "loaded": []
       },
       "trades": [
@@ -27221,8 +27263,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.19,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -27854,8 +27897,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.174,
         "loaded": []
       },
       "trades": [
@@ -28487,8 +28531,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.175,
+        "elapsed_seconds": 0.176,
         "loaded": []
       },
       "trades": [
@@ -29120,8 +29165,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.187,
         "loaded": []
       },
       "trades": [
@@ -29747,8 +29793,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.176,
+        "elapsed_seconds": 0.183,
         "loaded": []
       },
       "trades": [
@@ -30380,8 +30427,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.182,
         "loaded": []
       },
       "trades": [
@@ -31013,6 +31061,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.177,
         "loaded": []
@@ -31646,8 +31695,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.175,
+        "elapsed_seconds": 0.176,
         "loaded": []
       },
       "trades": [
@@ -32279,6 +32329,7 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
         "elapsed_seconds": 0.174,
         "loaded": []
@@ -32912,8 +32963,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.176,
+        "elapsed_seconds": 0.175,
         "loaded": []
       },
       "trades": [
@@ -33545,8 +33597,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.173,
+        "elapsed_seconds": 0.178,
         "loaded": []
       },
       "trades": [
@@ -34178,8 +34231,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.188,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -34811,8 +34865,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.178,
+        "elapsed_seconds": 0.173,
         "loaded": []
       },
       "trades": [
@@ -35444,8 +35499,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.19,
+        "elapsed_seconds": 0.177,
         "loaded": []
       },
       "trades": [
@@ -36077,8 +36133,9 @@
         "adapter": "Nifty native static seed42 checkpoint44",
         "adapter_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
         "input_tokens": 201,
+        "base_weight_sha256": "18b4cdbc8eab790f447feac717f4d0cecbb85caf8df198b3b2401c22506858e7",
         "max_probability_error": 0.0,
-        "elapsed_seconds": 0.188,
+        "elapsed_seconds": 0.182,
         "loaded": []
       },
       "trades": [
