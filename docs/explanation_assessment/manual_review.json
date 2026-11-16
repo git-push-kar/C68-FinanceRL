@@ -1,0 +1,379 @@
+{
+  "reviewer": "Assistant/developer semantic audit, not independent or blinded",
+  "rubric": "Pass: sufficient answer without identified material false claim. Partial: missing coverage but no identified material false claim. Fail: material contradiction, invented claim or wrong interpretation. Wording quality alone is not failed.",
+  "counts": {
+    "selected_explanation_SFT_fp32": {
+      "fail": 19,
+      "pass": 10,
+      "partial": 1
+    },
+    "pristine_base_fp32": {
+      "fail": 21,
+      "partial": 1,
+      "pass": 8
+    }
+  },
+  "decision": "Neither passes the predeclared gate. Remove finance freeform explanations. Results concern30 selected questions, not universal accuracy.",
+  "reviews": [
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q00",
+      "verdict": "fail",
+      "reason": "Invents a pre-trade value from the current post-return value; calls lagged estimates forecasts."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q01",
+      "verdict": "fail",
+      "reason": "Accepts a sale premise even though the record is a buy."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q02",
+      "verdict": "fail",
+      "reason": "Contradictory initial fee accounting: selected and cumulative are equal."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q03",
+      "verdict": "fail",
+      "reason": "Denies the initial cash purchase and implies a fresh probability update."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q04",
+      "verdict": "fail",
+      "reason": "Invents4.00% strategy allocation and wrong pre-trade value."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q05",
+      "verdict": "fail",
+      "reason": "Calls the recorded buy a sell and misinterprets weight/volatility fields."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q06",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q07",
+      "verdict": "fail",
+      "reason": "Invents forecast target interpretation and misidentifies largest strategy contribution."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q08",
+      "verdict": "fail",
+      "reason": "Incorrectly says cumulative market P&L includes portfolio fees."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q09",
+      "verdict": "fail",
+      "reason": "Accepts false sale premise for a recorded buy."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q10",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q11",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q12",
+      "verdict": "fail",
+      "reason": "Treats the later current value as the pre-purchase value and event fee as transaction-specific."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q13",
+      "verdict": "fail",
+      "reason": "Accepts false sale premise for a recorded buy."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q14",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q15",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q16",
+      "verdict": "fail",
+      "reason": "Misinterprets strategy preference as a fraction of one trade amount."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q17",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q18",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q19",
+      "verdict": "fail",
+      "reason": "Invents trades as the explanation for drift and refers to new probabilities."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q20",
+      "verdict": "fail",
+      "reason": "Invents modeled taxes."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q21",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q22",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q23",
+      "verdict": "partial",
+      "reason": "Does not directly resolve the counterfactual-proof question."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q24",
+      "verdict": "fail",
+      "reason": "Reverses signed P&L ordering and calls negative P&L positive."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q25",
+      "verdict": "fail",
+      "reason": "Says No while explaining facts that imply Yes."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q26",
+      "verdict": "fail",
+      "reason": "Says positive cumulative market P&L was deducted from portfolio value."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q27",
+      "verdict": "fail",
+      "reason": "Attributes cumulative holding P&L to one trade and mixes it with fees."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q28",
+      "verdict": "fail",
+      "reason": "Gives execution date instead of the earlier signal cutoff."
+    },
+    {
+      "candidate": "selected_explanation_SFT_fp32",
+      "id": "q29",
+      "verdict": "pass",
+      "reason": "No identified material factual error; awkward wording alone is not failed."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q00",
+      "verdict": "fail",
+      "reason": "Invents favorable stock-return probabilities from strategy preferences."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q01",
+      "verdict": "fail",
+      "reason": "Fails false-sale correction and reverses numeric weight comparison."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q02",
+      "verdict": "fail",
+      "reason": "Double-counts selected-event and cumulative fees."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q03",
+      "verdict": "partial",
+      "reason": "Partial initial-diversification answer, truncated and misses cash-funding explanation."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q04",
+      "verdict": "fail",
+      "reason": "Conflates trade notional with positive performance contribution and invents favorable price signal."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q05",
+      "verdict": "fail",
+      "reason": "Fails to correct false sale premise."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q06",
+      "verdict": "fail",
+      "reason": "Adds event fee to cumulative fee, double-counting."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q07",
+      "verdict": "fail",
+      "reason": "Invents unchanged-value decline and mixes portfolio and stock P&L."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q08",
+      "verdict": "fail",
+      "reason": "Invents predictions aligned with observed market conditions."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q09",
+      "verdict": "fail",
+      "reason": "False sale, reversed inequality and invented overvaluation rationale."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q10",
+      "verdict": "fail",
+      "reason": "Uses cumulative cost as event cost and denies it is total so far."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q11",
+      "verdict": "fail",
+      "reason": "Calls amount sold a realized loss and invents before/after stock values."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q12",
+      "verdict": "fail",
+      "reason": "Invents model predictions and conflates stock value timestamps."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q13",
+      "verdict": "fail",
+      "reason": "False sale and reversed numeric inequality."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q14",
+      "verdict": "fail",
+      "reason": "Adds selected fee to cumulative fee."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q15",
+      "verdict": "fail",
+      "reason": "Calls sale notional an investment loss and reverses current/target ordering."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q16",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q17",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q18",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q19",
+      "verdict": "fail",
+      "reason": "Does not identify price drift; substitutes a new target/signal story."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q20",
+      "verdict": "fail",
+      "reason": "Instructs double subtraction of already-accounted fees."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q21",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q22",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q23",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q24",
+      "verdict": "fail",
+      "reason": "Incorrect signed P&L winner."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q25",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q26",
+      "verdict": "fail",
+      "reason": "Equates cumulative P&L to trade amount."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q27",
+      "verdict": "fail",
+      "reason": "Equates portfolio net gain with profit from a selected transaction."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q28",
+      "verdict": "pass",
+      "reason": "No identified material factual error."
+    },
+    {
+      "candidate": "pristine_base_fp32",
+      "id": "q29",
+      "verdict": "fail",
+      "reason": "Invents orders actually sent to a broker despite explicit simulated-only record."
+    }
+  ]
+}

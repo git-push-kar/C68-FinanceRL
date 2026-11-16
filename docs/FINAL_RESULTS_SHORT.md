@@ -16,4 +16,4 @@
 
 **Finding:** Training increased net return by **2.06 percentage points over untrained**. All three training seeds showed essentially the same improvement. Reloading the actual adapter reproduced its policy; disabling it restored the untrained policy.
 
-**Limits:** The test is retrospective. The **0.22-point advantage over buy-and-hold is small and not statistically established**. Rebalanced equal weight returned **13.44%**, exceeding the trained policy. The dashboard still displays the earlier ETF experiment.
+**Limits:** The test is retrospective. The **0.22-point advantage over buy-and-hold is small and not statistically established**. Rebalanced equal weight returned **13.44%**, exceeding the trained policy. The dashboard now runs this Nifty adapter in an autonomous historical paper simulation. Conversation was removed after factual testing; the inspector shows actual execution records.

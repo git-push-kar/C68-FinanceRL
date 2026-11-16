@@ -1,3 +1,7 @@
+# Current authoritative context: Nifty paper-trading release
+
+Read JOURNAL_RESEARCH_REPORT.md first for the selected artifact, exact retrospective test, completed demo and removed narration. The following older reports are historical evidence; their earlier final-candidate/deployment statements are superseded. The short final presentation list is at the END of this file.
+
 # Finance RL: verified candidate and training/validation/test results
 
 ## Recommendation
@@ -713,3 +717,15 @@ The preferred final comparison is now final_presentation_figures/clean_final_com
 # Current presentation result
 
 Use nifty_test_results/FINAL_TEST_REPORT.md and presentation/nifty_test_2025.*. Exclude development scores from the main presentation. The verified Nifty adapter shows training benefit versus raw on retrospective tests; its small buy-and-hold advantage is not statistically established. The running UI still uses the earlier ETF adapter; do not present its records as this Nifty result.
+
+
+---
+
+# Final showable result after paper-trading integration
+
+- ONE selected artifact: original Nifty native RL seed42 checkpoint44. Train2019–2021; validation2022. Headline continuous retrospective test2025–January2026: raw11.22%, trained13.28%, equal holding13.06%. Rebalanced equal weight13.44% is stronger. Do not use45% development or15% calendar2025 as competing headline scores.
+- Original weights reloaded, disabled-adapter recovery checked, all three seeds retained. Live historical paper engine makes54 actual model calls and reproduces every one of270 original daily balances exactly.
+- Demonstrate Start/Pause, Next day, Next rebalance, holdings/trades/fees, source-date inspector and exports. Simulated funds/historical data, no broker/news/real-time inference claim beyond actual adapter calls.
+- Finance conversation removed: SFT10/30 full passes, base8/30 in a selected developer-reviewed factual audit. No preset answers replace it. Inspector is recorded evidence, not generated rationale.
+- Primary report JOURNAL_RESEARCH_REPORT.md, full numeric appendix and conditional uncertainty/cost sensitivity, actual browser/video evidence and source hashes accompany the release. No assertion of global optimality, no flaws, exhausted2B capacity or established superiority over holding.
+- Source/selected packages are on GitHub main in Parth-authored commits; verify the separate checkpoint-release receipt before assuming every intermediate binary is backed up. Upstream base and environments must be reinstalled.

@@ -1,1 +1,5 @@
 archives/*.zip filter=lfs diff=lfs merge=lfs -text
+demo/data/finance_paper/*.npz filter=lfs diff=lfs merge=lfs -text
+research/data/*.csv filter=lfs diff=lfs merge=lfs -text
+demo/adapters/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
+demo/adapters/finance_policy/** -text

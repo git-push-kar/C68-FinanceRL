@@ -1,0 +1,9 @@
+import json,time,shutil
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+D=Path.cwd();O=D/'finance/evaluation/paper_ui';errors=[]
+with sync_playwright() as pw:
+ browser=pw.chromium.launch(headless=True);context=browser.new_context(viewport={'width':1440,'height':1100},record_video_dir=str(O/'video'),record_video_size={'width':1280,'height':980});page=context.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.goto('http://127.0.0.1:8765/#finance');f=page.frame_locator('iframe[title="Finance portfolio workspace"]');f.get_by_text('Ready · 270 historical trading sessions',exact=True).wait_for();f.get_by_label('Playback speed').select_option('80');start=time.time();f.get_by_role('button',name='Start simulation',exact=False).click();f.get_by_text('Completed 270 trading sessions',exact=True).wait_for(timeout=180000)
+ assert f.get_by_text('₹1,13,282.89',exact=True).is_visible();f.get_by_role('button',name='View decision',exact=True).first.click();f.get_by_text('Learned strategy mix',exact=True).wait_for();page.screenshot(path=str(D/'portfolio-paper-live.png'),full_page=True);page.set_viewport_size({'width':390,'height':844});page.screenshot(path=str(O/'mobile_actual.png'),full_page=True);video=page.video;context.close();shutil.copy2(video.path(),D/'portfolio-paper-live.webm');browser.close()
+assert not errors,errors
+(O/'actual_browser_verification.json').write_text(json.dumps({'mode':'Actual production UI and real API; no network mocks, preset decisions or browser-evaluated fake state','elapsed_seconds':time.time()-start,'sessions':270,'expected_end_equity':113282.88926029207,'checks':['autonomous playback','real model allocation requests','completed test interval','correct ending balance','selected actual trade inspection','desktop and mobile rendering'],'javascript_errors':errors},indent=2));print('Actual browser playback passed',round(time.time()-start,2),'seconds')
