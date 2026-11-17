@@ -1,0 +1,58 @@
+{
+  "algorithm": "state_conditioned_all_action_one_rebalance_financial_policy_gradient",
+  "created_utc": "2026-11-17T02:32:02.120237+00:00",
+  "arguments": {
+    "mode": "train",
+    "run": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\campaign_runs\\stateful_full_account_seed42_20261117",
+    "base": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\local_models\\InternVL3-2B",
+    "epochs": 12,
+    "states": 1536,
+    "accum": 4,
+    "seed": 42
+  },
+  "train": "2015-01-01 through 2021-12-31; rewards never cross boundary",
+  "validation": "2022; checkpoint selection only",
+  "test_intervals": {
+    "primary_continuous": [
+      "2025-01-01",
+      "2026-11-13"
+    ],
+    "historical_comparison": [
+      "2025-01-01",
+      "2026-01-30"
+    ],
+    "later_extension": [
+      "2026-02-01",
+      "2026-11-13"
+    ]
+  },
+  "test_caveat": "Retrospective project history; no blanket claim of untouched confirmation. Different five-stock universe and integer execution mean old13.28% is not a matched comparator.",
+  "state_distribution": "Random valid cash/integer inventory states from training dates and fixed training capitals; offline contextual RL, not on-policy long-episode PPO.",
+  "objective": "Exact expectation of five-session net log wealth over all7^5 joint per-stock actions, scaled by0.02, plus0.02 KL to pristine policy on the same observation.",
+  "execution": "Observe known close; execute next open; integer shares; sell first; proportionally fund rounded buys; .10%fees+.05%slippage per side; dividends/splits before opening trades.",
+  "evaluation_capitals": [
+    500.0,
+    50000.0,
+    100000.0,
+    200000.0
+  ],
+  "selection": "2022 net wealth growth at100000INR; earliest tie; epoch0 eligible",
+  "evaluation_actions": "deterministic per-stock argmax; no test-time sampling or cached action fallback",
+  "base_id": "OpenGVLab/InternVL3-2B",
+  "base_revision": "899155015275a9b7338c7f4677e19c784e0e5a21",
+  "trainable": "Only rank16 full-InternVL-root attention and original vocabulary-head LoRA; no replacement numerical policy/head",
+  "attention_lr": 3e-06,
+  "vocabulary_head_lr": 3e-05,
+  "gradient_clip": 1.0,
+  "weight_decay": 0.0,
+  "seed": 42,
+  "source_sha256": {
+    "market.py": "7467a509ead714d7c2e164e6956e9819b8049824990c78486d3e663a5caaa9b9",
+    "policy.py": "11093daac2c2a8b2765c6078ddaf5ce336c48ede9ac3dda138a0fbb38879dec9",
+    "prepare_data.py": "8646369d0df6642d9b7d9e8a868300247f060491c7c5a37856b71d051da43228",
+    "test_gradient.py": "2fdc2db61086fb89169475e52a7877def8091f56c5adebd4e7d97d75449208cd",
+    "test_market.py": "085c8fb1ebc637b20b892fac34770dd014048276172cf9d32aae6352aef31126",
+    "train.py": "ac1a24cc0f6e22d383598a5d329cc50fe719d46cfa8f5b0076e881a586bed1df"
+  },
+  "data_manifest_sha256": "b74e6c646b0bc1a9908ca874795a5565fb37747eabb7823d05640765a9102b42"
+}
