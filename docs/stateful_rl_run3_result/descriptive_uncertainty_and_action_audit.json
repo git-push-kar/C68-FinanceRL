@@ -1,0 +1,1923 @@
+{
+  "selected": {
+    "step": 384,
+    "stage": "supervised",
+    "score": 0.1473375858480539,
+    "return": 0.15874507294768359,
+    "end_equity": 115874.50729476835,
+    "sharpe": 1.009321726255933,
+    "max_drawdown": 0.07014157197260118,
+    "annual_volatility": 0.16281825263153285,
+    "fees": 147.41159193513488,
+    "slippage": 73.68114991760254,
+    "sessions": 246
+  },
+  "caveat": "Circular paired block-bootstrap on one adaptively reused retrospective sample; not independent confirmation, not corrected for experiment selection. Similar high-capital returns are not failure. Different share quantities alone do not prove learned budget preferences. Exposure is observed at decision dates, not daily average.",
+  "results": [
+    {
+      "interval": "primary_continuous",
+      "capital": 500.0,
+      "metrics": {
+        "interval": "primary_continuous",
+        "capital": 500.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 463
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.14474899090069582,
+            "descriptive_95pct_interval": [
+              -0.5433988795877521,
+              0.1526263540286736
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.14474899090069582,
+            "descriptive_95pct_interval": [
+              -0.5371230154211238,
+              0.1506894786287035
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 24,
+      "real_order_dates": 0,
+      "shares_bought": 0,
+      "shares_sold": 0,
+      "mean_signal_stock_exposure": 0.0
+    },
+    {
+      "interval": "primary_continuous",
+      "capital": 5000.0,
+      "metrics": {
+        "interval": "primary_continuous",
+        "capital": 5000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.13009604182020884,
+        "end_equity": 5650.480209101044,
+        "sharpe": 0.9912681025158412,
+        "max_drawdown": 0.058590535471719773,
+        "annual_volatility": 0.06960512550386247,
+        "fees": 9.080252538360597,
+        "slippage": 4.539574981689453,
+        "sessions": 463
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.13009604182020884,
+            "descriptive_95pct_interval": [
+              -0.034037154475829,
+              0.32757229464062915
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.13009604182020884,
+            "descriptive_95pct_interval": [
+              -0.006953474897308386,
+              0.28121601983816485
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.015534750180066004,
+            "descriptive_95pct_interval": [
+              -0.018792553550401825,
+              0.055423709076180654
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.015534750180066004,
+            "descriptive_95pct_interval": [
+              -0.012913626263268242,
+              0.04394784315141216
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.03784498575000006,
+            "descriptive_95pct_interval": [
+              -0.05080786558128512,
+              0.1466614346580819
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.03784498575000006,
+            "descriptive_95pct_interval": [
+              -0.04884442735660141,
+              0.1497068175399184
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 24,
+      "real_order_dates": 7,
+      "shares_bought": 7,
+      "shares_sold": 3,
+      "mean_signal_stock_exposure": 0.41134354130816214
+    },
+    {
+      "interval": "primary_continuous",
+      "capital": 50000.0,
+      "metrics": {
+        "interval": "primary_continuous",
+        "capital": 50000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.027975132636224753,
+        "end_equity": 48601.24336818876,
+        "sharpe": -0.040058538327863685,
+        "max_drawdown": 0.20152771953170456,
+        "annual_volatility": 0.14026805028808714,
+        "fees": 99.21334714328002,
+        "slippage": 49.594224609375,
+        "sessions": 463
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.03987891643478747,
+            "descriptive_95pct_interval": [
+              -0.25862596456316017,
+              0.27230806107134675
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.03987891643478747,
+            "descriptive_95pct_interval": [
+              -0.25814864399936305,
+              0.2470787298779937
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.009326766843337109,
+            "descriptive_95pct_interval": [
+              -0.05742528653618025,
+              0.08823749087161743
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.009326766843337109,
+            "descriptive_95pct_interval": [
+              -0.035739210686259834,
+              0.06462644181637839
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.008007342780239735,
+            "descriptive_95pct_interval": [
+              -0.08469627482133242,
+              0.10565335921289494
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.008007342780239735,
+            "descriptive_95pct_interval": [
+              -0.07036803057289902,
+              0.06765634608359235
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 24,
+      "real_order_dates": 21,
+      "shares_bought": 79,
+      "shares_sold": 27,
+      "mean_signal_stock_exposure": 0.8906919153302525
+    },
+    {
+      "interval": "primary_continuous",
+      "capital": 100000.0,
+      "metrics": {
+        "interval": "primary_continuous",
+        "capital": 100000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.03837987673842913,
+        "end_equity": 96162.01232615708,
+        "sharpe": -0.07572055400690973,
+        "max_drawdown": 0.20951441581017072,
+        "annual_volatility": 0.14419598512569656,
+        "fees": 191.0434839473114,
+        "slippage": 95.49614912414552,
+        "sessions": 463
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.03725205212022786,
+            "descriptive_95pct_interval": [
+              -0.25316327037729847,
+              0.28230399670627926
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.03725205212022786,
+            "descriptive_95pct_interval": [
+              -0.24699436639588626,
+              0.2456206876084235
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.00231214388625145,
+            "descriptive_95pct_interval": [
+              -0.07250923920289314,
+              0.0811851652447
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.00231214388625145,
+            "descriptive_95pct_interval": [
+              -0.05200540152661342,
+              0.058097194307025694
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.02042603964871159,
+            "descriptive_95pct_interval": [
+              -0.09921775080115265,
+              0.10012211911558748
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.02042603964871159,
+            "descriptive_95pct_interval": [
+              -0.08057878506393193,
+              0.053548300038076826
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 24,
+      "real_order_dates": 22,
+      "shares_bought": 155,
+      "shares_sold": 52,
+      "mean_signal_stock_exposure": 0.921479636837554
+    },
+    {
+      "interval": "primary_continuous",
+      "capital": 200000.0,
+      "metrics": {
+        "interval": "primary_continuous",
+        "capital": 200000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.04952208696573357,
+        "end_equity": 190095.58260685328,
+        "sharpe": -0.11462897651119101,
+        "max_drawdown": 0.21506378443404572,
+        "annual_volatility": 0.1470135787937726,
+        "fees": 361.6161179240264,
+        "slippage": 180.75527302551262,
+        "sessions": 463
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.047980430642015404,
+            "descriptive_95pct_interval": [
+              -0.2653535895376426,
+              0.27557306845629365
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.047980430642015404,
+            "descriptive_95pct_interval": [
+              -0.25957635585469424,
+              0.2404578170069628
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.02031422468474464,
+            "descriptive_95pct_interval": [
+              -0.09088409173847858,
+              0.06811811599755976
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.02031422468474464,
+            "descriptive_95pct_interval": [
+              -0.07776700992632823,
+              0.052130701232843156
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.021106472444030078,
+            "descriptive_95pct_interval": [
+              -0.09509470042311247,
+              0.08356052453805156
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.021106472444030078,
+            "descriptive_95pct_interval": [
+              -0.07651808248655896,
+              0.04476553799585414
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 24,
+      "real_order_dates": 24,
+      "shares_bought": 306,
+      "shares_sold": 99,
+      "mean_signal_stock_exposure": 0.9383979415413136
+    },
+    {
+      "interval": "historical_comparison",
+      "capital": 500.0,
+      "metrics": {
+        "interval": "historical_comparison",
+        "capital": 500.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 270
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.1662489909006959,
+            "descriptive_95pct_interval": [
+              -0.47482358955579573,
+              0.06592056277668475
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.1662489909006959,
+            "descriptive_95pct_interval": [
+              -0.4134969675403825,
+              0.01706580730701421
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 14,
+      "real_order_dates": 0,
+      "shares_bought": 0,
+      "shares_sold": 0,
+      "mean_signal_stock_exposure": 0.0
+    },
+    {
+      "interval": "historical_comparison",
+      "capital": 5000.0,
+      "metrics": {
+        "interval": "historical_comparison",
+        "capital": 5000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.08527176455302143,
+        "end_equity": 5426.358822765107,
+        "sharpe": 1.434269133082263,
+        "max_drawdown": 0.031839244008028844,
+        "annual_volatility": 0.054284174818321956,
+        "fees": 2.5279132883605957,
+        "slippage": 1.2633249816894532,
+        "sessions": 270
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.08527176455302143,
+            "descriptive_95pct_interval": [
+              0.004959243925376725,
+              0.17208424696053617
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.08527176455302143,
+            "descriptive_95pct_interval": [
+              0.016984731783734625,
+              0.15623009870321714
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.0003327724426755996,
+            "descriptive_95pct_interval": [
+              -0.01198766662536984,
+              0.010764118378583256
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.0003327724426755996,
+            "descriptive_95pct_interval": [
+              -0.01033881642218469,
+              0.007692579153463331
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.007239296399999873,
+            "descriptive_95pct_interval": [
+              -0.04012277815890457,
+              0.02041046477343473
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.007239296399999873,
+            "descriptive_95pct_interval": [
+              -0.03927873844841807,
+              0.018257829457272
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 14,
+      "real_order_dates": 2,
+      "shares_bought": 4,
+      "shares_sold": 0,
+      "mean_signal_stock_exposure": 0.3488574171419896
+    },
+    {
+      "interval": "historical_comparison",
+      "capital": 50000.0,
+      "metrics": {
+        "interval": "historical_comparison",
+        "capital": 50000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.06955571753822065,
+        "end_equity": 53477.78587691103,
+        "sharpe": 0.5748724561583133,
+        "max_drawdown": 0.11101022429652008,
+        "annual_volatility": 0.12212006669084227,
+        "fees": 63.98473638548278,
+        "slippage": 31.980149642944333,
+        "sessions": 270
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.04608219141110914,
+            "descriptive_95pct_interval": [
+              -0.1112375156008549,
+              0.2308123796880406
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.04608219141110914,
+            "descriptive_95pct_interval": [
+              -0.11089527492216893,
+              0.2261291132777014
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.02087705084116176,
+            "descriptive_95pct_interval": [
+              -0.004720516730463028,
+              0.05159222535398024
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.02087705084116176,
+            "descriptive_95pct_interval": [
+              0.001891578651808898,
+              0.04560323702920389
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.004974494558919407,
+            "descriptive_95pct_interval": [
+              -0.025002453551655514,
+              0.016696561170469748
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.004974494558919407,
+            "descriptive_95pct_interval": [
+              -0.01897551977351361,
+              0.012012361176586276
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 14,
+      "real_order_dates": 11,
+      "shares_bought": 60,
+      "shares_sold": 10,
+      "mean_signal_stock_exposure": 0.855121817137254
+    },
+    {
+      "interval": "historical_comparison",
+      "capital": 100000.0,
+      "metrics": {
+        "interval": "historical_comparison",
+        "capital": 100000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.06760934803025531,
+        "end_equity": 106760.93480302554,
+        "sharpe": 0.5437253453821845,
+        "max_drawdown": 0.1169181559621012,
+        "annual_volatility": 0.1271324323161304,
+        "fees": 129.99450678894044,
+        "slippage": 64.97239916992189,
+        "sessions": 270
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.053495255074154535,
+            "descriptive_95pct_interval": [
+              -0.11148588698848112,
+              0.24701936824730553
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.053495255074154535,
+            "descriptive_95pct_interval": [
+              -0.10720762955721679,
+              0.2412288562056835
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.016575859430185913,
+            "descriptive_95pct_interval": [
+              -0.013281866746912743,
+              0.05137726976657957
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.016575859430185913,
+            "descriptive_95pct_interval": [
+              -0.0053559574974087285,
+              0.04774270946428422
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.010977817077292729,
+            "descriptive_95pct_interval": [
+              -0.03485158429779178,
+              0.01787472642555977
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.010977817077292729,
+            "descriptive_95pct_interval": [
+              -0.02879603698973352,
+              0.012297400061929682
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 14,
+      "real_order_dates": 12,
+      "shares_bought": 120,
+      "shares_sold": 19,
+      "mean_signal_stock_exposure": 0.8903349620224938
+    },
+    {
+      "interval": "historical_comparison",
+      "capital": 200000.0,
+      "metrics": {
+        "interval": "historical_comparison",
+        "capital": 200000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.06339983016635764,
+        "end_equity": 212679.96603327154,
+        "sharpe": 0.5050103519694565,
+        "max_drawdown": 0.12199641429254615,
+        "annual_volatility": 0.13040427232717947,
+        "fees": 265.2922024920807,
+        "slippage": 132.59529817199706,
+        "sessions": 270
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.04782201280468601,
+            "descriptive_95pct_interval": [
+              -0.12064530910319088,
+              0.2444290021980458
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.04782201280468601,
+            "descriptive_95pct_interval": [
+              -0.11641229740169791,
+              0.24048864376196036
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.006878196353267807,
+            "descriptive_95pct_interval": [
+              -0.023743909703084654,
+              0.04140385162727669
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.006878196353267807,
+            "descriptive_95pct_interval": [
+              -0.014701396088726741,
+              0.03922209657803021
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.010275057020923128,
+            "descriptive_95pct_interval": [
+              -0.029475286931445136,
+              0.013015156237927025
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.010275057020923128,
+            "descriptive_95pct_interval": [
+              -0.02422564310982212,
+              0.007929356134399459
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 14,
+      "real_order_dates": 14,
+      "shares_bought": 241,
+      "shares_sold": 40,
+      "mean_signal_stock_exposure": 0.9103126251607654
+    },
+    {
+      "interval": "later_extension",
+      "capital": 500.0,
+      "metrics": {
+        "interval": "later_extension",
+        "capital": 500.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 193
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.02074258100000015,
+            "descriptive_95pct_interval": [
+              -0.30883875166904035,
+              0.20180663200501395
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.02074258100000015,
+            "descriptive_95pct_interval": [
+              -0.26455754754771643,
+              0.17923493933471443
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 10,
+      "real_order_dates": 0,
+      "shares_bought": 0,
+      "shares_sold": 0,
+      "mean_signal_stock_exposure": 0.0
+    },
+    {
+      "interval": "later_extension",
+      "capital": 5000.0,
+      "metrics": {
+        "interval": "later_extension",
+        "capital": 5000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": 0.0912408242694398,
+        "end_equity": 5456.204121347199,
+        "sharpe": 1.5431550593945427,
+        "max_drawdown": 0.03541353940128611,
+        "annual_volatility": 0.07575366792849046,
+        "fees": 11.13094203781128,
+        "slippage": 5.564899993896484,
+        "sessions": 193
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0912408242694398,
+            "descriptive_95pct_interval": [
+              -0.01868840512396508,
+              0.23275729267283723
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0912408242694398,
+            "descriptive_95pct_interval": [
+              -0.004259578325176621,
+              0.20022511800138187
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.09871058614683503,
+            "descriptive_95pct_interval": [
+              0.022944452948926632,
+              0.1787905764502948
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.09871058614683503,
+            "descriptive_95pct_interval": [
+              0.030163167453936726,
+              0.17152046862100215
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.10696689956943972,
+            "descriptive_95pct_interval": [
+              0.029580994517830302,
+              0.19653952522584323
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.10696689956943972,
+            "descriptive_95pct_interval": [
+              0.03542184317052905,
+              0.17475624610296872
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 10,
+      "real_order_dates": 7,
+      "shares_bought": 8,
+      "shares_sold": 4,
+      "mean_signal_stock_exposure": 0.3957775029965457
+    },
+    {
+      "interval": "later_extension",
+      "capital": 50000.0,
+      "metrics": {
+        "interval": "later_extension",
+        "capital": 50000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.061679011558998575,
+        "end_equity": 46916.04942205007,
+        "sharpe": -0.4513339430183469,
+        "max_drawdown": 0.18753667315056666,
+        "annual_volatility": 0.1568928963139493,
+        "fees": 80.00821413462829,
+        "slippage": 39.99215019226074,
+        "sessions": 193
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.05613476233967507,
+            "descriptive_95pct_interval": [
+              -0.22068420935845753,
+              0.1624273130511439
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.05613476233967507,
+            "descriptive_95pct_interval": [
+              -0.18845088589720396,
+              0.08290058414817437
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0009252702930692136,
+            "descriptive_95pct_interval": [
+              -0.07540304496599207,
+              0.05614756521941371
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0009252702930692136,
+            "descriptive_95pct_interval": [
+              -0.0938467327571269,
+              0.06177374124231982
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.04081643116312661,
+            "descriptive_95pct_interval": [
+              0.007767870530043614,
+              0.0894508609705771
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.04081643116312661,
+            "descriptive_95pct_interval": [
+              0.013623531044784736,
+              0.07153047758362445
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 10,
+      "real_order_dates": 10,
+      "shares_bought": 70,
+      "shares_sold": 17,
+      "mean_signal_stock_exposure": 0.8324097917292116
+    },
+    {
+      "interval": "later_extension",
+      "capital": 100000.0,
+      "metrics": {
+        "interval": "later_extension",
+        "capital": 100000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.07241045794911827,
+        "end_equity": 92758.95420508817,
+        "sharpe": -0.5144940840277366,
+        "max_drawdown": 0.20003297463334502,
+        "annual_volatility": 0.1644550828933143,
+        "fees": 155.8799856009369,
+        "slippage": 77.91540037536622,
+        "sessions": 193
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.06387558752483691,
+            "descriptive_95pct_interval": [
+              -0.23294007489745275,
+              0.15961242570929454
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.06387558752483691,
+            "descriptive_95pct_interval": [
+              -0.19621488243420532,
+              0.07657065666919109
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.014837130216364125,
+            "descriptive_95pct_interval": [
+              -0.05949405170974051,
+              0.07649167947626109
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.014837130216364125,
+            "descriptive_95pct_interval": [
+              -0.07223576970097169,
+              0.07541389151636417
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.03021580528701384,
+            "descriptive_95pct_interval": [
+              -0.004687755608322451,
+              0.08104141065955732
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.03021580528701384,
+            "descriptive_95pct_interval": [
+              0.004744383010876409,
+              0.060679269581698704
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 10,
+      "real_order_dates": 10,
+      "shares_bought": 138,
+      "shares_sold": 31,
+      "mean_signal_stock_exposure": 0.871706626007889
+    },
+    {
+      "interval": "later_extension",
+      "capital": 200000.0,
+      "metrics": {
+        "interval": "later_extension",
+        "capital": 200000.0,
+        "policy": "trained",
+        "unique_action_vectors": 1,
+        "return": -0.07411480955573924,
+        "end_equity": 185177.03808885216,
+        "sharpe": -0.5204608824832111,
+        "max_drawdown": 0.20223614095615727,
+        "annual_volatility": 0.16652439100326002,
+        "fees": 321.6739039610138,
+        "slippage": 160.786975692749,
+        "sessions": 193
+      },
+      "comparisons": {
+        "untrained": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": -0.06521234439081369,
+            "descriptive_95pct_interval": [
+              -0.23385957634987917,
+              0.15979814634616415
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": -0.06521234439081369,
+            "descriptive_95pct_interval": [
+              -0.19896949475598819,
+              0.07530566860489193
+            ]
+          }
+        ],
+        "supervised_only": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "anchor": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.010055978449516556,
+            "descriptive_95pct_interval": [
+              -0.07048848177970916,
+              0.07375081721853825
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.010055978449516556,
+            "descriptive_95pct_interval": [
+              -0.0856170079560654,
+              0.07319906451793808
+            ]
+          }
+        ],
+        "buy_hold": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.028576863937396224,
+            "descriptive_95pct_interval": [
+              -0.00923507515950661,
+              0.08228311980445181
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.028576863937396224,
+            "descriptive_95pct_interval": [
+              0.003032613558346695,
+              0.057952710890821914
+            ]
+          }
+        ],
+        "equal_rebalanced": [
+          {
+            "block_sessions": 20,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "block_sessions": 60,
+            "replicates": 2000,
+            "return_difference": 0.0,
+            "descriptive_95pct_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "decision_count": 10,
+      "real_order_dates": 10,
+      "shares_bought": 283,
+      "shares_sold": 67,
+      "mean_signal_stock_exposure": 0.8832340173315802
+    }
+  ],
+  "capital_comparisons": [
+    {
+      "capital_a": 500.0,
+      "capital_b": 5000.0,
+      "different_action_dates": 0,
+      "different_executed_share_dates": 7,
+      "return_difference": 0.13009604182020884
+    },
+    {
+      "capital_a": 5000.0,
+      "capital_b": 50000.0,
+      "different_action_dates": 0,
+      "different_executed_share_dates": 21,
+      "return_difference": -0.1580711744564336
+    },
+    {
+      "capital_a": 50000.0,
+      "capital_b": 100000.0,
+      "different_action_dates": 0,
+      "different_executed_share_dates": 18,
+      "return_difference": -0.010404744102204377
+    },
+    {
+      "capital_a": 100000.0,
+      "capital_b": 200000.0,
+      "different_action_dates": 0,
+      "different_executed_share_dates": 23,
+      "return_difference": -0.011142210227304439
+    }
+  ]
+}

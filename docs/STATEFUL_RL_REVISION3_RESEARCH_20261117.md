@@ -222,3 +222,13 @@ selected artifacts, account-trajectory receipts, state counterfactual diagnostic
 all baseline ledgers and comparisons. The original data reconstruction and vendor
 corporate-action assumptions remain; taxes, liquidity and market impact are not
 fully modeled. Five contemporary selected stocks are not a broad market claim.
+
+## Revision 3 completed — 17 November 2026, checked 17:23 IST
+
+Worker finished in5906.9seconds (~98minutes). RL stopped at iteration72 after12 validation checks without improvement. Selected checkpoint384 is supervised-only. All subsequent supervised/RL validation checkpoints tied its15.8745% return, so earliest-tie selection correctly retained384. This is NOT an RL success.
+
+Primary January2025-November13 2026,100000INR: selected-3.83799%, pristine-0.112782%, holding-1.79538%. Selected policy has exactly one action vector [4,4,4,4,4], target20% each. Its results match equal-weight rebalancing exactly. Six validation probes also kept all actions unchanged after changing return signs, volatility ordering, account capital or held inventory. This shows greedy-action collapse despite available complete inputs; it does not imply the inputs were omitted or probabilities identical.
+
+5000INR gives+13.0096%, above raw0 and hold9.2251%, but matches ordinary equal rebalancing exactly. Do NOT promote it as learned budget adaptation or select that capital to rescue the result. Different capital returns here arise from integer execution, not demonstrated adaptive allocation choices. No menu promotion, no running training worker, no successful conclusive replacement. Failure/current artifacts preserved in docs/stateful_rl_run3_result. Descriptive paired block uncertainty audit completed; adaptive retrospective caveats remain.
+
+Next methodological issue is learning conditional actions rather than the majority allocation class. Do not blindly repeat the same warm-start plus weak clipped update or label extra training an established fix. Any subsequent attempt needs an explicit state-learning gate and comparison with constant/equal-weight policies before costly financial evaluation.
