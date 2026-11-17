@@ -1,5 +1,7 @@
 # Finance RL · InternVL3-2B
 
+**Current status:** a state-aware portfolio-management replacement is being trained. The old static-mixture result below does not fulfil that requirement. See [active training and failure records](docs/STATEFUL_RL_REVISION2_ACTIVE_20261117.md).
+
 A native RL adapter learns a mixture of causal stock-allocation strategies, with a reproducible historical paper-trading demo.
 
 The Finance workspace now sits directly in the original Polyvalent Chat/Anomaly interface, using its layout and shared light/dark theme. See the [17 November integration and verification](docs/FINANCE_UI_INTEGRATION_20261117.md).
@@ -8,7 +10,7 @@ The Finance workspace now sits directly in the original Polyvalent Chat/Anomaly 
 
 **Backup complete:** [published checkpoint release](https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116), [verification receipt](archives/CHECKPOINT_RELEASE_STATUS.md), and [original SSD context bombs](docs/ssd_historical_context/README.md). Install Git LFS when cloning `main`.
 
-## Selected result
+## Historical static-policy result
 
 Training2019–2021, validation2022, retrospective continuous test1January2025–30January2026. Same49stocks, costs and dates:
 

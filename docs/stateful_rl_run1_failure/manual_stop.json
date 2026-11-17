@@ -1,0 +1,71 @@
+{
+  "state": "manually_stopped_validation_failure",
+  "recorded_utc": "2026-11-17T05:18:00.608006+00:00",
+  "reason": "Every completed trained validation checkpoint worse than epoch0; epochs5-8 identical negative validation return and epoch8 has one action vector (concentrated Infosys) on all50 validation dates. Stop to use remaining single attempt; no test result used for this decision.",
+  "last_progress": {
+    "state": "training",
+    "pid": 64180,
+    "epoch": 10,
+    "epochs": 12,
+    "example": 752,
+    "examples_per_epoch": 1536,
+    "mean_loss": 0.12574877683073282,
+    "elapsed_seconds": 9949.504868599994,
+    "gradient_norm": 3.787804365158081,
+    "max_tokens": 714,
+    "expected_centered_return": 0.009176174998283387,
+    "kl": 0.9170751571655273
+  },
+  "best_completed_validation": {
+    "epoch": 0,
+    "score": 0.014222060214819008,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": 0.023534406668190844,
+        "end_equity": 51176.72033340955,
+        "sharpe": 0.5871377967191295,
+        "max_drawdown": 0.03172354022314694,
+        "annual_volatility": 0.04173931340805695,
+        "fees": 67.22131832385254,
+        "slippage": 33.60827502441406,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": 0.014323674864954894,
+        "end_equity": 101432.3674864955,
+        "sharpe": 0.40567220842061336,
+        "max_drawdown": 0.03665902445345548,
+        "annual_volatility": 0.03734345354443225,
+        "fees": 20.191640823852538,
+        "slippage": 10.090775024414063,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.015236290098046834,
+        "end_equity": 196952.74198039062,
+        "sharpe": -0.6286251632202009,
+        "max_drawdown": 0.030488549146156063,
+        "annual_volatility": 0.024345503286937548,
+        "fees": 19.9749825,
+        "slippage": 9.9825,
+        "sessions": 248
+      }
+    ]
+  },
+  "nominal_original_protocol_preserved": true
+}
