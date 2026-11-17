@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-11-17T12:04:08.261528+00:00",
+  "arguments": {
+    "mode": "train",
+    "run": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\campaign_runs\\stateful_focused_gate_seed42_20261117",
+    "base": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\local_models\\InternVL3-2B",
+    "states": 768,
+    "iterations": 96,
+    "seed": 42
+  },
+  "algorithm": "Focused shared-stock InternVL allocation with balanced causal initialization and factorized episodic RL",
+  "train": "2015-2023",
+  "validation": "2024 net growth at100000 INR, earliest tie; zero and supervised-only eligible",
+  "test_intervals": {
+    "primary_continuous": [
+      "2025-01-01",
+      "2026-11-13"
+    ],
+    "historical_comparison": [
+      "2025-01-01",
+      "2026-01-30"
+    ],
+    "later_extension": [
+      "2026-02-01",
+      "2026-11-13"
+    ]
+  },
+  "test_caveat": "Retrospective evaluation repeatedly seen by project; method selection is adaptive, not untouched confirmation. Fixed universe has survivorship/selection limitations.",
+  "teacher": "inverse_vol",
+  "teacher_selection": "Mean annual net log growth minus 0.1 drawdown, 2015-2023 only; 2024 not used for anchor selection",
+  "SFT": "2015-2022 actual account states,25percent candidate risk-counterfactual augmentation,2048 class-balanced focus examples max. Gate uses2023 real observations only. Check every512 examples; stop at first passing gate. Native one-action readout per focused stock, full other-stock/account context.",
+  "RL": "Four60-session own-account trajectories per context,two contexts/update,three20-session decisions. Per-stock clipped probability ratios with shared trajectory group advantage;120focus examples/collection,two passes. Reference is gate-passing SFT. Other coefficients unchanged; attentionLR3e-6/headLR3e-5. First72updates with12-check validation patience or configured iterations.",
+  "sampling": "2015-2023 RL histories; prior gate year2023 becomes RL training explicitly. 2024 financial validation remains separate. Causal regime buckets; no future-based sampling.",
+  "execution": "Whole shares, no shorts/leverage, next-open fills,0.10% fee+0.05%slippage each side;35%stock/60%sector caps with affordability relaxation; dividends creditedexdate; splits reconstructed; no tax/marketimpact model.",
+  "model": "Shared original InternVL3-2B attention/vocabulary LoRA. Five explicit stock-focus prompts with full market/account context; one original-vocabulary action per prompt. Temperature1.0,uniform exploration0.05. No separate numerical policy or action fallback.",
+  "capital_probes": [
+    500.0,
+    5000.0,
+    50000.0,
+    100000.0,
+    200000.0
+  ],
+  "selection_limit": "No claim of optimum, flawless process, independent unseen test, journal acceptance or universal outperformance. RL gain must be measured separately from SFT.",
+  "source_sha256": {
+    "anchor.py": "497179e0550a7ff7c2df73ee1df12533e26ca2638b46df8ae4def31a68a9d2a7",
+    "episodic.py": "195fbeb51d50f85121b52c00b5ef3fac1072756f6b6ca33f3cd61cea5d8ae1c6",
+    "learning_gate.py": "8b95dc916b2eff6e0f0ad8e5da154a2182e8f8c115d6181e64050ee2a446d079",
+    "market.py": "a8da145770129300034806200c69b6585b18dd5100ffd5c49d93a210eb1d14e4",
+    "policy.py": "6b7eb91c24fbf688450eaa594a99ef3a4acca180dd732cd52bb1837d8f7e630b",
+    "test_anchor.py": "1496db60f19a381b313439623a3303f95442fc78ab685b548c4b27bf52993a44",
+    "test_focus.py": "aa16c786081bbb42ba9cd2d7c061986c78e48c7dfb5f8532ac2248dc448cd641",
+    "test_market.py": "6a6b95ff4f280a25616a8dd6231d5e4952125feaaf589b32efc6e13b6de2a2ca",
+    "train.py": "b5e3a1940d253896baebcc7b910e37efce68ff19c32f163fc15148da1805b154"
+  },
+  "data_manifest_sha256": "b74e6c646b0bc1a9908ca874795a5565fb37747eabb7823d05640765a9102b42",
+  "learning_gate": "2023 balanced accuracy>=0.60 and >=raw+0.15; minimum recall>=0.20 among classes with>=8 cases; >=4 predicted classes. If no pass, stop before RL and no financial test. No guarantee this heuristic-learning gate predicts a trading edge.",
+  "recovery": {
+    "source": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\campaign_runs\\stateful_focused_gate_seed42_20261117",
+    "last_reported_iteration": 69,
+    "resumed_after_iteration": 64,
+    "optimizer_restored": false,
+    "method": "weights-only warm restart; original optimizer/RNG were not persisted",
+    "lost_reported_iterations": 5,
+    "new_sampler_seed": 4242,
+    "recovery_script_sha256": "a7cdc82ff3d7a17e3a9ada075d53e52705220543fb5192bd6424143df7770732"
+  }
+}
