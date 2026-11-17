@@ -129,3 +129,7 @@ not proof of fully accurate vendor quotes or exact corporate-action settlements.
 Code and initial receipts pushed as c611d46 under Parth Dhande. Local full source
 snapshot and optimizer recovery remain in the run directory. Training continues
 independently; inspect live status to see whether the gate passes or fails.
+
+## Live check: RL iteration 19
+
+Worker PID21336 verified alive. Conditional gate passed at512 SFT updates: balanced accuracy0.732848, minimum eligible recall0.548387. Financial RL continues at19/96 with exact collection/update likelihood identity and nonzero reward variance. Best2024 validation checkpoint remainsrl_1: return9.228095%; SFT8.168694%, untrained4.241057%, holding6.930419%. Latest evaluated RL16 returned8.620034%; later training has not beaten RL1. Best weights are retained. Simple momentum remains stronger on2024 at29.506058%. Primary2025-Jan2026 test pending. Estimated remaining training plus evaluation about1.5-2hours at measured67seconds/iteration. No protocol changes.
