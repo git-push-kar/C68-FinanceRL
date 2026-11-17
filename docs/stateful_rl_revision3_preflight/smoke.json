@@ -1,0 +1,313 @@
+{
+  "status": "passed",
+  "parameter_change": 5.845810301252641e-05,
+  "reload_difference": 0.0,
+  "disabled_recovery_difference": 0.0,
+  "reference_swap_difference": 0.0,
+  "elapsed_seconds": 30.556976199994097,
+  "peak_gpu_bytes": 5885360128,
+  "tokens": 961,
+  "optimizer": {
+    "optimizer_steps": 6,
+    "likelihood_identity_error": 0.0,
+    "last_gradient_norm": 9.522908210754395,
+    "early_stop_update_kl": false,
+    "loss": -0.011429077635208765,
+    "ratio": 1.00130362311999,
+    "reference_kl": 1.0358666571619324e-05,
+    "old_kl": 1.0398209397521896e-05,
+    "entropy": 1.8514639089504878
+  },
+  "collection": {
+    "zero_variance_groups": 0,
+    "group_reward_std": [
+      0.019065944243744762
+    ]
+  },
+  "episodes": [
+    {
+      "group": 0,
+      "regime_bucket": "down_highvol",
+      "advantage": -0.8624189235075209,
+      "begin": "2015-09-21",
+      "end": "2015-12-22",
+      "initial": 100000.0,
+      "end_equity": 93570.5125931542,
+      "net_return": -0.06429487406845802,
+      "drawdown": 0.09215436174038794,
+      "utility": -0.07567032471089974,
+      "decisions": [
+        {
+          "signal_date": "2015-09-21",
+          "actions": [
+            6,
+            4,
+            2,
+            1,
+            0
+          ],
+          "trade_shares": [
+            101,
+            19,
+            4,
+            0,
+            0
+          ],
+          "prompt_sha256": "ba28e06ac565dc4f287c2d2a954b266e416f7209afb67d222d80e517ab0965ee",
+          "tokens": 954
+        },
+        {
+          "signal_date": "2015-10-21",
+          "actions": [
+            0,
+            0,
+            4,
+            2,
+            4
+          ],
+          "trade_shares": [
+            0,
+            0,
+            13,
+            19,
+            7
+          ],
+          "prompt_sha256": "5f24833f20e77324611ac3a51dda12a6bea28ff7625709c2e574034ced1c8556",
+          "tokens": 960
+        },
+        {
+          "signal_date": "2015-11-23",
+          "actions": [
+            6,
+            2,
+            0,
+            6,
+            3
+          ],
+          "trade_shares": [
+            -4,
+            -15,
+            0,
+            115,
+            -4
+          ],
+          "prompt_sha256": "16ef568b1554c3451981826bed2be4233618ce281aadec4d20d7fa1e10813999",
+          "tokens": 958
+        }
+      ]
+    },
+    {
+      "group": 0,
+      "regime_bucket": "down_highvol",
+      "advantage": -0.5361549533949548,
+      "begin": "2015-09-21",
+      "end": "2015-12-22",
+      "initial": 100000.0,
+      "end_equity": 94208.2799750301,
+      "net_return": -0.05791720024969893,
+      "drawdown": 0.09787683603528163,
+      "utility": -0.06944979404799075,
+      "decisions": [
+        {
+          "signal_date": "2015-09-21",
+          "actions": [
+            0,
+            3,
+            6,
+            1,
+            6
+          ],
+          "trade_shares": [
+            0,
+            9,
+            27,
+            0,
+            11
+          ],
+          "prompt_sha256": "17436402e2d60f27f07c09d7979f90009f8ef3cd095dcd7568373f45bca53910",
+          "tokens": 954
+        },
+        {
+          "signal_date": "2015-10-21",
+          "actions": [
+            1,
+            5,
+            5,
+            1,
+            0
+          ],
+          "trade_shares": [
+            0,
+            18,
+            -1,
+            0,
+            0
+          ],
+          "prompt_sha256": "07df9c4dd30667dbdd5f4fe8f1aa97bfe5e3141f73ad5ab4d4a1b9067f42a9fb",
+          "tokens": 958
+        },
+        {
+          "signal_date": "2015-11-23",
+          "actions": [
+            2,
+            3,
+            1,
+            5,
+            3
+          ],
+          "trade_shares": [
+            14,
+            -18,
+            -26,
+            118,
+            -7
+          ],
+          "prompt_sha256": "24ee7888b94446f55257ce1212f0e407612989d9cebbd64a800bee931eb09753",
+          "tokens": 959
+        }
+      ]
+    },
+    {
+      "group": 0,
+      "regime_bucket": "down_highvol",
+      "advantage": -0.29840214682261973,
+      "begin": "2015-09-21",
+      "end": "2015-12-22",
+      "initial": 100000.0,
+      "end_equity": 94385.1889409476,
+      "net_return": -0.05614811059052405,
+      "drawdown": 0.07130790335864223,
+      "utility": -0.06491681229408877,
+      "decisions": [
+        {
+          "signal_date": "2015-09-21",
+          "actions": [
+            5,
+            2,
+            1,
+            1,
+            0
+          ],
+          "trade_shares": [
+            87,
+            4,
+            0,
+            0,
+            0
+          ],
+          "prompt_sha256": "4c3ae3fa93af22ee8003a8b71da3cbca2d6b242124950340aca76c953ed8cea3",
+          "tokens": 954
+        },
+        {
+          "signal_date": "2015-10-21",
+          "actions": [
+            2,
+            2,
+            6,
+            5,
+            1
+          ],
+          "trade_shares": [
+            -73,
+            0,
+            30,
+            118,
+            0
+          ],
+          "prompt_sha256": "bb45bcea1d31f0ebea897b52a53868fcb40ca246705963d368d613a85d5b515e",
+          "tokens": 956
+        },
+        {
+          "signal_date": "2015-11-23",
+          "actions": [
+            1,
+            5,
+            4,
+            0,
+            2
+          ],
+          "trade_shares": [
+            -14,
+            22,
+            -12,
+            0,
+            2
+          ],
+          "prompt_sha256": "893755df7c91ba069f904650ca80eaeb009b2d9983769c94d4c24c81a25a8814",
+          "tokens": 961
+        }
+      ]
+    },
+    {
+      "group": 0,
+      "regime_bucket": "down_highvol",
+      "advantage": 1.696976023725095,
+      "begin": "2015-09-21",
+      "end": "2015-12-22",
+      "initial": 100000.0,
+      "end_equity": 97929.59238015237,
+      "net_return": -0.02070407619847625,
+      "drawdown": 0.05951632725875666,
+      "utility": -0.026873043349240615,
+      "decisions": [
+        {
+          "signal_date": "2015-09-21",
+          "actions": [
+            3,
+            1,
+            1,
+            1,
+            5
+          ],
+          "trade_shares": [
+            29,
+            0,
+            0,
+            0,
+            11
+          ],
+          "prompt_sha256": "804c1938b41790e339e5fd11f8610df6ad2c4910ab4c1b0ce79e56066c6dba4f",
+          "tokens": 954
+        },
+        {
+          "signal_date": "2015-10-21",
+          "actions": [
+            3,
+            0,
+            1,
+            2,
+            3
+          ],
+          "trade_shares": [
+            0,
+            0,
+            0,
+            19,
+            -8
+          ],
+          "prompt_sha256": "ce94986169c31777f19b33a32bb3e5fe54dcbc516bb119882df5e41f081f521b",
+          "tokens": 957
+        },
+        {
+          "signal_date": "2015-11-23",
+          "actions": [
+            5,
+            5,
+            4,
+            0,
+            2
+          ],
+          "trade_shares": [
+            60,
+            27,
+            18,
+            0,
+            -1
+          ],
+          "prompt_sha256": "533ef68e729f7cdfa0f0d7c774b21dbf5b734cbe242b7f2572dd35476ee11b8b",
+          "tokens": 958
+        }
+      ]
+    }
+  ]
+}

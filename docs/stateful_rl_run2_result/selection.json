@@ -1,0 +1,52 @@
+{
+  "step": 1792,
+  "score": 0.20189618185284375,
+  "criterion": "2024 primary100000INR net growth; earliest tie; zero eligible",
+  "rows": [
+    {
+      "capital": 500.0,
+      "return": 0.0,
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "annual_volatility": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 246
+    },
+    {
+      "capital": 50000.0,
+      "return": 0.1247357726701841,
+      "end_equity": 56236.788633509204,
+      "sharpe": 0.9691605880574365,
+      "max_drawdown": 0.06135151455341581,
+      "annual_volatility": 0.13344311797173758,
+      "fees": 317.18041684484865,
+      "slippage": 158.5819506225586,
+      "sessions": 246
+    },
+    {
+      "capital": 100000.0,
+      "return": 0.22372095707397088,
+      "end_equity": 122372.0957073971,
+      "sharpe": 1.4154997742528372,
+      "max_drawdown": 0.06419895685694399,
+      "annual_volatility": 0.1546224293576061,
+      "fees": 499.8828247379456,
+      "slippage": 249.92525204467776,
+      "sessions": 246
+    },
+    {
+      "capital": 200000.0,
+      "return": 0.2226863184376402,
+      "end_equity": 244537.26368752803,
+      "sharpe": 1.3951535720493629,
+      "max_drawdown": 0.06384509024757679,
+      "annual_volatility": 0.15646350341263074,
+      "fees": 949.1511667201539,
+      "slippage": 474.5421281738282,
+      "sessions": 246
+    }
+  ],
+  "epoch": 2
+}

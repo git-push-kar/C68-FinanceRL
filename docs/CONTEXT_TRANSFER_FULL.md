@@ -763,3 +763,13 @@ ACTIVE: C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_monthl
 
 
 Revision2 launch verified: actual PID68640, wrapper70072; actual optimization/checkpoint32/64 confirmed. Source hashes match protocol. See docs/stateful_rl_revision2_preflight/launch_verified.json. Leave the worker independent and become inactive; user can check in about3-4hours. No new convincing final result yet.
+
+## Revision 3: current work, superseding prior active-worker notes
+
+17 November 2026 afternoon: run2 COMPLETED, selectedstep1792. Primary100k test trained-8.176%, raw+1.893%, equalhold-1.795%; validation+22.372% did not generalize. Seven validation feature-sign counterfactuals changed greedy decisions only once. Preserved evidence: docs/stateful_rl_run2_result. No successful replacement declared.
+
+User asked for a fresh deep research/design review and authorized12-18hours with some flexibility. New run source research/stateful_rl_20261117_run3: causal inverse-volatility supervised curriculum selected using2015-2023 training years, then clipped group-relative RL on actual60-session,three-decision account episodes. Full stock/account inputs, real whole-share next-open execution, native InternVL3-2B LoRA. Separate SFT-only baseline mandatory; do not claim RL succeeded if only SFT helped. Train2015-2023,val2024,testJan2025-Nov13 2026 stays retrospective/adaptively reused. No outcome guarantees, no optimum/flawless-process claims.
+
+17CPU tests and realGPU preflight passed. Update/reload/disabled recovery/reference-swap checked; exact0 output error, nonzero parameter change. Actual live workerPID36996, wrapper63884, launched14:46:40IST. Run C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_curriculum_episode_seed42_20261117. Logs reports/stateful_curriculum_episode.stdout.log and.stderr.log. Verify process/status before action. No old UI GPU server. No duplicate worker. Expected roughly3hours total; inspect current progress before giving a revised ETA.
+
+Full primary-source review, implementation choices, failure interpretation, limitations and evaluation contract: docs/STATEFUL_RL_REVISION3_RESEARCH_20261117.md. After completion run research/summarize_stateful_episode.py with run path; inspect allcomparators,SFTvsRL,state/capital sensitivity,savedweights before anymenuintegration. Raw share-count differences alone do not prove learned budget preferences. No auto promotion. No quiet/time restrictions coded. User wants Codex inactive only when meaningful concurrent analysis is finished and training can run independently.

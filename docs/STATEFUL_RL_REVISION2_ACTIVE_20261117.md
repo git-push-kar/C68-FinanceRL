@@ -1,5 +1,9 @@
 # Active state-aware Finance RL revision 2
 
+**SUPERSEDED:** this worker completed and failed the primary test. See
+[revision 3](STATEFUL_RL_REVISION3_RESEARCH_20261117.md) for current activity,
+and `stateful_rl_run2_result/` for preserved final evidence. Do not restart it.
+
 17 November 2026. **No conclusive winning result has been established.**
 
 The user clarified that several justified attempts are permitted within the

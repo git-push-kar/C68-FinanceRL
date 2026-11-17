@@ -1,0 +1,244 @@
+{
+  "scope": "Actual model validation-state diagnostic; synthetic feature counterfactuals are not performance/backtest claims. Cash, prices, holdings and identities are unchanged.",
+  "selected_step": 1792,
+  "cases": [
+    {
+      "date": "2023-12-29",
+      "original_actions": [
+        0,
+        2,
+        6,
+        6,
+        5
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.051975905895233154
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.019105806946754456
+        }
+      }
+    },
+    {
+      "date": "2024-02-27",
+      "original_actions": [
+        0,
+        2,
+        2,
+        6,
+        1
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.026392653584480286
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.035223305225372314
+        }
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "original_actions": [
+        0,
+        2,
+        6,
+        6,
+        6
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            1
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.044474393129348755
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            6
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.01682494580745697
+        }
+      }
+    },
+    {
+      "date": "2024-06-28",
+      "original_actions": [
+        0,
+        2,
+        6,
+        6,
+        5
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.01852034032344818
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            6,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.010051757097244263
+        }
+      }
+    },
+    {
+      "date": "2024-08-27",
+      "original_actions": [
+        0,
+        2,
+        2,
+        6,
+        5
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.022676989436149597
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.008458562195301056
+        }
+      }
+    },
+    {
+      "date": "2024-10-23",
+      "original_actions": [
+        0,
+        2,
+        2,
+        6,
+        5
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.03536596894264221
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.008806034922599792
+        }
+      }
+    },
+    {
+      "date": "2024-12-20",
+      "original_actions": [
+        0,
+        2,
+        2,
+        6,
+        5
+      ],
+      "counterfactuals": {
+        "neutral_market_features": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            6
+          ],
+          "changed_action_count": 1,
+          "max_probability_change": 0.03719928860664368
+        },
+        "reversed_trailing_returns": {
+          "actions": [
+            0,
+            2,
+            2,
+            6,
+            5
+          ],
+          "changed_action_count": 0,
+          "max_probability_change": 0.020426154136657715
+        }
+      }
+    }
+  ]
+}

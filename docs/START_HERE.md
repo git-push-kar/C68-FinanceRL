@@ -1,6 +1,6 @@
 # Start here: final Finance RL artifact and demo
 
-**Latest active work:** the first full-state attempt failed validation and was stopped. A revised state-aware run is now in progress; read [the current worker handover](STATEFUL_RL_REVISION2_ACTIVE_20261117.md). Several justified attempts are allowed within the unchanged 12–24-hour total budget. No replacement is declared final yet.
+**Latest active work (17 November, afternoon):** state-aware run 2 finished and failed the primary test: trained −8.176%, untrained +1.893%, holding −1.795%. A causal supervised curriculum followed by own-account episodic RL is now running. Read [revision 3 research, rationale and worker handover](STATEFUL_RL_REVISION3_RESEARCH_20261117.md). No replacement is declared final yet; old results below are historical.
 
 **17 November correction:** the old constant-mixture adapter does not meet the requested state-aware portfolio-management requirement. A new whole-share, full-stock/account-input RL attempt is running; read [the active-run handover](STATEFUL_RL_ACTIVE_RUN_20261117.md) first. The results below remain historical measurements, not a declaration that the requested domain is concluded.
 
