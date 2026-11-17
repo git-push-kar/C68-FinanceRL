@@ -1,0 +1,803 @@
+{
+  "original_sha256": "29b847a33ad88b7568eef66e1fb9f3274a897bd3091ddb8551c129b75dd726f7",
+  "source_rows": 287263,
+  "asset_count": 49,
+  "tickers": [
+    "ADANIENT.NS",
+    "ADANIPORTS.NS",
+    "APOLLOHOSP.NS",
+    "ASIANPAINT.NS",
+    "AXISBANK.NS",
+    "BAJAJ-AUTO.NS",
+    "BAJAJFINSV.NS",
+    "BAJFINANCE.NS",
+    "BHARTIARTL.NS",
+    "BPCL.NS",
+    "BRITANNIA.NS",
+    "CIPLA.NS",
+    "COALINDIA.NS",
+    "DIVISLAB.NS",
+    "DRREDDY.NS",
+    "EICHERMOT.NS",
+    "GRASIM.NS",
+    "HCLTECH.NS",
+    "HDFCBANK.NS",
+    "HDFCLIFE.NS",
+    "HEROMOTOCO.NS",
+    "HINDALCO.NS",
+    "HINDUNILVR.NS",
+    "ICICIBANK.NS",
+    "INDUSINDBK.NS",
+    "INFY.NS",
+    "ITC.NS",
+    "JSWSTEEL.NS",
+    "KOTAKBANK.NS",
+    "LT.NS",
+    "LTIM.NS",
+    "M&M.NS",
+    "MARUTI.NS",
+    "NESTLEIND.NS",
+    "NTPC.NS",
+    "ONGC.NS",
+    "POWERGRID.NS",
+    "RELIANCE.NS",
+    "SBILIFE.NS",
+    "SBIN.NS",
+    "SHREECEM.NS",
+    "SUNPHARMA.NS",
+    "TATACONSUM.NS",
+    "TATASTEEL.NS",
+    "TCS.NS",
+    "TECHM.NS",
+    "TITAN.NS",
+    "ULTRACEMCO.NS",
+    "WIPRO.NS"
+  ],
+  "first_date": "1999-01-01",
+  "last_date": "2026-01-30",
+  "full_history_retained": true,
+  "fills_applied": false,
+  "assets_dropped": [],
+  "coverage": [
+    {
+      "year": 1999,
+      "sessions": 261,
+      "tickers_with_any_observation": 20,
+      "sessions_all49_observed": 0,
+      "missing_cells": 7569
+    },
+    {
+      "year": 2000,
+      "sessions": 260,
+      "tickers_with_any_observation": 20,
+      "sessions_all49_observed": 0,
+      "missing_cells": 7540
+    },
+    {
+      "year": 2001,
+      "sessions": 261,
+      "tickers_with_any_observation": 22,
+      "sessions_all49_observed": 0,
+      "missing_cells": 7307
+    },
+    {
+      "year": 2002,
+      "sessions": 261,
+      "tickers_with_any_observation": 38,
+      "sessions_all49_observed": 0,
+      "missing_cells": 5132
+    },
+    {
+      "year": 2003,
+      "sessions": 261,
+      "tickers_with_any_observation": 41,
+      "sessions_all49_observed": 0,
+      "missing_cells": 2385
+    },
+    {
+      "year": 2004,
+      "sessions": 262,
+      "tickers_with_any_observation": 42,
+      "sessions_all49_observed": 0,
+      "missing_cells": 2099
+    },
+    {
+      "year": 2005,
+      "sessions": 250,
+      "tickers_with_any_observation": 42,
+      "sessions_all49_observed": 0,
+      "missing_cells": 1751
+    },
+    {
+      "year": 2006,
+      "sessions": 247,
+      "tickers_with_any_observation": 43,
+      "sessions_all49_observed": 0,
+      "missing_cells": 1643
+    },
+    {
+      "year": 2007,
+      "sessions": 248,
+      "tickers_with_any_observation": 45,
+      "sessions_all49_observed": 0,
+      "missing_cells": 1406
+    },
+    {
+      "year": 2008,
+      "sessions": 246,
+      "tickers_with_any_observation": 45,
+      "sessions_all49_observed": 0,
+      "missing_cells": 984
+    },
+    {
+      "year": 2009,
+      "sessions": 243,
+      "tickers_with_any_observation": 45,
+      "sessions_all49_observed": 0,
+      "missing_cells": 972
+    },
+    {
+      "year": 2010,
+      "sessions": 251,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 1009
+    },
+    {
+      "year": 2011,
+      "sessions": 246,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 738
+    },
+    {
+      "year": 2012,
+      "sessions": 245,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 735
+    },
+    {
+      "year": 2013,
+      "sessions": 248,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 744
+    },
+    {
+      "year": 2014,
+      "sessions": 244,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 732
+    },
+    {
+      "year": 2015,
+      "sessions": 246,
+      "tickers_with_any_observation": 46,
+      "sessions_all49_observed": 0,
+      "missing_cells": 738
+    },
+    {
+      "year": 2016,
+      "sessions": 246,
+      "tickers_with_any_observation": 47,
+      "sessions_all49_observed": 0,
+      "missing_cells": 628
+    },
+    {
+      "year": 2017,
+      "sessions": 248,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 30,
+      "missing_cells": 404
+    },
+    {
+      "year": 2018,
+      "sessions": 246,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 246,
+      "missing_cells": 0
+    },
+    {
+      "year": 2019,
+      "sessions": 243,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 243,
+      "missing_cells": 0
+    },
+    {
+      "year": 2020,
+      "sessions": 251,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 251,
+      "missing_cells": 0
+    },
+    {
+      "year": 2021,
+      "sessions": 248,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 248,
+      "missing_cells": 0
+    },
+    {
+      "year": 2022,
+      "sessions": 248,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 248,
+      "missing_cells": 0
+    },
+    {
+      "year": 2023,
+      "sessions": 245,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 245,
+      "missing_cells": 0
+    },
+    {
+      "year": 2024,
+      "sessions": 246,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 246,
+      "missing_cells": 0
+    },
+    {
+      "year": 2025,
+      "sessions": 249,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 249,
+      "missing_cells": 0
+    },
+    {
+      "year": 2026,
+      "sessions": 21,
+      "tickers_with_any_observation": 49,
+      "sessions_all49_observed": 21,
+      "missing_cells": 0
+    }
+  ],
+  "series_audit": [
+    {
+      "ticker": "ADANIENT.NS",
+      "source_rows": 5811,
+      "first": "2002-09-04",
+      "last": "2026-01-30",
+      "supplement_symbol": "ADANIENT.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "ADANIPORTS.NS",
+      "source_rows": 4482,
+      "first": "2007-11-27",
+      "last": "2026-01-30",
+      "supplement_symbol": "ADANIPORTS.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "APOLLOHOSP.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "APOLLOHOSP.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "ASIANPAINT.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "ASIANPAINT.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "AXISBANK.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "AXISBANK.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "BAJAJ-AUTO.NS",
+      "source_rows": 5859,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "BAJAJ-AUTO.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "BAJAJFINSV.NS",
+      "source_rows": 5825,
+      "first": "2002-08-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "BAJAJFINSV.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "BAJFINANCE.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "BAJFINANCE.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "BHARTIARTL.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "BPCL.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "BPCL.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2017-07-13",
+          "ratio": 1.5
+        }
+      ]
+    },
+    {
+      "ticker": "BRITANNIA.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "BRITANNIA.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "CIPLA.NS",
+      "source_rows": 6769,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "CIPLA.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "COALINDIA.NS",
+      "source_rows": 3759,
+      "first": "2010-11-04",
+      "last": "2026-01-30",
+      "supplement_symbol": "COALINDIA.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "DIVISLAB.NS",
+      "source_rows": 5677,
+      "first": "2003-03-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "DIVISLAB.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "DRREDDY.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "DRREDDY.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "EICHERMOT.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "EICHERMOT.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "GRASIM.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "GRASIM.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HCLTECH.NS",
+      "source_rows": 5830,
+      "first": "2002-08-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "HCLTECH.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "HDFCBANK.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HDFCLIFE.NS",
+      "source_rows": 2027,
+      "first": "2017-11-17",
+      "last": "2026-01-30",
+      "supplement_symbol": "HDFCLIFE.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HEROMOTOCO.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "HEROMOTOCO.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HINDALCO.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "HINDALCO.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "HINDUNILVR.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "HINDUNILVR.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "ICICIBANK.NS",
+      "source_rows": 5856,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "ICICIBANK.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2017-06-20",
+          "ratio": 1.1
+        }
+      ]
+    },
+    {
+      "ticker": "INDUSINDBK.NS",
+      "source_rows": 5857,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "INDUSINDBK.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "INFY.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "INFY.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "ITC.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "ITC.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2016-07-01",
+          "ratio": 1.5
+        }
+      ]
+    },
+    {
+      "ticker": "JSWSTEEL.NS",
+      "source_rows": 5636,
+      "first": "2003-05-08",
+      "last": "2026-01-30",
+      "supplement_symbol": "JSWSTEEL.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "KOTAKBANK.NS",
+      "source_rows": 6118,
+      "first": "2001-07-02",
+      "last": "2026-01-30",
+      "supplement_symbol": "KOTAKBANK.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "LT.NS",
+      "source_rows": 5859,
+      "first": "2002-07-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "LT.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2017-07-13",
+          "ratio": 1.5
+        }
+      ]
+    },
+    {
+      "ticker": "LTIM.NS",
+      "source_rows": 2355,
+      "first": "2016-07-21",
+      "last": "2026-01-30",
+      "supplement_symbol": "LTM.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "M&M.NS",
+      "source_rows": 6768,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "M&M.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "MARUTI.NS",
+      "source_rows": 5592,
+      "first": "2003-07-09",
+      "last": "2026-01-30",
+      "supplement_symbol": "MARUTI.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "NESTLEIND.NS",
+      "source_rows": 5829,
+      "first": "2002-08-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "NESTLEIND.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "NTPC.NS",
+      "source_rows": 5245,
+      "first": "2004-11-05",
+      "last": "2026-01-30",
+      "supplement_symbol": "NTPC.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2019-03-19",
+          "ratio": 1.2
+        }
+      ]
+    },
+    {
+      "ticker": "ONGC.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "ONGC.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2016-12-15",
+          "ratio": 1.5
+        }
+      ]
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "source_rows": 4518,
+      "first": "2007-10-05",
+      "last": "2026-01-30",
+      "supplement_symbol": "POWERGRID.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2021-07-29",
+          "ratio": 1.3333333333333333
+        },
+        {
+          "date": "2023-09-12",
+          "ratio": 1.3333333333333333
+        }
+      ]
+    },
+    {
+      "ticker": "RELIANCE.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "RELIANCE.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "SBILIFE.NS",
+      "source_rows": 2059,
+      "first": "2017-10-03",
+      "last": "2026-01-30",
+      "supplement_symbol": "SBILIFE.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "SBIN.NS",
+      "source_rows": 6768,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "SBIN.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "SHREECEM.NS",
+      "source_rows": 6116,
+      "first": "2001-07-02",
+      "last": "2026-01-30",
+      "supplement_symbol": "SHREECEM.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "SUNPHARMA.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "SUNPHARMA.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "TATACONSUM.NS",
+      "source_rows": 6767,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "TATACONSUM.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "TATASTEEL.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "TATASTEEL.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "TCS.NS",
+      "source_rows": 5827,
+      "first": "2002-08-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "TCS.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "TECHM.NS",
+      "source_rows": 4793,
+      "first": "2006-08-28",
+      "last": "2026-01-30",
+      "supplement_symbol": "TECHM.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "TITAN.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "TITAN.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "ULTRACEMCO.NS",
+      "source_rows": 5826,
+      "first": "2002-08-12",
+      "last": "2026-01-30",
+      "supplement_symbol": "ULTRACEMCO.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": []
+    },
+    {
+      "ticker": "WIPRO.NS",
+      "source_rows": 6770,
+      "first": "1999-01-01",
+      "last": "2026-01-30",
+      "supplement_symbol": "WIPRO.NS",
+      "missing_supplement_dates_since2018": [],
+      "return_discrepancies_over50bps": [],
+      "fractional_split_events": [
+        {
+          "date": "2019-03-06",
+          "ratio": 1.3333333333333333
+        }
+      ]
+    }
+  ],
+  "panel_sha256": "88a47373f48438357f46082c0966de28a3766083944acd11b66d60948e8a60da",
+  "interpretation": "Original adjusted prices preserved exactly; not historical executable quotes. Supplementary data must not silently replace source observations. Return discrepancies and demerger accounting require explicit review before claiming realistic whole-share fills. Pre-listing cells remain missing, not invented.",
+  "known_corporate_events_requiring_review": [
+    "RELIANCE July2023 demerger; historical vendor OHLC may already embed adjustments",
+    "ITC January2025 hotels demerger; entitlement and pre-event quote reconstruction",
+    "fractional bonus allocations: explicit cash-in-lieu handling required"
+  ],
+  "symbol_alias_source": "https://nsearchives.nseindia.com/content/circulars/CML72948.pdf"
+}
