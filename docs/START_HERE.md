@@ -1,5 +1,7 @@
 # Start here: final Finance RL artifact and demo
 
+**17 November correction:** the old constant-mixture adapter does not meet the requested state-aware portfolio-management requirement. A new whole-share, full-stock/account-input RL attempt is running; read [the active-run handover](STATEFUL_RL_ACTIVE_RUN_20261117.md) first. The results below remain historical measurements, not a declaration that the requested domain is concluded.
+
 **Selected artifact:** InternVL3-2B Nifty native static strategy-preference LoRA, seed 42, checkpoint 44. **Headline:** continuous retrospective test, 1 January 2025–30 January 2026: trained 13.28% return versus original 11.22% and equal holding 13.06%. Rebalanced equal weight at 13.44% remains stronger; holding superiority is uncertain and cost-sensitive. Training: 2019–2021; validation: 2022. No development score is the headline.
 
 1. [Short final results](FINAL_RESULTS_SHORT.md).

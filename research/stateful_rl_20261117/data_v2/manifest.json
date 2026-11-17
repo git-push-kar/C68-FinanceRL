@@ -1,0 +1,83 @@
+{
+  "captured_utc": "2026-11-17T02:05:04.335770+00:00",
+  "source": "Yahoo Finance via yfinance 1.8.0",
+  "tickers": [
+    "COALINDIA.NS",
+    "HDFCBANK.NS",
+    "INFY.NS",
+    "SBIN.NS",
+    "TCS.NS"
+  ],
+  "universe_reason": "Five long-established liquid Nifty constituents: coal, banks and IT. Initial candidate RELIANCE replaced by TCS before any policy evaluation because the Jio demerger entitlement is not modeled by Yahoo cash-dividend/split events. No asset ranking by test returns. Sector concentration and fixed-universe survivorship remain limitations. Prior unselected capture retained in data/.",
+  "start": "2014-01-01",
+  "end": "2026-11-13",
+  "rows": 3174,
+  "details": [
+    {
+      "ticker": "COALINDIA.NS",
+      "rows": 3175,
+      "omitted_incomplete_dates": [
+        "2026-11-16"
+      ],
+      "splits": {},
+      "dividend_events": 29
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "rows": 3175,
+      "omitted_incomplete_dates": [
+        "2026-11-16"
+      ],
+      "splits": {
+        "2019-09-19": 2.0,
+        "2025-08-26": 2.0
+      },
+      "dividend_events": 14
+    },
+    {
+      "ticker": "INFY.NS",
+      "rows": 3175,
+      "omitted_incomplete_dates": [
+        "2026-11-16"
+      ],
+      "splits": {
+        "2014-12-02": 2.0,
+        "2015-06-15": 2.0,
+        "2018-09-04": 2.0
+      },
+      "dividend_events": 27
+    },
+    {
+      "ticker": "SBIN.NS",
+      "rows": 3175,
+      "omitted_incomplete_dates": [
+        "2026-11-16"
+      ],
+      "splits": {
+        "2014-11-20": 10.0
+      },
+      "dividend_events": 11
+    },
+    {
+      "ticker": "TCS.NS",
+      "rows": 3175,
+      "omitted_incomplete_dates": [
+        "2026-11-16"
+      ],
+      "splits": {
+        "2018-05-31": 2.0
+      },
+      "dividend_events": 53
+    }
+  ],
+  "unit_reconstruction": "OHLC and cash dividends multiplied by the product of subsequent Yahoo split factors, recovering the then-current share denomination. No bfill/interpolation. Shared observed sessions only.",
+  "dividend_assumption": "Cash credited on recorded ex-date rather than actual payment date, equally for all policies. Taxes and impact omitted.",
+  "sha256": {
+    "COALINDIA.NS.csv": "2430fb30c41b05458d01eb6a691b3952a0a3cf6201faa3cf79ebacb471e1899c",
+    "HDFCBANK.NS.csv": "280ae2289832f83d60204389290cbd5058d2e5f32a4d11577ec0f38f422dc2b8",
+    "INFY.NS.csv": "19bb88ae3585a0bdde9908ef7e2d5da3ef4a772aeabd3beb98f39e6b791a9260",
+    "market.npz": "bddbb34a1b849f033eab06ab2cb4f3da4873aa8e078c041a71304e55abe54ff1",
+    "SBIN.NS.csv": "3ed31d883ee5db591b3c40d09a60296c013188ade636453cca6f44442523b060",
+    "TCS.NS.csv": "34bbd1274da3e945526b4e6693dee2cab7b9a96955a94bd7c01a27ca5d362afb"
+  }
+}
