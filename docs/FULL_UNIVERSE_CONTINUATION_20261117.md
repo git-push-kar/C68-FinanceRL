@@ -133,3 +133,7 @@ independently; inspect live status to see whether the gate passes or fails.
 ## Live check: RL iteration 19
 
 Worker PID21336 verified alive. Conditional gate passed at512 SFT updates: balanced accuracy0.732848, minimum eligible recall0.548387. Financial RL continues at19/96 with exact collection/update likelihood identity and nonzero reward variance. Best2024 validation checkpoint remainsrl_1: return9.228095%; SFT8.168694%, untrained4.241057%, holding6.930419%. Latest evaluated RL16 returned8.620034%; later training has not beaten RL1. Best weights are retained. Simple momentum remains stronger on2024 at29.506058%. Primary2025-Jan2026 test pending. Estimated remaining training plus evaluation about1.5-2hours at measured67seconds/iteration. No protocol changes.
+
+## Completed18 November2026
+
+Run b finished96 RL iterations and all scheduled comparisons. See FULL_UNIVERSE_RESULT_20261118.md. Primary100000INR: RL3.6663%, untrained3.5905%, SFT3.6711%, holding6.3586%. Main success criterion failed. No worker active, no promotion. Whole-share budget residual cash and row-order sensitivity remain explicit limitations.
