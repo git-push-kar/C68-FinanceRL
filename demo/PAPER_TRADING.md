@@ -1,5 +1,14 @@
 # Nifty paper-trading demonstration
 
+**Historical implementation — superseded requirement:** this page describes the
+old static strategy-mixture demo, whose model did not receive changing stock or
+account state. It is not the requested portfolio-aware replacement. That
+replacement is still being trained and evaluated; see
+[current stateful work](../docs/STATEFUL_RL_REVISION4_ACTIVE_20261117.md).
+The incremental simulator under `research/stateful_session.py` is only preparation,
+not a deployed or financially validated candidate. Do not present the historical
+13.28% result below as evidence of learned portfolio-aware decisions.
+
 The selected InternVL3-2B Nifty RL adapter (seed42, checkpoint44) controls the historical paper account. This replaces the older ETF replay as the Finance workspace. **Finance conversation is removed after failing factual-accuracy testing.** The decision inspector is a ledger/allocation calculation, not generated rationale.
 
 ## On this PC

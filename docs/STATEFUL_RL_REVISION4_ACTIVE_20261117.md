@@ -111,3 +111,11 @@ model to recover every quantity through decimal text. Relevant background:
 Such a bridge would be an additional trained adapter component and must be
 disclosed, saved, ablated and compared against its own matched initialization.
 It must not secretly replace the LM with an external numerical action policy.
+
+## 18:30 IST continuation — focused learning gate passed, RL active
+
+Run4 passed at2048 supervised examples: held-out balancedaccuracy63.5417%, raw14.5833%, minimum eligibleclassrecall25%, seven predictedclasses. Earlier checks51239.58%,102451.04%,153641.67% failed; preserved rather than omitted. The numericbridge fallback has NOT launched because run4 passed and is running episodicRL.
+
+Early2024 financial validation100k: raw0.1840%, SFT7.7004%, RLiteration1 10.8307%, iteration2 11.2280%, iteration4 9.1119%, iteration8 7.4616%. Holding14.2273% remains stronger. Best earlyRL uses6distinct actionvectors across13decisions. These are validation observations only, not final results or proof of out-of-sampleprofitability. Actualworker15384alive, iteration10atmostrecentinspection; supervisor23132waitingforworkerexit. Do not modify active source or run anotherGPUmodel.
+
+Prepared standalone research/stateful_session.py incremental whole-share simulator (NOT connected to productionUI, no promotedcheckpoint). FiveCPUtests pass: exact daily equity/cost/trade/observation parity versus research evaluate at500/5000/100000, atomic inferencefailure, immutable snapshots, no extra completedaccountcalls. Tests use an explicitly named syntheticfixture, not actualadapterinference; realGPU/productionbrowserparity remains required after checkpointreview. Olddemo remains historicalstatic, not valid statefuldeployment.
