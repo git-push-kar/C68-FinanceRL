@@ -1,0 +1,7 @@
+{
+  "probability_change": 0.033443987369537354,
+  "reload_error": 0.0,
+  "disabled_recovery_error": 0.0,
+  "frozen_base_gradients_absent": true,
+  "peak_gpu_bytes": 5816025600
+}

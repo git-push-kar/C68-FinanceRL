@@ -1,10 +1,6 @@
-"""State-conditioned native InternVL3 LoRA: five stock decisions, seven actions.
-
-No learned numerical substitute, cached decision, fixed-mixture guard, or time gate.
-"""
+"""All49 state-conditioned native InternVL3 LoRA with a numerical input adapter."""
 from pathlib import Path
 import hashlib,json,os,sys,time
-import numpy as np
 import numpy as np
 import torch
 from torch import nn
@@ -68,6 +64,7 @@ class NativePolicy(nn.Module):
    'Numerical columns: quote,shares,value,weight,cash-affordability,r5,r20,r60,r120,volatility,drawdown,volume,initial capital,cash,equity,cash fraction,cap,fees,slippage,held indicator.',
    'Choose A=0%,B=0.5%,C=1%,D=2%,E=4%,F=7%,G=10% target weight for each stock. Normalize combined weights if above100%; unallocated funds are cash. Whole shares, no borrowing or shorts. Prices after the signal are unknown.']
   text=self.tokenizer.apply_chat_template([{'role':'user','content':'\n'.join(lines)}],tokenize=False,add_generation_prompt=True)
+  text+='\nNon-spendable corporate-action receivables: '+json.dumps(obs.get('pending_entitlements',[]),separators=(',',':'))
   numeric=[];spans={};eq=obs['equity']
   for i in order:
    r=stocks[int(i)];text+='\nStock '+r['ticker']+' state:';spans[int(i)]=len(text)
@@ -80,7 +77,7 @@ class NativePolicy(nn.Module):
   ids=result['input_ids'];self.max_tokens=max(self.max_tokens,ids.shape[1])
   if ids.shape[1]>1600:raise ValueError('Full input exceeds declared budget; no truncation')
   vectors=np.clip(np.asarray(numeric,np.float32),-10,10)
-  return {'ids':ids,'positions':positions,'state_positions':state_positions,'numeric_state':vectors,'prompt_sha256':hashlib.sha256(text.encode()+vectors.tobytes()).hexdigest(),'text':text,'universe':obs['universe']}
+  return {'ids':ids,'positions':positions,'state_positions':state_positions,'numeric_state':vectors,'canonical_numeric_state':vectors[np.argsort(order)],'prompt_sha256':hashlib.sha256(text.encode()+vectors.tobytes()).hexdigest(),'text':text,'universe':obs['universe']}
 
  def forward(self,encoded):
   if isinstance(encoded,list):
@@ -91,6 +88,10 @@ class NativePolicy(nn.Module):
    state=torch.as_tensor(encoded['numeric_state'],device='cuda',dtype=torch.float32)
    delta=.02*torch.tanh(self.numeric_bridge(state))
    emb=emb.clone();emb[0,encoded['state_positions']]=emb[0,encoded['state_positions']]+delta
+   # Repeat each stock's own state at its query to prevent a fragile numerical
+   # token-to-ticker binding task. Every query still attends to all49 prior states.
+   own=torch.as_tensor(encoded['canonical_numeric_state'],device='cuda',dtype=torch.float32)
+   emb[0,encoded['positions']]=emb[0,encoded['positions']]+.02*torch.tanh(self.numeric_bridge(own))
   hidden=lm.model(inputs_embeds=emb,attention_mask=torch.ones(ids.shape,dtype=torch.long,device='cuda'),use_cache=False,return_dict=True).last_hidden_state[0,encoded['positions']].float()
   head=lm.lm_head;logits=nn.functional.linear(hidden,self.rows)
   if not head.disable_adapters:
@@ -101,7 +102,7 @@ class NativePolicy(nn.Module):
  def choose(self,obs):
   encoded=self.encode(obs);started=time.perf_counter()
   with torch.inference_mode():p=self(encoded).double().cpu().numpy()
-  return p.argmax(1),{'mode':'real_focused_stock_model','prompt_sha256':encoded['prompt_sha256'],'tokens':encoded['ids'].shape[1],'probabilities':p.tolist(),'elapsed_seconds':time.perf_counter()-started}
+  return p.argmax(1),{'mode':'real_all49_model','prompt_sha256':encoded['prompt_sha256'],'tokens':encoded['ids'].shape[1],'probabilities':p.tolist(),'elapsed_seconds':time.perf_counter()-started}
 
  def freeze_reference(self):
   self.reference_weights=[p.detach().clone() for p in self.parameters() if p.requires_grad]
@@ -125,7 +126,7 @@ class NativePolicy(nn.Module):
   path=Path(path);path.mkdir(parents=True,exist_ok=False)
   self.model.save_pretrained(path/'finance_lora',selected_adapters=['finance'],save_embedding_layers=False,safe_serialization=True)
   save_file({k:v.detach().cpu().contiguous() for k,v in self.numeric_bridge.state_dict().items()},str(path/'numeric_bridge.safetensors'))
-  (path/'policy.json').write_text(json.dumps({'base':BASE_ID,'revision':REVISION,'base_weight_sha256':HASH,'labels':LABELS,'temperature':1.,'uniform_exploration':.05,'prompt_schema':'all49_stock_state_tokens_v1','numeric_bridge':'20->128tanh->1536 per-stock input; all49 state tokens precede all49 action queries; zero initial final layer; bypassed when adapter disabled','max_tokens_observed':self.max_tokens,'trainable_parameters':sum(p.numel() for p in self.parameters() if p.requires_grad),'metadata':metadata},indent=2))
+  (path/'policy.json').write_text(json.dumps({'base':BASE_ID,'revision':REVISION,'base_weight_sha256':HASH,'labels':LABELS,'temperature':1.,'uniform_exploration':.05,'prompt_schema':'all49_stock_state_tokens_v2','numeric_bridge':'20->128tanh->1536 per-stock input; all49 state tokens precede all49 action queries; own state repeated at query; zero initial final layer; bypassed when adapter disabled','max_tokens_observed':self.max_tokens,'trainable_parameters':sum(p.numel() for p in self.parameters() if p.requires_grad),'metadata':metadata},indent=2))
   hashes={p.relative_to(path).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in path.rglob('*') if p.is_file()}
   (path/'manifest.json').write_text(json.dumps({'sha256':hashes},indent=2))
 

@@ -18,7 +18,7 @@ class OriginalPanel:
    self.dates=z['dates'];self.tickers=z['tickers'].tolist();self.prices=z['adjusted_close'];self.volume=z['volume'];self.observed=z['observed']
   if self.tickers!=self.manifest['tickers'] or len(self.tickers)!=49:raise ValueError('Universe mismatch')
 
- def observe(self,t,cash,shares,initial,quotes):
+ def observe(self,t,cash,shares,initial,quotes,receivable=0.):
   n=len(self.tickers);shares=np.asarray(shares);quotes=np.asarray(quotes,float)
   if t<126:raise ValueError('Insufficient causal feature history')
   if shares.shape!=(n,) or quotes.shape!=(n,):raise ValueError('Account must represent every original ticker')
@@ -27,7 +27,7 @@ class OriginalPanel:
   if not np.isfinite(cash) or cash<0 or not np.isfinite(initial) or initial<=0:raise ValueError('Invalid account')
   history=self.prices[t-126:t+1]
   if not np.isfinite(history).all():raise ValueError('Do not invent pre-listing history; explicit unavailable-state handling required')
-  equity=float(cash+shares@quotes);returns=history[1:]/history[:-1]-1;rows=[]
+  equity=float(cash+shares@quotes+receivable);returns=history[1:]/history[:-1]-1;rows=[]
   for i,ticker in enumerate(self.tickers):
    r={'ticker':ticker,'historical_quote':float(quotes[i]),'adjusted_signal_price':float(history[-1,i]),'held_shares':int(shares[i]),'position_value':float(shares[i]*quotes[i]),'weight':float(shares[i]*quotes[i]/equity),'affordable_shares_cash':int(cash//(quotes[i]*1.0015005))}
    for horizon in [5,20,60,120]:r[f'return{horizon}']=float(history[-1,i]/history[-horizon-1,i]-1)
