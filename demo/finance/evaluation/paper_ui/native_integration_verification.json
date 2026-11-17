@@ -1,0 +1,21 @@
+{
+  "mode": "Real production UI/API; no request mocks",
+  "reference": "git-push-kar/Polyvalent ui/index.html blob 4fad71c9c8d645a5acc633efef9e50a9407aaa4b",
+  "checks": [
+    "original Chat and Anomaly section markup preserved",
+    "lazy Finance initialization",
+    "native tab without iframe",
+    "no duplicate element IDs",
+    "existing Chat/Anomaly tab navigation",
+    "real-model next-day and next-rebalance",
+    "playback stops on tab change",
+    "shared primary colour in light and dark modes",
+    "desktop/mobile root has no horizontal overflow",
+    "old Finance URLs redirect to the native tab",
+    "no JavaScript errors"
+  ],
+  "sessions_in_control_test": 7,
+  "actual_adapter_calls": 2,
+  "javascript_errors": [],
+  "limits": "Tab navigation/markup only for Chat and Anomaly; no other-domain model-quality certification."
+}

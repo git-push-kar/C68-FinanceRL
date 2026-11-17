@@ -2,6 +2,8 @@
 
 A native RL adapter learns a mixture of causal stock-allocation strategies, with a reproducible historical paper-trading demo.
 
+The Finance workspace now sits directly in the original Polyvalent Chat/Anomaly interface, using its layout and shared light/dark theme. See the [17 November integration and verification](docs/FINANCE_UI_INTEGRATION_20261117.md).
+
 **Start:** [current context and results](docs/START_HERE.md) · [detailed research report](docs/JOURNAL_RESEARCH_REPORT.md) · [demo setup](demo/PAPER_TRADING.md) · [full context transfer](docs/CONTEXT_TRANSFER_FULL.md) · [recovery archives](archives/README.md).
 
 **Backup complete:** [published checkpoint release](https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116), [verification receipt](archives/CHECKPOINT_RELEASE_STATUS.md), and [original SSD context bombs](docs/ssd_historical_context/README.md). Install Git LFS when cloning `main`.

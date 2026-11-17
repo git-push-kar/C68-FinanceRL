@@ -55,15 +55,14 @@ from api.finance import router as finance_router
 app.include_router(finance_router)
 from api.paper import router as paper_router
 app.include_router(paper_router)
-from api.paper import router as paper_router
-app.include_router(paper_router)
 
 _REPO = Path(__file__).resolve().parent.parent
 
 
 @app.get('/ui/finance.html', include_in_schema=False)
+@app.get('/ui/paper.html', include_in_schema=False)
 def retired_finance_page():
-    return RedirectResponse('/ui/paper.html')
+    return RedirectResponse('/#finance')
 
 
 app.mount("/ui", StaticFiles(directory=str(_REPO / "ui"), html=True),

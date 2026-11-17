@@ -174,3 +174,7 @@ The defensible contribution is native small-model financial reward adaptation wi
 5. Conclude raw-relative adaptation benefit on measured history, not state-of-the-art returns, established holding superiority, news forecasting, a flawless process or exhausted model potential.
 
 Recovery status, commit hashes, checkpoint-release verification and portable setup are maintained separately so an unfinished backup is never described as complete. See [START_HERE.md](START_HERE.md), the main Git history and `archives/` receipts. Historical reports may call earlier artifacts final; later dated decisions supersede those descriptions without erasing provenance.
+
+## Interface addendum — 17 November 2026
+
+Finance was integrated natively into the original Polyvalent Chat/Anomaly interface, preserving the other workspace markup and shared theme. The final production-browser run made 54 real adapter calls through 270 sessions and matched every original daily balance exactly (maximum difference 0.0 INR). UI integration, provenance and controls/theme checks are documented in [FINANCE_UI_INTEGRATION_20261117.md](FINANCE_UI_INTEGRATION_20261117.md). No training, weights, financial method or headline result changed; Finance generated conversation remains disabled.

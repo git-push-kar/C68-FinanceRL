@@ -197,8 +197,7 @@
   .hidden { display: none !important; }
 
   /* ---------------- finance ---------------- */
-  #view-finance { padding: 0; }
-  #view-finance iframe { width:100%; height:100%; min-height:0; border:0; }
+  #view-finance { align-items: center; justify-content: center; padding: 24px; }
   .soon-card { max-width: 520px; text-align: center; }
   .soon-card h2 { margin: 8px 0 6px; }
   .soon-card p { color: var(--muted); }
@@ -218,6 +217,7 @@
     .bar { grid-template-columns: 110px 1fr 40px; }
   }
 </style>
+<link rel="stylesheet" href="/ui/finance.css">
 </head>
 <body>
 <header class="top">
@@ -381,14 +381,69 @@
 
   <!-- ======================= FINANCE ======================= -->
   <section class="view" id="view-finance" role="tabpanel" aria-labelledby="tab-finance">
-    <iframe title="Finance portfolio workspace" src="/ui/paper.html" loading="lazy"></iframe>
+<!-- Source fragment: inserted into the original Polyvalent Finance tab. -->
+<div class="fin-layout">
+  <aside class="fin-side" aria-label="Portfolio controls">
+    <div class="card">
+      <h3>Simulation</h3>
+      <div class="note">Historical Nifty market · Simulated funds</div>
+      <label class="f" for="fin-speed">Playback speed</label>
+      <select id="fin-speed" aria-label="Playback speed"><option value="500">Normal speed</option><option value="80">Fast playback</option><option value="1500">Slow playback</option></select>
+      <div class="fin-buttons"><button class="btn primary" id="fin-play">▶ Start simulation</button><button class="btn" id="fin-day">Next day</button><button class="btn" id="fin-rebalance">Next rebalance</button></div>
+      <div class="fin-status" id="fin-status" role="status"><span class="dot"></span><span id="fin-statusText">Preparing your portfolio…</span></div>
+      <div class="fin-progress" aria-label="Simulation progress"><i id="fin-progress" style="width:0%"></i></div>
+      <div class="note">1 January 2025 – 30 January 2026<br>270 trading sessions</div>
+    </div>
+    <form class="card" id="fin-settings">
+      <h3>Paper account</h3>
+      <label class="f" for="fin-capital">Starting capital (INR)</label>
+      <input class="fin-capital" id="fin-capital" type="number" min="100" max="10000000" step="any" value="100000" required>
+      <button class="btn fin-reset" type="submit">Reset portfolio</button>
+      <div class="note">Restarts the same historical period with a fresh account.</div>
+    </form>
+    <details class="card"><summary>About this demonstration</summary>
+      <p class="note">The selected finance RL adapter chooses a learned mixture of allocation strategies. Lagged prices update the stock targets; trades are simulated every five sessions with modeled fees.</p>
+      <p class="note">The account advances through recorded market data. It is not connected to a broker or a live price feed.</p>
+      <p class="note">Decision records show actual allocations, inputs and accounting. Generated Finance conversation was removed after factual testing.</p>
+      <p class="note" id="fin-source"></p>
+    </details>
+  </aside>
+  <div class="fin-main">
+    <div class="fin-heading"><div><h2>Your paper portfolio</h2><div class="note">Watch the trained portfolio act as the market unfolds.</div></div><span class="pill" id="fin-date">—</span></div>
+    <div id="fin-error" class="error" role="alert" hidden></div>
+    <div class="kpis" aria-label="Portfolio overview">
+      <div class="kpi"><div class="k">Portfolio value</div><div class="v" id="fin-equity">—</div><small id="fin-initial">—</small></div>
+      <div class="kpi"><div class="k">Net gain / loss</div><div class="v" id="fin-gain">—</div><small id="fin-return">—</small></div>
+      <div class="kpi"><div class="k">Largest decline from peak</div><div class="v" id="fin-drawdown">—</div><small>Over the revealed history</small></div>
+      <div class="kpi"><div class="k">Trading fees</div><div class="v" id="fin-fees">—</div><small>Already deducted</small></div>
+    </div>
+    <div class="fin-columns">
+      <div class="fin-stack">
+      <div class="card">
+        <div class="fin-toolbar"><h3>Portfolio performance</h3><label class="check" style="margin:0"><input id="fin-compare" type="checkbox" checked> Show benchmarks</label></div>
+        <div class="note" id="fin-range">—</div>
+        <svg id="fin-chart" class="chart" viewBox="0 0 800 285" role="img" aria-label="Portfolio value through the current simulation date"></svg>
+        <div class="legend"><span><i class="fin-chart-legend" style="background:var(--accent)"></i>Trained portfolio</span><span><i class="fin-chart-legend" style="background:var(--muted)"></i>Untrained reference</span><span><i class="fin-chart-legend" style="background:var(--warn)"></i>Buy-and-hold</span></div>
+        <p class="note">Net of modeled fees · INR · Same stocks and dates</p>
+      </div>
+      <section class="card"><div class="fin-toolbar"><h3>Your holdings</h3><div class="fin-holdings-tools"><input id="fin-search" type="text" aria-label="Find a holding" placeholder="Find a stock…"><button class="btn" id="fin-exportHoldings">Export</button></div></div><div class="note" id="fin-holdingsCount">—</div><div class="scroll"><table><thead><tr><th>Stock</th><th>Value</th><th>Weight</th><th>Market P&amp;L¹</th></tr></thead><tbody id="fin-holdings"></tbody></table></div><p class="note" id="fin-cash"></p><p class="note">¹ Cumulative contribution before portfolio fees; not tax-lot realized profit.</p></section>
+      </div>
+      <div class="fin-stack">
+      <section class="card" aria-label="Decision inspector"><h3>Decision record <span class="sub">InternVL3-2B</span></h3><p class="note">Select an activity to inspect its recorded inputs and allocation.</p><div id="fin-decision"><div class="empty">Your first allocation will appear here.<br>Start the simulation to let the adapter act.</div></div></section>
+      <section class="card"><div class="fin-toolbar"><h3>Portfolio activity</h3><button class="btn" id="fin-exportActivity">Export activity</button></div><p class="note">Simulated purchases, sales and execution records</p><div id="fin-activity"></div><button class="btn fin-more" id="fin-more" hidden>Show more</button></section>
+      </div>
+    </div>
+  </div>
+</div>
+
   </section>
 </main>
 
+<script src="/ui/finance.js"></script>
 <script>
 /* ============================== shared ============================== */
 const $ = id => document.getElementById(id);
-const TASK_LABEL = { general: 'Base model', reasoning: 'Reasoning adapter', deepfake: 'Deepfake adapter', anomaly: 'Anomaly adapter', finance: 'Finance explanation adapter', finance_policy: 'Nifty trading adapter' };
+const TASK_LABEL = { general: 'Base model', reasoning: 'Reasoning adapter', deepfake: 'Deepfake adapter', anomaly: 'Anomaly adapter', finance_policy: 'Nifty trading adapter' };
 
 function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
 
@@ -475,8 +530,6 @@ function pollStatus(fast) {
   statusTimer = setTimeout(() => pollStatus(false), fast ? 1000 : 8000);
 }
 
-window.addEventListener('message', e => { if(e.origin === location.origin && e.data?.type === 'finance-model-resident') refreshStatus(); });
-
 /* ----- tabs ----- */
 const views = ['chat', 'anomaly', 'finance'];
 function showView(v) {
@@ -489,6 +542,8 @@ function showView(v) {
   if (location.hash !== '#' + v) history.replaceState(null, '', '#' + v);
   if (v === 'anomaly') { anomalyInit(); requestAnimationFrame(drawAll); }
   if (v === 'chat') $('box').focus();
+  if (v === 'finance') window.FinanceWorkspace.show();
+  else window.FinanceWorkspace.hide();
 }
 document.querySelectorAll('nav.tabs button').forEach((b, idx, all) => {
   b.onclick = () => showView(b.dataset.view);

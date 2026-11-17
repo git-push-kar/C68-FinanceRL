@@ -9,7 +9,7 @@ for _ in range(270):
  if a.n in [1,6,270]:snaps[a.n]=copy.deepcopy(a.snapshot())
 with sync_playwright() as pw:
  browser=pw.chromium.launch(headless=True);page=browser.new_page(viewport={'width':1440,'height':1100});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
- page.goto('http://127.0.0.1:8765/#finance');frame=page.frame_locator('iframe[title="Finance portfolio workspace"]');frame.get_by_text('Your paper portfolio',exact=True).wait_for();frame.get_by_role('button',name='Next day',exact=True).wait_for();page.wait_for_timeout(500)
+ page.goto('http://127.0.0.1:8765/#finance');frame=page.locator('#view-finance');frame.get_by_text('Your paper portfolio',exact=True).wait_for();frame.get_by_role('button',name='Next day',exact=True).wait_for();page.wait_for_timeout(500)
  assert frame.get_by_text('Ready · 270 historical trading sessions',exact=True).is_visible()
  # UI-only transport fixture. Actual model/backend parity is tested separately.
  def response(route):
@@ -18,13 +18,13 @@ with sync_playwright() as pw:
  frame.get_by_role('button',name='Next day',exact=True).click();frame.get_by_text('1 / 270 sessions · 4 sessions to rebalance',exact=True).wait_for();assert frame.get_by_text('2024-12-31 · Initial allocation',exact=True).is_visible();assert frame.get_by_text('₹1,00,223.60',exact=True).is_visible()
  frame.get_by_role('button',name='View decision',exact=True).click();assert frame.get_by_text('Learned strategy mix',exact=True).is_visible();assert frame.get_by_text('32.88%',exact=True).is_visible()
  frame.get_by_role('button',name='Next rebalance',exact=True).click();frame.get_by_text('6 / 270 sessions · 4 sessions to rebalance',exact=True).wait_for();assert frame.get_by_text('2025-01-07 · Rebalance',exact=True).is_visible()
- frame.get_by_role('textbox',name='Find a holding').fill('HDFCBANK');assert frame.locator('#holdings tr').count()==1;frame.get_by_role('textbox',name='Find a holding').fill('')
- frame.get_by_label('Show benchmarks').uncheck();assert frame.locator('#chart path').count()==1;frame.get_by_label('Show benchmarks').check();assert frame.locator('#chart path').count()==3
+ frame.get_by_role('textbox',name='Find a holding').fill('HDFCBANK');assert frame.locator('#fin-holdings tr').count()==1;frame.get_by_role('textbox',name='Find a holding').fill('')
+ frame.get_by_label('Show benchmarks').uncheck();assert frame.locator('#fin-chart path').count()==1;frame.get_by_label('Show benchmarks').check();assert frame.locator('#fin-chart path').count()==3
  with page.expect_download() as download:frame.get_by_role('button',name='Export activity',exact=True).click()
  download.value.save_as(O/'activity_ui_fixture.csv')
  frame.get_by_role('button',name='Next rebalance',exact=True).click();frame.get_by_text('Completed 270 trading sessions',exact=True).wait_for();assert frame.get_by_role('button',name='Simulation complete',exact=True).is_disabled()
  assert not errors,errors
  page.screenshot(path=str(O/'desktop_fixture.png'),full_page=True)
- page.set_viewport_size({'width':390,'height':844});page.wait_for_timeout(200);overflow=frame.locator('body').evaluate('(e)=>({scroll:e.scrollWidth,width:e.clientWidth})');assert overflow['scroll']<=overflow['width']+1,overflow
+ page.set_viewport_size({'width':390,'height':844});page.wait_for_timeout(200);overflow=page.locator('body').evaluate('(e)=>({scroll:e.scrollWidth,width:e.clientWidth})');assert overflow['scroll']<=overflow['width']+1,overflow
  page.screenshot(path=str(O/'mobile_fixture.png'),full_page=True);browser.close()
  (O/'verification.json').write_text(json.dumps({'mode':'Headless UI transport fixtures using recorded real-model results; not a new model-quality evaluation','checks':['start state','next day','next rebalance','specific activity selection','holdings filtering','benchmark toggle','activity CSV export','end state','mobile horizontal layout','no page JS errors'],'javascript_errors':errors,'mobile_dimensions':overflow},indent=2));print('UI checks passed')

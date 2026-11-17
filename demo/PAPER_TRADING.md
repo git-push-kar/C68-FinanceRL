@@ -51,3 +51,9 @@ For a full fresh real-model API run, use `verify_paper_live.py` against the runn
 Training2019–2021; validation2022; retrospective continuous test2025–January2026. Raw return11.22%, trained13.28%, equal holding13.06%. Rebalanced equal weight13.44% is stronger. Holding superiority is uncertain and cost-sensitive. No development score is used as the headline. No future prices enter a trade target; account charts expose only advanced history. Vendor-adjusted prices, universe/preprocessing, retrospective selection and simplified fills remain limitations.
 
 Full method/failure/context documentation is in the repository's `docs/JOURNAL_RESEARCH_REPORT.md` and `docs/CONTEXT_TRANSFER_FULL.md`. The latter preserves prior experiments, including negative results and obsolete statuses. Later dated decisions supersede historical final-candidate claims.
+
+## Native UI update — 17 November 2026
+
+Finance is now implemented directly in the existing Polyvalent Chat/Anomaly UI from `git-push-kar/Polyvalent`, with its shared sidebar/card controls and light/dark theme. Open `/#finance`; there is no embedded portfolio page. The final native browser run reproduced all 270 daily balances exactly using 54 actual adapter calls. See `../docs/FINANCE_UI_INTEGRATION_20261117.md` and `finance/evaluation/paper_ui/native_integration_verification.json`.
+
+The layout source is `ui/finance-workspace.html`; rebuild the shell with `python scripts/build_finance_workspace.py`. Finance initializes lazily and pauses when another tab is selected. Actual-model full-path verification remains `verify_actual_paper_browser.py`; `scripts/verify_finance_native_ui.py` adds the shared-shell/theme/navigation checks. Model weights, trading rules and headline results are unchanged.
