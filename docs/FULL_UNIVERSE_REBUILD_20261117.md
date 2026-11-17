@@ -1,6 +1,6 @@
 > Update: implementation and launch are documented in FULL_UNIVERSE_CONTINUATION_20261117.md. Earlier pending-work statements below are historical; inspect current run status.
 
-# Required full-universe rebuild â€” authoritative scope correction
+# Required full-universe rebuild — authoritative scope correction
 
 The user explicitly rejected the five-stock reduction. Non-negotiable: original
 dataset, all49 stocks, original InternVL3-2B, policy access to actual portfolio and

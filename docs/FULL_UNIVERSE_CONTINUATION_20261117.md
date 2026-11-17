@@ -101,3 +101,31 @@ The literature supports the staged idea, not our hoped-for performance:
 https://arxiv.org/abs/2608.09880
 https://arxiv.org/abs/1707.06347
 https://arxiv.org/abs/2402.03300
+
+## Verified early progress
+
+Actual workerPID21336 completed128 supervised updates. First-update probability
+change0.0334439874; exact checkpoint reload error0; exact disabled recovery error0;
+peak allocated GPU memory5,816,025,600bytes. Full recovery snapshots are present.
+At128updates,2023 gate balanced accuracy22.28percent: not passed yet, and not a
+financial result. Continue the declared curriculum; do not lower the gate to
+claim success. Loss fell from3.263 on the first example to1.470 over the latest16.
+
+An independently trained16519-parameter numeric MLP control (exact count in
+numeric_control_summary.json) attained92.23percent balanced gate accuracy on the
+same target examples. It uses own numerical features and pooled mean/std context;
+no language model or RL. This establishes learnable targets, not InternVL benefit.
+Its2024 validation return was5.582percent. Full49 fixed baselines at100000INR in
+2024: holding6.930percent; equal rebalanced6.009percent; inverse volatility5.834
+percent; top10 trailing120-session momentum29.506percent. No test-period results
+were examined for this continuation. These are protocol-specific benchmarks,
+not interchangeable with earlier5-stock or fractional-share numbers.
+
+A coarse execution reconciliation found no economic daily-return difference above
+3percentage points versus original adjusted signal returns across the experiment
+period, including discovery-valued demerger entitlements. This is a diagnostic,
+not proof of fully accurate vendor quotes or exact corporate-action settlements.
+
+Code and initial receipts pushed as c611d46 under Parth Dhande. Local full source
+snapshot and optimizer recovery remain in the run directory. Training continues
+independently; inspect live status to see whether the gate passes or fails.
