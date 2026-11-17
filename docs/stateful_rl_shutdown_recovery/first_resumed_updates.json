@@ -1,0 +1,23 @@
+{
+  "state": "episodic_rl_resumed",
+  "pid": 18704,
+  "iteration": 66,
+  "iterations": 96,
+  "elapsed_seconds": 392.022802,
+  "iteration_seconds": 152.57869389999996,
+  "full_recovery_saved": true,
+  "optimizer_steps": 36,
+  "likelihood_identity_error": 0.0,
+  "last_gradient_norm": 0.44804155826568604,
+  "early_stop_update_kl": true,
+  "loss": -0.055188558051466115,
+  "ratio": 1.0149615104827616,
+  "reference_kl": 0.24333376531851375,
+  "old_kl": 0.005076448840706386,
+  "entropy": 0.9284758797536293,
+  "zero_variance_groups": 0,
+  "group_reward_std": [
+    0.0012154071859125856,
+    0.009006598619695277
+  ]
+}
