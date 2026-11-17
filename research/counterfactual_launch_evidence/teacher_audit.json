@@ -1,0 +1,143 @@
+{
+  "selected": "momentum",
+  "scores": {
+    "inverse_vol": 0.13124933140032982,
+    "momentum": 0.15945099826155767,
+    "risk_adjusted_momentum": 0.14205699748394673
+  },
+  "rows": [
+    {
+      "kind": "inverse_vol",
+      "year": 2019,
+      "end_equity": 108444.41093212865,
+      "sharpe": 0.6622071880341873,
+      "max_drawdown": 0.12187733497860853,
+      "fees": 1156.3647159435718,
+      "slippage": 578.157396369391,
+      "sessions": 243,
+      "return": 0.08444410932128643
+    },
+    {
+      "kind": "inverse_vol",
+      "year": 2020,
+      "end_equity": 126657.27365416793,
+      "sharpe": 0.9597012010365478,
+      "max_drawdown": 0.3705436591846445,
+      "fees": 1189.1554226998833,
+      "slippage": 594.5527412029365,
+      "sessions": 251,
+      "return": 0.26657273654167923
+    },
+    {
+      "kind": "inverse_vol",
+      "year": 2021,
+      "end_equity": 133782.04341170107,
+      "sharpe": 2.08485834972329,
+      "max_drawdown": 0.08852055057689512,
+      "fees": 1562.805275051435,
+      "slippage": 781.3777031147202,
+      "sessions": 248,
+      "return": 0.3378204341170108
+    },
+    {
+      "kind": "inverse_vol",
+      "year": 2022,
+      "end_equity": 99560.68848643439,
+      "sharpe": 0.05968095317791623,
+      "max_drawdown": 0.20929608721641657,
+      "fees": 1409.8230901886807,
+      "slippage": 704.8866957999854,
+      "sessions": 248,
+      "return": -0.0043931151356561005
+    },
+    {
+      "kind": "momentum",
+      "year": 2019,
+      "end_equity": 111474.99605670907,
+      "sharpe": 0.8093860842765946,
+      "max_drawdown": 0.10468775164112665,
+      "fees": 1185.7002568442906,
+      "slippage": 592.8253211415167,
+      "sessions": 243,
+      "return": 0.11474996056709075
+    },
+    {
+      "kind": "momentum",
+      "year": 2020,
+      "end_equity": 129899.10219075596,
+      "sharpe": 1.033620645814282,
+      "max_drawdown": 0.3742426765896163,
+      "fees": 1165.3239696451462,
+      "slippage": 582.6371279406274,
+      "sessions": 251,
+      "return": 0.29899102190755955
+    },
+    {
+      "kind": "momentum",
+      "year": 2021,
+      "end_equity": 141051.16246387968,
+      "sharpe": 1.9755982923193285,
+      "max_drawdown": 0.09482309591888605,
+      "fees": 1399.2707614447147,
+      "slippage": 699.6104256351963,
+      "sessions": 248,
+      "return": 0.41051162463879676
+    },
+    {
+      "kind": "momentum",
+      "year": 2022,
+      "end_equity": 100167.46903467271,
+      "sharpe": 0.0969454667931446,
+      "max_drawdown": 0.2066439235814148,
+      "fees": 1325.0533316042536,
+      "slippage": 662.5016974759773,
+      "sessions": 248,
+      "return": 0.0016746903467270702
+    },
+    {
+      "kind": "risk_adjusted_momentum",
+      "year": 2019,
+      "end_equity": 109819.65671872442,
+      "sharpe": 0.7455412372919628,
+      "max_drawdown": 0.11047610916104544,
+      "fees": 1245.4608191378395,
+      "slippage": 622.7056216767394,
+      "sessions": 243,
+      "return": 0.09819656718724423
+    },
+    {
+      "kind": "risk_adjusted_momentum",
+      "year": 2020,
+      "end_equity": 125716.24932267869,
+      "sharpe": 0.9293868311845082,
+      "max_drawdown": 0.38034587922749863,
+      "fees": 1243.2088995318165,
+      "slippage": 621.5795771466661,
+      "sessions": 251,
+      "return": 0.25716249322678686
+    },
+    {
+      "kind": "risk_adjusted_momentum",
+      "year": 2021,
+      "end_equity": 137485.33762202214,
+      "sharpe": 1.9700068276888918,
+      "max_drawdown": 0.09349380038355526,
+      "fees": 1616.3018569753076,
+      "slippage": 808.1261347331335,
+      "sessions": 248,
+      "return": 0.3748533762202213
+    },
+    {
+      "kind": "risk_adjusted_momentum",
+      "year": 2022,
+      "end_equity": 100628.15272740644,
+      "sharpe": 0.1216112827433371,
+      "max_drawdown": 0.2047594377859776,
+      "fees": 1372.4231264292625,
+      "slippage": 686.1866448904315,
+      "sessions": 248,
+      "return": 0.006281527274064391
+    }
+  ],
+  "criterion": "Mean annual log growth minus0.1drawdown in2019-2022 only. No2023/2024 validation or2025-2026 test selection."
+}

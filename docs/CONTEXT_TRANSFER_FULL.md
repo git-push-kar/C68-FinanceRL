@@ -838,3 +838,8 @@ Read docs/FULL_UNIVERSE_REBUILD_20261117.md forauthoritativescopeandpendinggates
 ## 17 November2026: all49 continuation after chat migration
 
 See [full-universe continuation](FULL_UNIVERSE_CONTINUATION_20261117.md) for implementation, chronology, execution approximations, training protocol and recovery. Run b launched after15 checks; inspect live status before claiming progress. Original dataset/all49/InternVL3-2B retained; no new profitability claim.
+
+
+## 18 November2026: complete counterfactual all49 campaign
+
+Prior restored-all49 run failed primary goal. User requested a full-fledged new approach. See COUNTERFACTUAL_FULL_CAMPAIGN_20261118.md. Three native seeds, corrected matched execution, relative scores, canonical inputs and per-stock simulator counterfactual credit. Same original49stocks/dataset/InternVL3-2B. CPU numerical control is separate. Actual first GPU update/reload passed; no new final returns yet.
