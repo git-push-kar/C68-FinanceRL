@@ -1,0 +1,18 @@
+{
+  "fallback_cpu_tests": "16passed;GPUpreflight not yet run",
+  "actual_pid": 15384,
+  "supervisor_alive": true,
+  "worker_alive": true,
+  "checked_utc": "2026-11-17T12:14:48.0900182Z",
+  "source_hashes_match": true,
+  "status": {
+    "state": "supervised_warmup",
+    "pid": 15384,
+    "step": 800,
+    "total": 2048,
+    "mean_recent_loss": 1.524723244830966,
+    "recent_action_accuracy": 0.34375,
+    "elapsed_seconds": 625.8188969999901
+  },
+  "supervisor_pid": 23132
+}

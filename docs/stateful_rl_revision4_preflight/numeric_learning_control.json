@@ -1,0 +1,285 @@
+{
+  "scope": "Numerical representation control only, not InternVL or RL; fixed200epochs, not selected for test profits. Same training/gate examples and causal features; no ticker identity or future outcomes. Cannot substitute these scores for adapter learning.",
+  "feature_dimensions": 38,
+  "history": [
+    {
+      "epoch": 0,
+      "train": {
+        "accuracy": 0.1376953125,
+        "balanced_accuracy": 0.13780783116817474,
+        "minimum_recall": 0.0,
+        "recall": [
+          0.0,
+          0.15699659287929535,
+          0.01706484705209732,
+          0.14675767719745636,
+          0.2054794579744339,
+          0.16780821979045868,
+          0.2705479562282562
+        ]
+      },
+      "gate": {
+        "accuracy": 0.2083333283662796,
+        "balanced_accuracy": 0.2083333283662796,
+        "minimum_recall": 0.0,
+        "recall": [
+          0.0,
+          0.0,
+          0.0,
+          0.4375,
+          0.4375,
+          0.0625,
+          0.3125
+        ]
+      }
+    },
+    {
+      "epoch": 25,
+      "train": {
+        "accuracy": 0.94970703125,
+        "balanced_accuracy": 0.9496453404426575,
+        "minimum_recall": 0.8698630332946777,
+        "recall": [
+          0.9829351305961609,
+          1.0,
+          1.0,
+          0.9419795274734497,
+          0.8698630332946777,
+          0.8972602486610413,
+          0.9554794430732727
+        ]
+      },
+      "gate": {
+        "accuracy": 0.8854166865348816,
+        "balanced_accuracy": 0.8854166865348816,
+        "minimum_recall": 0.75,
+        "recall": [
+          1.0,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.75,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 50,
+      "train": {
+        "accuracy": 0.99609375,
+        "balanced_accuracy": 0.9960861206054688,
+        "minimum_recall": 0.9794520735740662,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9965753555297852,
+          0.9794520735740662,
+          0.9965753555297852
+        ]
+      },
+      "gate": {
+        "accuracy": 0.8854166865348816,
+        "balanced_accuracy": 0.8854166865348816,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.875,
+          0.875,
+          0.8125,
+          0.9375
+        ]
+      }
+    },
+    {
+      "epoch": 75,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 100,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.8645833134651184,
+        "balanced_accuracy": 0.8645833134651184,
+        "minimum_recall": 0.75,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.75,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 125,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 150,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 175,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    },
+    {
+      "epoch": 200,
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "minimum_recall": 1.0,
+        "recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "gate": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "minimum_recall": 0.8125,
+        "recall": [
+          0.8125,
+          1.0,
+          0.0,
+          0.8125,
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    }
+  ]
+}
