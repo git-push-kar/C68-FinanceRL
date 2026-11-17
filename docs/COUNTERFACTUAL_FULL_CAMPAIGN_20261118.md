@@ -134,3 +134,7 @@ loader is yet supplied. Parent campaign and numerical worker run independently.
 - Native token allocation and staged learning: https://arxiv.org/abs/2608.09880
   Their causal mean-variance SFT/GRPO ETF experiment motivates staged learning,
   not a guarantee of our scores, method novelty or paper acceptance.
+
+## Progress check: seed123 RL1344
+
+Native seed42 completed1536RL decisions; fixed two-year validation criterion selected untrained. Its best RL checkpoint768 returned19.833% in2023 and15.864% in2024; untrained33.863% and6.641%; SFT19.504% and15.673%. Training improves2024 but reduces2023 enough that the aggregate criterion favors untrained. This is not a learned-policy success. Seed123 still running; seed456 pending. Both started native seeds passed the conditional-learning gate. Numerical-control training for all3 seeds is complete and correctly waiting for native training before test access. No final test has started. Both workers verified live; no stderr failures. Leave frozen protocol unchanged. Approximately2hours remain including the third native seed and evaluation, based on2.4seconds/RL decision plus SFT and evaluation.

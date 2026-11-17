@@ -1,0 +1,12 @@
+{
+  "state": "counterfactual_rl",
+  "seed": 123,
+  "pid": 24064,
+  "step": 1344,
+  "total": 1536,
+  "step_seconds": 2.322524399998656,
+  "likelihood_error": 0.0,
+  "expected_advantage": 9.361900055182559e-08,
+  "reference_kl": 0.03252902626991272,
+  "reward_spread": 0.006440073251724243
+}
