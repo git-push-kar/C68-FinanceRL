@@ -1,0 +1,6 @@
+{
+  "files_checked": 66432,
+  "initial_inventory_changes_during_capture": [],
+  "manifest": "snapshot_manifest.json hashes actual ZIP contents; initial inventory is retained separately",
+  "scope": "Historical capture was made while active demo work continued; it is not an atomic snapshot. Current tested demo is versioned separately."
+}

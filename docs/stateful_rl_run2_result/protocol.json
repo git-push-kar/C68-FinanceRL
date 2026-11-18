@@ -1,0 +1,60 @@
+{
+  "algorithm": "state_conditioned_monthly_risk_bounded_all_action_financial_policy_gradient",
+  "created_utc": "2026-11-17T05:33:52.826423+00:00",
+  "arguments": {
+    "mode": "train",
+    "run": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\campaign_runs\\stateful_monthly_risk_seed42_20261117_v2",
+    "base": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\local_models\\InternVL3-2B",
+    "epochs": 8,
+    "eval_every": 256,
+    "states": 1536,
+    "accum": 4,
+    "seed": 42
+  },
+  "train": "2015-01-01 through 2023-12-31;20-session rewards never cross boundary",
+  "validation": "2024; checkpoint selection only; prior2022 validation is now explicitly training data",
+  "test_intervals": {
+    "primary_continuous": [
+      "2025-01-01",
+      "2026-11-13"
+    ],
+    "historical_comparison": [
+      "2025-01-01",
+      "2026-01-30"
+    ],
+    "later_extension": [
+      "2026-02-01",
+      "2026-11-13"
+    ]
+  },
+  "test_caveat": "Retrospective project history; no blanket claim of untouched confirmation. Different five-stock universe and integer execution mean old13.28% is not a matched comparator.",
+  "state_distribution": "Random valid cash/integer inventory states from training dates and fixed training capitals; offline contextual RL, not on-policy long-episode PPO.",
+  "objective": "Exact expectation of20-session net log wealth minus0.1 maximum drawdown over all7^5 per-stock actions, scaled by0.05, plus0.1 KL to pristine policy on the same observation.",
+  "execution": "Concentration caps override KEEP; observe known close; execute next open; integer shares; sell first; proportionally fund rounded buys; .10%fees+.05%slippage per side; dividends/splits before opening trades.",
+  "evaluation_capitals": [
+    500.0,
+    50000.0,
+    100000.0,
+    200000.0
+  ],
+  "selection": "2024 net wealth growth at100000INR; earliest tie; zero eligible; inspect examples32/64/128 then every256;24 validation checks without improvement early stop",
+  "evaluation_actions": "deterministic per-stock argmax; no test-time sampling or cached action fallback",
+  "base_id": "OpenGVLab/InternVL3-2B",
+  "base_revision": "899155015275a9b7338c7f4677e19c784e0e5a21",
+  "trainable": "Only rank16 full-InternVL-root attention and original vocabulary-head LoRA; no replacement numerical policy/head",
+  "attention_lr": 1e-06,
+  "vocabulary_head_lr": 1e-05,
+  "risk_limits": "35 percent per stock,60 percent per sector, relaxed only if fewer stocks/sectors are affordable from total equity; original stocks/names always supplied; row/query order shuffled in training",
+  "gradient_clip": 1.0,
+  "weight_decay": 0.0,
+  "seed": 42,
+  "source_sha256": {
+    "market.py": "46c5fc86ae2bcf4c12c71a2df03593567a6ffa9af6a69a6b714b3990803f1ecd",
+    "policy.py": "9f14e1fd994f2ab074577096ee2f78fed21356c2015569109730dd35030189b8",
+    "test_gradient.py": "2fdc2db61086fb89169475e52a7877def8091f56c5adebd4e7d97d75449208cd",
+    "test_input_mapping.py": "d7d615b90bbbee267722acf871e166c23912e62eb7f9a673e8f4591ad30d088b",
+    "test_market.py": "6a6b95ff4f280a25616a8dd6231d5e4952125feaaf589b32efc6e13b6de2a2ca",
+    "train.py": "534fd56e9ac83e1e80171b92a42de5354b1b4914b95cf655a85df52e8106746d"
+  },
+  "data_manifest_sha256": "b74e6c646b0bc1a9908ca874795a5565fb37747eabb7823d05640765a9102b42"
+}

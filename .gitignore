@@ -47,4 +47,7 @@ Thumbs.db
 logs/
 wandb/
 lightning_logs/
+
+# Raw duplicate recordings; the reviewed demo video is kept separately.
+demo/finance/evaluation/paper_ui/video/
 runs/

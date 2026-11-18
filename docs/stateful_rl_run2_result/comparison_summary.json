@@ -1,0 +1,122 @@
+[
+  {
+    "interval": "primary_continuous",
+    "capital": 500.0,
+    "trained_minus_untrained_return": 0.0,
+    "trained_minus_equal_holding_return": 0.0,
+    "trained_minus_best_single_holding_return": -0.14474899090069582,
+    "unique_trained_action_vectors": 3,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "primary_continuous",
+    "capital": 50000.0,
+    "trained_minus_untrained_return": -0.011170947512673224,
+    "trained_minus_equal_holding_return": -0.10455314196976917,
+    "trained_minus_best_single_holding_return": -0.5169887307441857,
+    "unique_trained_action_vectors": 6,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "primary_continuous",
+    "capital": 100000.0,
+    "trained_minus_untrained_return": -0.10069566014940767,
+    "trained_minus_equal_holding_return": -0.0638078449992927,
+    "trained_minus_best_single_holding_return": -0.477394543901945,
+    "unique_trained_action_vectors": 4,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "primary_continuous",
+    "capital": 200000.0,
+    "trained_minus_untrained_return": -0.030380153887995753,
+    "trained_minus_equal_holding_return": -0.017159806414457912,
+    "trained_minus_best_single_holding_return": -0.44279081419634814,
+    "unique_trained_action_vectors": 6,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "historical_comparison",
+    "capital": 500.0,
+    "trained_minus_untrained_return": 0.0,
+    "trained_minus_equal_holding_return": 0.0,
+    "trained_minus_best_single_holding_return": -0.1662489909006959,
+    "unique_trained_action_vectors": 3,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "historical_comparison",
+    "capital": 50000.0,
+    "trained_minus_untrained_return": 0.07145416612818889,
+    "trained_minus_equal_holding_return": -0.043671908646518265,
+    "trained_minus_best_single_holding_return": -0.3365615257412473,
+    "unique_trained_action_vectors": 5,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "historical_comparison",
+    "capital": 100000.0,
+    "trained_minus_untrained_return": -0.002301194210059032,
+    "trained_minus_equal_holding_return": -0.049913905587422924,
+    "trained_minus_best_single_holding_return": -0.3417096328103879,
+    "unique_trained_action_vectors": 2,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "historical_comparison",
+    "capital": 200000.0,
+    "trained_minus_untrained_return": 0.049391412679643754,
+    "trained_minus_equal_holding_return": -0.02774045101557232,
+    "trained_minus_best_single_holding_return": -0.325929987728127,
+    "unique_trained_action_vectors": 4,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "later_extension",
+    "capital": 500.0,
+    "trained_minus_untrained_return": 0.0,
+    "trained_minus_equal_holding_return": 0.0,
+    "trained_minus_best_single_holding_return": -0.02074258100000015,
+    "unique_trained_action_vectors": 2,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "later_extension",
+    "capital": 50000.0,
+    "trained_minus_untrained_return": -0.07707624774838417,
+    "trained_minus_equal_holding_return": -0.030863065001082934,
+    "trained_minus_best_single_holding_return": -0.20624133869854033,
+    "unique_trained_action_vectors": 5,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "later_extension",
+    "capital": 100000.0,
+    "trained_minus_untrained_return": -0.151168920448721,
+    "trained_minus_equal_holding_return": -0.05260516288690498,
+    "trained_minus_best_single_holding_return": -0.22887345325436226,
+    "unique_trained_action_vectors": 3,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  },
+  {
+    "interval": "later_extension",
+    "capital": 200000.0,
+    "trained_minus_untrained_return": -0.15360874389702805,
+    "trained_minus_equal_holding_return": -0.05445436329660125,
+    "trained_minus_best_single_holding_return": -0.23116766199905847,
+    "unique_trained_action_vectors": 4,
+    "training_selected": true,
+    "beats_both_primary_comparators": false
+  }
+]

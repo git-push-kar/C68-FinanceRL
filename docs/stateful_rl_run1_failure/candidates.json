@@ -1,0 +1,512 @@
+[
+  {
+    "epoch": 0,
+    "score": 0.014222060214819008,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": 0.023534406668190844,
+        "end_equity": 51176.72033340955,
+        "sharpe": 0.5871377967191295,
+        "max_drawdown": 0.03172354022314694,
+        "annual_volatility": 0.04173931340805695,
+        "fees": 67.22131832385254,
+        "slippage": 33.60827502441406,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": 0.014323674864954894,
+        "end_equity": 101432.3674864955,
+        "sharpe": 0.40567220842061336,
+        "max_drawdown": 0.03665902445345548,
+        "annual_volatility": 0.03734345354443225,
+        "fees": 20.191640823852538,
+        "slippage": 10.090775024414063,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.015236290098046834,
+        "end_equity": 196952.74198039062,
+        "sharpe": -0.6286251632202009,
+        "max_drawdown": 0.030488549146156063,
+        "annual_volatility": 0.024345503286937548,
+        "fees": 19.9749825,
+        "slippage": 9.9825,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 1,
+    "score": -0.08453120419928456,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.042069015700867296,
+        "end_equity": 47896.549214956634,
+        "sharpe": -0.15553682365601848,
+        "max_drawdown": 0.1741423514909628,
+        "annual_volatility": 0.17834668822846772,
+        "fees": 932.6021585786135,
+        "slippage": 466.3007749023439,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.0810570199504419,
+        "end_equity": 91894.29800495581,
+        "sharpe": -0.4114966283244471,
+        "max_drawdown": 0.1941755215765858,
+        "annual_volatility": 0.1724833079173289,
+        "fees": 871.5184966312257,
+        "slippage": 435.7345238037109,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.13373046166445002,
+        "end_equity": 173253.90766711,
+        "sharpe": -0.5816818665178886,
+        "max_drawdown": 0.22396776588003642,
+        "annual_volatility": 0.21195224191105233,
+        "fees": 1125.832288456543,
+        "slippage": 562.8662456054689,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 2,
+    "score": -0.15181781659778557,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.14085521159531234,
+        "end_equity": 42957.239420234386,
+        "sharpe": -0.5592514344258193,
+        "max_drawdown": 0.24866643749018646,
+        "annual_volatility": 0.2287619676864815,
+        "fees": 49.914945,
+        "slippage": 24.945,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.14085521159531234,
+        "end_equity": 85914.47884046877,
+        "sharpe": -0.5592514344258193,
+        "max_drawdown": 0.24866643749018646,
+        "annual_volatility": 0.2287619676864815,
+        "fees": 99.82989,
+        "slippage": 49.89,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.0992732861126131,
+        "end_equity": 180145.34277747737,
+        "sharpe": -0.36952998457627834,
+        "max_drawdown": 0.20450772402046247,
+        "annual_volatility": 0.22105764983560477,
+        "fees": 908.8743160285644,
+        "slippage": 454.38715454101555,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 3,
+    "score": -0.1554506656045548,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.10382277983422328,
+        "end_equity": 44808.86100828883,
+        "sharpe": -0.3775304537542925,
+        "max_drawdown": 0.244197719946464,
+        "annual_volatility": 0.22665929447893332,
+        "fees": 150.76710914282225,
+        "slippage": 75.37115014648438,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1439706924244185,
+        "end_equity": 85602.93075755815,
+        "sharpe": -0.5589308327428699,
+        "max_drawdown": 0.2663326154858363,
+        "annual_volatility": 0.23350995191936413,
+        "fees": 203.95982642626953,
+        "slippage": 101.95487499999999,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.13146994173117166,
+        "end_equity": 173706.01165376566,
+        "sharpe": -0.4866175429349327,
+        "max_drawdown": 0.26877630771451066,
+        "annual_volatility": 0.23649925965595062,
+        "fees": 247.4227935,
+        "slippage": 123.6615,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 4,
+    "score": -0.16491227406563033,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.19843989110398208,
+        "end_equity": 40078.005444800896,
+        "sharpe": -0.8131621270190386,
+        "max_drawdown": 0.28595429447029286,
+        "annual_volatility": 0.24047247388695375,
+        "fees": 569.436406090271,
+        "slippage": 284.70597625732427,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.15203191038192454,
+        "end_equity": 84796.80896180755,
+        "sharpe": -0.5598458808342999,
+        "max_drawdown": 0.25103432922220015,
+        "annual_volatility": 0.24527917030760885,
+        "fees": 1562.8068220061036,
+        "slippage": 781.3786009521483,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.1542588439382394,
+        "end_equity": 169148.2312123521,
+        "sharpe": -0.6031423549644156,
+        "max_drawdown": 0.2617652981561809,
+        "annual_volatility": 0.23595254752227357,
+        "fees": 3777.753965870972,
+        "slippage": 1888.8282983398435,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 5,
+    "score": -0.2022176050716146,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.1828825701907152,
+        "end_equity": 40855.87149046424,
+        "sharpe": -0.6243153328738764,
+        "max_drawdown": 0.28298765036473483,
+        "annual_volatility": 0.26993715177593125,
+        "fees": 50.65986732385254,
+        "slippage": 25.317275024414062,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1830828567139512,
+        "end_equity": 81691.71432860488,
+        "sharpe": -0.6150289550746075,
+        "max_drawdown": 0.2851960657759537,
+        "annual_volatility": 0.27304178054631006,
+        "fees": 101.37221082385253,
+        "slippage": 50.660775024414065,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.18344151695068023,
+        "end_equity": 163311.69660986395,
+        "sharpe": -0.6111354611018556,
+        "max_drawdown": 0.2868399238107848,
+        "annual_volatility": 0.27474096442544904,
+        "fees": 202.83256555114747,
+        "slippage": 101.36559997558594,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 6,
+    "score": -0.2022176050716146,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.1828825701907152,
+        "end_equity": 40855.87149046424,
+        "sharpe": -0.6243153328738764,
+        "max_drawdown": 0.28298765036473483,
+        "annual_volatility": 0.26993715177593125,
+        "fees": 50.65986732385254,
+        "slippage": 25.317275024414062,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1830828567139512,
+        "end_equity": 81691.71432860488,
+        "sharpe": -0.6150289550746075,
+        "max_drawdown": 0.2851960657759537,
+        "annual_volatility": 0.27304178054631006,
+        "fees": 101.37221082385253,
+        "slippage": 50.660775024414065,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.1835619476303122,
+        "end_equity": 163287.61047393756,
+        "sharpe": -0.6115811512653492,
+        "max_drawdown": 0.2868399238107848,
+        "annual_volatility": 0.2747718059080392,
+        "fees": 202.85662762500002,
+        "slippage": 101.377625,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 7,
+    "score": -0.2022176050716146,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.1828825701907152,
+        "end_equity": 40855.87149046424,
+        "sharpe": -0.6243153328738764,
+        "max_drawdown": 0.28298765036473483,
+        "annual_volatility": 0.26993715177593125,
+        "fees": 50.65986732385254,
+        "slippage": 25.317275024414062,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1830828567139512,
+        "end_equity": 81691.71432860488,
+        "sharpe": -0.6150289550746075,
+        "max_drawdown": 0.2851960657759537,
+        "annual_volatility": 0.27304178054631006,
+        "fees": 101.37221082385253,
+        "slippage": 50.660775024414065,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.18351612886018387,
+        "end_equity": 163296.77422796324,
+        "sharpe": -0.6112974614045605,
+        "max_drawdown": 0.28679525227935154,
+        "annual_volatility": 0.27479550481160053,
+        "fees": 202.84747302557375,
+        "slippage": 101.37304998779297,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 8,
+    "score": -0.2022176050716146,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.1828825701907152,
+        "end_equity": 40855.87149046424,
+        "sharpe": -0.6243153328738764,
+        "max_drawdown": 0.28298765036473483,
+        "annual_volatility": 0.26993715177593125,
+        "fees": 50.65986732385254,
+        "slippage": 25.317275024414062,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1830828567139512,
+        "end_equity": 81691.71432860488,
+        "sharpe": -0.6150289550746075,
+        "max_drawdown": 0.2851960657759537,
+        "annual_volatility": 0.27304178054631006,
+        "fees": 101.37221082385253,
+        "slippage": 50.660775024414065,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.18351612886018387,
+        "end_equity": 163296.77422796324,
+        "sharpe": -0.6112974614045605,
+        "max_drawdown": 0.28679525227935154,
+        "annual_volatility": 0.27479550481160053,
+        "fees": 202.84747302557375,
+        "slippage": 101.37304998779297,
+        "sessions": 248
+      }
+    ]
+  },
+  {
+    "epoch": 9,
+    "score": -0.2022176050716146,
+    "criterion": "validation net wealth growth on primary100000INR; earliest tie; epoch0 eligible; other capitals are prespecified stress checks",
+    "rows": [
+      {
+        "capital": 500.0,
+        "return": 0.0,
+        "end_equity": 500.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "annual_volatility": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "sessions": 248
+      },
+      {
+        "capital": 50000.0,
+        "return": -0.1828825701907152,
+        "end_equity": 40855.87149046424,
+        "sharpe": -0.6243153328738764,
+        "max_drawdown": 0.28298765036473483,
+        "annual_volatility": 0.26993715177593125,
+        "fees": 50.65986732385254,
+        "slippage": 25.317275024414062,
+        "sessions": 248
+      },
+      {
+        "capital": 100000.0,
+        "return": -0.1830828567139512,
+        "end_equity": 81691.71432860488,
+        "sharpe": -0.6150289550746075,
+        "max_drawdown": 0.2851960657759537,
+        "annual_volatility": 0.27304178054631006,
+        "fees": 101.37221082385253,
+        "slippage": 50.660775024414065,
+        "sessions": 248
+      },
+      {
+        "capital": 200000.0,
+        "return": -0.18351612886018387,
+        "end_equity": 163296.77422796324,
+        "sharpe": -0.6112974614045605,
+        "max_drawdown": 0.28679525227935154,
+        "annual_volatility": 0.27479550481160053,
+        "fees": 202.84747302557375,
+        "slippage": 101.37304998779297,
+        "sessions": 248
+      }
+    ]
+  }
+]

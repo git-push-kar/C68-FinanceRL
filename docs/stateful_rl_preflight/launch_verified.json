@@ -1,0 +1,37 @@
+{
+  "verified_utc": "2026-11-17T02:40:52.432951+00:00",
+  "purpose": "Launch verification snapshot, not final training results",
+  "source_commit": "1beccf04805a64387b072c48134f182a602881bc",
+  "source_hashes_match_worker_protocol": true,
+  "worker_progress_snapshot": {
+    "state": "training",
+    "pid": 64180,
+    "epoch": 1,
+    "epochs": 12,
+    "example": 224,
+    "examples_per_epoch": 1536,
+    "mean_loss": 0.03721147100441158,
+    "elapsed_seconds": 518.9042142999824,
+    "gradient_norm": 1.682998776435852,
+    "max_tokens": 714,
+    "expected_centered_return": -0.0037815305590629578,
+    "kl": 0.008848258294165134
+  },
+  "package_versions_same_interpreter": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.3",
+    "peft": "0.15.2",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "yfinance": "1.8.0",
+    "safetensors": "0.5.3",
+    "accelerate": "1.6.0"
+  },
+  "detached_worker": true,
+  "estimated_completion_hours_from_launch": [
+    4,
+    5
+  ],
+  "automatic_evaluation": true,
+  "automatic_deployment": false
+}

@@ -1,0 +1,34 @@
+{
+  "untrained": {
+    "log_growth_difference": 0.0,
+    "block20_percentile95": [
+      0.0,
+      0.0
+    ],
+    "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+  },
+  "supervised": {
+    "log_growth_difference": 0.013224093710669665,
+    "block20_percentile95": [
+      -0.08950981833827955,
+      0.10758440597105978
+    ],
+    "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+  },
+  "buy_hold": {
+    "log_growth_difference": -0.04358180076178326,
+    "block20_percentile95": [
+      -0.1286727669341782,
+      0.03231261302740363
+    ],
+    "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+  },
+  "equal_rebalanced": {
+    "log_growth_difference": -0.03054133396679834,
+    "block20_percentile95": [
+      -0.1261275800430799,
+      0.048141932970672194
+    ],
+    "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+  }
+}

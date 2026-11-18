@@ -1,0 +1,12 @@
+{
+  "policy": "Nifty native static seed42 checkpoint44",
+  "policy_package": "adapters/finance_policy",
+  "explanations": {
+    "enabled": false,
+    "decision": "Removed after actual Nifty action QA failed factual reliability gate",
+    "audit": "finance/evaluation/nifty_qa/manual_review.json"
+  },
+  "paper_ui": "ui/paper.html",
+  "data": "data/finance_paper",
+  "mode": "Historical paper trading; actual policy inference on each scheduled rebalance; no broker connection"
+}

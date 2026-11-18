@@ -1,0 +1,14 @@
+{
+  "step": 2048,
+  "stage": "supervised",
+  "score": 0.0741832495676582,
+  "return": 0.07700414795868671,
+  "end_equity": 107700.41479586868,
+  "sharpe": 0.9445542148002398,
+  "max_drawdown": 0.04026790499617505,
+  "annual_volatility": 0.0842272029870579,
+  "fees": 127.12953843614198,
+  "slippage": 63.55475016784669,
+  "sessions": 246,
+  "selected_by": "first passing held-out conditional learning gate; not best financial return"
+}

@@ -1,0 +1,11 @@
+final/deepfake/wrapper.py is a verbatim copy of
+  C:\Users\Admin\Desktop\LY_C68\deepfake_project\model.py
+(DeepfakeReasoningModel v2; only serving defaults differ and are overridden
+by the caller in loader.py, not in this file).
+
+Trained weights are NOT in this file; loader.py injects them:
+  llm_adapter/adapter_model.safetensors      -> backbone.language_model LoRA slots
+  vision_adapter/adapter_model.safetensors   -> backbone.vision_model LoRA slots
+  custom_heads/custom_heads.safetensors      -> attn_pool / cls_head /
+                                              freq_branch / custom_projector /
+                                              domain_router (59 tensors)

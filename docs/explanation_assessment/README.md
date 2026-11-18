@@ -1,0 +1,3 @@
+# Actual Nifty explanation assessment
+
+cases.json and protocol.json were saved before generation. answers.json contains all60 actual outputs, including mistakes, with latency and notices. Same30questions/evidence to FP32 explanationSFT and FP32 adapter-disabled base. manual_review.json contains every verdict/reason and notes reviewer non-independence. Gate:>=90% full pass plus no material direction/accounting/fabricated-motive error. SFT10pass/1partial/19fail; base8pass/1partial/21fail. Finance conversation was removed. These are selected stress cases, not universal model accuracy. No preset replies were inserted, no failed answers removed, no new SFT run was performed in this final demo stage.

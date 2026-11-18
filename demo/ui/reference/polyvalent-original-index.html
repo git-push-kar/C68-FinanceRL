@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polyvalent</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%234f46e5%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22 font-weight=%22700%22%3EP%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --panel-2: #f1f3f6; --text: #14171f;
+    --muted: #5d6573; --border: #e1e4ea; --accent: #4f46e5; --accent-soft: #eef0ff;
+    --ok: #15803d; --ok-soft: #e8f6ec; --warn: #b45309; --warn-soft: #fff4e5;
+    --bad: #c62828; --bad-soft: #fdecec; --user: #4f46e5; --user-text: #fff;
+    --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+    --mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115; --panel: #171a21; --panel-2: #1e222b; --text: #e8eaef;
+      --muted: #9aa3b2; --border: #2a2f3a; --accent: #8b85ff; --accent-soft: #23234a;
+      --ok: #4ade80; --ok-soft: #12291b; --warn: #fbbf24; --warn-soft: #2d2410;
+      --bad: #f87171; --bad-soft: #321616; --user: #5b54e8; --user-text: #fff;
+      --shadow: none; color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex; flex-direction: column; min-height: 100dvh; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* top bar */
+  header.top { display: flex; align-items: center; gap: 16px; padding: 10px 20px;
+    background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; font-size: 16px; }
+  .brand .logo { width: 28px; height: 28px; border-radius: 8px; background: var(--accent);
+    display: grid; place-items: center; color: #fff; font-size: 14px; font-weight: 700; }
+  nav.tabs { display: flex; gap: 4px; background: var(--panel-2); padding: 4px; border-radius: 10px; }
+  nav.tabs button { border: 0; background: transparent; padding: 6px 14px; border-radius: 7px;
+    color: var(--muted); font-weight: 550; font-size: 14px; display: flex; gap: 6px; align-items: center; }
+  nav.tabs button[aria-selected="true"] { background: var(--panel); color: var(--text); box-shadow: var(--shadow); }
+  nav.tabs .sm { display: none; }
+  .soon { font-size: 10.5px; background: var(--accent-soft); color: var(--accent); padding: 1px 6px; border-radius: 99px; }
+  .spacer { flex: 1; }
+  .pill { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--muted);
+    border: 1px solid var(--border); border-radius: 99px; padding: 4px 10px; background: var(--panel); white-space: nowrap; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
+  .dot.on { background: var(--ok); } .dot.busy { background: var(--warn); animation: pulse 1s infinite; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  .badge-stub { background: var(--warn-soft); color: var(--warn); border-color: transparent; display: none; }
+
+  main { flex: 1; display: flex; min-height: 0; }
+  section.view { flex: 1; display: none; min-height: 0; }
+  section.view.active { display: flex; }
+
+  /* ---------------- chat ---------------- */
+  #view-chat { flex-direction: column; }
+  #log { flex: 1; overflow-y: auto; padding: 24px 16px 8px; }
+  .thread { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+  .empty { text-align: center; padding: 8vh 12px 0; }
+  .empty h2 { margin: 0 0 6px; font-size: 24px; }
+  .empty p { color: var(--muted); margin: 0 0 22px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .chip { border: 1px solid var(--border); background: var(--panel); border-radius: 12px;
+    padding: 10px 14px; text-align: left; max-width: 260px; box-shadow: var(--shadow); }
+  .chip b { display: block; font-size: 13.5px; } .chip span { font-size: 12.5px; color: var(--muted); }
+  .chip:hover { border-color: var(--accent); }
+  .msg { display: flex; flex-direction: column; gap: 6px; }
+  .msg.user { align-items: flex-end; }
+  .msg.user .bubble { background: var(--user); color: var(--user-text); border-radius: 16px 16px 4px 16px;
+    padding: 9px 14px; max-width: 80%; white-space: pre-wrap; word-wrap: break-word; }
+  .msg.user img { max-width: 180px; border-radius: 10px; border: 1px solid var(--border); }
+  .msg.assistant .bubble { background: var(--panel); border: 1px solid var(--border); border-radius: 4px 16px 16px 16px;
+    padding: 12px 16px; max-width: 100%; box-shadow: var(--shadow); word-wrap: break-word; }
+  .route { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+  .route .tag { padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .route .tag.general { background: var(--panel-2); color: var(--muted); }
+  .route .tag.deepfake { background: var(--bad-soft); color: var(--bad); }
+  .route .tag.anomaly { background: var(--warn-soft); color: var(--warn); }
+  .typing { color: var(--muted); font-style: italic; }
+  .md > :first-child { margin-top: 0; } .md > :last-child { margin-bottom: 0; }
+  .md p { margin: 0 0 .7em; } .md ul, .md ol { margin: 0 0 .7em; padding-left: 1.4em; }
+  .md h3, .md h4, .md h5 { margin: .9em 0 .4em; font-size: 1em; }
+  .md code { font-family: var(--mono); font-size: .9em; background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
+  .md pre { background: var(--panel-2); padding: 10px 12px; border-radius: 8px; overflow-x: auto; }
+  .md pre code { background: none; padding: 0; }
+  .md table { border-collapse: collapse; margin: .4em 0 .8em; font-size: 13.5px; display: block; overflow-x: auto; }
+  .md th, .md td { border: 1px solid var(--border); padding: 5px 9px; text-align: left; }
+  .md th { background: var(--panel-2); }
+  .cursor::after { content: "▍"; color: var(--accent); animation: pulse 1s steps(1) infinite; }
+  details.think { margin: 0 0 10px; border-left: 2px solid var(--border); padding-left: 10px; }
+  details.think summary { cursor: pointer; color: var(--muted); font-size: 12.5px; user-select: none; }
+  .thinkbody { color: var(--muted); font-size: 13px; white-space: pre-wrap; margin-top: 6px; max-height: 320px; overflow-y: auto; }
+  .notice { color: var(--warn); }
+  .vcard { border: 1px solid var(--border); border-left: 5px solid var(--accent); border-radius: 10px; padding: 10px 14px;
+    margin: 0 0 10px; font-size: 14px; background: var(--panel-2); }
+  .vcard.fake { border-left-color: var(--bad); } .vcard.real { border-left-color: var(--ok); }
+  .vcard .big { font-size: 18px; font-weight: 700; }
+  .meter { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; margin: 6px 0; }
+  .meter > i { display: block; height: 100%; background: var(--accent); }
+  .vcard.fake .meter > i { background: var(--bad); } .vcard.real .meter > i { background: var(--ok); }
+
+  .composer-wrap { padding: 8px 16px 14px; }
+  .composer { max-width: 820px; margin: 0 auto; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 16px; box-shadow: var(--shadow); padding: 8px; }
+  .composer:focus-within { border-color: var(--accent); }
+  .attach-preview { display: none; align-items: center; gap: 8px; padding: 4px 6px 8px; font-size: 13px; color: var(--muted); }
+  .attach-preview img { height: 44px; border-radius: 8px; border: 1px solid var(--border); }
+  .attach-preview button { border: 0; background: none; color: var(--muted); }
+  .composer-row { display: flex; align-items: flex-end; gap: 6px; }
+  .switch { display: inline-flex; align-items: center; gap: 7px; flex: none;
+    padding: 0 4px 6px 2px; cursor: pointer; user-select: none; }
+  .switch input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .switch .track { position: relative; width: 34px; height: 18px; border-radius: 9px;
+    border: 1px solid var(--border); background: transparent;
+    transition: background .15s ease, border-color .15s ease; }
+  .switch .knob { position: absolute; top: 2px; left: 2px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--muted);
+    transition: left .15s ease, background .15s ease; }
+  .switch input:checked + .track { background: var(--accent); border-color: var(--accent); }
+  .switch input:checked + .track .knob { left: 18px; background: #fff; }
+  .switch input:focus-visible + .track { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .switch .label { font-size: 11px; line-height: 1.1; color: var(--muted); white-space: nowrap; }
+  .switch input:checked ~ .label { color: var(--accent); }
+  .icon-btn { display: inline-flex; align-items: center; justify-content: center;
+    border: 0; background: transparent; width: 38px; height: 38px; border-radius: 10px;
+    font-size: 18px; color: var(--muted); flex: none; }
+  .icon-btn:hover { background: var(--panel-2); }
+  #box { flex: 1; resize: none; border: 0; background: transparent; padding: 8px 4px; max-height: 180px; outline: none; }
+  .send { border: 0; background: var(--accent); color: #fff; height: 38px; min-width: 38px; padding: 0 14px;
+    border-radius: 10px; font-weight: 600; flex: none; }
+  .send:disabled { opacity: .45; cursor: default; }
+  .send.stop { background: var(--text); color: var(--bg); }
+  .hint { max-width: 820px; margin: 6px auto 0; text-align: center; font-size: 12px; color: var(--muted); }
+  .hint a { color: inherit; }
+
+  /* ---------------- anomaly ---------------- */
+  #view-anomaly { overflow: hidden; }
+  .an-layout { display: grid; grid-template-columns: 300px 1fr; gap: 16px; padding: 16px; width: 100%; min-height: 0; }
+  .an-side, .an-main { overflow-y: auto; min-height: 0; }
+  /* Cards keep their content height; the column scrolls instead of squashing charts. */
+  .an-main > *, .an-side > * { flex: 0 0 auto; }
+  .an-main { display: flex; flex-direction: column; gap: 16px; padding-bottom: 24px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); }
+  .card h3 { margin: 0 0 10px; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  .card h3 .sub { color: var(--muted); font-weight: 400; font-size: 12.5px; }
+  label.f { display: block; font-size: 12.5px; color: var(--muted); margin: 10px 0 4px; }
+  select, input[type=text] { width: 100%; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--border); background: var(--panel); }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .btn { border: 1px solid var(--border); background: var(--panel); padding: 7px 12px; border-radius: 9px; font-weight: 550; font-size: 14px; }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .seg { display: flex; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; }
+  .seg button { flex: 1; border: 0; background: var(--panel); padding: 6px 0; font-size: 13px; color: var(--muted); }
+  .seg button.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .check { display: flex; gap: 8px; align-items: center; font-size: 13.5px; margin-top: 8px; }
+  .note { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+  .warnbox { font-size: 12.5px; background: var(--warn-soft); color: var(--warn); border-radius: 9px; padding: 8px 10px; margin-top: 10px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; box-shadow: var(--shadow); }
+  .kpi .k { font-size: 12px; color: var(--muted); } .kpi .v { font-size: 20px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .status-normal { color: var(--ok); } .status-alarm { color: var(--warn); } .status-event { color: var(--bad); }
+  canvas { width: 100%; display: block; }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 5px; border-radius: 2px; }
+  .twocol { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+  .bars { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
+  .bar { display: grid; grid-template-columns: 150px 1fr 48px; gap: 8px; align-items: center; cursor: pointer; }
+  .bar .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar .track { height: 8px; background: var(--panel-2); border-radius: 99px; overflow: hidden; }
+  .bar .track i { display: block; height: 100%; border-radius: 99px; }
+  .bar .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  table.ev { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.ev th, table.ev td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  table.ev th { color: var(--muted); font-weight: 550; font-size: 12px; }
+  table.ev td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .sev { padding: 2px 9px; border-radius: 99px; font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: .03em; }
+  .sev.low { background: var(--ok-soft); color: var(--ok); } .sev.medium { background: var(--warn-soft); color: var(--warn); }
+  .sev.high, .sev.critical { background: var(--bad-soft); color: var(--bad); }
+  .timeline { list-style: none; padding: 0; margin: 0; font-size: 13px; }
+  .timeline li { display: flex; gap: 10px; padding: 4px 0; }
+  .timeline .t { color: var(--muted); width: 78px; flex: none; font-variant-numeric: tabular-nums; }
+  .report { display: grid; gap: 12px; }
+  .report .rc { font-size: 17px; font-weight: 650; }
+  .report .lbl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .report .action { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; }
+  .report ol, .report ul { margin: 0; padding-left: 1.3em; }
+  .truth { border: 1px dashed var(--border); border-radius: 10px; padding: 8px 12px; font-size: 13px; }
+  .qa { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .qa .q { font-weight: 600; } .qa .a { border-left: 2px solid var(--accent); padding-left: 10px; }
+  .incident-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+  .hidden { display: none !important; }
+
+  /* ---------------- finance ---------------- */
+  #view-finance { align-items: center; justify-content: center; padding: 24px; }
+  .soon-card { max-width: 520px; text-align: center; }
+  .soon-card h2 { margin: 8px 0 6px; }
+  .soon-card p { color: var(--muted); }
+  .soon-card ul { text-align: left; color: var(--muted); display: inline-block; margin: 6px 0 0; }
+
+  @media (max-width: 980px) {
+    .an-layout { grid-template-columns: 1fr; overflow-y: auto; }
+    #view-anomaly { overflow-y: auto; }
+    .an-side, .an-main { overflow: visible; }
+    .twocol { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    header.top { padding: 8px 12px; gap: 10px; }
+    nav.tabs { order: 3; width: 100%; } nav.tabs button { flex: 1; justify-content: center; padding: 6px 4px; }
+    nav.tabs .lg, .hint { display: none; } nav.tabs .sm { display: inline; }
+    .bar { grid-template-columns: 110px 1fr 40px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">P</div>Polyvalent</div>
+  <nav class="tabs" role="tablist" aria-label="Workspaces">
+    <button role="tab" id="tab-chat" aria-controls="view-chat" data-view="chat">Chat</button>
+    <button role="tab" id="tab-anomaly" aria-controls="view-anomaly" data-view="anomaly"><span class="lg">Anomaly detection</span><span class="sm">Anomaly</span></button>
+    <button role="tab" id="tab-finance" aria-controls="view-finance" data-view="finance"><span class="lg">Finance portfolio</span><span class="sm">Finance</span> <span class="soon">Soon</span></button>
+  </nav>
+  <div class="spacer"></div>
+  <span class="pill badge-stub" id="stubBadge" title="FINAL_STUB_GENERATION=1: placeholder text, no model weights">Demo mode</span>
+  <span class="pill" id="residentPill" title="Weights currently resident on the device"><span class="dot" id="residentDot"></span><span id="residentText">No adapter loaded</span></span>
+</header>
+
+<main>
+  <!-- ======================= CHAT ======================= -->
+  <section class="view" id="view-chat" role="tabpanel" aria-labelledby="tab-chat">
+    <div id="log" aria-live="polite">
+      <div class="thread" id="thread">
+        <div class="empty" id="empty">
+          <h2>What can I help with?</h2>
+          <p>Laya routes each message to the right specialist and loads only that adapter.</p>
+          <div class="chips">
+            <button class="chip" data-prompt="Alice is taller than Bob, and Bob is taller than Carol. Who is the shortest? Explain step by step."><b>Logic puzzle</b><span>Loads the reasoning adapter</span></button>
+            <button class="chip" data-attach="1" data-prompt="Is this face photo real or fake?"><b>Check a face photo</b><span>Attach an image → deepfake adapter</span></button>
+            <button class="chip" data-prompt="Should I take the train or drive to work if it's raining and the train is 10 minutes slower?"><b>Decide between options</b><span>Reasoning adapter</span></button>
+            <button class="chip" data-prompt="Explain what a LoRA adapter is in two sentences."><b>Ask anything</b><span>Answered by the base model</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="composer-wrap">
+      <div class="composer">
+        <div class="attach-preview" id="attachPreview"><img id="attachImg" alt="attached image preview"><span id="attachName"></span><button id="attachClear" title="Remove image" aria-label="Remove image">&times;</button></div>
+        <div class="composer-row">
+          <button class="icon-btn" id="attachBtn" title="Attach a face image (routes to deepfake analysis)" aria-label="Attach image"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6 12 20.1a5 5 0 0 1-7.1-7.1l8.6-8.6a3.4 3.4 0 1 1 4.8 4.8l-8.3 8.3a1.8 1.8 0 0 1-2.6-2.6l7.6-7.5"/></svg></button>
+          <input type="file" id="img" accept="image/*" hidden>
+          <button class="icon-btn" id="newChat" title="New chat" aria-label="New chat">＋</button>
+          <textarea id="box" rows="1" placeholder="Message Polyvalent…  (Enter to send, Shift+Enter for a new line)"></textarea>
+          <label class="switch" id="deepThinkWrap" title="Deep thinking — pin this message to the reasoning adapter">
+            <input type="checkbox" id="deepThink">
+            <span class="track"><span class="knob"></span></span>
+            <span class="label">Deep thinking</span>
+          </label>
+          <button class="send" id="send" aria-label="Send">↑</button>
+        </div>
+      </div>
+      <div class="hint">Routing is automatic: general chat → base model · logic &amp; decisions → reasoning adapter · face images → deepfake adapter · TEP faults → anomaly adapter. “Deep thinking” pins the next messages to the reasoning adapter.</div>
+    </div>
+  </section>
+
+  <!-- ======================= ANOMALY ======================= -->
+  <section class="view" id="view-anomaly" role="tabpanel" aria-labelledby="tab-anomaly">
+    <div class="an-layout">
+      <aside class="an-side">
+        <div class="card">
+          <h3>Simulation</h3>
+          <label class="f" for="scenario">Test-set run</label>
+          <select id="scenario"></select>
+          <div id="dsInfo" class="note"></div>
+          <label class="f">Playback speed</label>
+          <div class="seg" id="speed">
+            <button data-s="4">1×</button><button data-s="12" class="on">3×</button><button data-s="40">10×</button><button data-s="0">Max</button>
+          </div>
+          <div class="row" style="margin-top:12px">
+            <button class="btn primary" id="playBtn" style="flex:1">Start</button>
+            <button class="btn" id="resetBtn" title="Rewind to the start">↺</button>
+          </div>
+          <label class="check"><input type="checkbox" id="autoDiag" checked> Diagnose automatically on alarm</label>
+          <label class="check"><input type="checkbox" id="pauseOnEvent" checked> Pause when an event is confirmed</label>
+          <label class="check"><input type="checkbox" id="showTruth"> Show dataset fault label</label>
+          <div id="truthLine" class="note hidden"></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3>Detector</h3>
+          <div id="detInfo" class="note" style="margin-top:0">—</div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3>How it works</h3>
+          <div class="note" style="margin-top:0">The run is replayed sample by sample (3 min of plant time each). The detector scores every sample against a fault-free baseline; after several consecutive alarms an event is confirmed and its structured evidence is routed through Laya to the <b>TEP anomaly adapter</b>, which writes the root-cause report. The model only ever sees the evidence, never the raw series.</div>
+        </div>
+      </aside>
+
+      <div class="an-main">
+        <div class="kpis">
+          <div class="kpi"><div class="k">Plant time</div><div class="v" id="kTime">00:00</div></div>
+          <div class="kpi"><div class="k">Detector score</div><div class="v" id="kScore">—</div></div>
+          <div class="kpi"><div class="k">Threshold</div><div class="v" id="kThr">—</div></div>
+          <div class="kpi"><div class="k">Status</div><div class="v" id="kStatus">Idle</div></div>
+        </div>
+
+        <div class="card">
+          <h3>Detector score <span class="sub">log scale</span></h3>
+          <canvas id="scoreCanvas" height="190" aria-label="Detector score over time"></canvas>
+          <div class="legend"><span><i style="background:var(--accent)"></i>score</span><span><i style="background:var(--bad)"></i>threshold</span><span><i style="background:var(--muted)"></i>fault introduced (label)</span><span><i style="background:var(--warn)"></i>alarm samples</span></div>
+        </div>
+
+        <div class="twocol">
+          <div class="card">
+            <h3>Sensor deviation map <span class="sub">|z| per sensor over time — click a row</span></h3>
+            <canvas id="heatCanvas" height="240" aria-label="Sensor deviation heatmap"></canvas>
+            <div class="legend"><span><i style="background:var(--panel-2)"></i>|z| &lt; 3</span><span><i style="background:#f59e0b"></i>3–6</span><span><i style="background:#dc2626"></i>&gt; 6</span></div>
+          </div>
+          <div class="card">
+            <h3>Largest deviations now</h3>
+            <div class="bars" id="bars"><div class="note">Start the simulation.</div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Sensor trace <span class="sub" id="traceName">—</span></h3>
+          <canvas id="traceCanvas" height="150" aria-label="Selected sensor trace"></canvas>
+          <div class="legend"><span><i style="background:var(--accent)"></i>observed</span><span><i style="background:var(--muted)"></i>fault-free baseline</span></div>
+        </div>
+
+        <div class="card hidden" id="incident">
+          <div class="incident-head">
+            <h3 style="margin:0">Incident <span id="incId"></span></h3>
+            <span class="sev" id="incSev"></span>
+            <span class="pill" id="incSub"></span>
+            <span class="spacer"></span>
+            <button class="btn" id="diagBtn">Diagnose with adapter</button>
+          </div>
+          <div class="twocol">
+            <div>
+              <div class="lbl note" style="margin:0 0 6px">Evidence handed to the adapter</div>
+              <div style="overflow-x:auto"><table class="ev" id="evTable"></table></div>
+            </div>
+            <div>
+              <div class="lbl note" style="margin:0 0 6px">Onset sequence</div>
+              <ul class="timeline" id="evSeq"></ul>
+              <div id="evLimits"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hidden" id="diagnosis">
+          <h3>Diagnosis <span class="sub" id="diagRoute"></span></h3>
+          <div id="diagStatus" class="typing"></div>
+          <div class="report" id="report"></div>
+          <details class="think" id="rawWrap" style="margin-top:10px"><summary>Model output (raw)</summary><div class="thinkbody" id="raw"></div></details>
+          <div class="truth hidden" id="truthCmp"></div>
+          <div style="margin-top:14px">
+            <div class="lbl note" style="margin:0 0 6px">Ask the anomaly adapter about this incident</div>
+            <div class="chips" style="justify-content:flex-start" id="qChips">
+              <button class="chip" data-q="Which sensor deviated first, and how did it propagate?"><b>Onset &amp; propagation</b></button>
+              <button class="chip" data-q="Show the detector scores and the key sensor values."><b>Scores &amp; values</b></button>
+              <button class="chip" data-q="What should the operator do right now?"><b>Recommended action</b></button>
+              <button class="chip" data-q="How severe is this and why?"><b>Severity</b></button>
+            </div>
+            <div class="row" style="margin-top:8px">
+              <input type="text" id="qBox" placeholder="e.g. Why this subsystem and not the reactor cooling loop?">
+              <button class="btn primary" id="qSend">Ask</button>
+            </div>
+            <div class="qa" id="qa"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FINANCE ======================= -->
+  <section class="view" id="view-finance" role="tabpanel" aria-labelledby="tab-finance">
+    <div class="card soon-card">
+          <h2>Finance portfolio</h2>
+      <p>Coming soon. This workspace will host a portfolio adapter routed by Laya, alongside the existing specialists.</p>
+      <ul>
+        <li>Holdings overview and allocation</li>
+        <li>Risk and exposure analysis</li>
+        <li>Grounded, explainable recommendations</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ============================== shared ============================== */
+const $ = id => document.getElementById(id);
+const TASK_LABEL = { general: 'Base model', reasoning: 'Reasoning adapter', deepfake: 'Deepfake adapter', anomaly: 'Anomaly adapter' };
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+// Small, safe markdown subset (escape first, then format).
+function md(src) {
+  const inline = s => esc(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*\w])\*([^*\n]+)\*(?!\w)/g, '$1<em>$2</em>');
+  const cells = l => l.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
+  const lines = String(src || '').split('\n');
+  const out = [];
+  let i = 0;
+  const isBlock = l => /^```/.test(l) || /^#{1,4}\s/.test(l) || /^\s*[-*•]\s+/.test(l) || /^\s*\d+[.)]\s+/.test(l) || /^\s*\|.*\|\s*$/.test(l);
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^```/.test(l)) {
+      const buf = []; i++;
+      while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]);
+      i++; out.push('<pre><code>' + esc(buf.join('\n')) + '</code></pre>'); continue;
+    }
+    if (/^\s*\|.*\|\s*$/.test(l) && i + 1 < lines.length && /^\s*\|?\s*:?-{2,}/.test(lines[i + 1])) {
+      const head = cells(l); i += 2;
+      let h = '<table><thead><tr>' + head.map(c => '<th>' + inline(c) + '</th>').join('') + '</tr></thead><tbody>';
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) h += '<tr>' + cells(lines[i++]).map(c => '<td>' + inline(c) + '</td>').join('') + '</tr>';
+      out.push(h + '</tbody></table>'); continue;
+    }
+    if (/^#{1,4}\s/.test(l)) { const n = Math.min(l.match(/^#+/)[0].length + 2, 5); out.push(`<h${n}>${inline(l.replace(/^#+\s*/, ''))}</h${n}>`); i++; continue; }
+    if (/^\s*[-*•]\s+/.test(l)) {
+      let h = '<ul>'; while (i < lines.length && /^\s*[-*•]\s+/.test(lines[i])) h += '<li>' + inline(lines[i++].replace(/^\s*[-*•]\s+/, '')) + '</li>';
+      out.push(h + '</ul>'); continue;
+    }
+    if (/^\s*\d+[.)]\s+/.test(l)) {
+      let h = '<ol>'; while (i < lines.length && /^\s*\d+[.)]\s+/.test(lines[i])) h += '<li>' + inline(lines[i++].replace(/^\s*\d+[.)]\s+/, '')) + '</li>';
+      out.push(h + '</ol>'); continue;
+    }
+    if (!l.trim()) { i++; continue; }
+    const buf = [l]; i++;
+    while (i < lines.length && lines[i].trim() && !isBlock(lines[i])) buf.push(lines[i++]);
+    out.push('<p>' + buf.map(inline).join('<br>') + '</p>');
+  }
+  return out.join('');
+}
+
+// POST + read an SSE stream; calls onEvent(ev) per `data:` JSON line.
+async function sse(url, body, onEvent, signal) {
+  const resp = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal });
+  if (!resp.ok || !resp.body) throw new Error('HTTP ' + resp.status);
+  const reader = resp.body.getReader(), dec = new TextDecoder();
+  let buf = '';
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    const parts = buf.split('\n\n'); buf = parts.pop();
+    for (const p of parts) {
+      const line = p.split('\n').find(x => x.startsWith('data:'));
+      if (line) { try { onEvent(JSON.parse(line.slice(5))); } catch (e) { console.warn(e); } }
+    }
+  }
+}
+
+function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+/* ----- resident-adapter pill ----- */
+let statusTimer = null;
+async function refreshStatus() {
+  try {
+    const s = await (await fetch('/adapters/status')).json();
+    const dot = $('residentDot'), txt = $('residentText');
+    const parts = [];
+    if (s.deepfake_loaded) parts.push('Deepfake adapter');
+    if (s.lora) parts.push(TASK_LABEL[s.lora] || s.lora);
+    else if (s.base_loaded) parts.push('Base model');
+    txt.textContent = parts.length ? 'Loaded: ' + parts.join(' + ') : 'No adapter loaded';
+    dot.className = 'dot' + (s.busy ? ' busy' : parts.length ? ' on' : '');
+    $('residentPill').title = 'Policy: ' + s.policy + (s.recent_swaps && s.recent_swaps.length ? '\nLast swap: ' + JSON.stringify(s.recent_swaps[s.recent_swaps.length - 1]) : '');
+    $('stubBadge').style.display = s.mode === 'stub' ? 'inline-flex' : 'none';
+  } catch (e) { /* server down: leave as is */ }
+}
+function pollStatus(fast) {
+  clearTimeout(statusTimer);
+  refreshStatus();
+  statusTimer = setTimeout(() => pollStatus(false), fast ? 1000 : 8000);
+}
+
+/* ----- tabs ----- */
+const views = ['chat', 'anomaly', 'finance'];
+function showView(v) {
+  if (!views.includes(v)) v = 'chat';
+  for (const name of views) {
+    $('view-' + name).classList.toggle('active', name === v);
+    $('tab-' + name).setAttribute('aria-selected', String(name === v));
+    $('tab-' + name).tabIndex = name === v ? 0 : -1;
+  }
+  if (location.hash !== '#' + v) history.replaceState(null, '', '#' + v);
+  if (v === 'anomaly') { anomalyInit(); requestAnimationFrame(drawAll); }
+  if (v === 'chat') $('box').focus();
+}
+document.querySelectorAll('nav.tabs button').forEach((b, idx, all) => {
+  b.onclick = () => showView(b.dataset.view);
+  b.onkeydown = e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      const n = all[(idx + (e.key === 'ArrowRight' ? 1 : all.length - 1)) % all.length];
+      n.focus(); showView(n.dataset.view);
+    }
+  };
+});
+window.addEventListener('hashchange', () => showView(location.hash.slice(1)));
+
+/* ============================== CHAT ============================== */
+const box = $('box'), sendBtn = $('send'), thread = $('thread'), logEl = $('log');
+let chatHistory = [], attached = null, controller = null;
+let deepThink = false;  // toggle: route every message to the reasoning adapter
+
+function autosize() { box.style.height = 'auto'; box.style.height = Math.min(box.scrollHeight, 180) + 'px'; }
+box.addEventListener('input', autosize);
+function nearBottom() { return logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 120; }
+function scrollDown(force) { if (force || nearBottom()) logEl.scrollTop = logEl.scrollHeight; }
+
+$('attachBtn').onclick = () => $('img').click();
+$('img').onchange = () => {
+  const f = $('img').files && $('img').files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    attached = { b64: String(r.result).split(',')[1], url: String(r.result), name: f.name };
+    $('attachImg').src = attached.url; $('attachName').textContent = f.name;
+    $('attachPreview').style.display = 'flex'; box.focus();
+  };
+  r.readAsDataURL(f);
+};
+function clearAttachment() { attached = null; $('img').value = ''; $('attachPreview').style.display = 'none'; }
+$('attachClear').onclick = clearAttachment;
+$('deepThink').onchange = () => {
+  deepThink = $('deepThink').checked;
+  $('deepThinkWrap').title = deepThink
+    ? 'Deep thinking ON — messages go to the reasoning adapter'
+    : 'Deep thinking — pin this message to the reasoning adapter';
+  box.focus();
+};
+$('newChat').onclick = () => {
+  if (controller) controller.abort();
+  chatHistory = []; thread.innerHTML = ''; thread.appendChild(emptyState); emptyState.style.display = '';
+  box.focus();
+};
+const emptyState = $('empty');
+document.querySelectorAll('#empty .chip').forEach(c => c.onclick = () => {
+  box.value = c.dataset.prompt; autosize();
+  if (c.dataset.attach) { $('img').click(); return; }
+  ask();
+});
+
+function userMsg(text, imgUrl) {
+  const m = document.createElement('div'); m.className = 'msg user';
+  if (imgUrl) { const im = document.createElement('img'); im.src = imgUrl; im.alt = 'attached image'; m.appendChild(im); }
+  const b = document.createElement('div'); b.className = 'bubble'; b.textContent = text; m.appendChild(b);
+  thread.appendChild(m);
+}
+function assistantMsg() {
+  const m = document.createElement('div'); m.className = 'msg assistant';
+  const route = document.createElement('div'); route.className = 'route';
+  const bubble = document.createElement('div'); bubble.className = 'bubble';
+  const ans = document.createElement('div'); ans.className = 'md typing'; ans.textContent = 'Routing…';
+  bubble.appendChild(ans); m.append(route, bubble); thread.appendChild(m);
+  return { m, route, bubble, ans, text: '', think: null, thinkBody: null, thinkSum: null, thinkChars: 0, raf: 0 };
+}
+function setRoute(ui, task, note) {
+  ui.route.innerHTML = `<span class="tag ${esc(task)}">${esc(TASK_LABEL[task] || task)}</span>` + (note ? `<span>${esc(note)}</span>` : '');
+}
+function renderAnswer(ui) {
+  if (ui.raf) return;
+  ui.raf = requestAnimationFrame(() => { ui.raf = 0; ui.ans.innerHTML = md(ui.text); scrollDown(); });
+}
+function addThinking(ui, text) {
+  if (!ui.think) {
+    const d = document.createElement('details'); d.className = 'think';
+    const s = document.createElement('summary'); const b = document.createElement('div'); b.className = 'thinkbody';
+    d.append(s, b); ui.bubble.insertBefore(d, ui.ans);
+    ui.think = d; ui.thinkBody = b; ui.thinkSum = s;
+  }
+  ui.thinkBody.textContent += text; ui.thinkChars += text.length;
+  ui.thinkSum.textContent = 'Reasoning · ' + ui.thinkChars.toLocaleString() + ' chars';
+}
+function verdictCard(ui, ev) {
+  const cls = String(ev.verdict || '').toLowerCase();
+  const conf = Math.max(0, Math.min(100, Number(ev.confidence) * 100));
+  const card = document.createElement('div'); card.className = 'vcard ' + cls;
+  card.innerHTML = `<div class="row" style="justify-content:space-between"><span class="big">${esc(ev.verdict)}</span><span>${conf.toFixed(1)}% confidence</span></div>
+    <div class="meter"><i style="width:${conf}%"></i></div>
+    <div><b>Hotspots:</b> ${esc(ev.hotspots || '—')}</div><div class="note" style="margin-top:2px">Spectrum: ${esc(ev.spectral || '')}</div>`;
+  ui.bubble.insertBefore(card, ui.bubble.firstChild);
+}
+
+function setBusy(on) {
+  sendBtn.classList.toggle('stop', on);
+  sendBtn.textContent = on ? '■' : '↑';
+  sendBtn.setAttribute('aria-label', on ? 'Stop generating' : 'Send');
+}
+
+async function ask() {
+  if (controller) { controller.abort(); return; }  // button doubles as Stop
+  const message = box.value.trim();
+  if (!message) return;
+  emptyState.style.display = 'none';
+  box.value = ''; autosize();
+  const img = attached; clearAttachment();
+  userMsg(message, img && img.url);
+  const ui = assistantMsg(); scrollDown(true);
+  controller = new AbortController(); setBusy(true); pollStatus(true);
+  let gotAnswer = false, gotNotice = false, verdictLine = '', started = false;
+  const begin = () => { if (!started) { started = true; ui.ans.classList.remove('typing'); ui.ans.textContent = ''; ui.ans.classList.add('cursor'); } };
+  try {
+    const forced = deepThink;  // captured per request, so a mid-stream toggle cannot mix
+    const body = { message, history: chatHistory.slice(-6), max_new_tokens: 768 };
+    if (forced) body.deep_thinking = true;
+    if (img) body.image_base64 = img.b64;
+    await sse('/chat/stream', body, ev => {
+      switch (ev.event) {
+        case 'route':
+          setRoute(ui, ev.task, forced ? 'deep thinking' : 'routed by Laya');
+          ui.ans.textContent = ev.task === 'general' ? 'Thinking…' : `Loading ${TASK_LABEL[ev.task] || ev.task}…`;
+          break;
+        case 'adapter': {
+          const bits = [];
+          if (ev.cold) bits.push('loaded' + (ev.swap_ms ? ` in ${(ev.swap_ms / 1000).toFixed(1)}s` : ''));
+          else bits.push('already loaded');
+          if (ev.unloaded && ev.unloaded.length) bits.push('swapped out ' + ev.unloaded.join(', '));
+          setRoute(ui, ev.task, bits.join(' · '));
+          if (!started) ui.ans.textContent = 'Thinking…';
+          refreshStatus();
+          break;
+        }
+        case 'token': begin(); ui.text += ev.text; gotAnswer = true; renderAnswer(ui); break;
+        case 'thinking': begin(); addThinking(ui, ev.text); break;
+        case 'verdict':
+          begin(); verdictCard(ui, ev); gotAnswer = true;
+          verdictLine = `Verdict: ${ev.verdict} (${(Number(ev.confidence) * 100).toFixed(1)}%) — ${ev.hotspots || ''}`;
+          break;
+        case 'notice': begin(); ui.text = ''; ui.ans.innerHTML = `<p class="notice">${esc(ev.text)}</p>`; gotNotice = true; break;
+      }
+      scrollDown();
+    }, controller.signal);
+  } catch (err) {
+    if (err.name === 'AbortError') { begin(); if (!ui.text) ui.ans.innerHTML = '<p class="note">Stopped.</p>'; }
+    else { begin(); ui.ans.innerHTML = '<p class="notice">Connection error — is the server running?</p>'; }
+  } finally {
+    if (ui.raf) { cancelAnimationFrame(ui.raf); ui.raf = 0; }
+    if (ui.text) ui.ans.innerHTML = md(ui.text);
+    ui.ans.classList.remove('cursor', 'typing');
+    if (!gotAnswer && !gotNotice && !ui.ans.textContent.trim()) {
+      if (ui.think) { ui.think.open = true; ui.ans.innerHTML = '<p class="note">(reasoning only — no final answer was emitted)</p>'; }
+      else ui.ans.innerHTML = '<p class="notice">Sorry — something went wrong. Please try again.</p>';
+    }
+    // Notices are UI feedback, not conversation: keep them out of history.
+    if (gotAnswer) {
+      chatHistory.push({ role: 'user', content: message });
+      const reply = (ui.text || verdictLine).trim();
+      if (reply) chatHistory.push({ role: 'assistant', content: reply });
+    }
+    controller = null; setBusy(false); pollStatus(false); box.focus(); scrollDown();
+  }
+}
+sendBtn.onclick = ask;
+box.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); if (!controller) ask(); } });
+
+/* ============================== ANOMALY ============================== */
+const A = { inited: false, tl: null, tick: -1, playing: false, ticksPerSec: 12, acc: 0, last: 0,
+            heat: null, selected: null, event: null, diagCtl: null, qaHistory: [], diagnosed: new Set() };
+
+async function anomalyInit() {
+  if (A.inited) return; A.inited = true;
+  try {
+    const d = await (await fetch('/anomaly/scenarios')).json();
+    const sel = $('scenario'); sel.innerHTML = '';
+    for (const s of d.scenarios) {
+      const o = document.createElement('option'); o.value = s.id; o.textContent = s.label; o.dataset.fault = s.fault; sel.appendChild(o);
+    }
+    $('dsInfo').innerHTML = d.synthetic
+      ? '<div class="warnbox">No TEP test set found, so these are <b>synthetic</b> demo runs. Set <code>FINAL_TEP_TEST_DIR</code> (or put files in <code>data/tep_test/</code>) to replay the real test set.</div>'
+      : `Dataset: <code>${esc(d.dataset_dir)}</code> · ${d.scenarios.length} runs`;
+    sel.onchange = () => loadScenario(sel.value);
+    if (d.scenarios.length) {
+      const firstFault = d.scenarios.find(s => s.fault) || d.scenarios[0];
+      sel.value = firstFault.id; loadScenario(firstFault.id);
+    }
+  } catch (e) { $('dsInfo').innerHTML = '<div class="warnbox">Could not load scenarios — is the server running?</div>'; }
+}
+
+async function loadScenario(id) {
+  pause(); A.tl = null; A.tick = -1; A.event = null; A.diagnosed.clear();
+  $('incident').classList.add('hidden'); $('diagnosis').classList.add('hidden');
+  if (A.diagCtl) A.diagCtl.abort();
+  $('kStatus').textContent = 'Loading…'; $('kStatus').className = 'v';
+  $('playBtn').disabled = true;
+  try {
+    const r = await fetch('/anomaly/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ scenario_id: id }) });
+    if (!r.ok) throw new Error((await r.json()).detail || r.status);
+    A.tl = await r.json();
+  } catch (e) { $('kStatus').textContent = 'Error'; $('detInfo').textContent = String(e.message || e); return; }
+  const t = A.tl, det = t.detector;
+  $('detInfo').innerHTML = `<b>${esc(det.name)}</b> (${esc(det.backend)})<br>Threshold ${fmt(det.threshold)} · confirm after ${det.confirm} alarms<br>Calibration: ${esc(det.calibration)}` +
+    (t.notices ? '<div class="warnbox">' + t.notices.map(esc).join('<br>') + '</div>' : '');
+  $('kThr').textContent = fmt(det.threshold);
+  const sc = t.scenario;
+  $('truthLine').innerHTML = sc.fault == null ? 'Unlabelled run' : `Label: <b>IDV(${sc.fault})</b> — ${esc(sc.fault_name)}` + (t.fault_onset != null ? ` · introduced at ${clock(t.fault_onset)}` : '');
+  buildHeat();
+  A.selected = t.events.length ? t.events[0].evidence.top_anomalous_sensors[0].name : 'XMEAS_7';
+  A.tick = 0; $('playBtn').disabled = false; $('playBtn').textContent = 'Start';
+  updateKpis(); drawAll(); renderBars();
+}
+
+function fmt(v) { if (v == null || isNaN(v)) return '—'; const a = Math.abs(v); return a >= 1000 ? v.toFixed(0) : a >= 100 ? v.toFixed(1) : a >= 1 ? v.toFixed(2) : v.toPrecision(3); }
+function clock(tick) { const m = Math.round(tick * (A.tl ? A.tl.sample_minutes : 3)); return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+
+$('speed').querySelectorAll('button').forEach(b => b.onclick = () => {
+  $('speed').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+  A.ticksPerSec = Number(b.dataset.s);
+});
+$('playBtn').onclick = () => A.playing ? pause() : play();
+$('resetBtn').onclick = () => { if (!A.tl) return; pause(); A.tick = 0; A.event = null; A.diagnosed.clear(); $('incident').classList.add('hidden'); $('diagnosis').classList.add('hidden'); updateKpis(); drawAll(); renderBars(); $('playBtn').textContent = 'Start'; };
+$('showTruth').onchange = () => { $('truthLine').classList.toggle('hidden', !$('showTruth').checked); $('truthCmp').classList.toggle('hidden', !$('showTruth').checked || !$('truthCmp').innerHTML); drawAll(); };
+
+function play() {
+  if (!A.tl) return;
+  if (A.tick >= A.tl.n - 1) A.tick = 0;
+  A.playing = true; A.last = performance.now(); A.acc = 0; $('playBtn').textContent = 'Pause';
+  requestAnimationFrame(step);
+}
+function pause() { A.playing = false; if (A.tl) $('playBtn').textContent = A.tick >= A.tl.n - 1 ? 'Replay' : 'Resume'; }
+
+function step(now) {
+  if (!A.playing || !A.tl) return;
+  const dt = (now - A.last) / 1000; A.last = now;
+  let adv;
+  if (A.ticksPerSec === 0) adv = 8; else { A.acc += dt * A.ticksPerSec; adv = Math.floor(A.acc); A.acc -= adv; }
+  for (let k = 0; k < adv && A.tick < A.tl.n - 1; k++) {
+    A.tick++;
+    const ev = A.tl.events.find(e => e.confirm_tick === A.tick);
+    if (ev) { onEvent(ev); if ($('pauseOnEvent').checked) { updateKpis(); drawAll(); renderBars(); pause(); return; } }
+  }
+  updateKpis(); drawAll(); renderBars();
+  if (A.tick >= A.tl.n - 1) { pause(); return; }
+  requestAnimationFrame(step);
+}
+
+function statusAt(t) {
+  const tl = A.tl; if (!tl || t < 0) return ['Idle', ''];
+  const ev = tl.events.find(e => e.confirm_tick <= t && (e.end_tick == null || e.end_tick > t));
+  if (ev) return ['Event', 'status-event'];
+  if (tl.anomalous[t]) return ['Alarm', 'status-alarm'];
+  return ['Normal', 'status-normal'];
+}
+function updateKpis() {
+  const t = A.tick, tl = A.tl; if (!tl) return;
+  $('kTime').textContent = clock(Math.max(t, 0));
+  $('kScore').textContent = t >= 0 ? fmt(tl.scores[t]) : '—';
+  const [s, c] = statusAt(t); $('kStatus').textContent = s; $('kStatus').className = 'v ' + c;
+}
+
+/* ----- canvases ----- */
+function fitCanvas(cv) {
+  // The layout height is pinned once in data-h. Reading it back from the height
+  // attribute made the bitmap size compound with the device pixel ratio on every
+  // redraw, so charts crept taller as they animated; a single pass while the tab
+  // was hidden then collapsed them to nothing.
+  const dpr = window.devicePixelRatio || 1;
+  const design = Number(cv.dataset.h || cv.getAttribute('height')) || 160;
+  cv.dataset.h = String(design);
+  cv.style.height = design + 'px';
+  const w = cv.clientWidth || cv.parentElement.clientWidth || 320;
+  const bw = Math.max(1, Math.round(w * dpr)), bh = Math.max(1, Math.round(design * dpr));
+  if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return [ctx, w, design];
+}
+function drawAll() { if (!A.tl || !$('view-anomaly').classList.contains('active')) return; drawScore(); drawHeat(); drawTrace(); }
+window.addEventListener('resize', () => requestAnimationFrame(drawAll));
+
+function drawScore() {
+  const tl = A.tl, [ctx, w, h] = fitCanvas($('scoreCanvas'));
+  const L = 40, R = 8, T = 8, B = 20, pw = w - L - R, ph = h - T - B;
+  ctx.clearRect(0, 0, w, h);
+  const thr = tl.detector.threshold;
+  const maxS = Math.max(thr * 4, ...tl.scores.slice(0, Math.max(A.tick + 1, 1)));
+  const lo = Math.log10(Math.max(Math.min(...tl.scores) * 0.8, 0.05)), hi = Math.log10(maxS * 1.3);
+  const X = i => L + (i / (tl.n - 1)) * pw, Y = v => T + ph - ((Math.log10(Math.max(v, 1e-3)) - lo) / (hi - lo)) * ph;
+  ctx.font = '11px system-ui'; ctx.fillStyle = cssVar('--muted'); ctx.strokeStyle = cssVar('--border'); ctx.lineWidth = 1;
+  for (let e = Math.ceil(lo); e <= Math.floor(hi); e++) {
+    const y = Y(10 ** e); ctx.beginPath(); ctx.moveTo(L, y); ctx.lineTo(w - R, y); ctx.stroke();
+    ctx.fillText(e >= 3 ? '1e' + e : String(10 ** e), 4, y + 4);
+  }
+  for (let hr = 0; hr <= tl.n * tl.sample_minutes / 60; hr += 8) { const x = X(hr * 60 / tl.sample_minutes); ctx.fillText(hr + 'h', x - 6, h - 4); }
+  // alarm shading
+  ctx.fillStyle = cssVar('--warn'); ctx.globalAlpha = 0.18;
+  for (let i = 0; i <= A.tick; i++) if (tl.anomalous[i]) ctx.fillRect(X(i), T, Math.max(pw / tl.n, 1), ph);
+  ctx.globalAlpha = 1;
+  if (tl.fault_onset != null && $('showTruth').checked) {
+    ctx.strokeStyle = cssVar('--muted'); ctx.setLineDash([2, 3]); ctx.beginPath(); ctx.moveTo(X(tl.fault_onset), T); ctx.lineTo(X(tl.fault_onset), T + ph); ctx.stroke(); ctx.setLineDash([]);
+  }
+  ctx.strokeStyle = cssVar('--bad'); ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(L, Y(thr)); ctx.lineTo(w - R, Y(thr)); ctx.stroke(); ctx.setLineDash([]);
+  ctx.strokeStyle = cssVar('--accent'); ctx.lineWidth = 1.6; ctx.beginPath();
+  for (let i = 0; i <= A.tick; i++) { const x = X(i), y = Y(tl.scores[i]); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+  ctx.stroke();
+  for (const ev of tl.events) if (ev.confirm_tick <= A.tick) {
+    const x = X(ev.confirm_tick); ctx.fillStyle = cssVar('--bad'); ctx.beginPath(); ctx.arc(x, Y(tl.scores[ev.confirm_tick]), 4.5, 0, 7); ctx.fill();
+  }
+  if (A.tick >= 0) { ctx.strokeStyle = cssVar('--text'); ctx.globalAlpha = .25; ctx.beginPath(); ctx.moveTo(X(A.tick), T); ctx.lineTo(X(A.tick), T + ph); ctx.stroke(); ctx.globalAlpha = 1; }
+}
+
+function buildHeat() {
+  const tl = A.tl, n = tl.n, m = 52, img = new ImageData(n, m);
+  for (let t = 0; t < n; t++) for (let s = 0; s < m; s++) {
+    const z = Math.abs(tl.z[t][s]), o = (s * n + t) * 4;
+    let r, g, b, a;
+    if (z < 3) { r = 128; g = 128; b = 128; a = 18; }
+    else if (z < 6) { const k = (z - 3) / 3; r = 245; g = Math.round(158 - k * 60); b = 11; a = Math.round(110 + k * 100); }
+    else { const k = Math.min((z - 6) / 14, 1); r = 220; g = 38; b = 38; a = Math.round(200 + k * 55); }
+    img.data[o] = r; img.data[o + 1] = g; img.data[o + 2] = b; img.data[o + 3] = a;
+  }
+  const off = document.createElement('canvas'); off.width = n; off.height = m; off.getContext('2d').putImageData(img, 0, 0);
+  A.heat = off;
+}
+const HEAT_L = 4;
+function drawHeat() {
+  const tl = A.tl, cv = $('heatCanvas'), [ctx, w, h] = fitCanvas(cv);
+  ctx.clearRect(0, 0, w, h);
+  if (!A.heat || A.tick < 0) return;
+  const pw = w - HEAT_L, cols = A.tick + 1;
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(A.heat, 0, 0, cols, 52, HEAT_L, 0, pw * cols / tl.n, h);
+  const sel = tl.sensors.findIndex(s => s.tag === A.selected);
+  if (sel >= 0) { ctx.strokeStyle = cssVar('--accent'); ctx.lineWidth = 1.5; ctx.strokeRect(HEAT_L, sel * h / 52, pw, h / 52); }
+  // group separators: XMEAS 1-22 | analyzers 23-41 | XMV
+  ctx.strokeStyle = cssVar('--border'); ctx.lineWidth = 1;
+  for (const r of [22, 41]) { ctx.beginPath(); ctx.moveTo(0, r * h / 52); ctx.lineTo(w, r * h / 52); ctx.stroke(); }
+}
+$('heatCanvas').addEventListener('click', e => {
+  if (!A.tl) return;
+  const r = e.target.getBoundingClientRect(), row = Math.floor((e.clientY - r.top) / r.height * 52);
+  if (row >= 0 && row < 52) { A.selected = A.tl.sensors[row].tag; drawAll(); }
+});
+$('heatCanvas').addEventListener('mousemove', e => {
+  if (!A.tl) return;
+  const r = e.target.getBoundingClientRect(), row = Math.floor((e.clientY - r.top) / r.height * 52);
+  const t = Math.floor((e.clientX - r.left - HEAT_L) / (r.width - HEAT_L) * A.tl.n);
+  const s = A.tl.sensors[row];
+  e.target.title = s ? `${s.tag} · ${s.name}` + (t >= 0 && t <= A.tick ? ` · ${clock(t)} · z=${A.tl.z[t][row]}` : '') : '';
+});
+
+function drawTrace() {
+  const tl = A.tl, [ctx, w, h] = fitCanvas($('traceCanvas'));
+  ctx.clearRect(0, 0, w, h);
+  const idx = tl.sensors.findIndex(s => s.tag === A.selected); if (idx < 0) return;
+  const s = tl.sensors[idx];
+  $('traceName').textContent = `${s.tag} · ${s.name}` + (s.unit ? ` (${s.unit})` : '');
+  const L = 54, R = 8, T = 8, B = 18, pw = w - L - R, ph = h - T - B;
+  const vals = tl.raw.map(r => r[idx]), base = tl.baseline[idx];
+  const upto = Math.max(A.tick, 0);
+  let lo = base, hi = base;
+  for (let i = 0; i <= upto; i++) { lo = Math.min(lo, vals[i]); hi = Math.max(hi, vals[i]); }
+  const pad = (hi - lo) * 0.1 || Math.abs(base) * 0.01 || 1; lo -= pad; hi += pad;
+  const X = i => L + (i / (tl.n - 1)) * pw, Y = v => T + ph - ((v - lo) / (hi - lo)) * ph;
+  ctx.font = '11px system-ui'; ctx.fillStyle = cssVar('--muted');
+  ctx.fillText(fmt(hi), 4, T + 10); ctx.fillText(fmt(lo), 4, T + ph);
+  ctx.strokeStyle = cssVar('--muted'); ctx.setLineDash([5, 4]); ctx.beginPath(); ctx.moveTo(L, Y(base)); ctx.lineTo(w - R, Y(base)); ctx.stroke(); ctx.setLineDash([]);
+  ctx.strokeStyle = cssVar('--accent'); ctx.lineWidth = 1.4; ctx.beginPath();
+  for (let i = 0; i <= upto; i++) { const x = X(i), y = Y(vals[i]); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+  ctx.stroke();
+}
+
+function renderBars() {
+  const tl = A.tl, el = $('bars'); if (!tl || A.tick < 0) return;
+  const z = tl.z[A.tick];
+  const top = z.map((v, i) => [Math.abs(v), v, i]).sort((a, b) => b[0] - a[0]).slice(0, 8);
+  el.innerHTML = top.map(([a, v, i]) => {
+    const s = tl.sensors[i], col = a >= 6 ? 'var(--bad)' : a >= 2 ? 'var(--warn)' : 'var(--muted)';
+    return `<div class="bar" data-tag="${s.tag}" title="${esc(s.tag)} · ${esc(s.name)}"><span class="name">${esc(s.name)}</span><span class="track"><i style="width:${Math.min(a / 12, 1) * 100}%;background:${col}"></i></span><span class="val">${v > 0 ? '+' : ''}${v.toFixed(1)}σ</span></div>`;
+  }).join('');
+  el.querySelectorAll('.bar').forEach(b => b.onclick = () => { A.selected = b.dataset.tag; drawAll(); });
+}
+
+/* ----- incident + diagnosis ----- */
+function onEvent(ev) {
+  A.event = ev; A.qaHistory = []; $('qa').innerHTML = '';
+  const e = ev.evidence;
+  $('incident').classList.remove('hidden');
+  $('incId').textContent = e.event_id + ' · ' + clock(ev.confirm_tick);
+  $('incSev').textContent = e.severity; $('incSev').className = 'sev ' + e.severity;
+  $('incSub').textContent = 'Candidate: ' + String(e.candidate_subsystem || '?').replace(/_/g, ' ');
+  $('evTable').innerHTML = '<tr><th>Sensor</th><th>Observed</th><th>Baseline</th><th>Dev %</th><th>z</th><th>Trend</th></tr>' +
+    (e.top_anomalous_sensors || []).map(s => `<tr data-tag="${esc(s.name)}" style="cursor:pointer"><td title="${esc(s.name)}">${esc(s.display_name || s.name)}</td><td class="num">${fmt(s.current_value)}</td><td class="num">${fmt(s.baseline_value)}</td><td class="num">${s.deviation_percent > 0 ? '+' : ''}${fmt(s.deviation_percent)}</td><td class="num">${fmt(s.z_score)}</td><td>${esc(s.trend || '')}</td></tr>`).join('');
+  $('evTable').querySelectorAll('tr[data-tag]').forEach(r => r.onclick = () => { A.selected = r.dataset.tag; drawAll(); });
+  const seq = (e.temporal_sequence || {}).sequence || [];
+  $('evSeq').innerHTML = seq.map(s => `<li><span class="t">+${Number(s.relative_time_minutes || 0).toFixed(1)} min</span><span>${esc(s.display_name || s.sensor)} <span class="note">${esc(s.event || '')}</span></span></li>`).join('');
+  $('evLimits').innerHTML = (e.safety_limits_exceeded || []).map(l => `<div class="warnbox">${esc(l.limit_name)}: ${fmt(l.current)} vs limit ${fmt(l.threshold)} ${esc(l.unit || '')}</div>`).join('');
+  $('diagnosis').classList.add('hidden');
+  if ($('autoDiag').checked && !A.diagnosed.has(e.event_id)) diagnose();
+  $('incident').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+$('diagBtn').onclick = () => diagnose();
+
+const REPORT_ORDER = ['summary', 'reasoning_steps', 'evidence', 'reasoning', 'recommended_action', 'uncertainty'];
+function parseReport(text) {
+  const a = text.indexOf('{'), b = text.lastIndexOf('}');
+  if (a < 0 || b <= a) return null;
+  try { return JSON.parse(text.slice(a, b + 1)); } catch (e) { return null; }
+}
+function listOrText(v) {
+  if (Array.isArray(v)) return '<ul>' + v.map(x => '<li>' + esc(typeof x === 'string' ? x : JSON.stringify(x)) + '</li>').join('') + '</ul>';
+  if (v && typeof v === 'object') return '<pre style="white-space:pre-wrap;margin:0">' + esc(JSON.stringify(v, null, 1)) + '</pre>';
+  return '<div>' + esc(String(v)) + '</div>';
+}
+function renderReport(r) {
+  const sev = String(r.severity || '').toLowerCase();
+  let h = `<div><div class="lbl">Root cause</div><div class="rc">${esc(r.root_cause || '—')}</div></div>
+    <div class="row" style="flex-wrap:wrap;gap:8px">${sev ? `<span class="sev ${esc(sev)}">${esc(sev)}</span>` : ''}
+    ${r.affected_subsystem ? `<span class="pill">Subsystem: ${esc(String(r.affected_subsystem).replace(/_/g, ' '))}</span>` : ''}
+    ${r.confidence != null ? `<span class="pill">Confidence: ${esc(typeof r.confidence === 'number' ? (r.confidence * (r.confidence <= 1 ? 100 : 1)).toFixed(0) + '%' : r.confidence)}</span>` : ''}</div>`;
+  for (const k of REPORT_ORDER) if (r[k] != null && r[k] !== '') {
+    const label = k.replace(/_/g, ' ');
+    if (k === 'recommended_action') h += `<div class="action"><div class="lbl">Recommended action</div>${listOrText(r[k])}</div>`;
+    else if (k === 'reasoning_steps' && Array.isArray(r[k])) h += `<div><div class="lbl">${label}</div><ol>${r[k].map(x => '<li>' + esc(typeof x === 'string' ? x : JSON.stringify(x)) + '</li>').join('')}</ol></div>`;
+    else h += `<div><div class="lbl">${esc(label)}</div>${listOrText(r[k])}</div>`;
+  }
+  const known = new Set(['root_cause', 'severity', 'affected_subsystem', 'confidence', ...REPORT_ORDER]);
+  for (const [k, v] of Object.entries(r)) if (!known.has(k)) h += `<div><div class="lbl">${esc(k.replace(/_/g, ' '))}</div>${listOrText(v)}</div>`;
+  $('report').innerHTML = h;
+}
+
+async function diagnose() {
+  const ev = A.event; if (!ev) return;
+  if (A.diagCtl) A.diagCtl.abort();
+  A.diagnosed.add(ev.evidence.event_id);
+  const ctl = A.diagCtl = new AbortController();
+  $('diagnosis').classList.remove('hidden');
+  $('report').innerHTML = ''; $('raw').textContent = ''; $('rawWrap').open = false;
+  $('truthCmp').innerHTML = ''; $('truthCmp').classList.add('hidden');
+  $('diagRoute').textContent = ''; $('diagStatus').textContent = 'Routing evidence through Laya…';
+  $('diagBtn').disabled = true; pollStatus(true);
+  let text = '';
+  try {
+    await sse('/anomaly/reason', { evidence: ev.evidence, values: ev.values }, e => {
+      if (e.event === 'route') { $('diagRoute').textContent = `→ ${TASK_LABEL[e.task] || e.task}`; $('diagStatus').textContent = `Loading ${TASK_LABEL[e.task] || e.task}…`; }
+      else if (e.event === 'adapter') { $('diagRoute').textContent = `→ ${TASK_LABEL[e.task]} · ${e.cold ? 'loaded' + (e.swap_ms ? ' in ' + (e.swap_ms / 1000).toFixed(1) + 's' : '') : 'already loaded'}${e.unloaded && e.unloaded.length ? ' · swapped out ' + e.unloaded.join(', ') : ''}`; $('diagStatus').textContent = 'Writing root-cause report…'; refreshStatus(); }
+      else if (e.event === 'token' || e.event === 'thinking') { text += e.text; $('raw').textContent = text; }
+      else if (e.event === 'notice') { $('diagStatus').innerHTML = `<span class="notice">${esc(e.text)}</span>`; }
+    }, ctl.signal);
+    const r = parseReport(text);
+    if (r) { renderReport(r); $('diagStatus').textContent = ''; }
+    else if (text.trim()) { $('report').innerHTML = '<div class="md">' + md(text) + '</div>'; $('diagStatus').textContent = ''; }
+    else if (!$('diagStatus').querySelector('.notice')) $('diagStatus').textContent = 'No output.';
+    const sc = A.tl.scenario;
+    if (sc.fault != null) {
+      $('truthCmp').innerHTML = `Dataset label: <b>IDV(${sc.fault})</b> — ${esc(sc.fault_name)}${sc.source === 'synthetic' ? ' <span class="note">(synthetic run)</span>' : ''}`;
+      $('truthCmp').classList.toggle('hidden', !$('showTruth').checked);
+    }
+  } catch (err) {
+    if (err.name !== 'AbortError') $('diagStatus').innerHTML = '<span class="notice">Connection error — is the server running?</span>';
+  } finally { if (A.diagCtl === ctl) A.diagCtl = null; $('diagBtn').disabled = false; pollStatus(false); }
+}
+
+async function askIncident(q) {
+  const ev = A.event; q = (q || '').trim(); if (!ev || !q) return;
+  $('qBox').value = '';
+  const wrap = document.createElement('div');
+  wrap.innerHTML = `<div class="q">${esc(q)}</div><div class="a md typing">Thinking…</div>`;
+  $('qa').appendChild(wrap);
+  const a = wrap.querySelector('.a'); let text = '';
+  $('qSend').disabled = true; pollStatus(true);
+  try {
+    await sse('/anomaly/reason', { evidence: ev.evidence, values: ev.values, question: q, history: A.qaHistory.slice(-6) }, e => {
+      if (e.event === 'token') { text += e.text; a.classList.remove('typing'); a.innerHTML = md(text); }
+      else if (e.event === 'notice') { a.classList.remove('typing'); a.innerHTML = `<p class="notice">${esc(e.text)}</p>`; }
+    });
+    if (text.trim()) { A.qaHistory.push({ role: 'user', content: q }, { role: 'assistant', content: text.trim() }); }
+    else if (a.classList.contains('typing')) { a.classList.remove('typing'); a.textContent = 'No answer.'; }
+  } catch (err) { a.classList.remove('typing'); a.innerHTML = '<p class="notice">Connection error.</p>'; }
+  finally { $('qSend').disabled = false; pollStatus(false); }
+}
+$('qSend').onclick = () => askIncident($('qBox').value);
+$('qBox').addEventListener('keydown', e => { if (e.key === 'Enter') askIncident($('qBox').value); });
+$('qChips').querySelectorAll('.chip').forEach(c => c.onclick = () => askIncident(c.dataset.q));
+
+/* ============================== boot ============================== */
+showView(location.hash.slice(1) || 'chat');
+pollStatus(false);
+</script>
+</body>
+</html>
+

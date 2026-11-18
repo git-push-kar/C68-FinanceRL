@@ -1,0 +1,10 @@
+{
+  "reason": "Input-slot unit check failed because punctuation/newline can share a tokenizer token. Launcher did not gate on pytest exit status; stopped setup immediately. New corrected source and fresh run directory will be used.",
+  "previous_status": {
+    "state": "pristine_reference",
+    "pid": 68728,
+    "example": 64,
+    "total": 1536,
+    "elapsed_seconds": 16.88175049997517
+  }
+}

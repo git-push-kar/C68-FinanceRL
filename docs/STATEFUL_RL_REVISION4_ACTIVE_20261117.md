@@ -1,0 +1,143 @@
+# Focused stock decisions and a conditional-learning gate
+
+17 November 2026. Active experiment; no claimed investment success.
+
+## Why this is a substantive next test
+
+Revision3 supplied full state but selected the same20% allocation for every stock.
+Its positive5000INR result exactly matched equal-weight rebalancing. This is not
+evidence of learned state dependence or RL improvement. The completed failure is
+preserved under `stateful_rl_run3_result` and must not be promoted.
+
+Revision4 uses one focused stock per native InternVL decision. Every prompt still
+contains all stock prices, holdings, market indicators and the total account.
+The focus row and its cash/affordability/risk facts are explicit immediately before
+the action query. The original model and vocabulary projection emit one action;
+the same learned weights are shared across all five stocks. This addresses the
+observed identical-answer failure without substituting a numerical trading model.
+Five actual forwards produce a portfolio decision; the executor funds and caps it.
+
+Shared per-asset evaluation has precedent in
+[Jiang et al.](https://arxiv.org/abs/1706.10059), but this is not their architecture
+or a reproduction of their crypto results. Numerical/table reasoning limitations
+are also documented in [EMNLP2023](https://aclanthology.org/2023.findings-emnlp.1028/).
+Neither citation guarantees that this particular representation will learn.
+
+## Curriculum and mandatory gate
+
+The teacher remains the causal inverse-volatility allocator selected in revision3
+from training years only. Supervised states now use2015-2022; the learning gate
+uses2023 real observations, with no shared decision dates. The gate year later
+enters RL training explicitly; financial checkpoint validation remains2024.
+
+Training samples are balanced across seven actions rather than dominated by20%.
+The6000 candidate states include25% synthetic risk counterfactuals; balanced
+resampling makes745/2048 actual training examples synthetic (36.38%), recorded in
+dataset_summary. Only volatility measurements are perturbed; they teach conditional
+allocation, not fictional profits. Prices/holdings/account values remain valid.
+Gate examples are all unperturbed and drawn without replacement from their pools.
+
+The gate contains96 examples:16each from six action classes. The5% class did not
+occur in this2023 sample pool, so it is explicitly untested by the gate. A constant
+answer scores16.67%; pristine model balanced accuracy is14.58%. Passing requires:
+
+- balanced accuracy at least60% and at least15 percentage points above pristine;
+- recall at least20% for every eligible class (at least8 gate examples);
+- at least four distinct predicted actions.
+
+These are predeclared engineering checks of conditional imitation, not a financial
+benchmark or proof of investment skill. Check every512examples, up to2048. Stop
+at the first passing checkpoint. If none passes, stop before RL or test backtests.
+The selected SFT checkpoint is not chosen for a lucky financial return.
+
+Native attention/head LoRA learning rates2e-5/1e-4 during this balanced warm-up.
+Temperature1.0,5%uniform exploration,5%label smoothing. The legacy `--states`
+argument remains in the inherited parser but is unused: learning_gate.py fixes
+the2048-example pool. The manifest and actual dataset inventory are authoritative.
+
+## RL only after the gate passes
+
+Own-account60session episodes,three20session decisions,groups of four trajectories,
+two contexts per collection. Account evolution uses actual model trades. Each
+stock focus is updated separately with its categorical likelihood ratio clipped
+to0.8–1.2 and the shared group-relative episode advantage. This is factorized
+per-action clipping rather than revision3's joint five-action ratio.120focus
+examples per collection,two update passes. Attention/head learning rates3e-6/3e-5;
+KL/entropy coefficients unchanged. Reference is the gate-passing SFT model.
+
+Reward remains net log wealth minus0.1 drawdown.96iterations maximum with
+validation-based stopping after12checks without improvement. No wall-clock cap
+or quiet-hours restriction. Predeclared2024 net-growth checkpoint selection and
+all2025-2026 retrospective comparisons/capital probes remain unchanged. Earlier
+test inspection makes method selection adaptive; no untouched-test claim.
+
+## Independent CPU signal diagnostic
+
+`research/stateful_signal_diagnostic.py` checks whether a simple numerical learner
+can exploit the available indicators. Pooled ridge uses shared stock features,
+no identity intercept, training-only standardization and20-session forward labels
+whose outcomes finish before the next-year evaluation. It evaluates2022,2023,2024
+only and does not inspect2025-2026. Three ridge strengths were recorded, not a
+large test-period search. This is not an InternVL adapter or an RL result.
+
+The result is mixed: some configurations beat holding in2022 or2024, but all three
+lag substantially in2023. This does not establish that indicators are useless,
+or that the language model is the sole problem. It argues against assuming a
+strong, stable exploitable edge exists just because many indicators are provided.
+Full metrics: `stateful_rl_revision4_preflight/causal_signal_diagnostic.json`.
+
+## Checks and operation
+
+15CPU tests pass, including complete focus mapping/account presence and rejection
+of constant answers by the learning gate. Actual GPU preflight collected complete
+portfolio trajectories and updated two focused optimizer batches. Maximum weight
+change0.0000199863; likelihood replay, exported/reloaded output, disabled-adapter
+recovery and frozen-reference swap errors all0. Peak GPU allocation5,778,608,128
+bytes;757tokens maximum in the probe. These validate mechanics, not generalization.
+
+Source: `research/stateful_rl_20261117_run4`.
+Run: `C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_focused_gate_seed42_20261117`.
+Logs: `PolyvalentFinance/reports/stateful_focused_gate.stdout.log` and stderr.
+Started17:34:04IST on17November; actualPID15384, wrapper12160. Check status before
+acting. No old demo server or second GPU worker should compete. No automatic
+deployment. If gate fails, inspect class-level learning and representational
+limitations before another financial RL attempt.
+
+Potential next hypothesis, not yet implemented or launched: a learned numerical
+input embedding bridge into the unchanged LM backbone, rather than forcing the
+model to recover every quantity through decimal text. Relevant background:
+[Time-LLM](https://arxiv.org/abs/2310.01728) and
+[numerical feature embeddings](https://arxiv.org/abs/2203.05556).
+Such a bridge would be an additional trained adapter component and must be
+disclosed, saved, ablated and compared against its own matched initialization.
+It must not secretly replace the LM with an external numerical action policy.
+
+## 18:30 IST continuation — focused learning gate passed, RL active
+
+Run4 passed at2048 supervised examples: held-out balancedaccuracy63.5417%, raw14.5833%, minimum eligibleclassrecall25%, seven predictedclasses. Earlier checks51239.58%,102451.04%,153641.67% failed; preserved rather than omitted. The numericbridge fallback has NOT launched because run4 passed and is running episodicRL.
+
+Early2024 financial validation100k: raw0.1840%, SFT7.7004%, RLiteration1 10.8307%, iteration2 11.2280%, iteration4 9.1119%, iteration8 7.4616%. Holding14.2273% remains stronger. Best earlyRL uses6distinct actionvectors across13decisions. These are validation observations only, not final results or proof of out-of-sampleprofitability. Actualworker15384alive, iteration10atmostrecentinspection; supervisor23132waitingforworkerexit. Do not modify active source or run anotherGPUmodel.
+
+Prepared standalone research/stateful_session.py incremental whole-share simulator (NOT connected to productionUI, no promotedcheckpoint). FiveCPUtests pass: exact daily equity/cost/trade/observation parity versus research evaluate at500/5000/100000, atomic inferencefailure, immutable snapshots, no extra completedaccountcalls. Tests use an explicitly named syntheticfixture, not actualadapterinference; realGPU/productionbrowserparity remains required after checkpointreview. Olddemo remains historicalstatic, not valid statefuldeployment.
+
+## Shutdown recovery — 17 November 2026, 21:59 IST
+
+PC shut down after reported RLiteration69/96. No optimizer or RNG checkpoint existed in the original run. Latest complete saved adapter is checkpoint10064, whose2024 validation return is19.8887% (holding14.2273%, supervised7.7004%, pristine0.1840%). Checkpoint56 had15.6059%. These are validation only, not2026 test success. Five completed reported iterations65-69 had no recoverable weights.
+
+New recovery worker source research/stateful_rl_20261117_run4/resume.py. Run R/campaign_runs/stateful_focused_resume_20261117, actualPID18704/wrapper18792. Logs R/reports/stateful_focused_resume.stdout.log and.stderr.log. Original run and artifacts preserved. All13 checkpoint directories copied with manifest hash checks. This is explicitly a WEIGHTS-ONLY WARM RESTART fromiteration64 with fresh Adam and sampling seed4242, not an exact optimizer continuation. SFT reference and all earlier validation candidates are preserved; original96-iteration endpoint retained. No repeated SFT/gate training.
+
+Resume validates restoredcheckpoint64 against its saved2024 daily equity before optimization. Thereafter every completed iteration saves separate recovery model weights plus atomically replaced training_state_latest.pt containing Adam, TorchCPU/CUDA, NumPy, Python and sampler RNG states, bestscore and patience. Future recovery can use those snapshots; uncommitted post-snapshot checkpoints are ignored when loading candidates.15existingCPUchecks and recovery-source compilation passed. No changes to original training source, data, reward or trading rules. Legacy continuation supervisor is no longer active aftershutdown; do not restart it on the old run. Only newrecoveryworker should useGPU.
+
+User asked for a quick status/resume. Check new status/reloadreceipt first, then selected test outputs after completion. No model automatically promoted. Remaining training/evaluation roughly2-2.5hours based on prior iteration timing, not an encoded time cap.
+
+## Recovery verified in operation — 17 November 2026, 22:06 IST
+
+Resumed worker18704 completediterations65 and66 from recovered64. Status66 records full_recovery_saved=true; training_state_latest.pt exists,54,687,754bytes, updated22:06:11. No stderr error observed. This verifies that optimizer updates resumed and full recovery snapshots are now actually being written, not merely implemented. The fresh optimizer's effect on performance is unknown; no new validation checkpoint afterrestart yet. Restored64 had exactly zero validation-equity discrepancy before updates.
+
+Latest pre-interruption2024 validation trajectory: iteration40 return8.4506%,48 12.9888%,56 15.6059%,64 19.8887%; best64Sharpe1.338,drawdown6.846%. Comparators same2024/100000INR: untrained0.1840%, supervised-only7.7004%, buyhold14.2273%. Supervised-only means the native adapter after causal inverse-volatility allocation imitation and before financialRL, not the untrained base or an externalteacher trading instead of the model. RL improvement on this validation sample is12.1883 percentagepoints overSFT and5.6614pp overholding.
+
+Interpretation: encouraging observed validation improvement, but checkpoint selection maximizes this same2024 metric. It is not a calibrated forecast of2026 profit. Priorstatefulrun2 reached22.3721%validation then-8.176%oncontinuous2025-Nov2026, so our own history gives a concrete warning against extrapolation. Focusedrun4's passed conditional-learning gate and nonconstant decisions address a priorfailure, but do not prove futuretradingedge or isolate eachchange's causal contribution. No defensible numerical odds of test success are available from this small adaptivecampaign.
+
+FreshAdam discards moving gradient estimates and stepcount, so subsequent updates differ even though learnedweights are preserved. Seed4242also changes sampledtrajectories. Oldbestcheckpoint64 remains an eligible selectioncandidate and is never overwritten, but validationselection still cannot guarantee test superiority. LaterFeb-Nov2026holding is alreadynegative(-10.2626%at100k), so do notpromise the ordering trained>holding>raw orpositiveholding. Desiredsuccess is positive trained netreturn and superiority tobothmatchedcomparators, whichever comparator is stronger.
+
+User explicitly requested continual context-transfer updates with timeline, numbers, decisions, evidence/inference separation, and success/failure explanations. Continue appending meaningful events; do notinvent causal explanations for observations that lack controlledablations. Final2025-2026matchedtest remains pending.

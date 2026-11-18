@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "policy.json": "00ad39d37a669c15f73a82e364b07e9f0bddbefd9379a62732aca0050806fa88",
+    "finance_lora/README.md": "8c6de7c5e913100756c70ad7ac6ad5921270564dd0f0ea8f874bec9542c7e085",
+    "finance_lora/finance/adapter_config.json": "7fcad70f508eba9a46d51ebe6692528ee98a5f74a96f16b8e49c8c35b534c2e6",
+    "finance_lora/finance/adapter_model.safetensors": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "source_data_matches_original_training_hash": true,
+  "groups": [
+    {
+      "period": "test_2025",
+      "fee_bps": 10,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_2025",
+      "fee_bps": 20,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_2025",
+      "fee_bps": 50,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_jan2026",
+      "fee_bps": 10,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_jan2026",
+      "fee_bps": 20,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_jan2026",
+      "fee_bps": 50,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_combined",
+      "fee_bps": 10,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_combined",
+      "fee_bps": 20,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    },
+    {
+      "period": "test_combined",
+      "fee_bps": 50,
+      "matching_dates": true,
+      "wealth_reconciliation": true,
+      "no_post_purchase_hold_trades": true,
+      "policies_checked": 11
+    }
+  ]
+}

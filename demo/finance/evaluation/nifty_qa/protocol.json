@@ -1,0 +1,11 @@
+{
+  "cases": 30,
+  "case_sha256": "ae5d18bb208cbf15d7d01a5fc47683be4e5c802664974b4a021fcee68edc720b",
+  "candidates": [
+    "selected_explanation_SFT_fp32",
+    "pristine_base_fp32"
+  ],
+  "evaluation": "Fresh wording on actual Nifty decision records, zero history; same short system prompt and facts for both. No retraining. Assistant manual semantic/factual review, not independent blinded evaluation.",
+  "gate": "At least90% full passes and no material trade-direction, accounting or fabricated-motive error on these common questions. If no candidate passes, remove conversation and retain only explicit ledger facts. Passing this small audit would not establish unrestricted reliability.",
+  "generation": "Greedy, max160newtokens; no answer templates, no automatic correction loop or numeric-reference recall presented as accuracy."
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "Verified launch snapshot, not final result",
+  "verified_utc": "2026-11-17T05:44:06.658283+00:00",
+  "source_commit": "ddf55de7556c14084ed71a4daa8f8ec4a7f630b0",
+  "source_hashes_match": true,
+  "worker_progress_snapshot": {
+    "state": "training",
+    "pid": 68640,
+    "epoch": 1,
+    "epochs": 8,
+    "step": 176,
+    "example": 176,
+    "examples_per_epoch": 1536,
+    "mean_loss": 0.016835813834944702,
+    "elapsed_seconds": 595.6623566999915,
+    "gradient_norm": 0.6707961559295654,
+    "max_tokens": 851,
+    "expected_centered_utility": 0.002934139966964722,
+    "kl": 6.991478585405275e-05
+  },
+  "estimated_hours": [
+    3,
+    4
+  ],
+  "first_run_stopped_validation_failure": true,
+  "attempt_limit": "Several justified runs allowed within original12-24hour total budget; not restricted to two"
+}

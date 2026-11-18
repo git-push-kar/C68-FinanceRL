@@ -1,0 +1,53 @@
+{
+  "training": "2019-2021",
+  "validation": "2022",
+  "excluded_main_results": "2023-2024: used for method development; retained only in historical appendix",
+  "test_intervals": {
+    "test_2025": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "test_jan2026": [
+      "2026-01-01",
+      "2026-01-30"
+    ],
+    "test_combined": [
+      "2025-01-01",
+      "2026-01-30"
+    ]
+  },
+  "status": "Retrospective test of a candidate revisited after prior results; data previously accessed. Not untouched confirmatory evidence. All intervals and cost levels reported, no checkpoint selection. Combined test carries holdings continuously; separate intervals start independently from cash.",
+  "cost_bps": [
+    10,
+    20,
+    50
+  ],
+  "buy_hold": "Equal initial weights, plus hold-first-trained-target and hold-first-untrained-target controls; each initial purchase fee charged; no terminal liquidation",
+  "bootstrap": "Paired circular blocks of5/20/60 sessions,5000 replicates; CI conditional on selected candidate, not adjusted for historical search; three seeds do not create three independent markets",
+  "policies": {
+    "untrained": [
+      0.20573949813842773,
+      0.31387799978256226,
+      0.30481627583503723,
+      0.1755661964416504
+    ],
+    "seed42_64": [
+      0.3287990689277649,
+      0.6448680758476257,
+      0.01358209177851677,
+      0.01275075413286686
+    ],
+    "seed123_64": [
+      0.32871654629707336,
+      0.6447271108627319,
+      0.013745388947427273,
+      0.01281097624450922
+    ],
+    "seed456_64": [
+      0.32713741064071655,
+      0.6465279459953308,
+      0.013583662919700146,
+      0.012750964611768723
+    ]
+  }
+}

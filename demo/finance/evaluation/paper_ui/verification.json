@@ -1,0 +1,20 @@
+{
+  "mode": "Headless UI transport fixtures using recorded real-model results; not a new model-quality evaluation",
+  "checks": [
+    "start state",
+    "next day",
+    "next rebalance",
+    "specific activity selection",
+    "holdings filtering",
+    "benchmark toggle",
+    "activity CSV export",
+    "end state",
+    "mobile horizontal layout",
+    "no page JS errors"
+  ],
+  "javascript_errors": [],
+  "mobile_dimensions": {
+    "scroll": 390,
+    "width": 390
+  }
+}

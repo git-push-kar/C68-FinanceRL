@@ -1,0 +1,17 @@
+{
+  "mode": "Native Finance tab in original Polyvalent UI; actual production API/model; no network mocks, preset decisions or browser-evaluated fake state",
+  "elapsed_seconds": 41.694713830947876,
+  "sessions": 270,
+  "actual_adapter_calls": 54,
+  "max_daily_equity_difference_from_original": 0.0,
+  "expected_end_equity": 113282.88926029207,
+  "checks": [
+    "autonomous playback",
+    "real model allocation requests",
+    "completed test interval",
+    "daily ledger parity",
+    "selected actual trade inspection",
+    "desktop and mobile rendering"
+  ],
+  "javascript_errors": []
+}

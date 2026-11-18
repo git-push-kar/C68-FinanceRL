@@ -1,0 +1,1147 @@
+{
+  "protocol.json": {
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "steps": 768,
+    "group": 16,
+    "train": "July 2018 through 2022",
+    "validation": [
+      2023,
+      2024
+    ],
+    "test": "2025-01-01 to 2026-01-30 retrospective",
+    "primary_capital": 100000,
+    "objective": "Paired 20-session log growth vs exact no trade. Center 16 sampled action rewards with leave-one-out baseline. Reference KL 0.01, reward scale 0.001.",
+    "selection": "Highest mean annual validation net log growth among RL checkpoints, earliest tie. Separately record whether both raw and holding are beaten. Report every seed regardless.",
+    "action": "Identical equal-weight opening basket for all policies, followed by one feasible funded pair rotation or hold each 20 sessions. All 49 scored. Cap applies to new buys, existing holdings may drift.",
+    "inputs": "Same 25 causal features and frozen InternVL3-2B backbone, fresh bridge and attention/vocabulary LoRA. No momentum imitation.",
+    "data": "29b847a33ad88b7568eef66e1fb9f3274a897bd3091ddb8551c129b75dd726f7",
+    "code": {
+      "C:\\Users\\Parth\\Documents\\C68-FinanceRL\\research\\final_rotation.py": "0412649cb7079f083453e4404e5fe1744ff37f77fc205662cfa87be9c600fb57",
+      "research/counterfactual_rl/market.py": "99fa3fd84ebe699a90304689eb5bd76e0353307f3527bbdcc964454c08b396d3",
+      "research/counterfactual_rl/policy.py": "c0c07fbbbf0d76d21cee4e7a5d6e95f3d639cfd106c9998ab752b86761fa7cf1"
+    }
+  },
+  "seed123/selection.json": {
+    "checkpoint": "rl_480",
+    "returns": [
+      0.29652232650065513,
+      0.15681757679402764
+    ],
+    "score": 0.20267915653683652
+  },
+  "seed42/selection.json": {
+    "checkpoint": "rl_672",
+    "returns": [
+      0.2966515336670841,
+      0.15681757679402764
+    ],
+    "score": 0.2027289824156642
+  },
+  "seed456/selection.json": {
+    "checkpoint": "rl_480",
+    "returns": [
+      0.29746787352992055,
+      0.15739171519096384
+    ],
+    "score": 0.2032917637386517
+  },
+  "seed123/raw_validation.json": [
+    0.2931312773292387,
+    0.15513110920575301
+  ],
+  "seed42/raw_validation.json": [
+    0.2931312773292387,
+    0.15513110920575301
+  ],
+  "seed456/raw_validation.json": [
+    0.2931312773292387,
+    0.15513110920575301
+  ],
+  "seed123/uncertainty.json": {
+    "holding": {
+      "log_growth_difference": -0.018196951626813115,
+      "block20_percentile95": [
+        -0.05445419188903013,
+        0.020933555942541256
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    },
+    "untrained": {
+      "log_growth_difference": 0.0014541661141239406,
+      "block20_percentile95": [
+        -0.003349960476433477,
+        0.006965198676024492
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    }
+  },
+  "seed42/uncertainty.json": {
+    "holding": {
+      "log_growth_difference": -0.019177464860277015,
+      "block20_percentile95": [
+        -0.054485746414113474,
+        0.019074217637115733
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    },
+    "untrained": {
+      "log_growth_difference": 0.00047365288066003185,
+      "block20_percentile95": [
+        -0.0003149007584033532,
+        0.0015534560023826827
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    }
+  },
+  "seed456/uncertainty.json": {
+    "holding": {
+      "log_growth_difference": -0.018397190546902125,
+      "block20_percentile95": [
+        -0.05592279127894464,
+        0.02318138485375724
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    },
+    "untrained": {
+      "log_growth_difference": 0.0012539271940349254,
+      "block20_percentile95": [
+        -0.005033653408353678,
+        0.009353382386949358
+      ],
+      "caveat": "Descriptive circular block bootstrap; not independent confirmation or multiple-search adjustment."
+    }
+  },
+  "seed123/test_metrics.json": [
+    {
+      "capital": 500,
+      "policy": "rl",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "untrained",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "holding",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "equal_rebalanced",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "momentum",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 5000,
+      "policy": "rl",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "untrained",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "holding",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "equal_rebalanced",
+      "end_equity": 5136.173717576243,
+      "sharpe": 0.3174341876961399,
+      "max_drawdown": 0.059645813135414394,
+      "fees": 80.97803740285781,
+      "slippage": 40.48822505392881,
+      "sessions": 270,
+      "return": 0.02723474351524846
+    },
+    {
+      "capital": 5000,
+      "policy": "momentum",
+      "end_equity": 4911.256964585578,
+      "sharpe": -0.7839399687595661,
+      "max_drawdown": 0.029009794652897214,
+      "fees": 5.36885937850479,
+      "slippage": 2.6842000142559486,
+      "sessions": 270,
+      "return": -0.017748607082884282
+    },
+    {
+      "capital": 50000,
+      "policy": "rl",
+      "end_equity": 56182.89385437684,
+      "sharpe": 0.9107634872980386,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.31907030634126,
+      "slippage": 34.647215015694506,
+      "sessions": 270,
+      "return": 0.12365787708753673
+    },
+    {
+      "capital": 50000,
+      "policy": "untrained",
+      "end_equity": 56046.8525724279,
+      "sharpe": 0.8945963499830493,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.23327078097351,
+      "slippage": 34.60428001050653,
+      "sessions": 270,
+      "return": 0.12093705144855815
+    },
+    {
+      "capital": 50000,
+      "policy": "holding",
+      "end_equity": 57727.95151889152,
+      "sharpe": 1.1267447926832943,
+      "max_drawdown": 0.10218039157495107,
+      "fees": 49.840811950109554,
+      "slippage": 24.907969990059748,
+      "sessions": 270,
+      "return": 0.15455903037783036
+    },
+    {
+      "capital": 50000,
+      "policy": "equal_rebalanced",
+      "end_equity": 56633.67199989573,
+      "sharpe": 0.9856170386503401,
+      "max_drawdown": 0.09339066384097894,
+      "fees": 1126.2668202038326,
+      "slippage": 563.1210937693568,
+      "sessions": 270,
+      "return": 0.1326734399979146
+    },
+    {
+      "capital": 50000,
+      "policy": "momentum",
+      "end_equity": 50686.16039387431,
+      "sharpe": 0.1935226242767706,
+      "max_drawdown": 0.051092355717557436,
+      "fees": 333.94508766412196,
+      "slippage": 166.96536981724208,
+      "sessions": 270,
+      "return": 0.013723207877486043
+    },
+    {
+      "capital": 100000,
+      "policy": "rl",
+      "end_equity": 110534.7919469135,
+      "sharpe": 0.7882588617374581,
+      "max_drawdown": 0.11278751162802814,
+      "fees": 138.58829711638273,
+      "slippage": 69.26986470088366,
+      "sessions": 270,
+      "return": 0.10534791946913491
+    },
+    {
+      "capital": 100000,
+      "policy": "untrained",
+      "end_equity": 110374.17280978964,
+      "sharpe": 0.7791521327383184,
+      "max_drawdown": 0.11305712467666984,
+      "fees": 138.800898160824,
+      "slippage": 69.37621462306383,
+      "sessions": 270,
+      "return": 0.1037417280978965
+    },
+    {
+      "capital": 100000,
+      "policy": "holding",
+      "end_equity": 112564.60036141484,
+      "sharpe": 0.9439630406081598,
+      "max_drawdown": 0.10379266855305824,
+      "fees": 99.95005742734922,
+      "slippage": 49.9500896688402,
+      "sessions": 270,
+      "return": 0.12564600361414846
+    },
+    {
+      "capital": 100000,
+      "policy": "equal_rebalanced",
+      "end_equity": 111106.23497744644,
+      "sharpe": 0.8487925798153895,
+      "max_drawdown": 0.10258008164535626,
+      "fees": 1522.7335549441875,
+      "slippage": 761.341909592241,
+      "sessions": 270,
+      "return": 0.11106234977446428
+    },
+    {
+      "capital": 100000,
+      "policy": "momentum",
+      "end_equity": 102594.38668245169,
+      "sharpe": 0.279272345802501,
+      "max_drawdown": 0.07199940208914923,
+      "fees": 834.2294810036591,
+      "slippage": 417.0961447248162,
+      "sessions": 270,
+      "return": 0.02594386682451688
+    },
+    {
+      "capital": 200000,
+      "policy": "rl",
+      "end_equity": 222500.43283698134,
+      "sharpe": 0.8723212059118668,
+      "max_drawdown": 0.09142866393856564,
+      "fees": 273.8851740034564,
+      "slippage": 136.89265954703103,
+      "sessions": 270,
+      "return": 0.11250216418490666
+    },
+    {
+      "capital": 200000,
+      "policy": "untrained",
+      "end_equity": 222724.9360959711,
+      "sharpe": 0.8824152181336642,
+      "max_drawdown": 0.09183163128985528,
+      "fees": 278.2153256582416,
+      "slippage": 139.05880944937476,
+      "sessions": 270,
+      "return": 0.11362468047985552
+    },
+    {
+      "capital": 200000,
+      "policy": "holding",
+      "end_equity": 227184.8021620317,
+      "sharpe": 1.0526612001098996,
+      "max_drawdown": 0.08506011865867635,
+      "fees": 199.80597821028928,
+      "slippage": 99.85313453787572,
+      "sessions": 270,
+      "return": 0.13592401081015848
+    },
+    {
+      "capital": 200000,
+      "policy": "equal_rebalanced",
+      "end_equity": 224561.922992801,
+      "sharpe": 0.9626484021604461,
+      "max_drawdown": 0.08617889647310772,
+      "fees": 2073.952219180344,
+      "slippage": 1036.9261049129368,
+      "sessions": 270,
+      "return": 0.122809614964005
+    },
+    {
+      "capital": 200000,
+      "policy": "momentum",
+      "end_equity": 206684.63183015864,
+      "sharpe": 0.31876402432745654,
+      "max_drawdown": 0.07961085889249064,
+      "fees": 1913.0719074700132,
+      "slippage": 956.4917944336762,
+      "sessions": 270,
+      "return": 0.03342315915079319
+    }
+  ],
+  "seed42/test_metrics.json": [
+    {
+      "capital": 500,
+      "policy": "rl",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "untrained",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "holding",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "equal_rebalanced",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "momentum",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 5000,
+      "policy": "rl",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "untrained",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "holding",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "equal_rebalanced",
+      "end_equity": 5136.173717576243,
+      "sharpe": 0.3174341876961399,
+      "max_drawdown": 0.059645813135414394,
+      "fees": 80.97803740285781,
+      "slippage": 40.48822505392881,
+      "sessions": 270,
+      "return": 0.02723474351524846
+    },
+    {
+      "capital": 5000,
+      "policy": "momentum",
+      "end_equity": 4911.256964585578,
+      "sharpe": -0.7839399687595661,
+      "max_drawdown": 0.029009794652897214,
+      "fees": 5.36885937850479,
+      "slippage": 2.6842000142559486,
+      "sessions": 270,
+      "return": -0.017748607082884282
+    },
+    {
+      "capital": 50000,
+      "policy": "rl",
+      "end_equity": 55853.814950954664,
+      "sharpe": 0.8707109200077191,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.04504493365296,
+      "slippage": 34.51012000684441,
+      "sessions": 270,
+      "return": 0.11707629901909322
+    },
+    {
+      "capital": 50000,
+      "policy": "untrained",
+      "end_equity": 56046.8525724279,
+      "sharpe": 0.8945963499830493,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.23327078097351,
+      "slippage": 34.60428001050653,
+      "sessions": 270,
+      "return": 0.12093705144855815
+    },
+    {
+      "capital": 50000,
+      "policy": "holding",
+      "end_equity": 57727.95151889152,
+      "sharpe": 1.1267447926832943,
+      "max_drawdown": 0.10218039157495107,
+      "fees": 49.840811950109554,
+      "slippage": 24.907969990059748,
+      "sessions": 270,
+      "return": 0.15455903037783036
+    },
+    {
+      "capital": 50000,
+      "policy": "equal_rebalanced",
+      "end_equity": 56633.67199989573,
+      "sharpe": 0.9856170386503401,
+      "max_drawdown": 0.09339066384097894,
+      "fees": 1126.2668202038326,
+      "slippage": 563.1210937693568,
+      "sessions": 270,
+      "return": 0.1326734399979146
+    },
+    {
+      "capital": 50000,
+      "policy": "momentum",
+      "end_equity": 50686.16039387431,
+      "sharpe": 0.1935226242767706,
+      "max_drawdown": 0.051092355717557436,
+      "fees": 333.94508766412196,
+      "slippage": 166.96536981724208,
+      "sessions": 270,
+      "return": 0.013723207877486043
+    },
+    {
+      "capital": 100000,
+      "policy": "rl",
+      "end_equity": 110426.46423770649,
+      "sharpe": 0.782198748372834,
+      "max_drawdown": 0.11305712467666984,
+      "fees": 138.3401288438379,
+      "slippage": 69.14571471461656,
+      "sessions": 270,
+      "return": 0.10426464237706479
+    },
+    {
+      "capital": 100000,
+      "policy": "untrained",
+      "end_equity": 110374.17280978964,
+      "sharpe": 0.7791521327383184,
+      "max_drawdown": 0.11305712467666984,
+      "fees": 138.800898160824,
+      "slippage": 69.37621462306383,
+      "sessions": 270,
+      "return": 0.1037417280978965
+    },
+    {
+      "capital": 100000,
+      "policy": "holding",
+      "end_equity": 112564.60036141484,
+      "sharpe": 0.9439630406081598,
+      "max_drawdown": 0.10379266855305824,
+      "fees": 99.95005742734922,
+      "slippage": 49.9500896688402,
+      "sessions": 270,
+      "return": 0.12564600361414846
+    },
+    {
+      "capital": 100000,
+      "policy": "equal_rebalanced",
+      "end_equity": 111106.23497744644,
+      "sharpe": 0.8487925798153895,
+      "max_drawdown": 0.10258008164535626,
+      "fees": 1522.7335549441875,
+      "slippage": 761.341909592241,
+      "sessions": 270,
+      "return": 0.11106234977446428
+    },
+    {
+      "capital": 100000,
+      "policy": "momentum",
+      "end_equity": 102594.38668245169,
+      "sharpe": 0.279272345802501,
+      "max_drawdown": 0.07199940208914923,
+      "fees": 834.2294810036591,
+      "slippage": 417.0961447248162,
+      "sessions": 270,
+      "return": 0.02594386682451688
+    },
+    {
+      "capital": 200000,
+      "policy": "rl",
+      "end_equity": 222422.423065876,
+      "sharpe": 0.8721343719737434,
+      "max_drawdown": 0.09183163128985528,
+      "fees": 278.95725455704536,
+      "slippage": 139.4299594737888,
+      "sessions": 270,
+      "return": 0.11211211532938004
+    },
+    {
+      "capital": 200000,
+      "policy": "untrained",
+      "end_equity": 222724.9360959711,
+      "sharpe": 0.8824152181336642,
+      "max_drawdown": 0.09183163128985528,
+      "fees": 278.2153256582416,
+      "slippage": 139.05880944937476,
+      "sessions": 270,
+      "return": 0.11362468047985552
+    },
+    {
+      "capital": 200000,
+      "policy": "holding",
+      "end_equity": 227184.8021620317,
+      "sharpe": 1.0526612001098996,
+      "max_drawdown": 0.08506011865867635,
+      "fees": 199.80597821028928,
+      "slippage": 99.85313453787572,
+      "sessions": 270,
+      "return": 0.13592401081015848
+    },
+    {
+      "capital": 200000,
+      "policy": "equal_rebalanced",
+      "end_equity": 224561.922992801,
+      "sharpe": 0.9626484021604461,
+      "max_drawdown": 0.08617889647310772,
+      "fees": 2073.952219180344,
+      "slippage": 1036.9261049129368,
+      "sessions": 270,
+      "return": 0.122809614964005
+    },
+    {
+      "capital": 200000,
+      "policy": "momentum",
+      "end_equity": 206684.63183015864,
+      "sharpe": 0.31876402432745654,
+      "max_drawdown": 0.07961085889249064,
+      "fees": 1913.0719074700132,
+      "slippage": 956.4917944336762,
+      "sessions": 270,
+      "return": 0.03342315915079319
+    }
+  ],
+  "seed456/test_metrics.json": [
+    {
+      "capital": 500,
+      "policy": "rl",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "untrained",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "holding",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "equal_rebalanced",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 500,
+      "policy": "momentum",
+      "end_equity": 500.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "fees": 0.0,
+      "slippage": 0.0,
+      "sessions": 270,
+      "return": 0.0
+    },
+    {
+      "capital": 5000,
+      "policy": "rl",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "untrained",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "holding",
+      "end_equity": 5242.37130257173,
+      "sharpe": 0.5233305875186237,
+      "max_drawdown": 0.058205046734355004,
+      "fees": 3.0129577250547777,
+      "slippage": 1.505734995029874,
+      "sessions": 270,
+      "return": 0.048474260514346
+    },
+    {
+      "capital": 5000,
+      "policy": "equal_rebalanced",
+      "end_equity": 5136.173717576243,
+      "sharpe": 0.3174341876961399,
+      "max_drawdown": 0.059645813135414394,
+      "fees": 80.97803740285781,
+      "slippage": 40.48822505392881,
+      "sessions": 270,
+      "return": 0.02723474351524846
+    },
+    {
+      "capital": 5000,
+      "policy": "momentum",
+      "end_equity": 4911.256964585578,
+      "sharpe": -0.7839399687595661,
+      "max_drawdown": 0.029009794652897214,
+      "fees": 5.36885937850479,
+      "slippage": 2.6842000142559486,
+      "sessions": 270,
+      "return": -0.017748607082884282
+    },
+    {
+      "capital": 50000,
+      "policy": "rl",
+      "end_equity": 56182.89385437684,
+      "sharpe": 0.9107634872980386,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.31907030634126,
+      "slippage": 34.647215015694506,
+      "sessions": 270,
+      "return": 0.12365787708753673
+    },
+    {
+      "capital": 50000,
+      "policy": "untrained",
+      "end_equity": 56046.8525724279,
+      "sharpe": 0.8945963499830493,
+      "max_drawdown": 0.10336222199568512,
+      "fees": 69.23327078097351,
+      "slippage": 34.60428001050653,
+      "sessions": 270,
+      "return": 0.12093705144855815
+    },
+    {
+      "capital": 50000,
+      "policy": "holding",
+      "end_equity": 57727.95151889152,
+      "sharpe": 1.1267447926832943,
+      "max_drawdown": 0.10218039157495107,
+      "fees": 49.840811950109554,
+      "slippage": 24.907969990059748,
+      "sessions": 270,
+      "return": 0.15455903037783036
+    },
+    {
+      "capital": 50000,
+      "policy": "equal_rebalanced",
+      "end_equity": 56633.67199989573,
+      "sharpe": 0.9856170386503401,
+      "max_drawdown": 0.09339066384097894,
+      "fees": 1126.2668202038326,
+      "slippage": 563.1210937693568,
+      "sessions": 270,
+      "return": 0.1326734399979146
+    },
+    {
+      "capital": 50000,
+      "policy": "momentum",
+      "end_equity": 50686.16039387431,
+      "sharpe": 0.1935226242767706,
+      "max_drawdown": 0.051092355717557436,
+      "fees": 333.94508766412196,
+      "slippage": 166.96536981724208,
+      "sessions": 270,
+      "return": 0.013723207877486043
+    },
+    {
+      "capital": 100000,
+      "policy": "rl",
+      "end_equity": 110512.66079537477,
+      "sharpe": 0.7889246319864973,
+      "max_drawdown": 0.11278751162802814,
+      "fees": 140.2087864541818,
+      "slippage": 70.08051469478015,
+      "sessions": 270,
+      "return": 0.10512660795374784
+    },
+    {
+      "capital": 100000,
+      "policy": "untrained",
+      "end_equity": 110374.17280978964,
+      "sharpe": 0.7791521327383184,
+      "max_drawdown": 0.11305712467666984,
+      "fees": 138.800898160824,
+      "slippage": 69.37621462306383,
+      "sessions": 270,
+      "return": 0.1037417280978965
+    },
+    {
+      "capital": 100000,
+      "policy": "holding",
+      "end_equity": 112564.60036141484,
+      "sharpe": 0.9439630406081598,
+      "max_drawdown": 0.10379266855305824,
+      "fees": 99.95005742734922,
+      "slippage": 49.9500896688402,
+      "sessions": 270,
+      "return": 0.12564600361414846
+    },
+    {
+      "capital": 100000,
+      "policy": "equal_rebalanced",
+      "end_equity": 111106.23497744644,
+      "sharpe": 0.8487925798153895,
+      "max_drawdown": 0.10258008164535626,
+      "fees": 1522.7335549441875,
+      "slippage": 761.341909592241,
+      "sessions": 270,
+      "return": 0.11106234977446428
+    },
+    {
+      "capital": 100000,
+      "policy": "momentum",
+      "end_equity": 102594.38668245169,
+      "sharpe": 0.279272345802501,
+      "max_drawdown": 0.07199940208914923,
+      "fees": 834.2294810036591,
+      "slippage": 417.0961447248162,
+      "sessions": 270,
+      "return": 0.02594386682451688
+    },
+    {
+      "capital": 200000,
+      "policy": "rl",
+      "end_equity": 222206.30098332508,
+      "sharpe": 0.8629137531073416,
+      "max_drawdown": 0.09142866393856564,
+      "fees": 274.3729300034565,
+      "slippage": 137.136659547031,
+      "sessions": 270,
+      "return": 0.1110315049166255
+    },
+    {
+      "capital": 200000,
+      "policy": "untrained",
+      "end_equity": 222724.9360959711,
+      "sharpe": 0.8824152181336642,
+      "max_drawdown": 0.09183163128985528,
+      "fees": 278.2153256582416,
+      "slippage": 139.05880944937476,
+      "sessions": 270,
+      "return": 0.11362468047985552
+    },
+    {
+      "capital": 200000,
+      "policy": "holding",
+      "end_equity": 227184.8021620317,
+      "sharpe": 1.0526612001098996,
+      "max_drawdown": 0.08506011865867635,
+      "fees": 199.80597821028928,
+      "slippage": 99.85313453787572,
+      "sessions": 270,
+      "return": 0.13592401081015848
+    },
+    {
+      "capital": 200000,
+      "policy": "equal_rebalanced",
+      "end_equity": 224561.922992801,
+      "sharpe": 0.9626484021604461,
+      "max_drawdown": 0.08617889647310772,
+      "fees": 2073.952219180344,
+      "slippage": 1036.9261049129368,
+      "sessions": 270,
+      "return": 0.122809614964005
+    },
+    {
+      "capital": 200000,
+      "policy": "momentum",
+      "end_equity": 206684.63183015864,
+      "sharpe": 0.31876402432745654,
+      "max_drawdown": 0.07961085889249064,
+      "fees": 1913.0719074700132,
+      "slippage": 956.4917944336762,
+      "sessions": 270,
+      "return": 0.03342315915079319
+    }
+  ],
+  "seed123/candidates.json": [
+    {
+      "checkpoint": "rl_96",
+      "returns": [
+        0.2960113343856656,
+        0.15681757679402764
+      ],
+      "score": 0.2024820550953717
+    },
+    {
+      "checkpoint": "rl_192",
+      "returns": [
+        0.2954703737062758,
+        0.15681757679402764
+      ],
+      "score": 0.20227330938608962
+    },
+    {
+      "checkpoint": "rl_288",
+      "returns": [
+        0.2954703737062758,
+        0.15681757679402764
+      ],
+      "score": 0.20227330938608962
+    },
+    {
+      "checkpoint": "rl_384",
+      "returns": [
+        0.2954703737062758,
+        0.15681757679402764
+      ],
+      "score": 0.20227330938608962
+    },
+    {
+      "checkpoint": "rl_480",
+      "returns": [
+        0.29652232650065513,
+        0.15681757679402764
+      ],
+      "score": 0.20267915653683652
+    },
+    {
+      "checkpoint": "rl_576",
+      "returns": [
+        0.2954703737062758,
+        0.15681757679402764
+      ],
+      "score": 0.20227330938608962
+    },
+    {
+      "checkpoint": "rl_672",
+      "returns": [
+        0.296000578446874,
+        0.15681757679402764
+      ],
+      "score": 0.2024779054466998
+    },
+    {
+      "checkpoint": "rl_768",
+      "returns": [
+        0.296000578446874,
+        0.15681757679402764
+      ],
+      "score": 0.2024779054466998
+    }
+  ],
+  "seed42/candidates.json": [
+    {
+      "checkpoint": "rl_96",
+      "returns": [
+        0.2920608389476371,
+        0.15513110920575301
+      ],
+      "score": 0.2002261726079259
+    },
+    {
+      "checkpoint": "rl_192",
+      "returns": [
+        0.2960113343856656,
+        0.15513110920575301
+      ],
+      "score": 0.20175259777756238
+    },
+    {
+      "checkpoint": "rl_288",
+      "returns": [
+        0.2960113343856656,
+        0.15681757679402764
+      ],
+      "score": 0.2024820550953717
+    },
+    {
+      "checkpoint": "rl_384",
+      "returns": [
+        0.29610077172686267,
+        0.15513110920575301
+      ],
+      "score": 0.20178710143233164
+    },
+    {
+      "checkpoint": "rl_480",
+      "returns": [
+        0.29610077172686267,
+        0.15513110920575301
+      ],
+      "score": 0.20178710143233164
+    },
+    {
+      "checkpoint": "rl_576",
+      "returns": [
+        0.2961213289264859,
+        0.15681757679402764
+      ],
+      "score": 0.2025244890889875
+    },
+    {
+      "checkpoint": "rl_672",
+      "returns": [
+        0.2966515336670841,
+        0.15681757679402764
+      ],
+      "score": 0.2027289824156642
+    },
+    {
+      "checkpoint": "rl_768",
+      "returns": [
+        0.2966309764674606,
+        0.15513110920575301
+      ],
+      "score": 0.20199159800177352
+    }
+  ],
+  "seed456/candidates.json": [
+    {
+      "checkpoint": "rl_96",
+      "returns": [
+        0.2960113343856656,
+        0.15681757679402764
+      ],
+      "score": 0.2024820550953717
+    },
+    {
+      "checkpoint": "rl_192",
+      "returns": [
+        0.2960113343856656,
+        0.15745911306055937
+      ],
+      "score": 0.20275926321217852
+    },
+    {
+      "checkpoint": "rl_288",
+      "returns": [
+        0.2960113343856656,
+        0.15681757679402764
+      ],
+      "score": 0.2024820550953717
+    },
+    {
+      "checkpoint": "rl_384",
+      "returns": [
+        0.29585682079126485,
+        0.15681757679402764
+      ],
+      "score": 0.20242244033669846
+    },
+    {
+      "checkpoint": "rl_480",
+      "returns": [
+        0.29746787352992055,
+        0.15739171519096384
+      ],
+      "score": 0.2032917637386517
+    },
+    {
+      "checkpoint": "rl_576",
+      "returns": [
+        0.29745399701898667,
+        0.15739171519096384
+      ],
+      "score": 0.20328641617459148
+    },
+    {
+      "checkpoint": "rl_672",
+      "returns": [
+        0.29703053104224386,
+        0.15681757679402764
+      ],
+      "score": 0.20287510571389494
+    },
+    {
+      "checkpoint": "rl_768",
+      "returns": [
+        0.29703053104224386,
+        0.15681757679402764
+      ],
+      "score": 0.20287510571389494
+    }
+  ]
+}

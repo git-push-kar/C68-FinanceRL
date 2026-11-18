@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "Mechanical49-stock input/update test only. Artificial quotes and artificial action targets; not a learned financial policy or profitable result.",
+  "stocks": 49,
+  "numeric_input_shape": [
+    49,
+    20
+  ],
+  "output_shape": [
+    49,
+    7
+  ],
+  "tokens": 1051,
+  "bridge_gradient_abs_sum": 19.931732177734375,
+  "probability_change": 0.24011346697807312,
+  "disabled_recovery_error": 0.0,
+  "peak_gpu_bytes": 5807846912,
+  "elapsed_seconds": 7.837433500000316
+}

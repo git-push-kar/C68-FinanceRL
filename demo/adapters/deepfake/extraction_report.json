@@ -1,0 +1,55 @@
+{
+  "source_checkpoint": "C:\\Users\\Admin\\Desktop\\LY_C68\\deepfake_project\\runs\\intern_v2_ground\\checkpoints\\best.pth",
+  "epoch": 3,
+  "adapters": {
+    "llm_adapter": {
+      "tensors": 392,
+      "params": 73859072,
+      "dtype": "torch.bfloat16",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "r": 64,
+      "lora_alpha": 128
+    },
+    "vision_adapter": {
+      "tensors": 192,
+      "params": 6291456,
+      "dtype": "torch.bfloat16",
+      "target_modules": [
+        "fc1",
+        "fc2",
+        "proj",
+        "qkv"
+      ],
+      "r": 16,
+      "lora_alpha": 32
+    }
+  },
+  "custom_heads": {
+    "tensors": 59,
+    "params": 13257034,
+    "modules": [
+      "attn_pool",
+      "cls_head",
+      "custom_projector",
+      "domain_router",
+      "freq_branch"
+    ],
+    "file": "custom_heads/custom_heads.safetensors",
+    "note": "Load onto a fresh DeepfakeReasoningModel (same arch_version/arch) via model.load_state_dict(..., strict=False) together with the two PEFT adapters. cls_head was frozen during grounded post-training but is still required at inference."
+  },
+  "provenance": {
+    "run": "intern_v2_ground",
+    "training": "intern_v2_ground grounded joint post-training from ./runs/intern_v2/checkpoints/ep006.pth",
+    "base_model": "./models/InternVL3-2B",
+    "frozen": "cls_head (4 tensors); trainable: LLM LoRA r=64 + vision LoRA r=16 + attn_pool/freq_branch/custom_projector/domain_router",
+    "checkpoint_type": "whole-model state_dict (backbone + LoRA + custom heads), NOT adapter-only"
+  }
+}

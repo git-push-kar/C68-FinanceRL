@@ -1,0 +1,167 @@
+[
+  {
+    "policy": "selected",
+    "capital": 500,
+    "end_equity": 500.0,
+    "sharpe": 0.0,
+    "max_drawdown": 0.0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "sessions": 270,
+    "return": 0.0
+  },
+  {
+    "policy": "selected",
+    "capital": 5000,
+    "end_equity": 5136.173717576243,
+    "sharpe": 0.3174341876961399,
+    "max_drawdown": 0.059645813135414394,
+    "fees": 80.97803740285781,
+    "slippage": 40.48822505392881,
+    "sessions": 270,
+    "return": 0.02723474351524846
+  },
+  {
+    "policy": "selected",
+    "capital": 50000,
+    "end_equity": 56062.84849052173,
+    "sharpe": 0.9197392575815815,
+    "max_drawdown": 0.09406057535834256,
+    "fees": 1149.262600123793,
+    "slippage": 574.6190289118737,
+    "sessions": 270,
+    "return": 0.12125696981043443
+  },
+  {
+    "policy": "selected",
+    "capital": 100000,
+    "end_equity": 114291.06192192348,
+    "sharpe": 1.0840564000525086,
+    "max_drawdown": 0.09316403917166893,
+    "fees": 1615.8216647579236,
+    "slippage": 807.8860044713916,
+    "sessions": 270,
+    "return": 0.14291061921923487
+  },
+  {
+    "policy": "selected",
+    "capital": 200000,
+    "end_equity": 226561.65176808287,
+    "sharpe": 1.0343193117239484,
+    "max_drawdown": 0.08389962825074593,
+    "fees": 2260.8794738667607,
+    "slippage": 1130.3897648860811,
+    "sessions": 270,
+    "return": 0.13280825884041425
+  },
+  {
+    "policy": "supervised",
+    "capital": 500,
+    "end_equity": 500.0,
+    "sharpe": 0.0,
+    "max_drawdown": 0.0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "sessions": 270,
+    "return": 0.0
+  },
+  {
+    "policy": "supervised",
+    "capital": 5000,
+    "end_equity": 5137.1799175579345,
+    "sharpe": 0.31943765395982593,
+    "max_drawdown": 0.059645813135414394,
+    "fees": 80.30723741506483,
+    "slippage": 40.15282506003232,
+    "sessions": 270,
+    "return": 0.027435983511586937
+  },
+  {
+    "policy": "supervised",
+    "capital": 50000,
+    "end_equity": 53120.23603080777,
+    "sharpe": 0.5119460094648566,
+    "max_drawdown": 0.10943345534662474,
+    "fees": 1085.6447197329646,
+    "slippage": 542.8100849441961,
+    "sessions": 270,
+    "return": 0.06240472061615532
+  },
+  {
+    "policy": "supervised",
+    "capital": 100000,
+    "end_equity": 105685.70965589938,
+    "sharpe": 0.4667045750359225,
+    "max_drawdown": 0.11945162324217717,
+    "fees": 1674.3780225683283,
+    "slippage": 837.1642999446318,
+    "sessions": 270,
+    "return": 0.05685709655899385
+  },
+  {
+    "policy": "supervised",
+    "capital": 200000,
+    "end_equity": 214106.2916341856,
+    "sharpe": 0.5760287410422776,
+    "max_drawdown": 0.1021322246014803,
+    "fees": 2584.894385500584,
+    "slippage": 1292.3975104310814,
+    "sessions": 270,
+    "return": 0.07053145817092799
+  },
+  {
+    "policy": "untrained",
+    "capital": 500,
+    "end_equity": 500.0,
+    "sharpe": 0.0,
+    "max_drawdown": 0.0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "sessions": 270,
+    "return": 0.0
+  },
+  {
+    "policy": "untrained",
+    "capital": 5000,
+    "end_equity": 5136.173717576243,
+    "sharpe": 0.3174341876961399,
+    "max_drawdown": 0.059645813135414394,
+    "fees": 80.97803740285781,
+    "slippage": 40.48822505392881,
+    "sessions": 270,
+    "return": 0.02723474351524846
+  },
+  {
+    "policy": "untrained",
+    "capital": 50000,
+    "end_equity": 56062.84849052173,
+    "sharpe": 0.9197392575815815,
+    "max_drawdown": 0.09406057535834256,
+    "fees": 1149.262600123793,
+    "slippage": 574.6190289118737,
+    "sessions": 270,
+    "return": 0.12125696981043443
+  },
+  {
+    "policy": "untrained",
+    "capital": 100000,
+    "end_equity": 114291.06192192348,
+    "sharpe": 1.0840564000525086,
+    "max_drawdown": 0.09316403917166893,
+    "fees": 1615.8216647579236,
+    "slippage": 807.8860044713916,
+    "sessions": 270,
+    "return": 0.14291061921923487
+  },
+  {
+    "policy": "untrained",
+    "capital": 200000,
+    "end_equity": 226561.65176808287,
+    "sharpe": 1.0343193117239484,
+    "max_drawdown": 0.08389962825074593,
+    "fees": 2260.8794738667607,
+    "slippage": 1130.3897648860811,
+    "sessions": 270,
+    "return": 0.13280825884041425
+  }
+]

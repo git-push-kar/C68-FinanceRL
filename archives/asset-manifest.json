@@ -1,0 +1,74 @@
+{
+  "checkpoint-objects-01.zip": {
+    "sha256": "388616bd06d923dec1bd15b1a0a6a7fa2ed2780f762e052bb8c3ad9a9460cef2",
+    "bytes": 984363233
+  },
+  "checkpoint-objects-02.zip": {
+    "sha256": "1f31cf7f358195836983cccc7cd34afb58364a4c7033508de228cb58a4fa0a88",
+    "bytes": 1048430733
+  },
+  "checkpoint-objects-03.zip": {
+    "sha256": "f900c6693c10ff9f16e34aec08d316b8a6849a0a53c720068bdf20bcde5131ef",
+    "bytes": 1052020780
+  },
+  "checkpoint-objects-04.zip": {
+    "sha256": "6cf94c91c0aa45aeb30284ee8a83eda56a13575b22b0df4692c760d842943fbf",
+    "bytes": 1004557184
+  },
+  "checkpoint-objects-05.zip": {
+    "sha256": "ffd3ad35311c7ac3a302d219096875f61ce3803572d97b6db3356f836d2847ba",
+    "bytes": 1096516988
+  },
+  "checkpoint-objects-06.zip": {
+    "sha256": "002f0cdcf81dbee17608ba5b929ab2ffce325a1c5f05b221f79ad62e0a75418b",
+    "bytes": 1060049650
+  },
+  "checkpoint-objects-07.zip": {
+    "sha256": "2389792a6945a5ecd797a46d0ec58793250b9483e584ba2e8c51940f19d36b98",
+    "bytes": 1005571908
+  },
+  "checkpoint-objects-08.zip": {
+    "sha256": "0d9cb5f420c4b16e914a4149ac48b4b7c071a302e9f36ddc8f74ca6aa6c69115",
+    "bytes": 1031894228
+  },
+  "checkpoint-objects-09.zip": {
+    "sha256": "66e172b2b9540f103791d3aae9ce58f8e0a57b7312bde702bf638d822aed5cee",
+    "bytes": 1052810487
+  },
+  "checkpoint-objects-10.zip": {
+    "sha256": "e5940c07414306e660208a33caaa5b46f24952083d28e7b1ddd93606d4a83f0d",
+    "bytes": 1035553294
+  },
+  "checkpoint-objects-11.zip": {
+    "sha256": "3cd61f78c2e75761edb62925a00c1eb2a30796b6ae29064d3dc871c74e6ed960",
+    "bytes": 1001695808
+  },
+  "checkpoint-objects-12.zip": {
+    "sha256": "daa66819d62d1514653a98e5890acc42b459ea172a1a3fea563ec9b861935cd8",
+    "bytes": 1062895768
+  },
+  "checkpoint-objects-13.zip": {
+    "sha256": "e723904cba98f1c7601f28c3d8d47be5d72df148a9c837d29d1d1fa4d56899d6",
+    "bytes": 1027565976
+  },
+  "checkpoint-objects-14.zip": {
+    "sha256": "e9407b9819e16cbfbed9c0250ec4bd38819c1a0ccb6512f1c0c63dd68156ddb3",
+    "bytes": 999513873
+  },
+  "checkpoint-objects-15.zip": {
+    "sha256": "1341e212afa9f309da45d45d23a8b49130b96364019b19c0e7966bcf76b83e91",
+    "bytes": 959274159
+  },
+  "checkpoint-objects-16.zip": {
+    "sha256": "211c92179ee4e0947b87bbee21a56e8b41596e196cc323a50baa3b6d1fbbb430",
+    "bytes": 1081227793
+  },
+  "checkpoint-objects-17.zip": {
+    "sha256": "b35bb927b68ff4c974488c49373adf1ff043a0be255ba42d96a08b5b87335549",
+    "bytes": 721736746
+  },
+  "weights-index.json": {
+    "sha256": "b2b59f3d3f4e1e3027a8d2251e144caaf8de8d348001d30007ed2e776de856e3",
+    "bytes": 1461840
+  }
+}

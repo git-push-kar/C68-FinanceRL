@@ -1,0 +1,422 @@
+[
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q00",
+    "answer": "The portfolio bought 2308.53 INR of SUNPHARMA.NS, increasing its current value from 2312.93 INR. This was a scheduled execution on 2024-12-31, not a recorded reaction to news. The selection used strategy probabilities and lagged volatility forecasts; the execution reconciled the target from those inputs with current prices. Total portfolio fees are 99.9 INR, already deducted from the selected trade.",
+    "elapsed_seconds": 11.523421300007612,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q01",
+    "answer": "The record contains no explanation for the sale. It only shows a target change and a executed trade. This is a historical portfolio allocation record, not a transcript of trading model thoughts.",
+    "elapsed_seconds": 4.028879799996503,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q02",
+    "answer": "The 2024-12-31 rebalance cost 99.9 INR. This is a selection fee, not the total modeled transaction cost. Cumulative modeled fees already deducted are 99.9 INR. Those are not the fees of just the latest transaction or a forecast tax.",
+    "elapsed_seconds": 7.239648399990983,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q03",
+    "answer": "The selected execution on 2024-12-31 was a rebalance, not a single trade. The RL model updated the strategy probabilities, and the execution engine moved money to change holdings. This was not a cash purchase from initial funds.",
+    "elapsed_seconds": 5.879360300008557,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q04",
+    "answer": "The portfolio bought 656.47 INR of INDUSINDBK.NS, increasing its current value from 1885.13 INR. This was a scheduled rebalance on 2025-03-11, not a reaction to a new signal. The RL strategy fixed their 4.00% allocation to Equal weight, while the execution engine combined the other targets. The entire trade is recorded as one execution, not multiple trades.",
+    "elapsed_seconds": 10.96982470000512,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q05",
+    "answer": "The portfolio sold 656.47 INR of INDUSINDBK on 2025-03-11 to reduce a drift from its 1.967% estimated value toward its five-session average of 1.878%. This was a rebalance toward the strategy with the 35.687% lagged annual volatility prediction. The execution reconciled the drifted holdings with the selected target.",
+    "elapsed_seconds": 10.052758699996048,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q06",
+    "answer": "The 2025-03-11 execution cost was 3.18 INR. This is a selection fee, not the total modeled transaction cost. Cumulative modeled fees already deducted are 128.18 INR. These are not the fees charged the client.",
+    "elapsed_seconds": 6.811221999989357,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q07",
+    "answer": "The portfolio sold 146.06 INR of RELIANCE on 2025-03-11 to bring its value from 2067.16 INR toward its five-trading-session forecast target of 2.133%. The largest contribution was from Equal weight at 0.671 percentage points. This was a rebalance, not a reaction to a new forecast. The RL strategy learned fixed probabilities for the allocation rules, while the execution engine delivered the trades.",
+    "elapsed_seconds": 11.65698309999425,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q08",
+    "answer": "The portfolio bought 134.89 INR on 2025-05-28. It was a target-based trade, not a reaction to a breaking event. The RL strategy produced the probability estimate 0.3288, which the execution engine used to compute the causal target from lagged prices. This was a scheduled five-trading-session rebalance, not a recorded reaction to a single event. The entire transaction is not measured as a separate gain; the cumulative market P&L is already adjusted for modeled fees.",
+    "elapsed_seconds": 12.175056499996572,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q09",
+    "answer": "The record contains no explanation for the sale. It only shows a target change and a executed trade. I can discuss the recorded facts, but cannot attribute them to an earlier forecast or claim that the sale caused a selected gain.",
+    "elapsed_seconds": 4.935409100013203,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q10",
+    "answer": "The 2025-05-28 execution cost was 2.20 INR. This is a selection fee, not the total modeled transaction cost. Cumulative modeled fees already deducted are 155.84 INR. These are not the fees charged the client.",
+    "elapsed_seconds": 6.84099649998825,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q11",
+    "answer": "The portfolio sold 112.46 INR of HDFCLIFE on 2025-05-28 to bring its value toward the selected target. This was a rebalance toward the strategy with the 2.051% weight. The execution model used lagged prices to produce the new target from the external allocation strategies' probabilities.",
+    "elapsed_seconds": 8.21787329998915,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q12",
+    "answer": "The portfolio bought 122.74 INR of SUNPHARMA.NS, increasing its current value from 2412.93 INR. This was a scheduled trade on 2025-12-24, not a recorded reaction to news. The RL strategy fixed the allocation probabilities, while the execution engine delivered the trades from those targets. The entire transaction cost 2.08 INR.",
+    "elapsed_seconds": 9.923549200000707,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q13",
+    "answer": "The record contains no explanation for the sale. It only shows a target change and a executed trade. This is a historical portfolio allocation record, not a transcript of trading model thoughts.",
+    "elapsed_seconds": 4.067722600011621,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q14",
+    "answer": "The 2025-12-24 execution cost was 2.08 INR. That is not the total fee so far or a claim that future fees will be this amount. Cumulative modeled fees are 228.12 INR, not included in the selected trade amount.",
+    "elapsed_seconds": 7.168059200004791,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q15",
+    "answer": "The portfolio sold 150.85 INR of COALINDIA on 2025-12-24. Its current value is 2512.27 INR, representing 2.183% of the portfolio. The selected trade followed the RL model's 2.211% target. This was a single transaction, not the whole rebalance.",
+    "elapsed_seconds": 9.307935899996664,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q16",
+    "answer": "No. An allocation percentage does not translate to the dollar amount traded. For inverse volatility, 64.49% of the selected trade's dollar amount was allocated. The entire trade can therefore be less than 64.49% of the chosen dollar amount.",
+    "elapsed_seconds": 6.26063140000042,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q17",
+    "answer": "No. For each selected trade, the strategy provides a target weight percentage. The execution engine compares that target to the current value, and buys or sells to reach it. Between trades, holdings drift. The supplied P&L contribution is cumulative market PNL before portfolio fees.",
+    "elapsed_seconds": 6.142036699995515,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q18",
+    "answer": "No. The RL model supplies fixed strategy probabilities each day, and the execution engine combines those targets from lagged prices to produce trades. Asset weights and execution fees are calculated from causal signals alone, not a changing model prompt.",
+    "elapsed_seconds": 5.091765699995449,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q19",
+    "answer": "Between the selected execution date and now, the portfolio sold INR 72.17 of NESTLEIND.NS and bought INR 9.15 of BRITANNIA.NS. These are trades, not a change in holdings. The execution reconciles the trades with past targets to update the holdings toward the new probabilities.",
+    "elapsed_seconds": 7.843617200007429,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q20",
+    "answer": "No. The 240.41 cumulative fees already deducted are accounted for in the balance. The 13282.89 net gain is total portfolio change, including modeled taxes. These fees are not a trade amount or a realised tax gain.",
+    "elapsed_seconds": 6.152331799996318,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q21",
+    "answer": "This policy does not use news or broker feeds. It selects allocations from lagged prices using external learned probabilities. I cannot give an explanation by looking at the execution record alone.",
+    "elapsed_seconds": 4.065070700002252,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q22",
+    "answer": "I cannot predict future market movements or the exact return tomorrow. This policy has fixed strategy probabilities and causal historical risk estimates, while the execution reconciles those targets from prices; its record does not establish a forecast. Past performance is not a guarantee.",
+    "elapsed_seconds": 5.594464300011168,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q23",
+    "answer": "This is not a transcript of an internal trading model's internal chain of thought. It is an executed trading record showing how the portfolio reached its current value. I can explain what the record contains and how it supports the conclusion, but cannot give an external forecast from it.",
+    "elapsed_seconds": 6.137121399995522,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q24",
+    "answer": "ITC.NS's cumulative market P&L is -813.52, while ApolloHosp.NS's is -58.44. ITC has the higher positive contribution. These are cumulative contributions before portfolio fees, not the gain of a single transaction.",
+    "elapsed_seconds": 6.525880499990308,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q25",
+    "answer": "No. ITC's cumulative market PNL is -813.52, while APOLLOHOSP.NS's is -58.44. ITC has the larger loss. These are cumulative contributions before portfolio fees, not the loss of just the selected trade.",
+    "elapsed_seconds": 6.632262400002219,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q26",
+    "answer": "At 2025-05-29, the portfolio holds 1.801% of ADANIENT, with a current value of 1911.72 INR. The cumulative market P&L is 22.85 INR, which is already deducted from the portfolio value. Neither the current exposure nor the total P&L is the traded amount.",
+    "elapsed_seconds": 9.200571800000034,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q27",
+    "answer": "The selected trade of 85.98 INR on ADANIENT.NS on 2025-05-28 produced a cumulative contribution of 22.85 INR. This is a market P&L only, not a realized tax gain or a total transaction amount. It is already deducted from the cumulative portfolio fee of 155.84 INR.",
+    "elapsed_seconds": 9.244228399998974,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q28",
+    "answer": "The selected execution date was \"2025-05-28\". The strategy probabilities are fixed after model training, while causal strategy targets change from lagged prices. The record does not establish that waiting would have been worse.",
+    "elapsed_seconds": 5.421370299998671,
+    "notices": []
+  },
+  {
+    "candidate": "selected_explanation_SFT_fp32",
+    "id": "q29",
+    "answer": "No. This is a historical portfolio execution record. It does not establish that an order was sent, its execution was successful, or it resulted in the specified P&L. An internal strategy rule produced the targets from past prices; the execution engine delivered the trades.",
+    "elapsed_seconds": 6.030506700000842,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q00",
+    "answer": "We bought SUNPHARMA.NS because the RL model's strategy probabilities indicated a higher probability of positive returns for this stock compared to others. The strategy probabilities for \"Equal weight\" were 32.88%, \"Inverse volatility\" 64.487%, \"Momentum\" 1.358%, and \"Reversal\" 1.275%. The \"Inverse volatility\" strategy, which targets stocks with lower volatility, was the most favorable. The execution record shows that we executed a trade with a signed amount of 2308.53 INR, which represents the purchase of SUNPHARMA.NS. This trade was part of a rebalance strategy that adjusts the portfolio's allocation every five trading sessions.",
+    "elapsed_seconds": 14.811817900001188,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q01",
+    "answer": "The execution record indicates that the portfolio rebalanced on December 31, 2024, and the strategy probabilities suggest a focus on \"Inverse volatility.\" The current weight of SUNPHARMA.NS is 2.308%, which is slightly above the target weight of 2.311%. Given the strategy probabilities, the portfolio is likely adjusting to maintain a more balanced allocation, potentially reducing exposure to SUNPHARMA.NS to align with the inverse volatility strategy.",
+    "elapsed_seconds": 9.788429100008216,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q02",
+    "answer": "The rebalance cost is the sum of the selected execution fee and the cumulative fees already deducted. The execution fee is 99.9 INR, and the cumulative fees already deducted are also 99.9 INR. Therefore, the total cost of the rebalance is 99.9 INR + 99.9 INR = 199.8 INR. This total cost is not the same as the current cumulative holding P&L, which is before portfolio fees.",
+    "elapsed_seconds": 10.032106300001033,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q03",
+    "answer": "The execution record indicates that the portfolio rebalanced on December 31, 2024, and the strategy probabilities suggest a focus on Equal weight and Inverse volatility. The significant increase in the \"SUNPHARMA.NS\" stock from 0.0 to 2.311% and the \"NESTLEIND.NS\" stock from 0.0 to 2.287% suggests a strategic decision to increase exposure to these stocks. The \"Equal weight\" strategy, which allocates funds equally across all stocks, likely led to the purchase of these stocks to maintain the target weight percentages. The \"Inverse volatility\" strategy, which seeks to capitalize on volatility patterns, may have also influenced the decision to increase exposure to these stocks. The",
+    "elapsed_seconds": 15.13803000000189,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q04",
+    "answer": "We bought INDUSINDBK.NS because the RL model's strategy probabilities indicated a favorable target weight of 1.878% for the stock, which was higher than the current weight of 1.195%. The execution engine executed a trade of 656.47 INR, which was a significant portion of the target weight. The strategy probabilities were based on fixed probabilities over four allocation strategies, and the causal signals were derived from lagged prices, suggesting a potential for price movement. The current holding P&L before fees was -437.12 INR, indicating a loss, but the trade executed was a positive contribution to the portfolio.",
+    "elapsed_seconds": 13.330763900012244,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q05",
+    "answer": "The execution record indicates that the portfolio had a net loss of 4.172% on March 12, 2025, and the current cumulative holding P&L is before portfolio fees. The strategy probabilities suggest that the portfolio rebalanced based on the RL model's learned probabilities, which include a target weight of 1.878% for INDUSINDBK.NS. The current weight of 1.967% is slightly higher than the target, indicating a slight deviation from the strategy's expectations. However, the record does not explicitly state the reason for the deviation or the specific strategy that was triggered. Therefore, the exact reason for selling INDUSINDBK is not explicitly provided in the record.",
+    "elapsed_seconds": 14.54178420000244,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q06",
+    "answer": "The rebalance cost is the sum of the selected execution fee and the cumulative fees already deducted. The execution fee is 3.18 INR, and the cumulative fees already deducted are 128.18 INR. Therefore, the total cost of the rebalance is 3.18 INR + 128.18 INR = 131.36 INR. This total cost includes both the fee for the specific rebalance and any other fees already applied to the portfolio.",
+    "elapsed_seconds": 10.388318600002094,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q07",
+    "answer": "The execution record indicates that the portfolio sold RELIANCE.NS due to a decrease in its current value from 2067.16 INR to 2067.16 INR, resulting in a net gain of -4172.26 INR. This represents a cumulative market P&L of 76.23 INR, which is a significant portion of the total portfolio value of 95827.74 INR. The strategy probabilities suggest that the portfolio rebalanced by selling RELIANCE.NS as part of a strategy that favors inverse volatility, which is consistent with the current market conditions and the portfolio's overall strategy.",
+    "elapsed_seconds": 13.665975999989314,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q08",
+    "answer": "We bought GRASIM.NS because the RL model, which learned fixed probabilities over four external allocation strategies, indicated a favorable target weight of 2.113%. The execution engine computed a trade amount of 134.89 INR for this stock. The current value of GRASIM.NS is 2232.32 INR, and its current weight percentage in the portfolio is 2.103%. The strategy probabilities suggest a higher allocation to \"Inverse volatility\" (64.487%) compared to \"Equal weight\" (32.88%). The causal signals, which precede the execution, suggest that the model's predictions were aligned with the observed market conditions, leading to the buy decision.",
+    "elapsed_seconds": 14.76413299998967,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q09",
+    "answer": "The execution record indicates that the portfolio rebalanced on May 28, 2025, and the strategy probabilities suggest a focus on \"Inverse volatility.\" The current weight of GRASIM is 2.103%, which is slightly above the target weight of 2.113%. This slight deviation from the target weight indicates that the portfolio rebalanced to reduce exposure to GRASIM, aligning with the strategy's focus on inverse volatility. The strategy's probabilities suggest that the portfolio is designed to reduce exposure to assets that are overvalued relative to their volatility, which could be a reason for the rebalancing.",
+    "elapsed_seconds": 12.611999500004458,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q10",
+    "answer": "The rebalance cost is the amount deducted from the portfolio value, which is 155.84 INR. This cost is already deducted from the portfolio value, so it is not the total cost so far. The total cost would include any additional fees or costs incurred after the rebalance.",
+    "elapsed_seconds": 6.000713400004315,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q11",
+    "answer": "The execution record indicates that the portfolio sold HDFCLIFE due to a decrease in its current value from 2146.37 INR to 2033.91 INR, resulting in a net loss of 112.46 INR. This loss was part of the overall portfolio performance, which included a net gain of 6149.74 INR. The strategy probabilities suggest that the portfolio rebalanced by selling HDFCLIFE to maintain a target weight of 2.051%, which was slightly lower than the initial weight of 2.157%. The causal signal cutoff on May 27th indicates that the decision to sell was influenced by the lagged annual volatility of 24.48",
+    "elapsed_seconds": 15.051882699990529,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q12",
+    "answer": "We bought SUNPHARMA.NS because the RL model's strategy probabilities indicated a favorable target weight of 2.128% for the stock, which was higher than the current weight of 2.02%. The strategy probabilities suggest a positive allocation to this stock, and the execution engine executed a trade of 122.74 INR, increasing the stock's current value to 2412.93 INR. The decision was based on the model's predictions rather than any specific news or fundamentals.",
+    "elapsed_seconds": 10.449803299998166,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q13",
+    "answer": "The execution record indicates that the portfolio rebalanced on December 24, 2025, and the strategy probabilities suggest a focus on \"Inverse volatility.\" The current weight of SUNPHARMA.NS is 2.097%, which is slightly above the target weight of 2.128%. This suggests that the portfolio may have been rebalancing to reduce exposure to SUNPHARMA.NS, aligning with the strategy's focus on inverse volatility. The slight increase in weight indicates a minor deviation from the target, which could be due to market conditions or other factors influencing the strategy's decision to rebalance.",
+    "elapsed_seconds": 12.532812200006447,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q14",
+    "answer": "The rebalance cost is the sum of the selected event fee and the cumulative fees already deducted. The selected event fee is 2.08 INR, and the cumulative fees already deducted are 228.12 INR. Therefore, the total cost of the rebalance is 2.08 INR + 228.12 INR = 230.20 INR. This total cost is not the same as the current cumulative holding P&L, which is before portfolio fees.",
+    "elapsed_seconds": 10.508109699992929,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q15",
+    "answer": "The execution record indicates that the portfolio sold COALINDIA due to a decrease in its current value from 2512.27 INR to 2361.42 INR, resulting in a net loss of 150.85 INR. This loss was part of the overall portfolio performance, which included a net gain of 15074.44 INR. The strategy probabilities suggest that the portfolio rebalanced by selling COALINDIA to adjust its allocation, as the current weight of COALINDIA was 2.183%, which was slightly higher than the target weight of 2.211%. The causal signal cutoff on December 23rd suggests that the decision to sell was influenced by",
+    "elapsed_seconds": 15.187618299998576,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q16",
+    "answer": "The 64.49% preference for inverse volatility indicates that 64.49% of the portfolio's allocation is targeted towards the inverse volatility strategy. This means that 64.49% of the portfolio's money was allocated to the inverse volatility strategy, not necessarily to a single stock. The strategy targets are based on lagged prices and are rebalanced every five trading sessions, so the allocation percentages are dynamic and reflect the current strategy's focus.",
+    "elapsed_seconds": 9.466105200001039,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q17",
+    "answer": "No, a strategy contribution of one percentage point does not necessarily mean the stock earned a one percent return. The contribution percentage points reflect the impact of each strategy on the overall portfolio weight, not the return on the individual stock.",
+    "elapsed_seconds": 4.32640160000301,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q18",
+    "answer": "The strategy probabilities do not change every trading day. The strategy probabilities are fixed and determined by the RL model over four external allocation strategies, as indicated by the \"strategy_probabilities_pct\" field. These probabilities are set to remain constant, and the execution engine uses these fixed probabilities to compute trades and rebalances the portfolio every five trading sessions.",
+    "elapsed_seconds": 6.197716199996648,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q19",
+    "answer": "The current holding weights differ from the selected targets due to the dynamic rebalancing strategy implemented by the RL model. The model adjusts the weights based on the causal signals of lagged prices, which are used to compute the targets. This means that the weights are not fixed and can change over time as new signals are processed, leading to a divergence between the current holdings and the selected targets.",
+    "elapsed_seconds": 7.467234699986875,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q20",
+    "answer": "Yes, you should subtract the cumulative trading fees from the portfolio balance to get the true balance. The record indicates that the \"cumulative_fees_already_deducted\" is 240.41 INR, which represents the fees already deducted from the portfolio value. Therefore, the true portfolio balance before fees is the account value minus the cumulative trading fees.",
+    "elapsed_seconds": 7.272884100006195,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q21",
+    "answer": "No, the model did not read company news before making these trades. The execution record indicates that no separate realised gain per transaction is measured, and there is no mention of news or fundamentals being used in the strategy.",
+    "elapsed_seconds": 4.3580596999963745,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q22",
+    "answer": "The portfolio's return next month cannot be determined from the provided execution record. The record includes historical performance data, strategy probabilities, and current holdings, but it does not provide information on future market conditions or the performance of the strategies over the next month.",
+    "elapsed_seconds": 4.988420699999551,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q23",
+    "answer": "The execution record does not provide sufficient evidence to prove that the alternative trade would have lost money. The record only shows the current holdings and their performance, without any information about alternative trades or their potential outcomes. Therefore, it is not possible to determine whether the alternative trade would have resulted in a loss based on the given data.",
+    "elapsed_seconds": 6.461022100003902,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q24",
+    "answer": "The ITC stock contributed more market profit than the APOLLOHOSP.NS stock. The ITC stock had a cumulative market profit before fees of -813.52 INR, while the APOLLOHOSP.NS stock had a cumulative market profit before fees of -58.44 INR. This indicates that the ITC stock experienced a greater loss compared to the APOLLOHOSP.NS stock.",
+    "elapsed_seconds": 8.511184999995749,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q25",
+    "answer": "The loss on ITC is larger than the loss on APOLLOHOSP. The cumulative market P&L before fees for ITC is -813.52 INR, while for APOLLOHOSP it is -58.44 INR.",
+    "elapsed_seconds": 5.547373699999298,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q26",
+    "answer": "You own 1911.72 INR worth of ADANIENT.NS. The market P&L for ADANIENT is 22.85 INR, which is the amount traded.",
+    "elapsed_seconds": 4.491087900009006,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q27",
+    "answer": "The selected ADANIENT trade was profitable on its own, as evidenced by the net gain of INR 6149.74. This profit was realized before any portfolio fees were deducted, and the trade's contribution to the overall portfolio value increased the cumulative holding P&L by 6.15%.",
+    "elapsed_seconds": 6.327266599997529,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q28",
+    "answer": "The exact information date available when trading ADANIENT was \"2025-05-27.\"",
+    "elapsed_seconds": 2.3845880000008037,
+    "notices": []
+  },
+  {
+    "candidate": "pristine_base_fp32",
+    "id": "q29",
+    "answer": "Based on the execution record provided, it is not explicitly stated whether the orders were sent to the broker. However, the record indicates that the execution engine computes trades using strategy probabilities and causal signals, which are then executed. Since the record does not mention any broker or live market feed, it is reasonable to infer that the orders were indeed sent to the broker.",
+    "elapsed_seconds": 7.054040200004238,
+    "notices": []
+  }
+]

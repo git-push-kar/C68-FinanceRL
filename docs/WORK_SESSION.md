@@ -1,0 +1,116 @@
+# Final working-session handover — 16 November 2026
+
+GitHub: https://github.com/git-push-kar/C68-FinanceRL/tree/main
+Published weight release: https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116
+All new commits use Parth Dhande <parthdhande1976@gmail.com> as both author and committer. Existing master history was preserved; the default branch remains master. Use main explicitly. Git Credential Manager login parth1056 succeeded; credentials were never written into the archive.
+
+Authoritative local checkout: C:/Users/Parth/Documents/C68-FinanceRL. Fresh GitHub recovery clone: sibling C68-FinanceRL-RecoveryCheck. Original workspaces PolyvalentFinance and PolyvalentDemo remain. Current method/results: JOURNAL_RESEARCH_REPORT.md, NUMERIC_APPENDIX.md and CONTEXT_TRANSFER_FULL.md. Original SSD context bombs are under ssd_historical_context/; college handover and original Finance trees are preserved in separate archives.
+
+Finished implementation: actual Nifty native RL adapter historical paper trading, real FP32 inference, causal four-strategy allocation tools and self-financing fees, 270-session ledger parity, portfolio UI, adapter/base integrity guards, failure-before-trade behavior and stale-request protection. Finance conversation was removed after genuine factual audit: SFT10/30 full passes versus base8/30. No preset replies replace it. The decision inspector displays records/calculations, not generated reasoning. No knowledge base was implemented.
+
+One headline artifact: original Nifty RL seed42 checkpoint44; train2019-2021, validation2022, continuous retrospective test2025-January2026. Raw11.22%, trained13.28%, holding13.06%, rebalanced equal13.44%. All limitations and negative controls are retained. Never claim best possible/flawless research, superiority over simple controls, independent confirmation or journal acceptance. No new finance training was required for this deployment task.
+
+Verification: separate remote clone downloaded selected weights/panel and research CSV through LFS. Working and recovered suites:35passed, one Starlette/httpx warning. Actual recovered-code server made54 model calls over270sessions with maximum daily equity difference0.0INR. Production browser completed the interval in42.93seconds, no mocks or JavaScript errors. Actual screenshot/video and raw receipts live in demo/. RECOVERY_VERIFICATION.md records the caveat: pinned base and installed Python dependencies were reused from this PC; this was not a clean dependency install or second-device test.
+
+Server at127.0.0.1:8765 currently uses fresh-clone demo source (uvicorn PID58408; verify before stopping). No training or explanation evaluation is active. Launch permanently using demo/Start-FinanceDemo.ps1 after its documented venv/base setup. Other-domain trained weights were not all available, so this is not certification of the full four-domain system. No quiet/idle restrictions; no subagents authorized.
+
+BACKUP COMPLETE: four LFS archives preserve66432 research/demo metadata files, selected campaign packages,3004 original handover files and192 original SSD Finance files including college checkpoints. Complete metadata and original handover/Finance ZIP member hashes were checked. All4663 unique current-workspace weight objects (5224 original paths;30279357187bytes) are published in17ZIPparts plus5 recovery assets. Total release assets22, compressed17227149909bytes. Public API verified all remote sizes/digests; anonymous downloads of manifest/index/helper verified against local originals. See archives/CHECKPOINT_RELEASE_STATUS.md and published_checkpoint_receipt.json. The release is no longer draft. Upload/finish workers are complete; do not restart or reupload them. No remaining backup task.
+
+Upstream full base, environments, caches, secrets and unrelated SSD domains are excluded. The base is recoverable at the pinned public revision/hash. Full restore helper is standard-library Python3.11+ and refuses differing existing files. Git LFS is needed for repository ZIP/model/data files. The selected live adapter is directly accessible without downloading all historical weights.
+
+## Current update — 17 November 2026
+
+Finance now runs natively inside the existing upstream Polyvalent UI, not an iframe. Reference repo git-push-kar/Polyvalent, UI blob4fad71c9c8d645a5acc633efef9e50a9407aaa4b, original source preserved under demo/ui/reference/. Chat/Anomaly markup stays identical. Finance fragment/CSS/JS and reproducible builder are in demo/ui and demo/scripts. No new training, weights or finance math. Final native browser run:270 sessions,54 real calls,41.69seconds,all daily balances exact. Extended native UI checks: real calls, themes/mobile/tab navigation/pause-on-tab-change, no JS errors.35 Python tests pass. Details: FINANCE_UI_INTEGRATION_20261117.md.
+
+Active server has changed: canonical checkout C:/Users/Parth/Documents/C68-FinanceRL/demo, uvicorn PID53076 (verify before stopping), port8765. Browser deliverable opened the native Finance tab. Legacy standalone URLs redirect to /#finance. Source backup archives are historical snapshots; current implementation is on main. Full checkpoint release remains complete and needs no reupload.
+
+## Active work superseding the earlier finalization
+
+The user explicitly rejected the old constant-mixture adapter as satisfying portfolio-aware trading. That objection is correct: the old adapter did not receive stock prices, holdings, available money or affordability, and repeated genuine calls did not add adaptivity. Its historical 13.28% measurement is not evidence of the requested capability. The old menu server is stopped while a replacement trains.
+
+A single new primary run is launched from research/stateful_rl_20261117, with five full per-stock observation rows, cash/positions/equity/initial capital, per-stock action logits from native InternVL vocabulary, whole-share execution and next-open chronology. Only attention/vocabulary-head LoRA is trainable. Exact all-action one-rebalance financial reward policy gradient is used, explicitly offline contextual RL rather than PPO. Nine accounting/causality/gradient tests and actual GPU optimizer/export/recovery checks passed. No claimed performance success yet.
+
+Run: C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_full_account_seed42_20261117. Actual Python PID64180 at launch (verify before operating); wrapper PID62228.12epochs,1536training states,accumulation4,seed42. Logs in sibling reports/stateful_full_account_primary.stdout.log and .stderr.log. Training rewards2015-2021, validation2022; primary continuous retrospective test2025-January through13November2026. Selection uses absolute validation net growth at100000INR, not the best delta or convenient test capital. Automatic tests include pristine-disabled model, buyhold, stronger simple controls, every single-stock holding and capitals500/50000/100000/200000. No automatic menu promotion.
+
+Detailed source/method/limits and resumption instructions: docs/STATEFUL_RL_ACTIVE_RUN_20261117.md and research/stateful_rl_20261117/README.md. User imposed a total12-24hour attempt and at most1-2substantive runs; no time cap is encoded in training. Codex should become inactive after verifying real optimization has started; user will wake it after approximately4-5hours. Do not launch duplicate workers, reopen the old GPU demo or claim the new requirement is met before inspecting outputs.
+
+## Current worker superseding the first state-aware run
+
+The first full-state run was stopped during epoch10 after validation collapse: raw+1.432%, trained epoch1-8.106%, epochs5-8-18.308%; epoch8 all50 validation actions concentrated Infosys. Full failure records are preserved, no test result was used to choose revision2. The user explicitly lifted the two-run ceiling; several justified attempts are allowed within the original12-24hour total budget.
+
+ACTIVE: C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_monthly_risk_seed42_20261117_v2, source G/research/stateful_rl_20261117_run2, logs R/reports/stateful_monthly_risk_v2.stdout.log and .stderr.log.8epochs maximum,1536states,seed42,accum4. Train2015-2023,validate2024,primarytest2025Jan-2026Nov13.20-session allocation/reward, stock35%/sector60% rebalance caps with small-budget relaxation, full-identity row/query shuffling, corrected query-end token selection, lowerLR/strongerKL, checkpoints32/64/128/every256,patience24 validation checks. No wall-clock/quiet restriction coded. No automatic menu deployment.
+
+13 CPU/gradient/input-mapping tests and actual GPU update/export/disabled recovery passed. Complete observations measured840tokens in probes. One setup was aborted during untrained-reference capture before optimization due failed endpoint test and launcher-exit gating; both corrected, aborted directory preserved. Read docs/STATEFUL_RL_REVISION2_ACTIVE_20261117.md first on resumption; do not operate the stopped run1 or aborted un-suffixed setup. No conclusive winning result yet.
+
+
+Revision2 launch verified: actual PID68640, wrapper70072; actual optimization/checkpoint32/64 confirmed. Source hashes match protocol. See docs/stateful_rl_revision2_preflight/launch_verified.json. Leave the worker independent and become inactive; user can check in about3-4hours. No new convincing final result yet.
+
+## Revision 3: current work, superseding prior active-worker notes
+
+17 November 2026 afternoon: run2 COMPLETED, selectedstep1792. Primary100k test trained-8.176%, raw+1.893%, equalhold-1.795%; validation+22.372% did not generalize. Seven validation feature-sign counterfactuals changed greedy decisions only once. Preserved evidence: docs/stateful_rl_run2_result. No successful replacement declared.
+
+User asked for a fresh deep research/design review and authorized12-18hours with some flexibility. New run source research/stateful_rl_20261117_run3: causal inverse-volatility supervised curriculum selected using2015-2023 training years, then clipped group-relative RL on actual60-session,three-decision account episodes. Full stock/account inputs, real whole-share next-open execution, native InternVL3-2B LoRA. Separate SFT-only baseline mandatory; do not claim RL succeeded if only SFT helped. Train2015-2023,val2024,testJan2025-Nov13 2026 stays retrospective/adaptively reused. No outcome guarantees, no optimum/flawless-process claims.
+
+17CPU tests and realGPU preflight passed. Update/reload/disabled recovery/reference-swap checked; exact0 output error, nonzero parameter change. Actual live workerPID36996, wrapper63884, launched14:46:40IST. Run C:/Users/Parth/Documents/PolyvalentFinance/campaign_runs/stateful_curriculum_episode_seed42_20261117. Logs reports/stateful_curriculum_episode.stdout.log and.stderr.log. Verify process/status before action. No old UI GPU server. No duplicate worker. Expected roughly3hours total; inspect current progress before giving a revised ETA.
+
+Full primary-source review, implementation choices, failure interpretation, limitations and evaluation contract: docs/STATEFUL_RL_REVISION3_RESEARCH_20261117.md. After completion run research/summarize_stateful_episode.py with run path; inspect allcomparators,SFTvsRL,state/capital sensitivity,savedweights before anymenuintegration. Raw share-count differences alone do not prove learned budget preferences. No auto promotion. No quiet/time restrictions coded. User wants Codex inactive only when meaningful concurrent analysis is finished and training can run independently.
+
+## Revision 3 completed — 17 November 2026, checked 17:23 IST
+
+Worker finished in5906.9seconds (~98minutes). RL stopped at iteration72 after12 validation checks without improvement. Selected checkpoint384 is supervised-only. All subsequent supervised/RL validation checkpoints tied its15.8745% return, so earliest-tie selection correctly retained384. This is NOT an RL success.
+
+Primary January2025-November13 2026,100000INR: selected-3.83799%, pristine-0.112782%, holding-1.79538%. Selected policy has exactly one action vector [4,4,4,4,4], target20% each. Its results match equal-weight rebalancing exactly. Six validation probes also kept all actions unchanged after changing return signs, volatility ordering, account capital or held inventory. This shows greedy-action collapse despite available complete inputs; it does not imply the inputs were omitted or probabilities identical.
+
+5000INR gives+13.0096%, above raw0 and hold9.2251%, but matches ordinary equal rebalancing exactly. Do NOT promote it as learned budget adaptation or select that capital to rescue the result. Different capital returns here arise from integer execution, not demonstrated adaptive allocation choices. No menu promotion, no running training worker, no successful conclusive replacement. Failure/current artifacts preserved in docs/stateful_rl_run3_result. Descriptive paired block uncertainty audit completed; adaptive retrospective caveats remain.
+
+Next methodological issue is learning conditional actions rather than the majority allocation class. Do not blindly repeat the same warm-start plus weak clipped update or label extra training an established fix. Any subsequent attempt needs an explicit state-learning gate and comparison with constant/equal-weight policies before costly financial evaluation.
+
+## Current continuation — 17 November 2026, 17:42 IST
+
+User renewed broad authorization to continue within roughly12-15hours; inactive only when no useful parallel work remains. Active run4: stateful_focused_gate_seed42_20261117, actualPID15384/wrapper12160. Full stock/account context, one focused-stock prompt per action. Balanced causal curriculum2015-2022; held-out2023 conditional-learning gate;2024 financial validation. First512-example gate14.58%raw->39.58%trained, but failed minimum class recall. Continue scheduled checks; no financial success claimed.15CPU tests and actual GPU preflight passed. See STATEFUL_RL_REVISION4_ACTIVE_20261117.md.
+
+CPU diagnostics: ridge forecasting gives mixed2022-2024 results, not a stable dominant edge. Separate38-feature numerical classifier learns exactly the allocation curriculum/gate at~88%held-out accuracy. This supports investigating numerical representation, not a profitability claim and not a replacement trading agent.
+
+Prepared run5 adds201600-parameter numerical INPUT encoder to nativeInternVL before all28decoder layers; original vocabulary emits actions. Both encoder andLoRA are saved/restored/disabled consistently.16CPU tests passed; GPU preflight still pending. See STATEFUL_NUMERIC_BRIDGE_CONTINUATION_20261117.md. Hidden continuation supervisorPID23132 waits for run4exit and only if explicit learning_gate_failed runs5CPUtests,GPUpreflight thentraining; no automatic restart after arbitrarycrash or financialloss. Supervisorstatus R/reports/focused_continuation_status.json,logs focused_continuation.stdout.log/.stderr.log. No concurrentGPUmodels,noautodeployment,noencodedtrainingdeadline.
+
+Check both run4status and supervisor before doing anything. If fallbacklaunched run R/campaign_runs/stateful_numeric_bridge_seed42_20261117. Initial gate within roughlyhalfanhour; fullRL/evaluation can take severalhours. Do not claim conditionalaccuracy proves returns, or that smallcapital integer rounding proves learnedstrategy. Preserve SFTvsRL comparison, matcheduntrained,holding,strongercontrols and negative evidence.
+
+## 18:30 IST continuation — focused learning gate passed, RL active
+
+Run4 passed at2048 supervised examples: held-out balancedaccuracy63.5417%, raw14.5833%, minimum eligibleclassrecall25%, seven predictedclasses. Earlier checks51239.58%,102451.04%,153641.67% failed; preserved rather than omitted. The numericbridge fallback has NOT launched because run4 passed and is running episodicRL.
+
+Early2024 financial validation100k: raw0.1840%, SFT7.7004%, RLiteration1 10.8307%, iteration2 11.2280%, iteration4 9.1119%, iteration8 7.4616%. Holding14.2273% remains stronger. Best earlyRL uses6distinct actionvectors across13decisions. These are validation observations only, not final results or proof of out-of-sampleprofitability. Actualworker15384alive, iteration10atmostrecentinspection; supervisor23132waitingforworkerexit. Do not modify active source or run anotherGPUmodel.
+
+Prepared standalone research/stateful_session.py incremental whole-share simulator (NOT connected to productionUI, no promotedcheckpoint). FiveCPUtests pass: exact daily equity/cost/trade/observation parity versus research evaluate at500/5000/100000, atomic inferencefailure, immutable snapshots, no extra completedaccountcalls. Tests use an explicitly named syntheticfixture, not actualadapterinference; realGPU/productionbrowserparity remains required after checkpointreview. Olddemo remains historicalstatic, not valid statefuldeployment.
+
+## Shutdown recovery — 17 November 2026, 21:59 IST
+
+PC shut down after reported RLiteration69/96. No optimizer or RNG checkpoint existed in the original run. Latest complete saved adapter is checkpoint10064, whose2024 validation return is19.8887% (holding14.2273%, supervised7.7004%, pristine0.1840%). Checkpoint56 had15.6059%. These are validation only, not2026 test success. Five completed reported iterations65-69 had no recoverable weights.
+
+New recovery worker source research/stateful_rl_20261117_run4/resume.py. Run R/campaign_runs/stateful_focused_resume_20261117, actualPID18704/wrapper18792. Logs R/reports/stateful_focused_resume.stdout.log and.stderr.log. Original run and artifacts preserved. All13 checkpoint directories copied with manifest hash checks. This is explicitly a WEIGHTS-ONLY WARM RESTART fromiteration64 with fresh Adam and sampling seed4242, not an exact optimizer continuation. SFT reference and all earlier validation candidates are preserved; original96-iteration endpoint retained. No repeated SFT/gate training.
+
+Resume validates restoredcheckpoint64 against its saved2024 daily equity before optimization. Thereafter every completed iteration saves separate recovery model weights plus atomically replaced training_state_latest.pt containing Adam, TorchCPU/CUDA, NumPy, Python and sampler RNG states, bestscore and patience. Future recovery can use those snapshots; uncommitted post-snapshot checkpoints are ignored when loading candidates.15existingCPUchecks and recovery-source compilation passed. No changes to original training source, data, reward or trading rules. Legacy continuation supervisor is no longer active aftershutdown; do not restart it on the old run. Only newrecoveryworker should useGPU.
+
+User asked for a quick status/resume. Check new status/reloadreceipt first, then selected test outputs after completion. No model automatically promoted. Remaining training/evaluation roughly2-2.5hours based on prior iteration timing, not an encoded time cap.
+
+## Recovery verified in operation — 17 November 2026, 22:06 IST
+
+Resumed worker18704 completediterations65 and66 from recovered64. Status66 records full_recovery_saved=true; training_state_latest.pt exists,54,687,754bytes, updated22:06:11. No stderr error observed. This verifies that optimizer updates resumed and full recovery snapshots are now actually being written, not merely implemented. The fresh optimizer's effect on performance is unknown; no new validation checkpoint afterrestart yet. Restored64 had exactly zero validation-equity discrepancy before updates.
+
+Latest pre-interruption2024 validation trajectory: iteration40 return8.4506%,48 12.9888%,56 15.6059%,64 19.8887%; best64Sharpe1.338,drawdown6.846%. Comparators same2024/100000INR: untrained0.1840%, supervised-only7.7004%, buyhold14.2273%. Supervised-only means the native adapter after causal inverse-volatility allocation imitation and before financialRL, not the untrained base or an externalteacher trading instead of the model. RL improvement on this validation sample is12.1883 percentagepoints overSFT and5.6614pp overholding.
+
+Interpretation: encouraging observed validation improvement, but checkpoint selection maximizes this same2024 metric. It is not a calibrated forecast of2026 profit. Priorstatefulrun2 reached22.3721%validation then-8.176%oncontinuous2025-Nov2026, so our own history gives a concrete warning against extrapolation. Focusedrun4's passed conditional-learning gate and nonconstant decisions address a priorfailure, but do not prove futuretradingedge or isolate eachchange's causal contribution. No defensible numerical odds of test success are available from this small adaptivecampaign.
+
+FreshAdam discards moving gradient estimates and stepcount, so subsequent updates differ even though learnedweights are preserved. Seed4242also changes sampledtrajectories. Oldbestcheckpoint64 remains an eligible selectioncandidate and is never overwritten, but validationselection still cannot guarantee test superiority. LaterFeb-Nov2026holding is alreadynegative(-10.2626%at100k), so do notpromise the ordering trained>holding>raw orpositiveholding. Desiredsuccess is positive trained netreturn and superiority tobothmatchedcomparators, whichever comparator is stronger.
+
+User explicitly requested continual context-transfer updates with timeline, numbers, decisions, evidence/inference separation, and success/failure explanations. Continue appending meaningful events; do notinvent causal explanations for observations that lack controlledablations. Final2025-2026matchedtest remains pending.
+
+## Full-universe correction — 17 November 2026
+
+User explicitly rejected five-stock scope and requires ALL original dataset stocks withInternVL3-2B and fullportfolio information. Stopped active five-stock recovery processes18704/18792 after verifying commands; preserved artifacts. Those results are diagnostic only and cannot conclude originaldomain.
+
+OriginalCSVhash29b847a33ad88b7568eef66e1fb9f3274a897bd3091ddb8551c129b75dd726f7:287263rows,49stocks,1999-Jan2026. All49complete2018onward. Immutable original_panel preserves everyrow/date/ticker; nofill,noassetdrop. Supplementaryexecutionrecords capturedall49; LTIM lookupaliasLTM verifiedNSEsymbolchange. No overlapping adjustedreturn discrepancy>50bps. Rawhistorical executablequotes and demergerentitlements stillrequireexplicitresolution; nofabricatedwhole-shareaccounting.
+
+Newsource research/full_universe_rl. FiveCPUchecks pass and actualGPUpreflight PASS:49x20numericalstockstates,49x7nativeactionoutputs,1051tokens,peak5807846912bytes,nonzeroinputbridgegradient19.9317,outputchange0.2401 afteractualupdate,disabledrecoveryerror0. Hardware demonstrablyfitsall49; priorfive-stocklimitwasnotrequired. Mechanicalprobeusesartificialquotes/targets andmustNOTbepresentedasfinancialtrainingorprofits. AddedsharednumericalINPUTadapterisexplicitlydisclosed; original28-layerLM andvocabularyremainactionpath.
+
+Read docs/FULL_UNIVERSE_REBUILD_20261117.md forauthoritativescopeandpendinggates. No full-universeRLtrainingstarted yet. Pendingcorporateactionledger,realquoteverification,fullpolicyserialization,matchedcontrols,learninggateandRL. Do not resurrectfive-stockworker or claimlargeruniversebyjustchanginglabel. OriginaldatasetendsJanuary30 2026; later2026dataareseparateextension,notoriginalCSV. Contextmustkeepthisdistinctionexplicit.

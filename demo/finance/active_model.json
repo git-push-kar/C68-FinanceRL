@@ -1,0 +1,14 @@
+{
+  "label": "Nifty trading adapter",
+  "role": "Native Finance RL strategy-preference policy; no deployed Finance explanation adapter",
+  "adapter_path": "adapters/finance_policy/finance_lora/finance",
+  "selection": {
+    "selected_step": 44,
+    "seed": 42,
+    "training": "2019-2021",
+    "validation": "2022"
+  },
+  "weights_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
+  "text_dtype": "fp32",
+  "explanations_enabled": false
+}

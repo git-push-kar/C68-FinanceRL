@@ -1,0 +1,28 @@
+{
+  "cpu_tests": "17 passed",
+  "checked_utc": "2026-11-17T09:20:52.1554533Z",
+  "run": "C:\\Users\\Parth\\Documents\\PolyvalentFinance\\campaign_runs\\stateful_curriculum_episode_seed42_20261117",
+  "status": {
+    "state": "supervised_warmup",
+    "pid": 36996,
+    "step": 256,
+    "total": 1536,
+    "mean_recent_loss": 1.5995656624436378,
+    "recent_action_accuracy": 0.5187500128522515,
+    "elapsed_seconds": 244.27984750000178
+  },
+  "actual_pid": 36996,
+  "source_hashes_verified": [
+    "anchor.py",
+    "episodic.py",
+    "market.py",
+    "policy.py",
+    "test_anchor.py",
+    "test_episodic.py",
+    "test_input_mapping.py",
+    "test_market.py",
+    "train.py"
+  ],
+  "gpu_preflight": "passed",
+  "worker_alive": true
+}

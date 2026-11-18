@@ -1,0 +1,1578 @@
+[
+  {
+    "id": "q00",
+    "n": 1,
+    "question": "Why did we buy SUNPHARMA, and how much did we buy?",
+    "facts": {
+      "as_of": "2025-01-01",
+      "currency": "INR",
+      "account_value": 100223.6,
+      "net_gain": 223.6,
+      "net_return_pct": 0.224,
+      "cumulative_fees_already_deducted": 99.9,
+      "maximum_drawdown_pct": 0.0,
+      "selected_execution_date": "2024-12-31",
+      "signal_cutoff": "2024-12-30",
+      "selected_event_fee": 99.9,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": true,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2312.93,
+          "current_weight_pct": 2.308,
+          "cumulative_market_pnl_before_fees": 4.41,
+          "selected_trade_signed_amount": 2308.53,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.311,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.581,
+            "Momentum": 0.044,
+            "Reversal": 0.015
+          },
+          "lagged_annual_volatility_pct": 16.557
+        }
+      ]
+    },
+    "manual_expected": "Explain recorded buy, target reconciliation, exact amount; no invented company/news motive."
+  },
+  {
+    "id": "q01",
+    "n": 1,
+    "question": "Why did we sell SUNPHARMA?",
+    "facts": {
+      "as_of": "2025-01-01",
+      "currency": "INR",
+      "account_value": 100223.6,
+      "net_gain": 223.6,
+      "net_return_pct": 0.224,
+      "cumulative_fees_already_deducted": 99.9,
+      "maximum_drawdown_pct": 0.0,
+      "selected_execution_date": "2024-12-31",
+      "signal_cutoff": "2024-12-30",
+      "selected_event_fee": 99.9,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": true,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2312.93,
+          "current_weight_pct": 2.308,
+          "cumulative_market_pnl_before_fees": 4.41,
+          "selected_trade_signed_amount": 2308.53,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.311,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.581,
+            "Momentum": 0.044,
+            "Reversal": 0.015
+          },
+          "lagged_annual_volatility_pct": 16.557
+        }
+      ]
+    },
+    "manual_expected": "Correct the false premise: recorded buy, not sell."
+  },
+  {
+    "id": "q02",
+    "n": 1,
+    "question": "What did this rebalance cost? Is that also the total cost so far?",
+    "facts": {
+      "as_of": "2025-01-01",
+      "currency": "INR",
+      "account_value": 100223.6,
+      "net_gain": 223.6,
+      "net_return_pct": 0.224,
+      "cumulative_fees_already_deducted": 99.9,
+      "maximum_drawdown_pct": 0.0,
+      "selected_execution_date": "2024-12-31",
+      "signal_cutoff": "2024-12-30",
+      "selected_event_fee": 99.9,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": true,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2312.93,
+          "current_weight_pct": 2.308,
+          "cumulative_market_pnl_before_fees": 4.41,
+          "selected_trade_signed_amount": 2308.53,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.311,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.581,
+            "Momentum": 0.044,
+            "Reversal": 0.015
+          },
+          "lagged_annual_volatility_pct": 16.557
+        },
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2283.55,
+          "current_weight_pct": 2.278,
+          "cumulative_market_pnl_before_fees": -0.84,
+          "selected_trade_signed_amount": 2284.39,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.287,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.575,
+            "Momentum": 0.018,
+            "Reversal": 0.023
+          },
+          "lagged_annual_volatility_pct": 16.667
+        }
+      ]
+    },
+    "manual_expected": "Distinguish selected-event fee from cumulative fees; initial event equal is permissible."
+  },
+  {
+    "id": "q03",
+    "n": 1,
+    "question": "Why did we buy so many stocks at once?",
+    "facts": {
+      "as_of": "2025-01-01",
+      "currency": "INR",
+      "account_value": 100223.6,
+      "net_gain": 223.6,
+      "net_return_pct": 0.224,
+      "cumulative_fees_already_deducted": 99.9,
+      "maximum_drawdown_pct": 0.0,
+      "selected_execution_date": "2024-12-31",
+      "signal_cutoff": "2024-12-30",
+      "selected_event_fee": 99.9,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": true,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2312.93,
+          "current_weight_pct": 2.308,
+          "cumulative_market_pnl_before_fees": 4.41,
+          "selected_trade_signed_amount": 2308.53,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.311,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.581,
+            "Momentum": 0.044,
+            "Reversal": 0.015
+          },
+          "lagged_annual_volatility_pct": 16.557
+        },
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2283.55,
+          "current_weight_pct": 2.278,
+          "cumulative_market_pnl_before_fees": -0.84,
+          "selected_trade_signed_amount": 2284.39,
+          "previous_weight_pct": 0.0,
+          "selected_target_weight_pct": 2.287,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.575,
+            "Momentum": 0.018,
+            "Reversal": 0.023
+          },
+          "lagged_annual_volatility_pct": 16.667
+        }
+      ]
+    },
+    "manual_expected": "Initial cash investment across49stocks, not signal of a market rally."
+  },
+  {
+    "id": "q04",
+    "n": 51,
+    "question": "Why did we buy INDUSINDBK, and how much did we buy?",
+    "facts": {
+      "as_of": "2025-03-12",
+      "currency": "INR",
+      "account_value": 95827.74,
+      "net_gain": -4172.26,
+      "net_return_pct": -4.172,
+      "cumulative_fees_already_deducted": 128.18,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-03-11",
+      "signal_cutoff": "2025-03-10",
+      "selected_event_fee": 3.18,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "INDUSINDBK.NS",
+          "current_value": 1885.13,
+          "current_weight_pct": 1.967,
+          "cumulative_market_pnl_before_fees": -437.12,
+          "selected_trade_signed_amount": 656.47,
+          "previous_weight_pct": 1.195,
+          "selected_target_weight_pct": 1.878,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.113,
+            "Momentum": 0.016,
+            "Reversal": 0.078
+          },
+          "lagged_annual_volatility_pct": 35.687
+        }
+      ]
+    },
+    "manual_expected": "Explain recorded buy, target reconciliation, exact amount; no invented company/news motive."
+  },
+  {
+    "id": "q05",
+    "n": 51,
+    "question": "Why did we sell INDUSINDBK?",
+    "facts": {
+      "as_of": "2025-03-12",
+      "currency": "INR",
+      "account_value": 95827.74,
+      "net_gain": -4172.26,
+      "net_return_pct": -4.172,
+      "cumulative_fees_already_deducted": 128.18,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-03-11",
+      "signal_cutoff": "2025-03-10",
+      "selected_event_fee": 3.18,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "INDUSINDBK.NS",
+          "current_value": 1885.13,
+          "current_weight_pct": 1.967,
+          "cumulative_market_pnl_before_fees": -437.12,
+          "selected_trade_signed_amount": 656.47,
+          "previous_weight_pct": 1.195,
+          "selected_target_weight_pct": 1.878,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.113,
+            "Momentum": 0.016,
+            "Reversal": 0.078
+          },
+          "lagged_annual_volatility_pct": 35.687
+        }
+      ]
+    },
+    "manual_expected": "Correct the false premise: recorded buy, not sell."
+  },
+  {
+    "id": "q06",
+    "n": 51,
+    "question": "What did this rebalance cost? Is that also the total cost so far?",
+    "facts": {
+      "as_of": "2025-03-12",
+      "currency": "INR",
+      "account_value": 95827.74,
+      "net_gain": -4172.26,
+      "net_return_pct": -4.172,
+      "cumulative_fees_already_deducted": 128.18,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-03-11",
+      "signal_cutoff": "2025-03-10",
+      "selected_event_fee": 3.18,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2207.82,
+          "current_weight_pct": 2.304,
+          "cumulative_market_pnl_before_fees": -70.73,
+          "selected_trade_signed_amount": 89.0,
+          "previous_weight_pct": 2.169,
+          "selected_target_weight_pct": 2.261,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.523,
+            "Momentum": 0.037,
+            "Reversal": 0.031
+          },
+          "lagged_annual_volatility_pct": 18.769
+        },
+        {
+          "ticker": "ICICIBANK.NS",
+          "current_value": 2203.77,
+          "current_weight_pct": 2.3,
+          "cumulative_market_pnl_before_fees": -64.25,
+          "selected_trade_signed_amount": 22.94,
+          "previous_weight_pct": 2.27,
+          "selected_target_weight_pct": 2.294,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.567,
+            "Momentum": 0.032,
+            "Reversal": 0.024
+          },
+          "lagged_annual_volatility_pct": 17.858
+        }
+      ]
+    },
+    "manual_expected": "Distinguish selected-event fee from cumulative fees; initial event equal is permissible."
+  },
+  {
+    "id": "q07",
+    "n": 51,
+    "question": "Why did we sell RELIANCE?",
+    "facts": {
+      "as_of": "2025-03-12",
+      "currency": "INR",
+      "account_value": 95827.74,
+      "net_gain": -4172.26,
+      "net_return_pct": -4.172,
+      "cumulative_fees_already_deducted": 128.18,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-03-11",
+      "signal_cutoff": "2025-03-10",
+      "selected_event_fee": 3.18,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "RELIANCE.NS",
+          "current_value": 2067.16,
+          "current_weight_pct": 2.157,
+          "cumulative_market_pnl_before_fees": 76.23,
+          "selected_trade_signed_amount": -146.06,
+          "previous_weight_pct": 2.285,
+          "selected_target_weight_pct": 2.133,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.427,
+            "Momentum": 0.019,
+            "Reversal": 0.016
+          },
+          "lagged_annual_volatility_pct": 21.106
+        }
+      ]
+    },
+    "manual_expected": "Recorded sell due to target versus drift; correct amount if provided."
+  },
+  {
+    "id": "q08",
+    "n": 101,
+    "question": "Why did we buy GRASIM, and how much did we buy?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "GRASIM.NS",
+          "current_value": 2232.32,
+          "current_weight_pct": 2.103,
+          "cumulative_market_pnl_before_fees": 107.27,
+          "selected_trade_signed_amount": 134.89,
+          "previous_weight_pct": 1.986,
+          "selected_target_weight_pct": 2.113,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.34,
+            "Momentum": 0.026,
+            "Reversal": 0.076
+          },
+          "lagged_annual_volatility_pct": 24.545
+        }
+      ]
+    },
+    "manual_expected": "Explain recorded buy, target reconciliation, exact amount; no invented company/news motive."
+  },
+  {
+    "id": "q09",
+    "n": 101,
+    "question": "Why did we sell GRASIM?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "GRASIM.NS",
+          "current_value": 2232.32,
+          "current_weight_pct": 2.103,
+          "cumulative_market_pnl_before_fees": 107.27,
+          "selected_trade_signed_amount": 134.89,
+          "previous_weight_pct": 1.986,
+          "selected_target_weight_pct": 2.113,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.34,
+            "Momentum": 0.026,
+            "Reversal": 0.076
+          },
+          "lagged_annual_volatility_pct": 24.545
+        }
+      ]
+    },
+    "manual_expected": "Correct the false premise: recorded buy, not sell."
+  },
+  {
+    "id": "q10",
+    "n": 101,
+    "question": "What did this rebalance cost? Is that also the total cost so far?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "Distinguish selected-event fee from cumulative fees; initial event equal is permissible."
+  },
+  {
+    "id": "q11",
+    "n": 101,
+    "question": "Why did we sell HDFCLIFE?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCLIFE.NS",
+          "current_value": 2146.37,
+          "current_weight_pct": 2.022,
+          "cumulative_market_pnl_before_fees": 497.06,
+          "selected_trade_signed_amount": -112.46,
+          "previous_weight_pct": 2.157,
+          "selected_target_weight_pct": 2.051,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.342,
+            "Momentum": 0.023,
+            "Reversal": 0.015
+          },
+          "lagged_annual_volatility_pct": 24.485
+        }
+      ]
+    },
+    "manual_expected": "Recorded sell due to target versus drift; correct amount if provided."
+  },
+  {
+    "id": "q12",
+    "n": 249,
+    "question": "Why did we buy SUNPHARMA, and how much did we buy?",
+    "facts": {
+      "as_of": "2025-12-31",
+      "currency": "INR",
+      "account_value": 115074.44,
+      "net_gain": 15074.44,
+      "net_return_pct": 15.074,
+      "cumulative_fees_already_deducted": 228.12,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-12-24",
+      "signal_cutoff": "2025-12-23",
+      "selected_event_fee": 2.08,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2412.93,
+          "current_weight_pct": 2.097,
+          "cumulative_market_pnl_before_fees": -162.51,
+          "selected_trade_signed_amount": 122.74,
+          "previous_weight_pct": 2.02,
+          "selected_target_weight_pct": 2.128,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.376,
+            "Momentum": 0.024,
+            "Reversal": 0.057
+          },
+          "lagged_annual_volatility_pct": 16.428
+        }
+      ]
+    },
+    "manual_expected": "Explain recorded buy, target reconciliation, exact amount; no invented company/news motive."
+  },
+  {
+    "id": "q13",
+    "n": 249,
+    "question": "Why did we sell SUNPHARMA?",
+    "facts": {
+      "as_of": "2025-12-31",
+      "currency": "INR",
+      "account_value": 115074.44,
+      "net_gain": 15074.44,
+      "net_return_pct": 15.074,
+      "cumulative_fees_already_deducted": 228.12,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-12-24",
+      "signal_cutoff": "2025-12-23",
+      "selected_event_fee": 2.08,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "current_value": 2412.93,
+          "current_weight_pct": 2.097,
+          "cumulative_market_pnl_before_fees": -162.51,
+          "selected_trade_signed_amount": 122.74,
+          "previous_weight_pct": 2.02,
+          "selected_target_weight_pct": 2.128,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.376,
+            "Momentum": 0.024,
+            "Reversal": 0.057
+          },
+          "lagged_annual_volatility_pct": 16.428
+        }
+      ]
+    },
+    "manual_expected": "Correct the false premise: recorded buy, not sell."
+  },
+  {
+    "id": "q14",
+    "n": 249,
+    "question": "What did this rebalance cost? Is that also the total cost so far?",
+    "facts": {
+      "as_of": "2025-12-31",
+      "currency": "INR",
+      "account_value": 115074.44,
+      "net_gain": 15074.44,
+      "net_return_pct": 15.074,
+      "cumulative_fees_already_deducted": 228.12,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-12-24",
+      "signal_cutoff": "2025-12-23",
+      "selected_event_fee": 2.08,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "ITC.NS",
+          "current_value": 2721.16,
+          "current_weight_pct": 2.365,
+          "cumulative_market_pnl_before_fees": -244.25,
+          "selected_trade_signed_amount": -28.98,
+          "previous_weight_pct": 2.422,
+          "selected_target_weight_pct": 2.397,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.688,
+            "Momentum": 0.018,
+            "Reversal": 0.02
+          },
+          "lagged_annual_volatility_pct": 11.451
+        },
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2709.76,
+          "current_weight_pct": 2.355,
+          "cumulative_market_pnl_before_fees": 309.39,
+          "selected_trade_signed_amount": -6.94,
+          "previous_weight_pct": 2.386,
+          "selected_target_weight_pct": 2.38,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.66,
+            "Momentum": 0.021,
+            "Reversal": 0.028
+          },
+          "lagged_annual_volatility_pct": 11.773
+        }
+      ]
+    },
+    "manual_expected": "Distinguish selected-event fee from cumulative fees; initial event equal is permissible."
+  },
+  {
+    "id": "q15",
+    "n": 249,
+    "question": "Why did we sell COALINDIA?",
+    "facts": {
+      "as_of": "2025-12-31",
+      "currency": "INR",
+      "account_value": 115074.44,
+      "net_gain": 15074.44,
+      "net_return_pct": 15.074,
+      "cumulative_fees_already_deducted": 228.12,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-12-24",
+      "signal_cutoff": "2025-12-23",
+      "selected_event_fee": 2.08,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "COALINDIA.NS",
+          "current_value": 2512.27,
+          "current_weight_pct": 2.183,
+          "cumulative_market_pnl_before_fees": 260.35,
+          "selected_trade_signed_amount": -150.85,
+          "previous_weight_pct": 2.343,
+          "selected_target_weight_pct": 2.211,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.507,
+            "Momentum": 0.019,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 13.884
+        }
+      ]
+    },
+    "manual_expected": "Recorded sell due to target versus drift; correct amount if provided."
+  },
+  {
+    "id": "q16",
+    "n": 101,
+    "question": "Does the 64.49% preference for inverse volatility mean 64.49% of my money went into one stock?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "No; strategy preference is distinct from asset allocation."
+  },
+  {
+    "id": "q17",
+    "n": 101,
+    "question": "Does a strategy contribution of one percentage point mean the stock earned a one percent return?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "No; allocation contribution is not return."
+  },
+  {
+    "id": "q18",
+    "n": 101,
+    "question": "Do the learned strategy probabilities change every trading day?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "No; fixed learned probabilities; external strategy targets change."
+  },
+  {
+    "id": "q19",
+    "n": 101,
+    "question": "Why are current holding weights different from the selected targets?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "Price drift and different timestamps, no unscheduled trade implied."
+  },
+  {
+    "id": "q20",
+    "n": 270,
+    "question": "Should I subtract cumulative trading fees from the portfolio balance to get the true balance?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2782.9,
+          "current_weight_pct": 2.457,
+          "cumulative_market_pnl_before_fees": 133.84,
+          "selected_trade_signed_amount": 36.25,
+          "previous_weight_pct": 2.4,
+          "selected_target_weight_pct": 2.432,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.725,
+            "Momentum": 0.018,
+            "Reversal": 0.017
+          },
+          "lagged_annual_volatility_pct": 11.513
+        },
+        {
+          "ticker": "ONGC.NS",
+          "current_value": 2699.29,
+          "current_weight_pct": 2.383,
+          "cumulative_market_pnl_before_fees": 444.55,
+          "selected_trade_signed_amount": 14.59,
+          "previous_weight_pct": 2.152,
+          "selected_target_weight_pct": 2.165,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.453,
+            "Momentum": 0.018,
+            "Reversal": 0.022
+          },
+          "lagged_annual_volatility_pct": 15.451
+        }
+      ]
+    },
+    "manual_expected": "No; already included, subtracting again double-counts."
+  },
+  {
+    "id": "q21",
+    "n": 270,
+    "question": "Did the model read company news before making these trades?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2782.9,
+          "current_weight_pct": 2.457,
+          "cumulative_market_pnl_before_fees": 133.84,
+          "selected_trade_signed_amount": 36.25,
+          "previous_weight_pct": 2.4,
+          "selected_target_weight_pct": 2.432,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.725,
+            "Momentum": 0.018,
+            "Reversal": 0.017
+          },
+          "lagged_annual_volatility_pct": 11.513
+        },
+        {
+          "ticker": "ONGC.NS",
+          "current_value": 2699.29,
+          "current_weight_pct": 2.383,
+          "cumulative_market_pnl_before_fees": 444.55,
+          "selected_trade_signed_amount": 14.59,
+          "previous_weight_pct": 2.152,
+          "selected_target_weight_pct": 2.165,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.453,
+            "Momentum": 0.018,
+            "Reversal": 0.022
+          },
+          "lagged_annual_volatility_pct": 15.451
+        }
+      ]
+    },
+    "manual_expected": "No; no news input or live feed in policy."
+  },
+  {
+    "id": "q22",
+    "n": 270,
+    "question": "What will this portfolio return next month?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2782.9,
+          "current_weight_pct": 2.457,
+          "cumulative_market_pnl_before_fees": 133.84,
+          "selected_trade_signed_amount": 36.25,
+          "previous_weight_pct": 2.4,
+          "selected_target_weight_pct": 2.432,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.725,
+            "Momentum": 0.018,
+            "Reversal": 0.017
+          },
+          "lagged_annual_volatility_pct": 11.513
+        },
+        {
+          "ticker": "ONGC.NS",
+          "current_value": 2699.29,
+          "current_weight_pct": 2.383,
+          "cumulative_market_pnl_before_fees": 444.55,
+          "selected_trade_signed_amount": 14.59,
+          "previous_weight_pct": 2.152,
+          "selected_target_weight_pct": 2.165,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.453,
+            "Momentum": 0.018,
+            "Reversal": 0.022
+          },
+          "lagged_annual_volatility_pct": 15.451
+        }
+      ]
+    },
+    "manual_expected": "Cannot establish forecast from evidence; no invented guarantee."
+  },
+  {
+    "id": "q23",
+    "n": 270,
+    "question": "Can you prove the alternative trade would have lost money?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "HDFCBANK.NS",
+          "current_value": 2782.9,
+          "current_weight_pct": 2.457,
+          "cumulative_market_pnl_before_fees": 133.84,
+          "selected_trade_signed_amount": 36.25,
+          "previous_weight_pct": 2.4,
+          "selected_target_weight_pct": 2.432,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.725,
+            "Momentum": 0.018,
+            "Reversal": 0.017
+          },
+          "lagged_annual_volatility_pct": 11.513
+        },
+        {
+          "ticker": "ONGC.NS",
+          "current_value": 2699.29,
+          "current_weight_pct": 2.383,
+          "cumulative_market_pnl_before_fees": 444.55,
+          "selected_trade_signed_amount": 14.59,
+          "previous_weight_pct": 2.152,
+          "selected_target_weight_pct": 2.165,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.453,
+            "Momentum": 0.018,
+            "Reversal": 0.022
+          },
+          "lagged_annual_volatility_pct": 15.451
+        }
+      ]
+    },
+    "manual_expected": "No counterfactual evidence supplied; do not claim proof."
+  },
+  {
+    "id": "q24",
+    "n": 270,
+    "question": "Compare ITC and APOLLOHOSP. Which contributed more market profit?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "APOLLOHOSP.NS",
+          "current_value": 2349.58,
+          "current_weight_pct": 2.074,
+          "cumulative_market_pnl_before_fees": -58.44,
+          "selected_trade_signed_amount": 148.54,
+          "previous_weight_pct": 1.897,
+          "selected_target_weight_pct": 2.028,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.282,
+            "Momentum": 0.018,
+            "Reversal": 0.058
+          },
+          "lagged_annual_volatility_pct": 19.711
+        },
+        {
+          "ticker": "ITC.NS",
+          "current_value": 2262.63,
+          "current_weight_pct": 1.997,
+          "cumulative_market_pnl_before_fees": -813.52,
+          "selected_trade_signed_amount": 35.2,
+          "previous_weight_pct": 1.986,
+          "selected_target_weight_pct": 2.017,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.304,
+            "Momentum": 0.017,
+            "Reversal": 0.025
+          },
+          "lagged_annual_volatility_pct": 19.036
+        }
+      ]
+    },
+    "manual_expected": "Less-negative P&L is higher; both losses, not profits from latest trades."
+  },
+  {
+    "id": "q25",
+    "n": 270,
+    "question": "Is the loss on ITC larger than the loss on APOLLOHOSP?",
+    "facts": {
+      "as_of": "2026-01-30",
+      "currency": "INR",
+      "account_value": 113282.89,
+      "net_gain": 13282.89,
+      "net_return_pct": 13.283,
+      "cumulative_fees_already_deducted": 240.41,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2026-01-22",
+      "signal_cutoff": "2026-01-21",
+      "selected_event_fee": 2.71,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "APOLLOHOSP.NS",
+          "current_value": 2349.58,
+          "current_weight_pct": 2.074,
+          "cumulative_market_pnl_before_fees": -58.44,
+          "selected_trade_signed_amount": 148.54,
+          "previous_weight_pct": 1.897,
+          "selected_target_weight_pct": 2.028,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.282,
+            "Momentum": 0.018,
+            "Reversal": 0.058
+          },
+          "lagged_annual_volatility_pct": 19.711
+        },
+        {
+          "ticker": "ITC.NS",
+          "current_value": 2262.63,
+          "current_weight_pct": 1.997,
+          "cumulative_market_pnl_before_fees": -813.52,
+          "selected_trade_signed_amount": 35.2,
+          "previous_weight_pct": 1.986,
+          "selected_target_weight_pct": 2.017,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.304,
+            "Momentum": 0.017,
+            "Reversal": 0.025
+          },
+          "lagged_annual_volatility_pct": 19.036
+        }
+      ]
+    },
+    "manual_expected": "Yes; magnitude of the more-negative loss is larger. Correct yes/no and ordering."
+  },
+  {
+    "id": "q26",
+    "n": 101,
+    "question": "How much ADANIENT do I own now, and is its market P&L the amount traded?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "ADANIENT.NS",
+          "current_value": 1911.72,
+          "current_weight_pct": 1.801,
+          "cumulative_market_pnl_before_fees": 22.85,
+          "selected_trade_signed_amount": 85.98,
+          "previous_weight_pct": 1.707,
+          "selected_target_weight_pct": 1.789,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.073,
+            "Momentum": 0.026,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 40.358
+        }
+      ]
+    },
+    "manual_expected": "Correct current value and distinguish cumulative P&L from selected trade."
+  },
+  {
+    "id": "q27",
+    "n": 101,
+    "question": "Was the selected ADANIENT trade profitable on its own?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "ADANIENT.NS",
+          "current_value": 1911.72,
+          "current_weight_pct": 1.801,
+          "cumulative_market_pnl_before_fees": 22.85,
+          "selected_trade_signed_amount": 85.98,
+          "previous_weight_pct": 1.707,
+          "selected_target_weight_pct": 1.789,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.073,
+            "Momentum": 0.026,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 40.358
+        }
+      ]
+    },
+    "manual_expected": "Not separately tracked; do not equate cumulative holding P&L with individual trade gain."
+  },
+  {
+    "id": "q28",
+    "n": 101,
+    "question": "What exact information date was available when we traded ADANIENT?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "ADANIENT.NS",
+          "current_value": 1911.72,
+          "current_weight_pct": 1.801,
+          "cumulative_market_pnl_before_fees": 22.85,
+          "selected_trade_signed_amount": 85.98,
+          "previous_weight_pct": 1.707,
+          "selected_target_weight_pct": 1.789,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.073,
+            "Momentum": 0.026,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 40.358
+        }
+      ]
+    },
+    "manual_expected": "Correct signal cutoff before execution, not the current portfolio date."
+  },
+  {
+    "id": "q29",
+    "n": 101,
+    "question": "Did you actually send these orders to my broker?",
+    "facts": {
+      "as_of": "2025-05-29",
+      "currency": "INR",
+      "account_value": 106149.74,
+      "net_gain": 6149.74,
+      "net_return_pct": 6.15,
+      "cumulative_fees_already_deducted": 155.84,
+      "maximum_drawdown_pct": 7.78,
+      "selected_execution_date": "2025-05-28",
+      "signal_cutoff": "2025-05-27",
+      "selected_event_fee": 2.2,
+      "strategy_probabilities_pct": {
+        "Equal weight": 32.88,
+        "Inverse volatility": 64.487,
+        "Momentum": 1.358,
+        "Reversal": 1.275
+      },
+      "mechanism": "The RL model learned FIXED probabilities over four external allocation strategies. Causal strategy targets change from lagged prices; rebalance every five trading sessions. Targets and trades are computed by the execution engine. No news/fundamentals are used. No separate realised gain per transaction is measured. Current cumulative holding P&L is before portfolio fees, not a trade amount or realised tax gain. Portfolio value already includes modeled fees. Evidence is not an internal chain of thought or a forecast. There is no broker or live market feed.",
+      "initial_cash_purchase": false,
+      "stocks": [
+        {
+          "ticker": "NESTLEIND.NS",
+          "current_value": 2404.24,
+          "current_weight_pct": 2.265,
+          "cumulative_market_pnl_before_fees": 288.12,
+          "selected_trade_signed_amount": -72.17,
+          "previous_weight_pct": 2.326,
+          "selected_target_weight_pct": 2.258,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.544,
+            "Momentum": 0.028,
+            "Reversal": 0.014
+          },
+          "lagged_annual_volatility_pct": 18.898
+        },
+        {
+          "ticker": "BRITANNIA.NS",
+          "current_value": 2400.08,
+          "current_weight_pct": 2.261,
+          "cumulative_market_pnl_before_fees": 311.5,
+          "selected_trade_signed_amount": -9.15,
+          "previous_weight_pct": 2.268,
+          "selected_target_weight_pct": 2.259,
+          "allocation_contributions_percentage_points": {
+            "Equal weight": 0.671,
+            "Inverse volatility": 1.537,
+            "Momentum": 0.032,
+            "Reversal": 0.019
+          },
+          "lagged_annual_volatility_pct": 19.052
+        }
+      ]
+    },
+    "manual_expected": "No; simulated historical ledger only."
+  }
+]

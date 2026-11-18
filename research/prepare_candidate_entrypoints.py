@@ -1,0 +1,17 @@
+from pathlib import Path
+root=Path(__file__).parent/'rl_candidate_trial'
+p=root/'train_direct.py';s=p.read_text()
+s=s.replace('from exposure_market import Market,evaluate,tensor,LEVELS','from candidate_market import Market,evaluate,tensor')
+s=s.replace('from direct_ledger import path_returns,negative_sharpe','from candidate_path import path_returns\nfrom direct_ledger import negative_sharpe')
+s=s.replace('observations=[];old=[];exposures=[]','observations=[];old=[];candidates=[]')
+s=s.replace("exposure=float(p@torch.tensor(LEVELS));observations.append(obs);old.append(p.numpy());exposures.append(exposure)","targets=obs['candidate_targets'];observations.append(obs);old.append(p.numpy());candidates.append(targets)")
+s=s.replace('np.ones(e.n_assets)*exposure/e.n_assets','p.numpy()@targets')
+s=s.replace('torch.tensor(exposures,dtype=torch.float64,requires_grad=True)','torch.tensor(np.asarray(old),dtype=torch.float64,requires_grad=True)')
+s=s.replace('path_returns(leaves,initial_weights,initial_cash,relatives)','path_returns(leaves,np.asarray(candidates),initial_weights,initial_cash,relatives)')
+s=s.replace('../sector_data_20261107/sector9_development_through2024.csv','../data/nifty50_prices.csv')
+s=s.replace("train=Market(data,'2001-01-01','2018-12-31');val=Market(data,'2019-01-01','2021-12-31');dev=Market(data,'2022-01-01','2024-12-31')","train=Market(data,'2019-01-01','2021-12-31');val=Market(data,'2022-01-01','2022-12-31');dev=Market(data,'2023-01-01','2024-12-31')")
+s=s.replace("'training':'2001-2018'","'training':'2019-2021'").replace("'selection':'2019-2021 net", "'selection':'2022 net").replace("'development':'2022-2024", "'development':'2023-2024").replace('complete 2001-2018','complete 2019-2021')
+s=s.replace('Deterministic expected equity exposure from .25/.5/.75/1','Deterministic mixture of equal weight, inverse volatility, momentum, reversal')
+s=s.replace('exposure=p@torch.tensor(LEVELS);kl=', 'kl=').replace('loss=exposure*coefficient.detach()+','loss=(p*coefficient.detach()).sum()+')
+p.write_text(s)
+p=root/'audit_numeric.py';s=p.read_text().replace('from exposure_market import','from candidate_market import').replace('../sector_data_20261107/sector9_development_through2024.csv','../data/nifty50_prices.csv').replace("val=Market(data,'2019-01-01','2021-12-31');dev=Market(data,'2022-01-01','2024-12-31')","val=Market(data,'2022-01-01','2022-12-31');dev=Market(data,'2023-01-01','2024-12-31')");p.write_text(s)

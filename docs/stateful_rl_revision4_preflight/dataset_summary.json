@@ -1,0 +1,34 @@
+{
+  "training": {
+    "class_pool_sizes": {
+      "0": 289,
+      "1": 753,
+      "2": 61,
+      "3": 1018,
+      "4": 2445,
+      "5": 833,
+      "6": 601
+    },
+    "examples": 2048,
+    "training": true,
+    "date_start": "2015-01-01",
+    "date_end": "2022-12-30",
+    "synthetic_risk_examples": 745
+  },
+  "gate": {
+    "class_pool_sizes": {
+      "0": 98,
+      "1": 397,
+      "2": 0,
+      "3": 283,
+      "4": 1223,
+      "5": 273,
+      "6": 126
+    },
+    "examples": 96,
+    "training": false,
+    "date_start": "2023-01-02",
+    "date_end": "2023-12-29",
+    "synthetic_risk_examples": 0
+  }
+}
