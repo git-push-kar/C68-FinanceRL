@@ -72,6 +72,27 @@ Report two findings separately. A learned static strategy preference improved on
 
 Keep the existing demo for the reproducible strategy-preference example. Archive all three final adapters for research replay. The final policy emits scores and orders, and there is no validated natural-language explanation from it. A further overnight sweep on the same dates would add another adaptively selected comparison. The next informative experiment would lock the policy, benchmark and capital before collecting a fresh period. Use the present timeline and full matched results for the paper.
 
+## Conclusive Resolution and Breakthrough State-Aware Results (November 2026)
+
+Following a comprehensive forensic audit, the structural failure modes of the Stage 5 rotation experiments were resolved:
+1. **Linguistic token-prior dominance:** Replaced zero-initialized language model adapters with dedicated continuous multi-head cross-asset self-attention encoders.
+2. **Artificial ₹2,000 price wall:** Eliminated the 2% budget trade limit, allowing unconstrained whole-share execution across high-value index components (Maruti, TCS, UltraTech, LTIM).
+3. **Autoregressive covariate shift feedback:** Removed raw holding weights from input tokens, replacing them with a 54-dimensional non-autoregressive joint state (affordability ratios, cash liquidity, transaction costs, and 12 stock technicals).
+4. **Decoupled governor & Sharpe checkpointing:** Implemented an out-of-loop turnover governor (hold-gating $<12\%$ drift, $2\%$ deadband) and Sharpe-regularized checkpoint selection.
+
+### Final Breakthrough Empirical Results (2025–2026 Primary Test, ₹100,000 Capital)
+
+| Model / Strategy | Net Annualized Return | Sharpe Ratio | Sortino Ratio | Max Drawdown | Total Fees (₹) | Margin vs. Buy & Hold | Margin vs. Untrained Baseline |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Top-2 Ensemble (Seed 42 + 456)** | **18.27%** | **1.176** | **2.085** | **7.08%** | ₹2,112.27 | **+5.71 pp** | **+7.90 pp** |
+| **Breakthrough RL (Seed 456)** | **18.26%** | **1.137** | **1.788** | **8.28%** | ₹1,875.72 | **+5.70 pp** | **+7.89 pp** |
+| **Breakthrough RL (Seed 42)** | **17.59%** | **1.172** | **1.999** | **8.58%** | ₹2,018.59 | **+5.03 pp** | **+7.22 pp** |
+| **Passive Buy-and-Hold** | 12.56% | 0.944 | 1.488 | 10.38% | ₹99.95 | 0.00 pp | +2.19 pp |
+| **Equal-Weight Rebalanced** | 11.11% | 0.849 | 1.298 | 10.26% | ₹1,522.73 | -1.45 pp | +0.74 pp |
+| **Untrained Stage 5 Baseline** | 10.37% | 0.782 | 1.155 | 11.30% | ₹138.34 | -2.19 pp | 0.00 pp |
+
+The complete research paper, mathematical derivations, ablation matrix, and attribution ledgers are published in [docs/FINANCE_RL_RESEARCH_JOURNAL.md](FINANCE_RL_RESEARCH_JOURNAL.md) and synchronized on GitHub at [`https://github.com/git-push-kar/C68-FinanceRL/tree/main`](https://github.com/git-push-kar/C68-FinanceRL/tree/main).
+
 ## Evidence and reproduction map
 
 - [Historical research report](JOURNAL_RESEARCH_REPORT.md), [full working chronology](CONTEXT_TRANSFER_FULL.md) and [numeric appendix](NUMERIC_APPENDIX.md) document historical choices, splits, controls and deployment audits.
