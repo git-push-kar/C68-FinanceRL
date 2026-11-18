@@ -7,7 +7,11 @@
 This master document consolidates the complete forensic experimental chronology, failure diagnostics, model architecture, mathematical derivations, simulation integration, primary test set results (2025–2026), and live forward extension evaluations on recent market data (February 2, 2026 – November 17, 2026).
 
 **Key Breakthrough Milestones:**
-1. **Paper Trading Simulation Engine Merger:** The state-aware `InternVL3-2B + LoRA RL` policy (`internvl3_state_rl`) has been merged into the live paper trading demonstration engine (`demo/finance/policy.py`, `demo/finance/paper_engine.py`, `demo/finance/active_model.json`, `demo/finance/deployment.json`, `demo/api/paper.py`). All 37 tests across the simulation suite pass out-of-the-box (`pytest demo/tests -v`).
+1. **Full Integration into Main Polyvalent Demo & Three Simulation Modes:** The state-aware `InternVL3-2B + LoRA RL` policy (`internvl3_state_rl`) has been merged into the standalone demo (`demo/`) and fully integrated into the unified Polyvalent demo (`c:\Users\Admin\Desktop\final`) alongside Chat, Reasoning, and Anomaly specialists. Features 3 distinct simulation modes:
+   - **Mode 1 (Benchmark Replay):** 270 sessions (Jan 2025 – Jan 2026), +14.53% return net of fees.
+   - **Mode 2 (2026 YTD History Replay):** 216+ sessions (Jan 1, 2026 – Yesterday) continuous trading history.
+   - **Mode 3 (Live Real-Time Market):** Today's live session with Yahoo Finance live quotes, InternVL3 model decision, and day settlement into permanent JSON storage (`live_portfolio_store.json`).
+   - **One-Command Launcher:** `run_demo.bat` and `Start-Demo.ps1` launch the unified server on `http://127.0.0.1:8000`. All 75 tests pass (`pytest tests -q`).
 2. **Primary Test Set Performance (2025-01-01 to 2026-01-30, 270 Sessions):**
    - **Trained InternVL3-2B + LoRA RL:** **+14.53% Net Return, 1.121 Sharpe, 1.714 Sortino, 8.87% Max Drawdown, ₹785.24 Fees**.
    - **Untrained InternVL3-2B Baseline:** +13.73% Net Return, 1.060 Sharpe, 8.51% Max Drawdown.
