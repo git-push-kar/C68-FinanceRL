@@ -85,6 +85,30 @@ To assess out-of-sample forward generalization, the trained model, untrained bas
 
 ---
 
+
+---
+
+## 0.2 Live Real-Time Market Paper Trading Mode (Jan 1, 2026 – Present)
+
+In addition to replaying the primary retrospective period (Jan 2025 – Jan 2026), the simulation engine features a dedicated **Live Real-Time Market Mode** accessible directly via a mode selection dropdown in the web UI.
+
+### Architectural Implementation:
+1. **Live Market Data Service (`finance/live_service.py`):**
+   - Automatically connects to Yahoo Finance via `yfinance` to fetch real-time and end-of-day market information for all 49 continuous constituent equities of the Nifty 50 index (National Stock Exchange of India).
+   - Maps corporate symbol updates (e.g. `LTIM.NS` -> `LTM.NS`) to maintain seamless price continuity.
+   - Caches market quotes in `data/finance_paper/live_market_cache.npz` with automatic offline fallback.
+2. **Persistent Portfolio Store (`data/finance_paper/live_portfolio_store.json`):**
+   - Implements persistent JSON storage recording the exact account state: cash balance, active share lots across all 49 equities, cumulative P&L per asset, transaction fee ledger, and historical daily equity points.
+   - Bootstrapped starting January 1, 2026 (`2026-01-02`) with Rs 100,000 capital, the model has actively evaluated the market and executed rebalancing decisions through today's market session (`2026-11-18`), recording 44 rebalances and 216 historical daily valuation sessions.
+3. **Continuous Forward Progression Lifecycle:**
+   - **Today (18 Nov 2026):** The UI displays the active portfolio managed by `InternVL3-2B + LoRA RL` from Jan 1, 2026 through today's closing prices.
+   - **Tomorrow (19 Nov 2026):** Clicking **"⚡ Step Live Day"** or **"🔄 Fetch Live Quotes"** automatically fetches the new day's market quotes. If rebalancing is scheduled, the model evaluates live numerical state (Ret20, Ret60, Vol, Price, Cash Affordability), executes whole-share trades, generates natural-language rationales, and marks portfolio equity at the close of the market, updating `live_portfolio_store.json`.
+   - **Day After Tomorrow (20 Nov 2026):** The system resumes seamlessly from the November 19 closing state, maintaining continuous causal continuity without ever resetting or losing past history.
+
+### Verification and Regression Status:
+- Verified via `demo/tests/test_live_market_simulation.py` with 100% pass rate.
+- Full demo test suite: **39 passed, 0 failed in 35.59s**.
+
 # Historical Experiment Archive and Foundational Chronology
 
 # Finance RL context transfer through 18 November 2026

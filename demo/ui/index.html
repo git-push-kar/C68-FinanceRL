@@ -386,30 +386,43 @@
   <aside class="fin-side" aria-label="Portfolio controls">
     <div class="card">
       <h3>Simulation</h3>
-      <div class="note">Historical Nifty market · Simulated funds</div>
-      <label class="f" for="fin-speed">Playback speed</label>
-      <select id="fin-speed" aria-label="Playback speed"><option value="500">Normal speed</option><option value="80">Fast playback</option><option value="1500">Slow playback</option></select>
-      <div class="fin-buttons"><button class="btn primary" id="fin-play">▶ Start simulation</button><button class="btn" id="fin-day">Next day</button><button class="btn" id="fin-rebalance">Next rebalance</button></div>
+      <div class="note" id="fin-subtitle">Nifty 49 Equities · InternVL3-2B State RL</div>
+      <label class="f" for="fin-mode">Simulation mode</label>
+      <select id="fin-mode" aria-label="Simulation mode">
+        <option value="historical">Preset Period (Jan 2025 – Jan 2026)</option>
+        <option value="live">Live Real-Time Market (Jan 2026 – Present)</option>
+      </select>
+      <div id="fin-playback-tools">
+        <label class="f" for="fin-speed">Playback speed</label>
+        <select id="fin-speed" aria-label="Playback speed"><option value="500">Normal speed</option><option value="80">Fast playback</option><option value="1500">Slow playback</option></select>
+      </div>
+      <div class="fin-buttons">
+        <button class="btn primary" id="fin-play">▶ Start simulation</button>
+        <button class="btn" id="fin-day">Next day</button>
+        <button class="btn" id="fin-rebalance">Next rebalance</button>
+        <button class="btn primary" id="fin-live-advance" style="display:none;">⚡ Step Live Day</button>
+        <button class="btn" id="fin-live-refresh" style="display:none;">🔄 Fetch Live Quotes</button>
+      </div>
       <div class="fin-status" id="fin-status" role="status"><span class="dot"></span><span id="fin-statusText">Preparing your portfolio…</span></div>
       <div class="fin-progress" aria-label="Simulation progress"><i id="fin-progress" style="width:0%"></i></div>
-      <div class="note">1 January 2025 – 30 January 2026<br>270 trading sessions</div>
+      <div class="note" id="fin-sessionInfo">1 January 2025 – 30 January 2026<br>270 trading sessions</div>
     </div>
     <form class="card" id="fin-settings">
       <h3>Paper account</h3>
       <label class="f" for="fin-capital">Starting capital (INR)</label>
       <input class="fin-capital" id="fin-capital" type="number" min="100" max="10000000" step="any" value="100000" required>
       <button class="btn fin-reset" type="submit">Reset portfolio</button>
-      <div class="note">Restarts the same historical period with a fresh account.</div>
+      <div class="note" id="fin-resetNote">Restarts the same historical period with a fresh account.</div>
     </form>
     <details class="card"><summary>About this demonstration</summary>
-      <p class="note">The selected finance RL adapter chooses a learned mixture of allocation strategies. Lagged prices update the stock targets; trades are simulated every five sessions with modeled fees.</p>
-      <p class="note">The account advances through recorded market data. It is not connected to a broker or a live price feed.</p>
+      <p class="note">The selected state-aware InternVL3-2B + LoRA RL adapter evaluates all 49 Nifty equities using live portfolio state and market technical indicators.</p>
+      <p class="note" id="fin-modeDesc">Preset mode replays the primary 2025–2026 test set. Live mode tracks the model-managed portfolio from Jan 1, 2026 through today, and seamlessly resumes on tomorrow's real-time data.</p>
       <p class="note">Decision records show actual allocations, inputs and accounting. Generated Finance conversation was removed after factual testing.</p>
       <p class="note" id="fin-source"></p>
     </details>
   </aside>
   <div class="fin-main">
-    <div class="fin-heading"><div><h2>Your paper portfolio</h2><div class="note">Watch the trained portfolio act as the market unfolds.</div></div><span class="pill" id="fin-date">—</span></div>
+    <div class="fin-heading"><div><h2>Your paper portfolio</h2><div class="note" id="fin-headlineNote">Watch the trained portfolio act as the market unfolds.</div></div><span class="pill" id="fin-date">—</span></div>
     <div id="fin-error" class="error" role="alert" hidden></div>
     <div class="kpis" aria-label="Portfolio overview">
       <div class="kpi"><div class="k">Portfolio value</div><div class="v" id="fin-equity">—</div><small id="fin-initial">—</small></div>

@@ -6,6 +6,21 @@ The fine-tuned model evaluates all 49 stocks, computes whole-share integer alloc
 
 The selected InternVL3-2B Nifty RL adapter (`adapters/internvl3_state_rl`, SHA256: `749d98f2420b5ce601b10d1b191dbb2d9985ecac5ce9f290b55defa588c1d340`) controls the historical paper account. Backward compatibility with the legacy strategy-mixture reference is preserved for regression testing.
 
+## Simulation Modes in the Interface
+
+The paper trading interface now features a **Simulation Mode** dropdown selector with two operating modes:
+
+1. **Preset Period (Jan 2025 – Jan 2026):**
+   - Replays the 270-session primary retrospective test set.
+   - Interactive day-by-day autonomous playback, step-by-step advance, and rebalance inspection.
+   - Preserves benchmark comparisons against Untrained LLM and Buy & Hold.
+
+2. **Live Real-Time Market (Jan 2026 – Present):**
+   - **Forward Real-Time Mode:** Tracks the portfolio actively managed by the model starting from January 1, 2026 up to today's market session (`2026-11-18`).
+   - **Live Market Fetching:** Uses `yfinance` to fetch live daily quotes across all 49 Nifty constituent equities from the National Stock Exchange of India.
+   - **Continuous Day-to-Day Resumption:** Persists portfolio holdings, cash, cost basis, cumulative P&L, and model rationales in `data/finance_paper/live_portfolio_store.json`.
+   - **Next Trading Day Progression:** When tomorrow (e.g., Nov 19, 2026) arrives, clicking **"⚡ Step Live Day"** or **"🔄 Fetch Live Quotes"** ingests the new day's market data, allows the `InternVL3-2B + LoRA RL` adapter to evaluate the updated portfolio state, executes whole-share trades if rebalance is due, and marks the account to market with the market close. On the day after tomorrow (Nov 20, 2026), it resumes seamlessly from Nov 19's closing state.
+
 ## On this PC
 
 ```powershell
