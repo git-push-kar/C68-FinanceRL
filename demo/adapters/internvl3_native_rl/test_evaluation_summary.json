@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-11-18 15:52:09",
+  "test_period": "2025-01-01 to 2026-01-30",
+  "primary_capital_100k": {
+    "trained_rl": {
+      "return": 0.14533572273940187,
+      "end_equity": 114533.5722739402,
+      "sharpe": 1.1212863685068508,
+      "sortino": 1.826869893364208,
+      "max_drawdown": 0.08874457444408335,
+      "fees": 785.2361039119428,
+      "slippage": 392.59287406886375,
+      "sessions": 270,
+      "decisions_count": 14
+    },
+    "untrained_llm": {
+      "return": 0.1372750066600168,
+      "end_equity": 113727.50066600168,
+      "sharpe": 1.0596055055258862,
+      "sortino": 1.6733756869136904,
+      "max_drawdown": 0.0850859532690399,
+      "fees": 811.3830392887891,
+      "slippage": 405.66639916957183,
+      "sessions": 270,
+      "decisions_count": 14
+    },
+    "buy_and_hold": {
+      "end_equity": 112564.60036141484,
+      "sharpe": 0.9439630406081598,
+      "max_drawdown": 0.10379266855305824,
+      "fees": 99.95005742734922,
+      "slippage": 49.9500896688402,
+      "sessions": 270,
+      "return": 0.12564600361414846
+    },
+    "equal_rebalanced": {
+      "end_equity": 111106.23497744644,
+      "sharpe": 0.8487925798153895,
+      "max_drawdown": 0.10258008164535626,
+      "fees": 1522.7335549441875,
+      "slippage": 761.341909592241,
+      "sessions": 270,
+      "return": 0.11106234977446428
+    }
+  },
+  "bootstrap": {
+    "vs_buy_and_hold": {
+      "log_growth_diff": 0.017340705375065848,
+      "ci95": [
+        -0.06085558022786059,
+        0.10870337562972646
+      ],
+      "p_superiority": 0.629
+    },
+    "vs_untrained": {
+      "log_growth_diff": 0.007062745726063253,
+      "ci95": [
+        -0.02086385295069697,
+        0.03580205093168741
+      ],
+      "p_superiority": 0.676
+    },
+    "vs_equal_rebalanced": {
+      "log_growth_diff": 0.03038117217005076,
+      "ci95": [
+        -0.05187709916182109,
+        0.12750028831176058
+      ],
+      "p_superiority": 0.7315
+    }
+  },
+  "capital_sweep": {
+    "5000": {
+      "trained": {
+        "return": -0.04029284483276663,
+        "end_equity": 4798.535775836167,
+        "sharpe": -1.8798013519996513,
+        "sortino": -2.335602354781614,
+        "max_drawdown": 0.04230934094770866,
+        "fees": 16.50956090715317,
+        "slippage": 8.254650003574797,
+        "sessions": 270,
+        "decisions_count": 14
+      },
+      "buy_hold": {
+        "end_equity": 5242.37130257173,
+        "sharpe": 0.5233305875186252,
+        "max_drawdown": 0.058205046734355004,
+        "fees": 3.0129577250547777,
+        "slippage": 1.505734995029874,
+        "sessions": 270,
+        "return": 0.048474260514346
+      }
+    },
+    "50000": {
+      "trained": {
+        "return": 0.08823938156252087,
+        "end_equity": 54411.96907812604,
+        "sharpe": 0.7097175215377748,
+        "sortino": 1.2077013859462045,
+        "max_drawdown": 0.09554898405189205,
+        "fees": 635.6624360654899,
+        "slippage": 317.81874913286424,
+        "sessions": 270,
+        "decisions_count": 14
+      },
+      "buy_hold": {
+        "end_equity": 57727.95151889152,
+        "sharpe": 1.1267447926832943,
+        "max_drawdown": 0.10218039157495107,
+        "fees": 49.840811950109554,
+        "slippage": 24.907969990059748,
+        "sessions": 270,
+        "return": 0.15455903037783036
+      }
+    },
+    "100000": {
+      "trained": {
+        "return": 0.14533572273940187,
+        "end_equity": 114533.5722739402,
+        "sharpe": 1.1212863685068508,
+        "sortino": 1.826869893364208,
+        "max_drawdown": 0.08874457444408335,
+        "fees": 785.2361039119428,
+        "slippage": 392.59287406886375,
+        "sessions": 270,
+        "decisions_count": 14
+      },
+      "buy_hold": {
+        "end_equity": 112564.60036141484,
+        "sharpe": 0.9439630406081598,
+        "max_drawdown": 0.10379266855305824,
+        "fees": 99.95005742734922,
+        "slippage": 49.9500896688402,
+        "sessions": 270,
+        "return": 0.12564600361414846
+      }
+    },
+    "200000": {
+      "trained": {
+        "return": 0.14112054768227522,
+        "end_equity": 228224.10953645504,
+        "sharpe": 1.0932564600638768,
+        "sortino": 1.7364734922833212,
+        "max_drawdown": 0.0763791701090385,
+        "fees": 1047.5926248553828,
+        "slippage": 523.7482235654967,
+        "sessions": 270,
+        "decisions_count": 14
+      },
+      "buy_hold": {
+        "end_equity": 227184.8021620317,
+        "sharpe": 1.0526612001099018,
+        "max_drawdown": 0.08506011865867624,
+        "fees": 199.80597821028928,
+        "slippage": 99.85313453787572,
+        "sessions": 270,
+        "return": 0.13592401081015848
+      }
+    }
+  },
+  "sample_rationales": [
+    {
+      "ticker": "GRASIM.NS",
+      "features": {
+        "ret20": -9.31,
+        "ret60": -11.69,
+        "vol20": 17.53,
+        "price": 2442.7
+      },
+      "rationale": "The stock was allocated maximum capital based on its 20-day return of -9.3%, indicating a significant decline in value. The 60-day return of -11.7%"
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "features": {
+        "ret20": -1.76,
+        "ret60": 5.4,
+        "vol20": 14.94,
+        "price": 1772.85
+      },
+      "rationale": "The stock was allocated maximum capital based on its 20-day return of -1.8%, indicating a slight decline in value. The 60-day return of +5.4%"
+    },
+    {
+      "ticker": "HDFCLIFE.NS",
+      "features": {
+        "ret20": -3.62,
+        "ret60": -12.13,
+        "vol20": 14.89,
+        "price": 617.05
+      },
+      "rationale": "The stock was allocated maximum capital based on its  20-day return of -3.6%, indicating a slight decline in value. The 60-day return of -12.1"
+    },
+    {
+      "ticker": "HCLTECH.NS",
+      "features": {
+        "ret20": 2.45,
+        "ret60": 8.51,
+        "vol20": 14.58,
+        "price": 1917.4
+      },
+      "rationale": "The stock was allocated maximum capital based on its  20-day return of +2.5%, indicating a slight increase in value. The 60-day return of +8.5"
+    },
+    {
+      "ticker": "HINDUNILVR.NS",
+      "features": {
+        "ret20": -6.14,
+        "ret60": -18.64,
+        "vol20": 17.3,
+        "price": 2326.85
+      },
+      "rationale": "The stock was allocated maximum capital based on its   20-day return of -6.1%, indicating a significant decline in value. The 60-day return of -18."
+    }
+  ]
+}

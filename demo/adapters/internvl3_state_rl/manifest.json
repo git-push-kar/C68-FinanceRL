@@ -1,0 +1,7 @@
+{
+  "sha256": {
+    "policy.json": "d52571805e4ee47fabb803dacd93a9baced8e8eb7e2a404e25f73f98a0afe2a5",
+    "adapter_config.json": "fcfd72ecf73635a9a72fa76b754c756b30b2dd5ad038f26c4a3ae3a7185b89a6",
+    "adapter_model.safetensors": "749d98f2420b5ce601b10d1b191dbb2d9985ecac5ce9f290b55defa588c1d340"
+  }
+}

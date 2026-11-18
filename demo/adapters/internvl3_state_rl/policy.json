@@ -1,0 +1,79 @@
+{
+  "model_name": "InternVL3-2B-State-RL",
+  "base_model": "OpenGVLab/InternVL3-2B",
+  "adapter_type": "PEFT LoRA (r=16, alpha=32)",
+  "action_space": "49-Asset Continuous Logit / Categorical Grade A-G",
+  "splits": {
+    "train": "2018-07-02 to 2022-12-31 (1113 sessions)",
+    "val": "2023-01-01 to 2024-12-31 (492 sessions)",
+    "test": "2025-01-01 to 2026-01-30 (271 sessions)"
+  },
+  "test_metrics_100k": {
+    "return": 0.14533572273940187,
+    "end_equity": 114533.5722739402,
+    "sharpe": 1.1212863685068508,
+    "sortino": 1.826869893364208,
+    "max_drawdown": 0.08874457444408335,
+    "fees": 785.2361039119428,
+    "slippage": 392.59287406886375,
+    "sessions": 270,
+    "decisions_count": 14
+  },
+  "benchmarks_test_100k": {
+    "untrained_llm": {
+      "return": 0.1372750066600168,
+      "end_equity": 113727.50066600168,
+      "sharpe": 1.0596055055258862,
+      "sortino": 1.6733756869136904,
+      "max_drawdown": 0.0850859532690399,
+      "fees": 811.3830392887891,
+      "slippage": 405.66639916957183,
+      "sessions": 270,
+      "decisions_count": 14
+    },
+    "buy_and_hold": {
+      "end_equity": 112564.60036141484,
+      "sharpe": 0.9439630406081598,
+      "max_drawdown": 0.10379266855305824,
+      "fees": 99.95005742734922,
+      "slippage": 49.9500896688402,
+      "sessions": 270,
+      "return": 0.12564600361414846
+    },
+    "equal_rebalanced": {
+      "end_equity": 111106.23497744644,
+      "sharpe": 0.8487925798153895,
+      "max_drawdown": 0.10258008164535626,
+      "fees": 1522.7335549441875,
+      "slippage": 761.341909592241,
+      "sessions": 270,
+      "return": 0.11106234977446428
+    }
+  },
+  "bootstrap_confidence": {
+    "vs_buy_and_hold": {
+      "log_growth_diff": 0.017340705375065848,
+      "ci95": [
+        -0.06085558022786059,
+        0.10870337562972646
+      ],
+      "p_superiority": 0.629
+    },
+    "vs_untrained": {
+      "log_growth_diff": 0.007062745726063253,
+      "ci95": [
+        -0.02086385295069697,
+        0.03580205093168741
+      ],
+      "p_superiority": 0.676
+    },
+    "vs_equal_rebalanced": {
+      "log_growth_diff": 0.03038117217005076,
+      "ci95": [
+        -0.05187709916182109,
+        0.12750028831176058
+      ],
+      "p_superiority": 0.7315
+    }
+  }
+}
