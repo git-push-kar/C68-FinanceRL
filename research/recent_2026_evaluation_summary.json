@@ -1,0 +1,509 @@
+{
+  "evaluation_period": {
+    "start_date": "2026-01-30",
+    "end_date": "2026-11-17",
+    "trading_sessions": 195,
+    "market_universe": "Nifty 50 (all 49 continuous constituents)"
+  },
+  "primary_capital_100k": {
+    "trained_rl": {
+      "return": -0.022724029196153572,
+      "end_equity": 97727.59708038464,
+      "sharpe": -0.10031618461083991,
+      "sortino": -0.15388345404229267,
+      "max_drawdown": 0.15202514240842901,
+      "fees": 598.6839998003693,
+      "slippage": 299.31687513732913,
+      "sessions": 195,
+      "decisions_count": 10
+    },
+    "untrained_llm": {
+      "return": -0.01576838428862315,
+      "end_equity": 98423.16157113768,
+      "sharpe": -0.05299504031432352,
+      "sortino": -0.0821038627428341,
+      "max_drawdown": 0.14306598639717782,
+      "fees": 547.6741947467804,
+      "slippage": 273.8122504730225,
+      "sessions": 195,
+      "decisions_count": 10
+    },
+    "buy_and_hold": {
+      "end_equity": 109489.12184680061,
+      "sharpe": 0.9089135214816033,
+      "max_drawdown": 0.11058904290603566,
+      "fees": 99.85520282098388,
+      "slippage": 49.90265008544922,
+      "sessions": 195,
+      "return": 0.09489121846800619
+    },
+    "equal_rebalanced": {
+      "end_equity": 109794.35799739353,
+      "sharpe": 0.9265977656431958,
+      "max_drawdown": 0.11124413245733167,
+      "fees": 1010.663977246475,
+      "slippage": 505.3071147155762,
+      "sessions": 195,
+      "return": 0.09794357997393521
+    },
+    "bootstrap_inference": {
+      "vs_buy_and_hold": {
+        "log_growth_diff": -0.113641213736832,
+        "ci95": [
+          -0.24101315249455904,
+          0.015168285588738041
+        ],
+        "p_superiority": 0.0365
+      },
+      "vs_untrained_llm": {
+        "log_growth_diff": -0.007092171460798338,
+        "ci95": [
+          -0.06314977263467368,
+          0.04315048665855036
+        ],
+        "p_superiority": 0.394
+      },
+      "vs_equal_rebalance": {
+        "log_growth_diff": -0.11642515667635564,
+        "ci95": [
+          -0.2389298515806762,
+          -0.009000214166206956
+        ],
+        "p_superiority": 0.0145
+      }
+    }
+  },
+  "multi_capital_sweep": {
+    "capitals": [
+      5000.0,
+      10000.0,
+      25000.0,
+      50000.0,
+      75000.0,
+      100000.0,
+      150000.0,
+      200000.0,
+      500000.0
+    ],
+    "trained_rl": {
+      "5000": {
+        "return": 0.009556534932330552,
+        "end_equity": 5047.782674661653,
+        "sharpe": 0.7187813286883854,
+        "sortino": 1.165117262413825,
+        "max_drawdown": 0.017193603127329427,
+        "fees": 6.144939260467529,
+        "slippage": 3.0723250427246094,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "10000": {
+        "return": 0.0010995323339118013,
+        "end_equity": 10010.995323339119,
+        "sharpe": 0.05659516771474245,
+        "sortino": 0.08373823191355129,
+        "max_drawdown": 0.07021434735416254,
+        "fees": 52.33711498486328,
+        "slippage": 26.16752505493164,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "25000": {
+        "return": -0.021894636973348702,
+        "end_equity": 24452.634075666283,
+        "sharpe": -0.14581621034361944,
+        "sortino": -0.2326244917175901,
+        "max_drawdown": 0.1392253072859706,
+        "fees": 254.3136422902832,
+        "slippage": 127.15152520751954,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "50000": {
+        "return": -0.04653980011813752,
+        "end_equity": 47673.009994093125,
+        "sharpe": -0.32808050650471837,
+        "sortino": -0.509422873792997,
+        "max_drawdown": 0.16648794384028553,
+        "fees": 382.8009945085907,
+        "slippage": 191.38817521667482,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "75000": {
+        "return": -0.030413976592254643,
+        "end_equity": 72718.9517555809,
+        "sharpe": -0.18547889691810784,
+        "sortino": -0.2951069267348607,
+        "max_drawdown": 0.15642752420385242,
+        "fees": 528.6107899513855,
+        "slippage": 264.28659997558594,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "100000": {
+        "return": -0.022724029196153572,
+        "end_equity": 97727.59708038464,
+        "sharpe": -0.10031618461083991,
+        "sortino": -0.15388345404229267,
+        "max_drawdown": 0.15202514240842901,
+        "fees": 598.6839998003693,
+        "slippage": 299.31687513732913,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "150000": {
+        "return": 0.0006107943222946055,
+        "end_equity": 150091.61914834418,
+        "sharpe": 0.08186131478400245,
+        "sortino": 0.12501421852637337,
+        "max_drawdown": 0.1332430882904082,
+        "fees": 559.3777811450043,
+        "slippage": 279.6510502471924,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "200000": {
+        "return": -0.030596742716117342,
+        "end_equity": 193880.65145677654,
+        "sharpe": -0.16941426984808164,
+        "sortino": -0.2495780792114433,
+        "max_drawdown": 0.1517431949335024,
+        "fees": 737.663853068512,
+        "slippage": 368.7827004089355,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "500000": {
+        "return": -0.015018866074881676,
+        "end_equity": 492490.5669625592,
+        "sharpe": -0.04351821007640064,
+        "sortino": -0.06575206947135466,
+        "max_drawdown": 0.14108526652985065,
+        "fees": 1281.068508510315,
+        "slippage": 640.4120753173828,
+        "sessions": 195,
+        "decisions_count": 10
+      }
+    },
+    "untrained_llm": {
+      "5000": {
+        "return": 0.0023902138547242657,
+        "end_equity": 5011.951069273621,
+        "sharpe": 0.16773475853555536,
+        "sortino": 0.2515170076490375,
+        "max_drawdown": 0.023073146256992194,
+        "fees": 6.499356873840331,
+        "slippage": 3.2495250244140625,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "10000": {
+        "return": 0.008509487515360181,
+        "end_equity": 10085.094875153602,
+        "sharpe": 0.18213074034808233,
+        "sortino": 0.26870989962954117,
+        "max_drawdown": 0.07021434735416254,
+        "fees": 52.63751492208862,
+        "slippage": 26.317500061035158,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "25000": {
+        "return": -0.027104719258830623,
+        "end_equity": 24322.382018529235,
+        "sharpe": -0.19327983141584762,
+        "sortino": -0.3015950545815069,
+        "max_drawdown": 0.14337698398837462,
+        "fees": 259.1821319529724,
+        "slippage": 129.585300201416,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "50000": {
+        "return": -0.062114461252792075,
+        "end_equity": 46894.276937360395,
+        "sharpe": -0.46847246123944586,
+        "sortino": -0.7406406172863657,
+        "max_drawdown": 0.1820246438706531,
+        "fees": 395.38967015307617,
+        "slippage": 197.682550201416,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "75000": {
+        "return": -0.040847359731074895,
+        "end_equity": 71936.44802016938,
+        "sharpe": -0.2712664039320383,
+        "sortino": -0.42932165677648315,
+        "max_drawdown": 0.16805567703220958,
+        "fees": 533.5131539945069,
+        "slippage": 266.73782485961914,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "100000": {
+        "return": -0.01576838428862315,
+        "end_equity": 98423.16157113768,
+        "sharpe": -0.05299504031432352,
+        "sortino": -0.0821038627428341,
+        "max_drawdown": 0.14306598639717782,
+        "fees": 547.6741947467804,
+        "slippage": 273.8122504730225,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "150000": {
+        "return": -0.0012495677750625767,
+        "end_equity": 149812.56483374062,
+        "sharpe": 0.0671270547622407,
+        "sortino": 0.10359510030373964,
+        "max_drawdown": 0.13629817800146093,
+        "fees": 641.3472894284057,
+        "slippage": 320.6358504638672,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "200000": {
+        "return": -0.02036152622947396,
+        "end_equity": 195927.6947541052,
+        "sharpe": -0.09031799753920586,
+        "sortino": -0.1353580658028159,
+        "max_drawdown": 0.14816685569460997,
+        "fees": 831.8355647425536,
+        "slippage": 415.86782568359376,
+        "sessions": 195,
+        "decisions_count": 10
+      },
+      "500000": {
+        "return": -0.023507816376863944,
+        "end_equity": 488246.091811568,
+        "sharpe": -0.11475261927622926,
+        "sortino": -0.17374450727310653,
+        "max_drawdown": 0.14008216452729416,
+        "fees": 1383.2506583113097,
+        "slippage": 691.5009261169433,
+        "sessions": 195,
+        "decisions_count": 10
+      }
+    },
+    "buy_and_hold": {
+      "5000": {
+        "end_equity": 4918.143238299637,
+        "sharpe": -0.2161088983976064,
+        "max_drawdown": 0.09843867684923768,
+        "fees": 3.198308407516479,
+        "slippage": 1.5983550262451172,
+        "sessions": 195,
+        "return": -0.016371352340072587
+      },
+      "10000": {
+        "end_equity": 10038.531875566194,
+        "sharpe": 0.10665843568424158,
+        "max_drawdown": 0.1414769307262771,
+        "fees": 9.85358442526245,
+        "slippage": 4.924330047607422,
+        "sessions": 195,
+        "return": 0.003853187556619453
+      },
+      "25000": {
+        "end_equity": 25180.800378232092,
+        "sharpe": 0.1366014374901257,
+        "max_drawdown": 0.12696512858513087,
+        "fees": 24.910709078704834,
+        "slippage": 12.449129974365235,
+        "sessions": 195,
+        "return": 0.007232015129283731
+      },
+      "50000": {
+        "end_equity": 51369.33385962412,
+        "sharpe": 0.30098571235037164,
+        "max_drawdown": 0.13460220979620674,
+        "fees": 49.925880457672115,
+        "slippage": 24.950464996337892,
+        "sessions": 195,
+        "return": 0.027386677192482445
+      },
+      "75000": {
+        "end_equity": 82749.35817058744,
+        "sharpe": 0.9545894446766401,
+        "max_drawdown": 0.11264705815276932,
+        "fees": 74.78671494113159,
+        "slippage": 37.37467013549805,
+        "sessions": 195,
+        "return": 0.1033247756078326
+      },
+      "100000": {
+        "end_equity": 109489.12184680061,
+        "sharpe": 0.9089135214816033,
+        "max_drawdown": 0.11058904290603566,
+        "fees": 99.85520282098388,
+        "slippage": 49.90265008544922,
+        "sessions": 195,
+        "return": 0.09489121846800619
+      },
+      "150000": {
+        "end_equity": 154565.25630820397,
+        "sharpe": 0.334986303652387,
+        "max_drawdown": 0.1282196995595738,
+        "fees": 149.7802831961975,
+        "slippage": 74.85271524047852,
+        "sessions": 195,
+        "return": 0.03043504205469305
+      },
+      "200000": {
+        "end_equity": 206397.34708917333,
+        "sharpe": 0.3504746402052477,
+        "max_drawdown": 0.12954187944794104,
+        "fees": 199.70136144927977,
+        "slippage": 99.80078033447266,
+        "sessions": 195,
+        "return": 0.03198673544586672
+      },
+      "500000": {
+        "end_equity": 519464.1216503555,
+        "sharpe": 0.41225504340388186,
+        "max_drawdown": 0.12316321786504336,
+        "fees": 499.48088712011713,
+        "slippage": 249.6156357421875,
+        "sessions": 195,
+        "return": 0.038928243300710985
+      }
+    },
+    "equal_rebalanced": {
+      "5000": {
+        "end_equity": 4842.030497506879,
+        "sharpe": -0.44937133123264933,
+        "max_drawdown": 0.11218355115846934,
+        "fees": 60.086840299827585,
+        "slippage": 30.042565147399905,
+        "sessions": 195,
+        "return": -0.031593900498624095
+      },
+      "10000": {
+        "end_equity": 10258.25126009488,
+        "sharpe": 0.3064521616736631,
+        "max_drawdown": 0.12470984156732545,
+        "fees": 174.23402505376436,
+        "slippage": 87.11462024688723,
+        "sessions": 195,
+        "return": 0.025825126009487942
+      },
+      "25000": {
+        "end_equity": 24528.554447735554,
+        "sharpe": -0.10621695841693507,
+        "max_drawdown": 0.14712367378271474,
+        "fees": 388.9478676789246,
+        "slippage": 194.46776515197755,
+        "sessions": 195,
+        "return": -0.018857822090577847
+      },
+      "50000": {
+        "end_equity": 50342.00612746546,
+        "sharpe": 0.13545222537107204,
+        "max_drawdown": 0.14131790718445814,
+        "fees": 730.3242880924835,
+        "slippage": 365.1497998962402,
+        "sessions": 195,
+        "return": 0.006840122549309102
+      },
+      "75000": {
+        "end_equity": 77228.61635122685,
+        "sharpe": 0.3298911161999021,
+        "max_drawdown": 0.13242165364560365,
+        "fees": 862.027930458107,
+        "slippage": 430.9952996139526,
+        "sessions": 195,
+        "return": 0.029714884683024634
+      },
+      "100000": {
+        "end_equity": 109794.35799739353,
+        "sharpe": 0.9265977656431958,
+        "max_drawdown": 0.11124413245733167,
+        "fees": 1010.663977246475,
+        "slippage": 505.3071147155762,
+        "sessions": 195,
+        "return": 0.09794357997393521
+      },
+      "150000": {
+        "end_equity": 160064.27532465215,
+        "sharpe": 0.6377762191760997,
+        "max_drawdown": 0.12845654578064858,
+        "fees": 1266.8409298036045,
+        "slippage": 633.3829551391601,
+        "sessions": 195,
+        "return": 0.0670951688310144
+      },
+      "200000": {
+        "end_equity": 211262.8988347295,
+        "sharpe": 0.5619025511718491,
+        "max_drawdown": 0.12710422571832114,
+        "fees": 1468.0400238675688,
+        "slippage": 733.9699701385497,
+        "sessions": 195,
+        "return": 0.056314494173647534
+      },
+      "500000": {
+        "end_equity": 525108.816489852,
+        "sharpe": 0.5110743617957288,
+        "max_drawdown": 0.1211886581198166,
+        "fees": 2085.832027642418,
+        "slippage": 1042.7902459335328,
+        "sessions": 195,
+        "return": 0.05021763297970416
+      }
+    }
+  },
+  "rationales_sample": [
+    {
+      "ticker": "GRASIM.NS",
+      "features": {
+        "ret20": 6.88,
+        "ret60": -5.93,
+        "vol": 23.67,
+        "price": 3084.4
+      },
+      "rationale": "The stock was allocated capital based on its momentum and risk because it had a strong upward trend in its price (Ret20=+6.9%) and a high volatility"
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "features": {
+        "ret20": 12.33,
+        "ret60": 12.93,
+        "vol": 26.02,
+        "price": 816.5
+      },
+      "rationale": "The stock was allocated capital based on its momentum and risk because it showed strong positive performance in the last 20 trading days (+12.3%) and 60"
+    },
+    {
+      "ticker": "HDFCLIFE.NS",
+      "features": {
+        "ret20": 9.8,
+        "ret60": 12.31,
+        "vol": 26.54,
+        "price": 604.5
+      },
+      "rationale": "The stock was allocated capital based on its momentum and risk because it has shown strong performance in the short term (Ret20=+9.8%) and moderate risk ("
+    },
+    {
+      "ticker": "HEROMOTOCO.NS",
+      "features": {
+        "ret20": 2.87,
+        "ret60": -6.72,
+        "vol": 26.12,
+        "price": 5359.5
+      },
+      "rationale": "The stock was allocated capital based on its momentum and risk because it showed strong upward momentum (Ret20=+2.9%) and high volatility (Vol=26"
+    },
+    {
+      "ticker": "HINDUNILVR.NS",
+      "features": {
+        "ret20": 6.44,
+        "ret60": -0.77,
+        "vol": 20.16,
+        "price": 2000.3
+      },
+      "rationale": "The stock was allocated capital based on its momentum and risk because it showed strong upward momentum with a high price and low volatility, indicating potential for for higher returns, while also having"
+    }
+  ]
+}

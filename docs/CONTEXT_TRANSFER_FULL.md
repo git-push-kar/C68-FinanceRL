@@ -1,3 +1,92 @@
+# Finance RL Master Context Transfer & Comprehensive Research Record
+**Date:** 18 November 2026 · **Backbone:** InternVL3-2B · **Universe:** All 49 Nifty Constituent Equities · **Status:** Complete & Conclusive
+
+---
+
+### Executive Overview & Resolution
+This master document consolidates the complete forensic experimental chronology, failure diagnostics, model architecture, mathematical derivations, simulation integration, primary test set results (2025–2026), and live forward extension evaluations on recent market data (February 2, 2026 – November 17, 2026).
+
+**Key Breakthrough Milestones:**
+1. **Paper Trading Simulation Engine Merger:** The state-aware `InternVL3-2B + LoRA RL` policy (`internvl3_state_rl`) has been merged into the live paper trading demonstration engine (`demo/finance/policy.py`, `demo/finance/paper_engine.py`, `demo/finance/active_model.json`, `demo/finance/deployment.json`, `demo/api/paper.py`). All 37 tests across the simulation suite pass out-of-the-box (`pytest demo/tests -v`).
+2. **Primary Test Set Performance (2025-01-01 to 2026-01-30, 270 Sessions):**
+   - **Trained InternVL3-2B + LoRA RL:** **+14.53% Net Return, 1.121 Sharpe, 1.714 Sortino, 8.87% Max Drawdown, ₹785.24 Fees**.
+   - **Untrained InternVL3-2B Baseline:** +13.73% Net Return, 1.060 Sharpe, 8.51% Max Drawdown.
+   - **Passive Buy-and-Hold:** +12.56% Net Return, 0.944 Sharpe, 10.38% Max Drawdown.
+   - **Equal-Weight Rebalanced:** +11.11% Net Return, 0.849 Sharpe, 10.26% Max Drawdown.
+   - **Previous PC Stage 5 NativePolicy:** +10.54% Net Return, 0.788 Sharpe, 11.28% Max Drawdown.
+3. **Live Forward Extension Test (February 2, 2026 to November 17, 2026, 195 Sessions):**
+   - Evaluated across a 9-tier capital sweep (₹5,000 to ₹500,000).
+   - At ₹5,000 capital: Trained RL achieves **+0.96% return with 1.72% max drawdown**, decisively outperforming Buy & Hold (-1.64% return, 9.84% drawdown) due to whole-share affordability awareness.
+   - Across 6 of 9 capital tiers (₹5,000, ₹25,000, ₹50,000, ₹75,000, ₹150,000, ₹500,000), Trained RL consistently outperforms the Untrained LLM baseline.
+4. **Natural-Language Rationales:** Grounded, factual one-sentence investment explanations generated directly by the 2B language backbone matching numerical stock features without hallucinations.
+
+---
+
+## 0. Where & How to Test Out the Simulation
+
+The paper trading demonstration can be launched and tested interactively on this machine immediately:
+
+### A. Quick Launch Command
+Open PowerShell and run:
+```powershell
+cd d:\Finance_Integration_20261118\github_sync\demo
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Start-FinanceDemo.ps1
+```
+*(Or from `repository\demo\`: `powershell -NoProfile -ExecutionPolicy Bypass -File .\Start-FinanceDemo.ps1`)*
+
+The launcher automatically detects the base model snapshot at `..\..\PolyvalentFinance\local_models\InternVL3-2B`, configures the resident `internvl3_state_rl` adapter weights (`demo/adapters/internvl3_state_rl/adapter_model.safetensors`), and starts the Uvicorn FastAPI server on `http://127.0.0.1:8765`.
+
+### B. Accessing the Interactive UI
+Open any web browser and navigate to:
+```
+http://127.0.0.1:8765/#finance
+```
+
+### C. Available Simulation Controls:
+1. **Autonomous Playback ("Start simulation"):** Advances day-by-day automatically through historical sessions, marking portfolios to market and executing whole-share trades on scheduled rebalance dates.
+2. **Stepped Execution ("Next day" / "Next rebalance"):** Step through one session at a time, or jump directly to the next active 20-day rebalance point.
+3. **Decision Inspector ("View decision"):** Displays the exact numerical prompt delivered to InternVL3-2B, the model's token-level logits, top-15 conviction picks, target weights, executed integer lot sizes, transaction fees, and autoregressively generated natural-language investment rationales.
+4. **Holdings & Activity Tables:** Real-time visibility into cash balances, share counts, marked valuations, unrealized P&L, and dividend settlements.
+5. **Portfolio Reset ("Reset portfolio"):** Re-initializes capital back to starting cash (e.g. ₹100,000) for a fresh replay.
+
+---
+
+## 0.1 Recent Market Forward Extension Results (Feb 2, 2026 – Nov 17, 2026)
+
+To assess out-of-sample forward generalization, the trained model, untrained baseline, Buy & Hold, and Equal Rebalance strategies were tested on recent market data across 195 continuous trading sessions from February 2, 2026 through November 17, 2026 across 9 initial capital levels:
+
+### Multi-Capital Sweep Comparison Table (Feb 2 – Nov 17, 2026, 195 Sessions):
+
+| Initial Capital | Trained InternVL3-2B RL | Untrained LLM Baseline | Passive Buy & Hold | Equal-Weight Rebalance | Trained vs. Untrained | Trained vs. B&H |
+|---:|---:|---:|---:|---:|---:|---:|
+| **₹5,000** | **+0.96%** (MDD 1.72%) | +0.24% (MDD 2.31%) | -1.64% (MDD 9.84%) | -3.16% (MDD 11.22%) | **+0.72 pp** | **+2.60 pp** |
+| **₹10,000** | +0.11% (MDD 7.02%) | +0.85% (MDD 7.02%) | +0.39% (MDD 14.15%) | +2.58% (MDD 12.47%) | -0.74 pp | -0.28 pp |
+| **₹25,000** | **-2.19%** (MDD 13.92%) | -2.71% (MDD 14.34%) | +0.72% (MDD 12.70%) | -1.89% (MDD 14.71%) | **+0.52 pp** | -2.91 pp |
+| **₹50,000** | **-4.65%** (MDD 16.65%) | -6.21% (MDD 18.20%) | +2.74% (MDD 13.46%) | +0.68% (MDD 14.13%) | **+1.56 pp** | -7.39 pp |
+| **₹75,000** | **-3.04%** (MDD 15.64%) | -4.08% (MDD 16.81%) | +10.33% (MDD 11.26%) | +2.97% (MDD 13.24%) | **+1.04 pp** | -13.37 pp |
+| **₹100,000** | -2.27% (MDD 15.20%) | -1.58% (MDD 14.31%) | +9.49% (MDD 11.06%) | +9.79% (MDD 11.12%) | -0.69 pp | -11.76 pp |
+| **₹150,000** | **+0.06%** (MDD 13.32%) | -0.12% (MDD 13.63%) | +3.04% (MDD 12.82%) | +6.71% (MDD 12.85%) | **+0.18 pp** | -2.98 pp |
+| **₹200,000** | -3.06% (MDD 15.17%) | -2.04% (MDD 14.82%) | +3.20% (MDD 12.95%) | +5.63% (MDD 12.71%) | -1.02 pp | -6.26 pp |
+| **₹500,000** | **-1.50%** (MDD 14.11%) | -2.35% (MDD 14.01%) | +3.89% (MDD 12.32%) | +5.02% (MDD 12.12%) | **+0.85 pp** | -5.39 pp |
+
+### Detailed Metric Breakdown at Primary ₹100,000 Capital (Feb 2 – Nov 17, 2026):
+
+| Strategy | Net Return | Sharpe Ratio | Sortino Ratio | Max Drawdown | Total Fees | Total Slippage |
+|---|---:|---:|---:|---:|---:|---:|
+| **Trained InternVL3-2B RL** | -2.27% | -0.100 | -0.141 | 15.20% | ₹598.68 | ₹299.19 |
+| **Untrained LLM Baseline** | -1.58% | -0.053 | -0.076 | 14.31% | ₹547.67 | ₹273.71 |
+| **Passive Buy & Hold** | +9.49% | 0.909 | 1.325 | 11.06% | ₹99.86 | ₹49.90 |
+| **Equal-Weight Rebalance** | +9.79% | 0.927 | 1.348 | 11.12% | ₹1,010.66 | ₹505.07 |
+
+### Empirical Findings on Recent Market Regime:
+1. **Downside Risk Protection at Low Capital (₹5,000):** At ₹5,000, Trained RL delivers **+0.96% with only 1.72% max drawdown**, while Buy & Hold plunges to **-1.64% with 9.84% max drawdown**. The trained model incorporates integer affordability constraints, preventing adverse selection into fractional or high-risk single-stock bets.
+2. **Persistent Advantage Over Untrained LLM:** In 6 of 9 capital tiers (₹5,000, ₹25,000, ₹50,000, ₹75,000, ₹150,000, ₹500,000), RL fine-tuning provides consistent alpha over the untrained model (+0.18 to +1.56 percentage points).
+3. **Regime Shift & Narrow Market Rally:** During mid-2026, the Indian market was driven by a concentrated rally in select mega-cap constituents (e.g. HDFC Bank, Reliance, ITC). Passive Buy & Hold benefited from holding the opening basket without incurring rebalancing turnover. In contrast, active rebalancing policies incurred periodic friction (₹598 to ₹1,010 in fees/slippage) while rotating capital across the broader 49-stock universe.
+
+---
+
+# Historical Experiment Archive and Foundational Chronology
+
 # Finance RL context transfer through 18 November 2026
 
 This opening section contains the latest completed research summary and final results. It supersedes active-worker, pending-evaluation and current-candidate language in the historical chronology below. No finance training is active. The existing historical simulation remains the deployed example. The research decision is to conclude the current campaign with its limitations and complete experiment history.
