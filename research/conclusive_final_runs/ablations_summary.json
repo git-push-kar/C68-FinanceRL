@@ -1,0 +1,300 @@
+{
+  "turnover_control": {
+    "full_control": {
+      "description": "Full Framework (Deadband 2%, Hold-Gate 12%)",
+      "return": 0.13786237321531347,
+      "end_equity": 113786.23732153136,
+      "sharpe": 0.8982624628505931,
+      "sortino": 1.328642502416162,
+      "max_drawdown": 0.07283554337135045,
+      "fees": 1036.259830907837,
+      "slippage": 518.1050746917725,
+      "trades_count": 14
+    },
+    "no_hold_gate": {
+      "description": "No Hold-Gate (Rebalance every horizon, Deadband 2%)",
+      "return": 0.13786237321531347,
+      "end_equity": 113786.23732153136,
+      "sharpe": 0.8982624628505931,
+      "sortino": 1.328642502416162,
+      "max_drawdown": 0.07283554337135045,
+      "fees": 1036.259830907837,
+      "slippage": 518.1050746917725,
+      "trades_count": 14
+    },
+    "zero_control": {
+      "description": "Zero Control (Blind rebalancing, 0% Deadband, 0% Gate)",
+      "return": 0.13786237321531347,
+      "end_equity": 113786.23732153136,
+      "sharpe": 0.8982624628505931,
+      "sortino": 1.328642502416162,
+      "max_drawdown": 0.07283554337135045,
+      "fees": 1036.259830907837,
+      "slippage": 518.1050746917725,
+      "trades_count": 14
+    },
+    "strict_gate": {
+      "description": "Strict Hold-Gate (Deadband 4%, Hold-Gate 20%)",
+      "return": 0.14104082253690886,
+      "end_equity": 114104.0822536909,
+      "sharpe": 0.9153706532348521,
+      "sortino": 1.3624286484999315,
+      "max_drawdown": 0.07283554337135045,
+      "fees": 1009.1956433314211,
+      "slippage": 504.5742995910645,
+      "trades_count": 14
+    }
+  },
+  "architecture_and_state": {
+    "full_state_attention": {
+      "description": "Full Framework (Deadband 2%, Hold-Gate 12%)",
+      "return": 0.13786237321531347,
+      "end_equity": 113786.23732153136,
+      "sharpe": 0.8982624628505931,
+      "sortino": 1.328642502416162,
+      "max_drawdown": 0.07283554337135045,
+      "fees": 1036.259830907837,
+      "slippage": 518.1050746917725,
+      "trades_count": 14
+    },
+    "technicals_only_no_portfolio": {
+      "description": "Technicals Only (Portfolio Cash, Holdings & Affordability Zeroed)",
+      "return": 0.17044483310663772,
+      "end_equity": 117044.48331066377,
+      "sharpe": 1.1580599695677187,
+      "sortino": 1.8454173268579301,
+      "max_drawdown": 0.06675721316282468,
+      "fees": 2235.328472565002,
+      "slippage": 1117.6399594726563
+    },
+    "decoupled_mlp_no_attention": {
+      "description": "Decoupled Per-Asset MLP (No Multi-Head Self-Attention)",
+      "return": 0.09143530891402518,
+      "end_equity": 109143.53089140251,
+      "sharpe": 0.7004796190947667,
+      "sortino": 1.0637800421851493,
+      "max_drawdown": 0.0759500870509685,
+      "fees": 2478.1259629907763,
+      "slippage": 1239.0386747817993
+    }
+  },
+  "capital_sweep": {
+    "500": {
+      "rl_return": 0.0,
+      "rl_equity": 500.0,
+      "rl_sharpe": 0.0,
+      "rl_mdd": 0.0,
+      "rl_fees": 0.0,
+      "bnh_return": 0.0,
+      "bnh_equity": 500.0,
+      "eq_return": 0.0,
+      "eq_equity": 500.0
+    },
+    "2000": {
+      "rl_return": 0.021737904022323562,
+      "rl_equity": 2043.4758080446472,
+      "rl_sharpe": 1.054467276805907,
+      "rl_mdd": 0.01599966154841126,
+      "rl_fees": 2.7028146207580566,
+      "bnh_return": 0.029211389860069215,
+      "bnh_equity": 2058.4227797201384,
+      "eq_return": 0.02608490984908296,
+      "eq_equity": 2052.169819698166
+    },
+    "5000": {
+      "rl_return": 0.04912007268600571,
+      "rl_equity": 5245.600363430029,
+      "rl_sharpe": 0.6041735678415343,
+      "rl_mdd": 0.037934558618465175,
+      "rl_fees": 56.18689479446411,
+      "bnh_return": 0.048474260514346,
+      "bnh_equity": 5242.37130257173,
+      "eq_return": 0.02723474351524935,
+      "eq_equity": 5136.173717576246
+    },
+    "10000": {
+      "rl_return": 0.1239748604307096,
+      "rl_equity": 11239.748604307097,
+      "rl_sharpe": 0.9958173505661394,
+      "rl_mdd": 0.04864130267764566,
+      "rl_fees": 136.13580806169128,
+      "bnh_return": 0.1480508264632856,
+      "bnh_equity": 11480.508264632856,
+      "eq_return": 0.1684987292017066,
+      "eq_equity": 11684.987292017066
+    },
+    "20000": {
+      "rl_return": 0.15781175824733173,
+      "rl_equity": 23156.235164946633,
+      "rl_sharpe": 1.0446947004747444,
+      "rl_mdd": 0.06522213892546558,
+      "rl_fees": 338.4800191659546,
+      "bnh_return": 0.04635070053369694,
+      "bnh_equity": 20927.014010673938,
+      "eq_return": 0.061814650896045764,
+      "eq_equity": 21236.293017920914
+    },
+    "50000": {
+      "rl_return": 0.1326902662435847,
+      "rl_equity": 56634.51331217923,
+      "rl_sharpe": 0.871302147499805,
+      "rl_mdd": 0.06794720178658675,
+      "rl_fees": 648.9934940011445,
+      "bnh_return": 0.15455903037783036,
+      "bnh_equity": 57727.95151889152,
+      "eq_return": 0.1326734399979146,
+      "eq_equity": 56633.67199989573
+    },
+    "100000": {
+      "rl_return": 0.13786237321531347,
+      "rl_equity": 113786.23732153136,
+      "rl_sharpe": 0.8982624628505931,
+      "rl_mdd": 0.07283554337135045,
+      "rl_fees": 1036.259830907837,
+      "bnh_return": 0.12564600361414846,
+      "bnh_equity": 112564.60036141484,
+      "eq_return": 0.11106234977446428,
+      "eq_equity": 111106.23497744644
+    },
+    "200000": {
+      "rl_return": 0.12548878545597275,
+      "rl_equity": 225097.75709119454,
+      "rl_sharpe": 0.8423028697449054,
+      "rl_mdd": 0.0775083164854885,
+      "rl_fees": 1684.944876626099,
+      "bnh_return": 0.13592401081015848,
+      "bnh_equity": 227184.8021620317,
+      "eq_return": 0.122809614964005,
+      "eq_equity": 224561.922992801
+    },
+    "500000": {
+      "rl_return": 0.13658471668614514,
+      "rl_equity": 568292.3583430726,
+      "rl_sharpe": 0.9026927626041099,
+      "rl_mdd": 0.07616774850712094,
+      "rl_fees": 3623.313342215118,
+      "bnh_return": 0.12690589254344742,
+      "bnh_equity": 563452.9462717237,
+      "eq_return": 0.13209467199145064,
+      "eq_equity": 566047.3359957254
+    },
+    "1000000": {
+      "rl_return": 0.14279412135646874,
+      "rl_equity": 1142794.1213564686,
+      "rl_sharpe": 0.9310582031393609,
+      "rl_mdd": 0.07442626924537432,
+      "rl_fees": 6765.18921274344,
+      "bnh_return": 0.12690926474350883,
+      "bnh_equity": 1126909.2647435088,
+      "eq_return": 0.13734247098479524,
+      "eq_equity": 1137342.4709847951
+    }
+  },
+  "top_asset_selection": [
+    {
+      "ticker": "ADANIENT.NS",
+      "average_allocated_weight": 0.06959335586965013,
+      "raw_2025_return": -0.20099653868991585,
+      "initial_price": 2528.64990234375,
+      "final_price": 2020.4000244140625
+    },
+    {
+      "ticker": "HINDALCO.NS",
+      "average_allocated_weight": 0.06446263294725003,
+      "raw_2025_return": 0.5978088739006304,
+      "initial_price": 602.4500122070312,
+      "final_price": 962.5999755859376
+    },
+    {
+      "ticker": "TATASTEEL.NS",
+      "average_allocated_weight": 0.0644486629576377,
+      "raw_2025_return": 0.3989858791267398,
+      "initial_price": 138.0500030517578,
+      "final_price": 193.1300048828125
+    },
+    {
+      "ticker": "INDUSINDBK.NS",
+      "average_allocated_weight": 0.05852851603338976,
+      "raw_2025_return": -0.06670837598240109,
+      "initial_price": 960.1500244140624,
+      "final_price": 896.0999755859375
+    },
+    {
+      "ticker": "BPCL.NS",
+      "average_allocated_weight": 0.05849468318863916,
+      "raw_2025_return": 0.2463668483007726,
+      "initial_price": 292.45001220703125,
+      "final_price": 364.5
+    },
+    {
+      "ticker": "BAJFINANCE.NS",
+      "average_allocated_weight": 0.05703967420103555,
+      "raw_2025_return": -0.31859153435300713,
+      "initial_price": 1364.5999755859375,
+      "final_price": 929.8499755859376
+    },
+    {
+      "ticker": "ADANIPORTS.NS",
+      "average_allocated_weight": 0.05071594907073237,
+      "raw_2025_return": 0.15327761918960014,
+      "initial_price": 1231.0999755859375,
+      "final_price": 1419.800048828125
+    },
+    {
+      "ticker": "LTIM.NS",
+      "average_allocated_weight": 0.04133439780454218,
+      "raw_2025_return": 0.06956803817648072,
+      "initial_price": 5585.89990234375,
+      "final_price": 5974.5
+    },
+    {
+      "ticker": "COALINDIA.NS",
+      "average_allocated_weight": 0.032223249955840194,
+      "raw_2025_return": 0.14733829754730499,
+      "initial_price": 384.1499938964844,
+      "final_price": 440.75
+    },
+    {
+      "ticker": "INFY.NS",
+      "average_allocated_weight": 0.029856538169979487,
+      "raw_2025_return": -0.12712765957446803,
+      "initial_price": 1880.0,
+      "final_price": 1641.0
+    },
+    {
+      "ticker": "TECHM.NS",
+      "average_allocated_weight": 0.02940253114408104,
+      "raw_2025_return": 0.021627022312782573,
+      "initial_price": 1706.199951171875,
+      "final_price": 1743.0999755859375
+    },
+    {
+      "ticker": "NTPC.NS",
+      "average_allocated_weight": 0.026117271452916948,
+      "raw_2025_return": 0.06794658311615831,
+      "initial_price": 333.3500061035156,
+      "final_price": 356.0
+    },
+    {
+      "ticker": "BAJAJFINSV.NS",
+      "average_allocated_weight": 0.025838576953863903,
+      "raw_2025_return": 0.24520120272071755,
+      "initial_price": 1568.0999755859375,
+      "final_price": 1952.5999755859373
+    },
+    {
+      "ticker": "GRASIM.NS",
+      "average_allocated_weight": 0.025142523587695337,
+      "raw_2025_return": 0.1540508684448112,
+      "initial_price": 2442.699951171875,
+      "final_price": 2819.0
+    },
+    {
+      "ticker": "SUNPHARMA.NS",
+      "average_allocated_weight": 0.02388671831189579,
+      "raw_2025_return": -0.1542926448033094,
+      "initial_price": 1886.3499755859373,
+      "final_price": 1595.300048828125
+    }
+  ]
+}
