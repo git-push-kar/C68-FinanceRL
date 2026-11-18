@@ -1,5 +1,7 @@
 **AUTHORITATIVE SCOPE CORRECTION:** all49 original dataset stocks are required. Five-stock workers stopped and results are diagnostic only. See [full-universe rebuild](FULL_UNIVERSE_REBUILD_20261117.md). Full49 GPU input/update preflight passed; financial training pending execution-accounting checks.
 
+**Latest research decision, 18 November 2026.** The three final state-aware policies trailed matched holding. The historical demo remains the deployed example. [Complete research handover](FINANCE_EXPERIMENT_HANDOVER_20261118.md).
+
 # Start here: final Finance RL artifact and demo
 
 **Latest active work (17 November, afternoon):** state-aware run 2 finished and failed the primary test: trained −8.176%, untrained +1.893%, holding −1.795%. Revision 3 also completed and failed: its selected supervised-only model repeats equal-weight allocations, returning −3.838% versus raw −0.113% and holding −1.795% at the primary capital. A focused-stock run with a mandatory conditional-learning gate is now active; see [revision4](STATEFUL_RL_REVISION4_ACTIVE_20261117.md) and its [guarded numerical-input continuation](STATEFUL_NUMERIC_BRIDGE_CONTINUATION_20261117.md). Read [revision 3 research, rationale and worker handover](STATEFUL_RL_REVISION3_RESEARCH_20261117.md). No replacement is declared final yet; old results below are historical.
@@ -25,3 +27,6 @@ Older reports sometimes name earlier artifacts final. They are retained history,
 
 
 
+
+
+18 November 2026. [Complete experiment history, final three-seed results and integration decision](FINANCE_EXPERIMENT_HANDOVER_20261118.md).

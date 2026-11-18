@@ -846,3 +846,6 @@ Prior restored-all49 run failed primary goal. User requested a full-fledged new 
 
 
 18 November 2026. All three native counterfactual seeds selected initialization. See [completed results and final experiment](COUNTERFACTUAL_RESULT_AND_FINAL_ROTATION.md).
+
+
+18 November 2026. [Complete experiment history, final three-seed results and integration decision](FINANCE_EXPERIMENT_HANDOVER_20261118.md).
