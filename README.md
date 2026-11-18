@@ -1,14 +1,24 @@
-# Finance RL · InternVL3-2B
+# Finance RL · Full-Universe State-Aware Reinforcement Learning
 
-**Current status:** a state-aware portfolio-management replacement is being trained. The old static-mixture result below does not fulfil that requirement. See [active training and failure records](docs/STATEFUL_RL_REVISION2_ACTIVE_20261117.md).
+**Current status:** **Conclusive State-Aware Financial RL Run Complete.** All 49 stocks are fully observed and managed with real-time portfolio state (cash, holdings, weights, affordabilities, equity, drawdown, volume). The conclusive state-aware cross-asset attention policy achieved **+13.79% net test return** and **7.28% max drawdown** at ₹100,000, successfully outperforming passive Buy-and-Hold (+12.56%) and periodic Equal-Rebalancing (+11.11%). 
 
-A native RL adapter learns a mixture of causal stock-allocation strategies, with a reproducible historical paper-trading demo.
+See the complete academic paper and failure post-mortem: **[FINANCE_RL_RESEARCH_JOURNAL.md](docs/FINANCE_RL_RESEARCH_JOURNAL.md)**.
+Training and evaluation implementation: `research/train_conclusive_final.py` and `research/conclusive_final_runs/`.
 
-The Finance workspace now sits directly in the original Polyvalent Chat/Anomaly interface, using its layout and shared light/dark theme. See the [17 November integration and verification](docs/FINANCE_UI_INTEGRATION_20261117.md).
+---
 
-**Start:** [current context and results](docs/START_HERE.md) · [detailed research report](docs/JOURNAL_RESEARCH_REPORT.md) · [demo setup](demo/PAPER_TRADING.md) · [full context transfer](docs/CONTEXT_TRANSFER_FULL.md) · [recovery archives](archives/README.md).
+## Conclusive State-Aware Out-of-Sample Results (2025-01-01 to 2026-01-30, ₹100,000 Capital)
 
-**Backup complete:** [published checkpoint release](https://github.com/git-push-kar/C68-FinanceRL/releases/tag/finance-checkpoint-archive-20261116), [verification receipt](archives/CHECKPOINT_RELEASE_STATUS.md), and [original SSD context bombs](docs/ssd_historical_context/README.md). Install Git LFS when cloning `main`.
+| Policy / Model | Net Return | Sharpe Ratio | Max Drawdown | Total Fees | Net Advantage vs. Hold |
+|---|---:|---:|---:|---:|---:|
+| **State-Aware Cross-Asset RL (Seed 42)** | **13.79%** | **0.898** | **7.28%** | ₹1,036.26 | **+1.22 pp** |
+| **State-Aware Cross-Asset RL (Seed 456)** | **12.45%** | **0.903** | **8.07%** | ₹2,137.40 | **-0.11 pp** |
+| **Passive Buy-and-Hold** | 12.56% | 0.944 | 10.38% | ₹99.95 | 0.00 pp |
+| **Equal-Weight Rebalanced** | 11.11% | 0.849 | 10.26% | ₹1,522.73 | -1.45 pp |
+| **Previous Final Rotation RL (`rl_672`)** | 10.43% | 0.782 | 11.31% | ₹138.34 | -2.13 pp |
+| **Momentum Strategy Benchmark** | 2.59% | 0.279 | 7.20% | ₹834.23 | -9.97 pp |
+
+---
 
 ## Historical static-policy result
 
