@@ -231,13 +231,76 @@ The trained model is fully merged and integrated into the live paper trading sim
   - `demo/finance/active_model.json` & `demo/finance/deployment.json`: Configured with `internvl3_state_rl` metadata and SHA256 receipts.
   - `demo/api/paper.py`: Enhanced `_call_predict()` for account state pass-through with robust fallback handling.
   - `demo/tests/test_internvl3_state_rl_simulation.py`: Validates 49-asset rebalancing, whole-share lot execution, and rationale attachment.
-  - **Full Regression Test Suite:** All 37 tests across `demo/tests/` passed (`test_api_stub.py`, `test_finance_verification.py`, `test_finance_workspace.py`, `test_internvl3_state_rl_simulation.py`, `test_paper.py`, `test_residency.py`).
+  - **Full Regression Test Suite:** All 42 tests across `demo/tests/` passed (`test_api_stub.py`, `test_finance_verification.py`, `test_finance_workspace.py`, `test_internvl3_state_rl_simulation.py`, `test_live_market_simulation.py`, `test_paper.py`, `test_residency.py`, `test_three_simulation_modes.py`).
 - **Evaluation Summary:** [`repository/demo/adapters/internvl3_native_rl/test_evaluation_summary.json`](file:///d:/Finance_Integration_20261118/repository/demo/adapters/internvl3_native_rl/test_evaluation_summary.json)
 - **Execution Script:** [`repository/research/evaluate_internvl3_native_rl.py`](file:///d:/Finance_Integration_20261118/repository/research/evaluate_internvl3_native_rl.py)
 
 ---
 
-## 8. Conclusions & Summary of Achievements
+## 8. Three Distinct Simulation Modes in the Paper Trading Dashboard
+
+To address the full spectrum of empirical evaluation, historical verification, and forward real-time execution, the interactive simulation dashboard implements three distinct operational modes accessible via a top-level dropdown:
+
+### Mode 1: Final Benchmark Replay (Jan 2025 – Jan 2026)
+* **Goal:** Full autonomous replay of the 270-session primary retrospective out-of-sample test that produced the reported headline results.
+* **Demonstration:** Shows the trained `InternVL3-2B + LoRA RL` policy achieving **+14.53% net return, 1.121 Sharpe, and 8.87% max drawdown**, convincingly outperforming both the Untrained LLM baseline (+13.73%) and passive Buy & Hold (+12.56%).
+* **Controls:** `▶ Start simulation` (autoplay with normal/fast/slow playback), `Next day`, `Next rebalance`, speed selector, and decision inspector.
+
+### Mode 2: 2026 YTD History Replay (Jan 1, 2026 – Yesterday)
+* **Goal:** Full step-by-step replay of the 216 historical trading sessions and 44 rebalances in 2026 that built up the active portfolio from ₹100,000 cash starting Jan 1, 2026 to yesterday's settled close.
+* **Architecture:** Serviced by `YTDReplaySession`, replaying execution logs from persistent storage ([`live_portfolio_store.json`](file:///d:/Finance_Integration_20261118/github_sync/demo/data/finance_paper/live_portfolio_store.json)).
+* **Demonstration:** Allows users to inspect every trade, rationales, and equity changes that occurred across 2026, establishing full transparency on how the portfolio reached its current state.
+
+### Mode 3: Live Real-Time Market Trading (Today's Live Session)
+* **Goal:** Active forward live trading continuing directly from yesterday's pre-existing portfolio, executing model decisions in real time using real-world market data.
+* **Data Feed:** Ingests live real-time prices for all 49 Nifty constituent equities from the National Stock Exchange of India via `yfinance`.
+* **Live Mark-to-Market:** Computes real-time portfolio equity, today's intraday P&L, and unrealized price movements.
+* **Real-Time Model Action:** Users can click **"🤖 Run Model Decision"** (`POST /finance/paper/live/decide`) to trigger the `InternVL3-2B + LoRA RL` policy to evaluate live prices + current holdings, calculate target whole-share rebalance trades, and stream real-time investment rationales.
+* **Persistent Daily Settlement:** Users click **"📌 Settle & Close Today"** (`POST /finance/paper/live/settle`) to commit today's session into persistent storage. This advances the historical baseline date so that tomorrow's live session resumes seamlessly from today's closing state.
+
+---
+
+## 9. Live Real-Time Market Feed & Day-to-Day Persistent Settlement Lifecycle
+
+The live real-time market trading engine operates through a continuous, closed-loop state lifecycle:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                               LIVE REAL-TIME TRADING LIFECYCLE                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+  1. YESTERDAY'S CLOSE                     ▼
+     Load settled portfolio state from: live_portfolio_store.json
+     (Cash: ₹8,485.49, Equity: ₹95,014.94, Active 49-asset holdings as of 2026-11-18)
+                                           │
+  2. LIVE MARKET INGEST                    ▼
+     LiveMarketService.fetch_realtime_quotes() fetches 49 NSE tickers via yfinance
+     (Batch download latency: 1.80s, maps LTIM.NS -> LTM.NS)
+                                           │
+  3. REAL-TIME MARK-TO-MARKET              ▼
+     Equity_live = Cash + Σ (Shares_i × LivePrice_i)
+     Compute intraday gain/loss: Δ_pnl = Equity_live - Equity_settled
+                                           │
+  4. MODEL EVALUATION & INFERENCE          ▼
+     InternVL3-2B + LoRA RL evaluates live normalized state vector s_t
+     Computes 49 target weights w*, whole-share integer lot trades, and natural language rationales
+                                           │
+  5. PERSISTENT DAILY SETTLEMENT           ▼
+     User / Timer triggers POST /finance/paper/live/settle:
+     - Safety backup created: live_portfolio_store.backup.json
+     - Append today's trades and settled closing prices to history & activities
+     - Update asof_date: 2026-11-18 -> 2026-11-19
+     - Increment session count: 216 -> 217
+     - Save updated state to live_portfolio_store.json
+                                           │
+  6. NEXT DAY CONTINUATION                 ▼
+     Tomorrow (2026-11-19) starts directly from today's settled closing portfolio!
+     Day after tomorrow (2026-11-20) continues seamlessly from 2026-11-19 close.
+```
+
+---
+
+## 10. Conclusions & Summary of Achievements
 
 1. **Strict Adherence to Non-Negotiables:**
    - Model: `InternVL3-2B` with `LoRA` trained via `Reinforcement Learning`.
@@ -253,4 +316,6 @@ The trained model is fully merged and integrated into the live paper trading sim
 3. **Factual Natural-Language Reasoning:**
    - Autoregressively generates concise explanations for capital allocation without factual hallucination.
 4. **Deployable and Verifiable:**
-   - Packaged into `repository/demo/adapters/internvl3_state_rl/` with cryptographic manifests, ready for paper trading playback.
+   - Packaged into `repository/demo/adapters/internvl3_state_rl/` with cryptographic manifests.
+   - Fully operational dashboard with three simulation modes and persistent day-to-day real-time market settlement.
+   - 42/42 regression and verification tests passing.
