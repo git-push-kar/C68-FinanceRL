@@ -1,0 +1,26 @@
+{
+  "reorder": {
+    "changed_actions": 0,
+    "probability_change": 0.0
+  },
+  "capital5000": {
+    "changed_actions": 0,
+    "probability_change": 0.02601340413093567
+  },
+  "capital200000": {
+    "changed_actions": 0,
+    "probability_change": 0.005192399024963379
+  },
+  "holdings": {
+    "changed_actions": 1,
+    "probability_change": 0.014780580997467041
+  },
+  "reverse_risk": {
+    "changed_actions": 0,
+    "probability_change": 0.0
+  },
+  "reverse_returns": {
+    "changed_actions": 0,
+    "probability_change": 0.0
+  }
+}

@@ -128,7 +128,8 @@ class Market(OriginalPanel):
      ledger.append({'date':date,'liquidation':e['child'],'quantity':float(p[j]),'gross':gross,'fees':f,'slippage':s});p[j]=0.
    if day==t+1 and weights is not None:
     receivable=float(p@np.array([e['mark'] for e in self.events]))
-    c,q,f,s,trade=execute(c,q,self.open[day],weights,receivable);fees+=f;slips+=s
+    fill = getattr(self, "execute_order", execute)
+    c,q,f,s,trade=fill(c,q,self.open[day],weights,receivable);fees+=f;slips+=s
    values.append(float(c+q@self.close[day]+p@np.array([e['mark'] for e in self.events])))
   if not values:raise ValueError('Empty horizon')
   return {'cash':c,'qty':q,'pending':p,'values':np.array(values),'reward':float(np.log(values[-1]/start)),'fees':fees,'slippage':slips,'trade_shares':trade,'ledger':ledger}

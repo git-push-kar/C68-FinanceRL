@@ -843,3 +843,6 @@ See [full-universe continuation](FULL_UNIVERSE_CONTINUATION_20261117.md) for imp
 ## 18 November2026: complete counterfactual all49 campaign
 
 Prior restored-all49 run failed primary goal. User requested a full-fledged new approach. See COUNTERFACTUAL_FULL_CAMPAIGN_20261118.md. Three native seeds, corrected matched execution, relative scores, canonical inputs and per-stock simulator counterfactual credit. Same original49stocks/dataset/InternVL3-2B. CPU numerical control is separate. Actual first GPU update/reload passed; no new final returns yet.
+
+
+18 November 2026. All three native counterfactual seeds selected initialization. See [completed results and final experiment](COUNTERFACTUAL_RESULT_AND_FINAL_ROTATION.md).

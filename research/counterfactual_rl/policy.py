@@ -64,7 +64,7 @@ class NativePolicy(nn.Module):
   stocks=sorted(stocks,key=lambda row:row['ticker']);order=np.arange(n)
   lines=['Manage all49 stocks in this portfolio. Each named stock below has one numerical state token; none are omitted.',f"As of {obs['asof']}; initialINR={obs['initial_capital']:.2f}; cashINR={obs['cash']:.2f}; equityINR={obs['equity']:.2f}.",
    'Numerical columns: quote,shares,value,weight,cash-affordability,r5,r20,r60,r120,volatility,drawdown,volume,initial capital,cash,equity,cash fraction,cap,fees,slippage,held indicator,cross-sectional rank(return20,return60,return120,volatility),quote/equity.',
-   'Choose relative investment scores A=0,B=0.25,C=0.5,D=1,E=2,F=4,G=8 for each stock. Positive scores are normalized to an invested portfolio subject to a10percent stock cap. All zero means cash. Whole-share rounding minimizes portfolio tracking error including cash; no borrowing or shorts. Prices after the signal are unknown.']
+   getattr(self,'action_instruction','Choose relative investment scores A=0,B=0.25,C=0.5,D=1,E=2,F=4,G=8 for each stock. Positive scores are normalized to an invested portfolio subject to a10percent stock cap. All zero means cash. Whole-share rounding minimizes portfolio tracking error including cash; no borrowing or shorts. Prices after the signal are unknown.')]
   text=self.tokenizer.apply_chat_template([{'role':'user','content':'\n'.join(lines)}],tokenize=False,add_generation_prompt=True)
   text+='\nNon-spendable corporate-action receivables: '+json.dumps(obs.get('pending_entitlements',[]),separators=(',',':'))
   numeric=[];spans={};eq=obs['equity']
