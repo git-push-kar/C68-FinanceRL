@@ -6,8 +6,9 @@
       <div class="note" id="fin-subtitle">Nifty 49 Equities · InternVL3-2B State RL</div>
       <label class="f" for="fin-mode">Simulation mode</label>
       <select id="fin-mode" aria-label="Simulation mode">
-        <option value="historical">Preset Period (Jan 2025 – Jan 2026)</option>
-        <option value="live">Live Real-Time Market (Jan 2026 – Present)</option>
+        <option value="benchmark">1. Final Benchmark Replay (Jan 2025 – Jan 2026)</option>
+        <option value="ytd">2. 2026 YTD History Replay (Jan 1, 2026 – Yesterday)</option>
+        <option value="live">3. Live Real-Time Market (Jan 2026 – Today / Tomorrow)</option>
       </select>
       <div id="fin-playback-tools">
         <label class="f" for="fin-speed">Playback speed</label>
@@ -17,8 +18,10 @@
         <button class="btn primary" id="fin-play">▶ Start simulation</button>
         <button class="btn" id="fin-day">Next day</button>
         <button class="btn" id="fin-rebalance">Next rebalance</button>
-        <button class="btn primary" id="fin-live-advance" style="display:none;">⚡ Step Live Day</button>
         <button class="btn" id="fin-live-refresh" style="display:none;">🔄 Fetch Live Quotes</button>
+        <button class="btn primary" id="fin-live-decide" style="display:none;">🤖 Run Model Decision</button>
+        <button class="btn" id="fin-live-settle" style="display:none;background:#2e7d32;color:#fff;">📌 Settle &amp; Close Today</button>
+        <button class="btn" id="fin-live-advance" style="display:none;">⚡ Step Live Day</button>
       </div>
       <div class="fin-status" id="fin-status" role="status"><span class="dot"></span><span id="fin-statusText">Preparing your portfolio…</span></div>
       <div class="fin-progress" aria-label="Simulation progress"><i id="fin-progress" style="width:0%"></i></div>
@@ -33,7 +36,7 @@
     </form>
     <details class="card"><summary>About this demonstration</summary>
       <p class="note">The selected state-aware InternVL3-2B + LoRA RL adapter evaluates all 49 Nifty equities using live portfolio state and market technical indicators.</p>
-      <p class="note" id="fin-modeDesc">Preset mode replays the primary 2025–2026 test set. Live mode tracks the model-managed portfolio from Jan 1, 2026 through today, and seamlessly resumes on tomorrow's real-time data.</p>
+      <p class="note" id="fin-modeDesc">Mode 1 replays the primary 2025–2026 benchmark (+14.53% return). Mode 2 replays the 2026 daily trading history up to yesterday. Mode 3 continues from yesterday's portfolio on real-time live market data.</p>
       <p class="note">Decision records show actual allocations, inputs and accounting. Generated Finance conversation was removed after factual testing.</p>
       <p class="note" id="fin-source"></p>
     </details>

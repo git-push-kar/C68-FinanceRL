@@ -1,39 +1,53 @@
-/* Actual paper-account controller; scoped to the native Finance tab. Supports Historical and Live Real-Time Market modes. */
+/* Actual paper-account controller; scoped to the native Finance tab.
+   Supports:
+     Mode 1: Final Benchmark Replay (Jan 2025 – Jan 2026)
+     Mode 2: 2026 YTD History Replay (Jan 1, 2026 – Yesterday)
+     Mode 3: Live Real-Time Market Trading (Today's Live Session)
+*/
 (()=>{
 
 'use strict';
 const $=id=>document.getElementById('fin-'+id), money=x=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(x),pct=x=>(100*x).toFixed(2)+'%';
-let state=null,session=null,busy=false,playing=false,limit=6,selected=null,playback=0,currentMode='historical';
+let state=null,session=null,busy=false,playing=false,limit=6,selected=null,playback=0,currentMode='benchmark';
 const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 async function api(path,method='GET',body){const r=await fetch('/finance/paper'+path,{method,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});let j=await r.json();if(!r.ok)throw Error(j.detail||'Request failed');return j;}
 function status(text,working=false){$('statusText').textContent=text;$('status').classList.toggle('busy',working);}
+
 function controls(){
   const isLive = (currentMode === 'live');
-  $('play').style.display = isLive ? 'none' : 'inline-block';
-  $('day').style.display = isLive ? 'none' : 'inline-block';
-  $('rebalance').style.display = isLive ? 'none' : 'inline-block';
-  $('playback-tools').style.display = isLive ? 'none' : 'block';
-  $('live-advance').style.display = isLive ? 'inline-block' : 'none';
-  $('live-refresh').style.display = isLive ? 'inline-block' : 'none';
+  const isReplay = !isLive;
 
-  $('live-advance').disabled = busy;
-  $('live-refresh').disabled = busy;
+  $('play').style.display = isReplay ? 'inline-block' : 'none';
+  $('day').style.display = isReplay ? 'inline-block' : 'none';
+  $('rebalance').style.display = isReplay ? 'inline-block' : 'none';
+  $('playback-tools').style.display = isReplay ? 'block' : 'none';
+
+  if($('live-refresh')) $('live-refresh').style.display = isLive ? 'inline-block' : 'none';
+  if($('live-decide')) $('live-decide').style.display = isLive ? 'inline-block' : 'none';
+  if($('live-settle')) $('live-settle').style.display = isLive ? 'inline-block' : 'none';
+  if($('live-advance')) $('live-advance').style.display = isLive ? 'inline-block' : 'none';
+
+  if(isLive){
+    if($('live-refresh')) $('live-refresh').disabled = busy;
+    if($('live-decide')) $('live-decide').disabled = busy;
+    if($('live-settle')) $('live-settle').disabled = busy;
+    if($('live-advance')) $('live-advance').disabled = busy;
+  }
+
   for(const id of ['day','rebalance'])$(id).disabled=busy||!state||state.finished||playing;
   $('play').disabled=!state||state.finished;
   $('play').textContent=playing?'Ⅱ Pause':state?.finished?'Simulation complete':state?.sessions?'▶ Resume':'▶ Start simulation';
   $('settings').querySelector('button').disabled=busy;
 }
+
 function error(text){$('error').textContent=text;$('error').hidden=!text;}
 
 function render(){
   if(!state)return;
   const isLive = (currentMode === 'live');
-  $('date').textContent=(isLive?'Live: ':'As of ')+state.date;
+  const isYTD = (currentMode === 'ytd');
+
   $('equity').textContent=money(state.equity);
-  $('initial').textContent='Started with '+money(state.capital);
-  $('gain').textContent=money(state.equity-state.capital);
-  $('gain').className='v '+(state.net_return>=0?'positive':'negative');
-  $('return').textContent=pct(state.net_return)+' net return';
   $('drawdown').textContent=pct(state.maximum_drawdown);
   $('fees').textContent=money(state.fees);
   $('range').textContent=state.initial_date+' — '+state.date;
@@ -41,13 +55,37 @@ function render(){
   $('progress').style.width=isLive?'100%':(100*state.sessions/state.total_sessions+'%');
 
   if(isLive){
-    $('sessionInfo').innerHTML = '<strong>Live Real-Time Market Mode</strong><br>Jan 1, 2026 – Today ('+state.date+')<br>'+state.sessions+' trading sessions managed';
-    $('resetNote').textContent = 'Re-initializes the live portfolio from Jan 1, 2026 to today with fresh capital.';
-    $('headlineNote').textContent = 'Real-time forward portfolio managed by InternVL3-2B on live market data.';
+    $('date').textContent='Live: '+state.date;
+    $('initial').textContent='Settled close: '+money(state.settled_equity || state.capital);
+    const pnl = (state.intraday_pnl !== undefined) ? state.intraday_pnl : (state.equity - state.capital);
+    const pnlPct = (state.intraday_pct !== undefined) ? state.intraday_pct : state.net_return;
+    $('gain').textContent=money(pnl);
+    $('gain').className='v '+(pnl>=0?'positive':'negative');
+    $('return').textContent=pct(pnlPct)+' today · Overall '+pct(state.net_return);
+
+    $('sessionInfo').innerHTML = '<strong>Mode 3: Live Real-Time Market Trading</strong><br>Resumed from yesterday ('+(state.settled_date||state.initial_date)+') · Today: '+state.date+'<br>'+(state.market_status||'Live Data Active');
+    $('resetNote').textContent = 'Reloads the pre-existing portfolio state from storage.';
+    $('headlineNote').textContent = 'Real-time portfolio management on live market data. Settle to commit today into history.';
+  } else if(isYTD){
+    $('date').textContent='2026 YTD Replay: '+state.date;
+    $('initial').textContent='Started Jan 1 with '+money(state.capital);
+    $('gain').textContent=money(state.equity-state.capital);
+    $('gain').className='v '+(state.net_return>=0?'positive':'negative');
+    $('return').textContent=pct(state.net_return)+' net return';
+
+    $('sessionInfo').innerHTML = '<strong>Mode 2: 2026 YTD History Replay</strong><br>Jan 1, 2026 – Yesterday ('+state.date+')<br>'+state.sessions+' / '+state.total_sessions+' sessions replayed';
+    $('resetNote').textContent = 'Restarts the 2026 historical replay from Jan 1, 2026 cash.';
+    $('headlineNote').textContent = 'Watch the 216 daily actions and 44 rebalances that built the current portfolio.';
   } else {
-    $('sessionInfo').innerHTML = '1 January 2025 – 30 January 2026<br>270 trading sessions';
-    $('resetNote').textContent = 'Restarts the same historical period with a fresh account.';
-    $('headlineNote').textContent = 'Watch the trained portfolio act as the market unfolds.';
+    $('date').textContent='Benchmark Replay: '+state.date;
+    $('initial').textContent='Started with '+money(state.capital);
+    $('gain').textContent=money(state.equity-state.capital);
+    $('gain').className='v '+(state.net_return>=0?'positive':'negative');
+    $('return').textContent=pct(state.net_return)+' net return';
+
+    $('sessionInfo').innerHTML = '<strong>Mode 1: Final Benchmark Replay</strong><br>1 Jan 2025 – 30 Jan 2026 · 270 sessions<br>Conclusive out-of-sample benchmark (+14.53%)';
+    $('resetNote').textContent = 'Restarts the 2025–2026 benchmark simulation with fresh capital.';
+    $('headlineNote').textContent = 'Watch the trained portfolio act on the primary test set beating Buy & Hold.';
   }
 
   renderChart();
@@ -171,23 +209,6 @@ async function advance(mode){
   }
 }
 
-async function advanceLive(){
-  if(busy||!state)return;
-  busy=true;error('');
-  status('Advancing live portfolio with latest real-time market quotes…',true);
-  controls();
-  try{
-    state=await api('/sessions/live_market_session/advance','POST',{mode:'day',expected_sessions:state.sessions});
-    render();
-    status('Live portfolio updated as of '+state.date);
-  }catch(e){
-    error(e.message);
-    status('Live update completed');
-  }finally{
-    busy=false;controls();
-  }
-}
-
 async function refreshLiveQuotes(){
   if(busy)return;
   busy=true;error('');
@@ -196,10 +217,61 @@ async function refreshLiveQuotes(){
   try{
     state=await api('/live/refresh','POST');
     render();
-    status('Live market data refreshed as of '+state.date);
+    status('Live market data refreshed as of '+state.date+' · Portfolio marked to market');
   }catch(e){
     error('Live refresh failed: '+e.message);
     status('Refresh failed');
+  }finally{
+    busy=false;controls();
+  }
+}
+
+async function decideLive(){
+  if(busy)return;
+  busy=true;error('');
+  status('Running InternVL3-2B + LoRA RL inference on live market prices…',true);
+  controls();
+  try{
+    state=await api('/live/decide','POST');
+    render();
+    status('Model evaluated today\'s live market and generated target allocation & reasoning');
+  }catch(e){
+    error('Model live decision failed: '+e.message);
+    status('Live decision failed');
+  }finally{
+    busy=false;controls();
+  }
+}
+
+async function settleLive(){
+  if(busy)return;
+  busy=true;error('');
+  status('Committing today\'s session into permanent history storage…',true);
+  controls();
+  try{
+    state=await api('/live/settle','POST');
+    render();
+    status('Day settled into permanent storage! Portfolio officially managed through '+state.date+'. Tomorrow will resume from this state.');
+  }catch(e){
+    error('Day settlement failed: '+e.message);
+    status('Settlement failed');
+  }finally{
+    busy=false;controls();
+  }
+}
+
+async function advanceLive(){
+  if(busy||!state)return;
+  busy=true;error('');
+  status('Stepping live day forward on latest market data…',true);
+  controls();
+  try{
+    state=await api('/sessions/live_market_session/advance','POST',{mode:'day',expected_sessions:state.sessions});
+    render();
+    status('Live portfolio updated as of '+state.date);
+  }catch(e){
+    error(e.message);
+    status('Live update completed');
   }finally{
     busy=false;controls();
   }
@@ -218,12 +290,21 @@ async function play(){
 async function start(capital=100000, mode=currentMode){
   playing=false;playback++;busy=true;controls();error('');
   try{
-    if(session && session !== 'live_market_session')await api('/sessions/'+session,'DELETE');
+    if(session && session !== 'live_market_session' && session !== 'ytd_history_session') {
+      try{ await api('/sessions/'+session,'DELETE'); }catch(_){}
+    }
     state=await api('/sessions','POST',{capital,mode});
     session=state.session_id;
-    if(mode === 'historical')localStorage.setItem('finance-paper-session',session);
+    if(mode === 'benchmark' || mode === 'historical') localStorage.setItem('finance-paper-session',session);
     selected=null;limit=6;render();
-    status(mode === 'live' ? 'Live portfolio active · '+state.sessions+' sessions managed from Jan 1, 2026 to today' : 'Ready · '+state.total_sessions+' historical trading sessions');
+
+    if(mode === 'live'){
+      status('Mode 3 Active: Live Real-Time Market Trading · Resumed from yesterday ('+state.settled_date+') to today ('+state.date+')');
+    } else if(mode === 'ytd'){
+      status('Mode 2 Active: 2026 YTD History Replay · '+state.total_sessions+' trading sessions from Jan 1, 2026 to yesterday');
+    } else {
+      status('Mode 1 Active: Final Benchmark Replay · '+state.total_sessions+' continuous test sessions (Jan 2025 – Jan 2026)');
+    }
   }catch(e){
     error(e.message);
   }finally{
@@ -241,8 +322,11 @@ function exportCSV(name,rows){
 $('play').onclick=play;
 $('day').onclick=()=>advance('day');
 $('rebalance').onclick=()=>advance('rebalance');
-$('live-advance').onclick=advanceLive;
-$('live-refresh').onclick=refreshLiveQuotes;
+if($('live-refresh')) $('live-refresh').onclick=refreshLiveQuotes;
+if($('live-decide')) $('live-decide').onclick=decideLive;
+if($('live-settle')) $('live-settle').onclick=settleLive;
+if($('live-advance')) $('live-advance').onclick=advanceLive;
+
 $('compare').onchange=renderChart;
 $('search').oninput=renderHoldings;
 $('more').onclick=()=>{limit+=6;renderActivity();};
@@ -252,6 +336,7 @@ $('exportActivity').onclick=()=>exportCSV('activity-'+state.date+'.csv',state.ac
 
 $('mode').onchange=async()=>{
   currentMode=$('mode').value;
+  if(currentMode === 'historical') currentMode = 'benchmark';
   localStorage.setItem('finance-paper-mode',currentMode);
   await start(Number($('capital').value),currentMode);
 };
@@ -260,12 +345,19 @@ async function initialize(){
   try{
     const c=await api('/config');
     $('source').textContent='Selected artifact: '+c.adapter+' · SHA256 '+c.adapter_sha256.slice(0,16)+'…';
-    currentMode=localStorage.getItem('finance-paper-mode')||'historical';
+    currentMode=localStorage.getItem('finance-paper-mode')||'benchmark';
+    if(currentMode === 'historical') currentMode = 'benchmark';
     $('mode').value=currentMode;
+
     if(currentMode==='live'){
       await start(100000,'live');
       return;
     }
+    if(currentMode==='ytd'){
+      await start(100000,'ytd');
+      return;
+    }
+
     session=localStorage.getItem('finance-paper-session');
     if(session){
       try{
@@ -276,7 +368,7 @@ async function initialize(){
         return;
       }catch(_){session=null;}
     }
-    await start(100000,'historical');
+    await start(100000,'benchmark');
   }catch(e){
     error(e.message);status('Portfolio unavailable');
   }
