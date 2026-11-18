@@ -6,20 +6,26 @@ The fine-tuned model evaluates all 49 stocks, computes whole-share integer alloc
 
 The selected InternVL3-2B Nifty RL adapter (`adapters/internvl3_state_rl`, SHA256: `749d98f2420b5ce601b10d1b191dbb2d9985ecac5ce9f290b55defa588c1d340`) controls the historical paper account. Backward compatibility with the legacy strategy-mixture reference is preserved for regression testing.
 
-## Simulation Modes in the Interface
+## Three Distinct Simulation Modes in the Interface
 
-The paper trading interface now features a **Simulation Mode** dropdown selector with two operating modes:
+The paper trading dashboard provides three operating modes selectable from the **Simulation mode** dropdown:
 
-1. **Preset Period (Jan 2025 – Jan 2026):**
-   - Replays the 270-session primary retrospective test set.
-   - Interactive day-by-day autonomous playback, step-by-step advance, and rebalance inspection.
-   - Preserves benchmark comparisons against Untrained LLM and Buy & Hold.
+1. **Mode 1: Final Benchmark Replay (Jan 2025 – Jan 2026)**
+   - **Purpose:** Full autonomous replay of the 270-session primary retrospective out-of-sample test that yielded our final headline results.
+   - **Benchmark Comparison:** Demonstrates the trained model achieving **+14.53% net return, 1.121 Sharpe, and 8.87% max drawdown**, outperforming Untrained Baseline (+13.73%) and Buy & Hold (+12.56%).
+   - **Controls:** Play/Pause autonomous playback, Next day, Next rebalance, speed adjustment, and decision inspection with natural-language rationales.
 
-2. **Live Real-Time Market (Jan 2026 – Present):**
-   - **Forward Real-Time Mode:** Tracks the portfolio actively managed by the model starting from January 1, 2026 up to today's market session (`2026-11-18`).
-   - **Live Market Fetching:** Uses `yfinance` to fetch live daily quotes across all 49 Nifty constituent equities from the National Stock Exchange of India.
-   - **Continuous Day-to-Day Resumption:** Persists portfolio holdings, cash, cost basis, cumulative P&L, and model rationales in `data/finance_paper/live_portfolio_store.json`.
-   - **Next Trading Day Progression:** When tomorrow (e.g., Nov 19, 2026) arrives, clicking **"⚡ Step Live Day"** or **"🔄 Fetch Live Quotes"** ingests the new day's market data, allows the `InternVL3-2B + LoRA RL` adapter to evaluate the updated portfolio state, executes whole-share trades if rebalance is due, and marks the account to market with the market close. On the day after tomorrow (Nov 20, 2026), it resumes seamlessly from Nov 19's closing state.
+2. **Mode 2: 2026 YTD History Replay (Jan 1, 2026 – Yesterday)**
+   - **Purpose:** Interactive replay of the exact 216 historical trading sessions and 44 rebalances in 2026 that built up the active portfolio from ₹100,000 cash starting Jan 1, 2026 to yesterday's settled close.
+   - **Controls:** Autonomous Play/Pause, Next day, Next rebalance, and trade inspections across the full 2026 timeline.
+   - **Outcome:** Reaches completion at yesterday's close, establishing the exact portfolio state that feeds into Mode 3.
+
+3. **Mode 3: Live Real-Time Market Trading (Today's Live Session)**
+   - **Purpose:** Active live forward trading session continuing directly from yesterday's pre-existing portfolio.
+   - **Real-Time Data Feed:** Fetches today's live market quotes across all 49 Nifty equities via `yfinance` from the National Stock Exchange of India (NSE).
+   - **Live Mark-to-Market:** Computes real-time portfolio value, today's intraday P&L, and unrealized returns.
+   - **Model Decision & Execution:** When triggered, the `InternVL3-2B + LoRA RL` adapter evaluates today's real-time prices + current portfolio state, calculates whole-share target allocations under 10% position limits and transaction fees, and streams real-time natural language reasoning explaining its actions.
+   - **Day-to-Day Persistent Settlement:** Clicking **"📌 Settle & Close Today"** commits today's trades and settled closing prices into `data/finance_paper/live_portfolio_store.json`. This permanently updates the baseline so that tomorrow's live trading session (e.g. Nov 19 or Nov 20) resumes seamlessly from today's closing state, while Mode 2 expands to replay through this newly settled day.
 
 ## On this PC
 
