@@ -194,12 +194,19 @@ All generated numbers in the rationales match the grounded input state exactly, 
 
 ## 7. Paper Trading Demonstration Integration
 
-The trained model is fully integrated into the paper trading simulation engine:
+The trained model is fully merged and integrated into the live paper trading simulation engine:
 - **Deployment Adapter:** [`repository/demo/adapters/internvl3_state_rl/`](file:///d:/Finance_Integration_20261118/repository/demo/adapters/internvl3_state_rl/)
   - `adapter_model.safetensors` (SHA256: `749d98f2420b5ce601b10d1b191dbb2d9985ecac5ce9f290b55defa588c1d340`)
   - `adapter_config.json` (SHA256: `fcfd72ecf73635a9a72fa76b754c756b30b2dd5ad038f26c4a3ae3a7185b89a6`)
   - `policy.json` (SHA256: `d52571805e4ee47fabb803dacd93a9baced8e8eb7e2a404e25f73f98a0afe2a5`)
   - `manifest.json` (SHA256 verified)
+- **Engine & Policy Integration:**
+  - `demo/finance/policy.py`: Grounded numerical prompt construction over all 49 equities, LoRA forward pass, conviction scoring, top-15 filtering, 10% maximum stock cap, turnover hold-gating ($<12\%$), and autoregressive rationale generation.
+  - `demo/finance/paper_engine.py`: Supports 49-asset target weight rebalancing and embeds rationales into structured paper trading activity logs.
+  - `demo/finance/active_model.json` & `demo/finance/deployment.json`: Configured with `internvl3_state_rl` metadata and SHA256 receipts.
+  - `demo/api/paper.py`: Enhanced `_call_predict()` for account state pass-through with robust fallback handling.
+  - `demo/tests/test_internvl3_state_rl_simulation.py`: Validates 49-asset rebalancing, whole-share lot execution, and rationale attachment.
+  - **Full Regression Test Suite:** All 37 tests across `demo/tests/` passed (`test_api_stub.py`, `test_finance_verification.py`, `test_finance_workspace.py`, `test_internvl3_state_rl_simulation.py`, `test_paper.py`, `test_residency.py`).
 - **Evaluation Summary:** [`repository/demo/adapters/internvl3_native_rl/test_evaluation_summary.json`](file:///d:/Finance_Integration_20261118/repository/demo/adapters/internvl3_native_rl/test_evaluation_summary.json)
 - **Execution Script:** [`repository/research/evaluate_internvl3_native_rl.py`](file:///d:/Finance_Integration_20261118/repository/research/evaluate_internvl3_native_rl.py)
 
