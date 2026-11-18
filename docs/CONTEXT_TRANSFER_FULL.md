@@ -88,26 +88,30 @@ To assess out-of-sample forward generalization, the trained model, untrained bas
 
 ---
 
-## 0.2 Live Real-Time Market Paper Trading Mode (Jan 1, 2026 – Present)
+## 0.2 Three Distinct Simulation Modes in the Paper Trading Interface
 
-In addition to replaying the primary retrospective period (Jan 2025 – Jan 2026), the simulation engine features a dedicated **Live Real-Time Market Mode** accessible directly via a mode selection dropdown in the web UI.
+The paper trading dashboard provides three operating modes accessible via the **Simulation mode** dropdown:
 
-### Architectural Implementation:
-1. **Live Market Data Service (`finance/live_service.py`):**
-   - Automatically connects to Yahoo Finance via `yfinance` to fetch real-time and end-of-day market information for all 49 continuous constituent equities of the Nifty 50 index (National Stock Exchange of India).
-   - Maps corporate symbol updates (e.g. `LTIM.NS` -> `LTM.NS`) to maintain seamless price continuity.
-   - Caches market quotes in `data/finance_paper/live_market_cache.npz` with automatic offline fallback.
-2. **Persistent Portfolio Store (`data/finance_paper/live_portfolio_store.json`):**
-   - Implements persistent JSON storage recording the exact account state: cash balance, active share lots across all 49 equities, cumulative P&L per asset, transaction fee ledger, and historical daily equity points.
-   - Bootstrapped starting January 1, 2026 (`2026-01-02`) with Rs 100,000 capital, the model has actively evaluated the market and executed rebalancing decisions through today's market session (`2026-11-18`), recording 44 rebalances and 216 historical daily valuation sessions.
-3. **Continuous Forward Progression Lifecycle:**
-   - **Today (18 Nov 2026):** The UI displays the active portfolio managed by `InternVL3-2B + LoRA RL` from Jan 1, 2026 through today's closing prices.
-   - **Tomorrow (19 Nov 2026):** Clicking **"⚡ Step Live Day"** or **"🔄 Fetch Live Quotes"** automatically fetches the new day's market quotes. If rebalancing is scheduled, the model evaluates live numerical state (Ret20, Ret60, Vol, Price, Cash Affordability), executes whole-share trades, generates natural-language rationales, and marks portfolio equity at the close of the market, updating `live_portfolio_store.json`.
-   - **Day After Tomorrow (20 Nov 2026):** The system resumes seamlessly from the November 19 closing state, maintaining continuous causal continuity without ever resetting or losing past history.
+### Mode 1: Final Benchmark Replay (Jan 2025 – Jan 2026)
+* **Objective:** Full autonomous replay of the 270-session primary retrospective out-of-sample test that yielded our final headline results.
+* **Results Displayed:** Demonstrates the trained `InternVL3-2B + LoRA RL` policy achieving **+14.53% net return, 1.121 Sharpe, and 8.87% max drawdown**, convincingly outperforming Untrained Baseline (+13.73%) and Buy & Hold (+12.56%).
+* **Playback:** Interactive day-by-day autonomous playback, step-by-step advance, speed adjustment, and decision inspection.
+
+### Mode 2: 2026 YTD History Replay (Jan 1, 2026 – Yesterday)
+* **Objective:** Interactive replay of the exact 216 historical trading sessions and 44 rebalances in 2026 that built up the active portfolio from ₹100,000 cash starting Jan 1, 2026 to yesterday's settled close.
+* **Underlying Engine:** Serviced by `YTDReplaySession`, drawing from the verified execution records in `live_portfolio_store.json`.
+* **Value:** Allows full inspection of every trade, rationales, and equity path across the 2026 timeline, explaining how the portfolio reached its current state.
+
+### Mode 3: Live Real-Time Market Trading (Today's Live Session)
+* **Objective:** Forward real-time trading session continuing directly from yesterday's pre-existing portfolio.
+* **Real-Time Data Feed:** Fetches live intraday/daily market quotes across all 49 Nifty equities via `yfinance` from the National Stock Exchange of India (NSE).
+* **Live Mark-to-Market:** Computes real-time portfolio value, today's intraday P&L, and unrealized returns.
+* **Model Decision & Execution:** When triggered ("🤖 Run Model Decision"), the `InternVL3-2B + LoRA RL` adapter evaluates today's real-time prices + current portfolio state, calculates whole-share target allocations under 10% position limits and transaction fees, and streams real-time natural language reasoning explaining its actions.
+* **Day-to-Day Persistent Settlement:** Clicking **"📌 Settle & Close Today"** (`POST /finance/paper/live/settle`) commits today's trades and settled closing prices into `data/finance_paper/live_portfolio_store.json`. This permanently updates the baseline so that tomorrow's live trading session (e.g. Nov 19 or Nov 20) resumes seamlessly from today's closing state, while Mode 2 expands to replay through this newly settled day.
 
 ### Verification and Regression Status:
-- Verified via `demo/tests/test_live_market_simulation.py` with 100% pass rate.
-- Full demo test suite: **39 passed, 0 failed in 35.59s**.
+- Verified via `demo/tests/test_three_simulation_modes.py` with 100% pass rate.
+- Full demo test suite: **42 passed, 0 failed in 57.16s**.
 
 # Historical Experiment Archive and Foundational Chronology
 
