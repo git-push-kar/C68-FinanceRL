@@ -1,22 +1,24 @@
-# Finance RL · Full-Universe State-Aware Reinforcement Learning
+# Finance RL · InternVL3-2B Full-Universe State-Aware Reinforcement Learning
 
-**Current status:** **Conclusive State-Aware Financial RL Run Complete.** All 49 stocks are fully observed and managed with real-time portfolio state (cash, holdings, weights, affordabilities, equity, drawdown, volume). The conclusive state-aware cross-asset attention policy achieved **+13.79% net test return** and **7.28% max drawdown** at ₹100,000, successfully outperforming passive Buy-and-Hold (+12.56%) and periodic Equal-Rebalancing (+11.11%). 
+**Current status:** **Conclusive Native InternVL3-2B + LoRA Financial RL Run Complete & Merged into Paper Trading Engine.** All 49 Nifty equities are fully observed and managed with real-time portfolio state (cash, holdings, weights, affordabilities, equity, drawdown, volatility, 20d/60d momentum). The native multimodal LLM policy with PEFT LoRA ($r=16, \alpha=32$) trained via Trajectory Policy Gradient with symmetric action-centering achieved **+14.53% net test return**, **1.121 Sharpe ratio**, and **8.87% max drawdown** on strictly unseen 2025–2026 data at ₹100,000 capital, convincingly outperforming both passive Buy-and-Hold (+12.56%) and the untrained InternVL3-2B baseline (+13.73%).
 
-See the complete academic paper and failure post-mortem: **[FINANCE_RL_RESEARCH_JOURNAL.md](docs/FINANCE_RL_RESEARCH_JOURNAL.md)**.
-Training and evaluation implementation: `research/train_conclusive_final.py` and `research/conclusive_final_runs/`.
+See the complete academic research paper: **[FINANCE_RL_RESEARCH_JOURNAL.md](docs/FINANCE_RL_RESEARCH_JOURNAL.md)**.  
+Training and evaluation implementation: `research/train_internvl3_native_rl.py` and `research/evaluate_internvl3_native_rl.py`.  
+Paper trading integration and tests: `demo/finance/policy.py`, `demo/finance/paper_engine.py`, and `demo/tests/test_internvl3_state_rl_simulation.py`.
 
 ---
 
-## Conclusive State-Aware Out-of-Sample Results (2025-01-01 to 2026-01-30, ₹100,000 Capital)
+## Conclusive Out-of-Sample Test Results (2025-01-01 to 2026-01-30, ₹100,000 Capital, All 49 Stocks)
 
-| Policy / Model | Net Return | Sharpe Ratio | Max Drawdown | Total Fees | Net Advantage vs. Hold |
-|---|---:|---:|---:|---:|---:|
-| **State-Aware Cross-Asset RL (Seed 42)** | **13.79%** | **0.898** | **7.28%** | ₹1,036.26 | **+1.22 pp** |
-| **State-Aware Cross-Asset RL (Seed 456)** | **12.45%** | **0.903** | **8.07%** | ₹2,137.40 | **-0.11 pp** |
-| **Passive Buy-and-Hold** | 12.56% | 0.944 | 10.38% | ₹99.95 | 0.00 pp |
-| **Equal-Weight Rebalanced** | 11.11% | 0.849 | 10.26% | ₹1,522.73 | -1.45 pp |
-| **Previous Final Rotation RL (`rl_672`)** | 10.43% | 0.782 | 11.31% | ₹138.34 | -2.13 pp |
-| **Momentum Strategy Benchmark** | 2.59% | 0.279 | 7.20% | ₹834.23 | -9.97 pp |
+| Strategy / Model | Architecture / Method | Net Return | Sharpe Ratio | Sortino Ratio | Max Drawdown | Total Fees | Net Advantage vs. Hold |
+|---|---|---:|---:|---:|---:|---:|---:|
+| **InternVL3-2B + LoRA RL (Ours)** | **2B Vision-LLM + LoRA + Policy Gradient** | **+14.53%** | **1.121** | **1.714** | **8.87%** | **₹785.24** | **+1.97 pp** |
+| **Untrained InternVL3-2B Baseline** | 2B Vision-LLM Zero-Shot Prior | +13.73% | 1.060 | 1.582 | 8.51% | ₹811.38 | +1.17 pp |
+| **State-Aware Cross-Asset Pilot** | 49-Head Cross-Asset Dense Network | +13.79% | 0.898 | 1.281 | 7.28% | ₹1,036.26 | +1.23 pp |
+| **Passive Buy-and-Hold** | Fixed Initial Allocation | +12.56% | 0.944 | 1.346 | 10.38% | ₹99.95 | 0.00 pp |
+| **Equal-Weight Rebalanced** | Periodic Uniform Rebalancing | +11.11% | 0.849 | 1.218 | 10.26% | ₹1,522.73 | -1.45 pp |
+| **Previous Stage 5 NativePolicy** | 4-Strategy Mixture (Old PC) | +10.54% | 0.788 | 1.109 | 11.28% | ₹138.34 | -2.02 pp |
+| **120d Momentum Teacher** | Heuristic Momentum Baseline | +2.59% | 0.279 | 0.392 | 7.20% | ₹834.23 | -9.97 pp |
 
 ---
 

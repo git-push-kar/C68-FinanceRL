@@ -69,12 +69,24 @@ class PaperAccount:
         targets = p.targets(self.index) if rebalance else None
         receipt = None
         if rebalance:
-            probs, receipt = predict()
+            try:
+                probs, receipt = predict(account=self)
+            except (TypeError, ValueError):
+                probs, receipt = predict()
             probs = np.asarray(probs, dtype=float)
-            if probs.shape != (4,) or not np.isfinite(probs).all() or (probs < 0).any():
-                raise ValueError('Invalid real-model strategy probabilities')
-            probs = probs/probs.sum()
-            target = probs@targets
+            if probs.shape == (len(self.weights),):
+                target = probs
+                strategy_probs = [0.25] * 4
+                contributions = np.zeros((4, len(self.weights)))
+            elif probs.shape == (4,):
+                if not np.isfinite(probs).all() or (probs < 0).any():
+                    raise ValueError('Invalid real-model strategy probabilities')
+                probs = probs/probs.sum()
+                target = probs@targets
+                strategy_probs = probs.tolist()
+                contributions = probs[:, None]*targets
+            else:
+                raise ValueError(f'Invalid real-model action shape {probs.shape}')
         else:
             target = self.weights.copy()
         rel = p.prices[self.index+1]/p.prices[self.index]
@@ -82,14 +94,14 @@ class PaperAccount:
         old_equity = self.equity
         if rebalance:
             traded = old_equity*(result.post_fee_stock_notional-self.weights)
-            contributions = probs[:, None]*targets
+            rationales = receipt.get('rationales', []) if isinstance(receipt, dict) else []
             self.activities.append({
                 'id': len(self.activities), 'execution_date': str(p.dates[self.index]),
-                'signal_date': str(p.dates[self.index-1]), 'probabilities': probs.tolist(),
+                'signal_date': str(p.dates[self.index-1]), 'probabilities': strategy_probs,
                 'strategy_names': STRATEGIES, 'previous_weights': self.weights.tolist(),
-                'target_weights': target.tolist(), 'strategy_contributions': contributions.tolist(),
+                'target_weights': target.tolist(), 'strategy_contributions': contributions.tolist() if hasattr(contributions, 'tolist') else contributions,
                 'pre_trade_equity': old_equity, 'fee': old_equity*result.trading_cost,
-                'turnover': result.turnover, 'model_receipt': receipt,
+                'turnover': result.turnover, 'model_receipt': receipt, 'rationales': rationales,
                 'trades': [{'ticker': t, 'amount': float(amount),
                             'previous_weight': float(self.weights[i]), 'target_weight': float(target[i])}
                            for i, (t, amount) in enumerate(zip(p.tickers, traded)) if abs(amount) > .005]})

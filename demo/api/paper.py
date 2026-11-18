@@ -56,8 +56,14 @@ def advance(key: str, request: Advance):
             if request.expected_sessions != session.n:
                 raise HTTPException(409, 'The portfolio has already advanced. Reload its current state.')
             before = len(session.activities)
+            def _call_predict():
+                try:
+                    return predict(get_service(), account=session)
+                except TypeError:
+                    return predict(get_service())
+
             for _ in range(5 if request.mode == 'rebalance' else 1):
-                if not session.step(lambda: predict(get_service())):
+                if not session.step(_call_predict):
                     break
                 if request.mode == 'rebalance' and len(session.activities) > before:
                     break

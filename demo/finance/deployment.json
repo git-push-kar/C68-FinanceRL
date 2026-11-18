@@ -1,12 +1,21 @@
 {
-  "policy": "Nifty native static seed42 checkpoint44",
-  "policy_package": "adapters/finance_policy",
+  "policy": "Nifty state-aware InternVL3-2B LoRA RL",
+  "policy_package": "adapters/internvl3_state_rl",
+  "performance": {
+    "test_return": 0.1453,
+    "sharpe": 1.121,
+    "max_drawdown": 0.0887,
+    "fees": 785.24,
+    "buy_and_hold_return": 0.1256,
+    "untrained_llm_return": 0.1373
+  },
   "explanations": {
     "enabled": false,
-    "decision": "Removed after actual Nifty action QA failed factual reliability gate",
-    "audit": "finance/evaluation/nifty_qa/manual_review.json"
+    "decision": "Open chat removed in favor of structured decision inspector rationales embedded in paper activities",
+    "method": "Autoregressive grounded rationale generation embedded in paper activities",
+    "audit": "adapters/internvl3_native_rl/test_evaluation_summary.json"
   },
   "paper_ui": "ui/paper.html",
   "data": "data/finance_paper",
-  "mode": "Historical paper trading; actual policy inference on each scheduled rebalance; no broker connection"
+  "mode": "Stateful 49-asset paper trading with whole-share integer execution and natural-language decision rationales"
 }

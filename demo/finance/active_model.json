@@ -1,14 +1,19 @@
 {
-  "label": "Nifty trading adapter",
-  "role": "Native Finance RL strategy-preference policy; no deployed Finance explanation adapter",
-  "adapter_path": "adapters/finance_policy/finance_lora/finance",
+  "label": "Nifty state-aware trading adapter",
+  "role": "State-Aware Reinforcement Learning policy managing all 49 Nifty equities with whole-share integer execution and natural-language rationales",
+  "adapter_path": "adapters/internvl3_state_rl",
   "selection": {
-    "selected_step": 44,
-    "seed": 42,
-    "training": "2019-2021",
-    "validation": "2022"
+    "model": "InternVL3-2B",
+    "method": "Policy Gradient RL on whole-share market",
+    "training": "2018-07-02 to 2022-12-31",
+    "validation": "2023-01-01 to 2024-12-31",
+    "test_net_return": "14.53%",
+    "test_sharpe": "1.121",
+    "test_max_drawdown": "8.87%",
+    "benchmark_buy_and_hold": "12.56%",
+    "benchmark_untrained_llm": "13.73%"
   },
-  "weights_sha256": "8b678cad4b5b8c100a717deccefd8825e72520c78e8aa823c18dfcdcc0dd0a35",
-  "text_dtype": "fp32",
-  "explanations_enabled": false
+  "weights_sha256": "749d98f2420b5ce601b10d1b191dbb2d9985ecac5ce9f290b55defa588c1d340",
+  "text_dtype": "bfloat16",
+  "explanations_enabled": true
 }
